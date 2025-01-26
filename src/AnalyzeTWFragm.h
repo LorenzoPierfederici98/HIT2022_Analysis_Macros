@@ -2,7 +2,7 @@
  * @file AnalyzeTWFragm.h
  * @brief Header file for AnalyzeTWFragm.cc
  * 
- * This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files
+ * @mainpage This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files
  * (for  fragmentation runs).
  * A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton
  * peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files
