@@ -1,0 +1,19 @@
+# .readthedocs.yaml
+version: 2
+
+# Build tools
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.10"
+  apt_packages:
+    - doxygen
+
+# Build documentation in the docs/sphinx directory
+sphinx:
+  configuration: docs/sphinx/conf.py
+
+# Python dependencies
+python:
+  install:
+    - requirements: requirements.txt
