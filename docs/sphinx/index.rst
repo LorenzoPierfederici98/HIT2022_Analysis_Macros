@@ -10,6 +10,8 @@ Welcome to HIT2022 Analysis's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   api
+
 
 
 Indices and tables
