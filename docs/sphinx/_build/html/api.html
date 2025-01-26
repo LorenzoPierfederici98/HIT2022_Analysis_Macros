@@ -32,80 +32,6 @@
             
   <p>API DOCUMENTATION</p>
 <hr class="docutils" />
-<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. root -l -b -q ‘AnalyzePeakCrystal.cc(x_min, x_max, fit_thresh)’, -b doesn’t display plots. In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.g. Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </p>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv416PrintMeasurementdd">
-<span id="_CPPv316PrintMeasurementdd"></span><span id="_CPPv216PrintMeasurementdd"></span><span id="PrintMeasurement__double.double"></span><span class="target" id="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrintMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416PrintMeasurementdd" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Prints a measurement value and its uncertainty. </p>
-<p>This function prints a measurement value and its uncertainty to the console.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv420FitPeakWithTSpectrumP4TH1Dd">
-<span id="_CPPv320FitPeakWithTSpectrumP4TH1Dd"></span><span id="_CPPv220FitPeakWithTSpectrumP4TH1Dd"></span><span id="FitPeakWithTSpectrum__TH1DP.double"></span><span class="target" id="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeakWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dd" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Fits a peak in a histogram using TSpectrum. </p>
-<p>This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>hist</strong> – The histogram to fit. </p></li>
-<li><p><strong>threshold</strong> – The threshold for peak detection. </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A TFitResultPtr containing the fit result. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv414FindHistogramsP5TFileRK7TStringRK7TString">
-<span id="_CPPv314FindHistogramsP5TFileRK7TStringRK7TString"></span><span id="_CPPv214FindHistogramsP5TFileRK7TStringRK7TString"></span><span id="FindHistograms__TFileP.TStringCR.TStringCR"></span><span class="target" id="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TH1D</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TH1D</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FindHistograms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inFile</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histName_total</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Finds histograms in a ROOT file. </p>
-<p>This function finds and retrieves histograms from a ROOT file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>inFile</strong> – The input ROOT file. </p></li>
-<li><p><strong>histName_total</strong> – The name of the total histogram. </p></li>
-<li><p><strong>histName</strong> – The name of the specific histogram. </p></li>
-</ul>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A tuple containing pointers to the total histogram and the specific histogram. </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString">
-<span id="_CPPv320SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"></span><span id="_CPPv220SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"></span><span id="SaveFitResultsToFile__TCanvasP.TH1DP.TFitResultPtr.TStringCR"></span><span class="target" id="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SaveFitResultsToFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TCanvas</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">canvas</span></span>, <span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fitResult</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outputFileName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Saves fit results to a ROOT file. </p>
-<p>This function saves the fit results and the corresponding histogram to a ROOT file.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>canvas</strong> – The canvas containing the fit plot. </p></li>
-<li><p><strong>hist</strong> – The histogram to save. </p></li>
-<li><p><strong>fitResult</strong> – The fit result to save. </p></li>
-<li><p><strong>outputFileName</strong> – The name of the output ROOT file. </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-</div>
 <p>Header file for AnalyzeTWFragm.cc. </p>
 <p>This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum in a certain range (energy-dependent, the bins outside the range are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g. TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root. To be run with root -l -b -q ‘AnalyzeTWFragm.cc()’. </p>
 <div class="breathe-sectiondef docutils container">
@@ -363,11 +289,7 @@
 <h3>Navigation</h3>
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">PrintMeasurement()</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dd"><code class="docutils literal notranslate"><span class="pre">FitPeakWithTSpectrum()</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString"><code class="docutils literal notranslate"><span class="pre">FindHistograms()</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"><code class="docutils literal notranslate"><span class="pre">SaveFitResultsToFile()</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#_CPPv411SumNentriesP5TFile"><code class="docutils literal notranslate"><span class="pre">SumNentries()</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">SumNentries()</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"><code class="docutils literal notranslate"><span class="pre">FitHistogramsInDirectory()</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
