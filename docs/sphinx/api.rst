@@ -3,4 +3,4 @@ API DOCUMENTATION
 =================
 
 .. doxygenfile:: CalibrateFragm.h
-    :project: HIT2022 Analysis
+    :project: HIT 2022 Analysis

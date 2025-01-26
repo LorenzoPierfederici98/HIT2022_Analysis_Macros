@@ -21,7 +21,7 @@ def run_doxygen():
 
 run_doxygen()
 
-project = 'HIT2022 Analysis'
+project = 'HIT 2022 Analysis'
 copyright = '2025, Lorenzo Pierfederici'
 author = 'Lorenzo Pierfederici'
 release = '0.0.1'
@@ -31,9 +31,9 @@ release = '0.0.1'
 
 extensions = ["breathe"]
 breathe_projects = {
-    "HIT2022 Analysis": "../xml"
+    "HIT 2022 Analysis": "../xml"
 }
-breathe_default_project = "HIT2022 Analysis"
+breathe_default_project = "HIT 2022 Analysis"
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
