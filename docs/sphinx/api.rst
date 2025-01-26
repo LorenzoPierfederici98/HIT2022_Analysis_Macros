@@ -8,6 +8,8 @@ API DOCUMENTATION
 
 .. doxygenfile:: AnalyzeTWFragm.h
     :project: HIT 2022 Analysis
+    :title: AnalyzeTWFragm.h Documentation
+    :brief:
 
 .. doxygenfile:: AnalyzeTWMC.h
     :project: HIT 2022 Analysis
