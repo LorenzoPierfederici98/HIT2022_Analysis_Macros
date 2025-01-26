@@ -6,8 +6,6 @@
 Welcome to HIT2022 Analysis's documentation!
 ============================================
 
-BBOOOOOOHH
-
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
