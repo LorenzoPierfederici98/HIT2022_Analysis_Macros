@@ -1,6 +1,4 @@
 /**
- * @file AnalyzeTWFragm.h
- * @brief Header file for AnalyzeTWFragm.cc
  * 
  * @mainpage This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files
  * (for  fragmentation runs).
