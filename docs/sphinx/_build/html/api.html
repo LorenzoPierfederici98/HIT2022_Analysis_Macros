@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; HIT 2022 Analysis 0.0.1 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=4f649999" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=cb25574f" />
+    <script src="_static/documentation_options.js?v=d45e8c67"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to HIT2022 Analysis’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <p>API DOCUMENTATION</p>
+<hr class="docutils" />
+<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
+<p>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. root -l -b -q ‘AnalyzePeakCrystal.cc(x_min, x_max, fit_thresh)’, -b doesn’t display plots. In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.g. Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416PrintMeasurementdd">
+<span id="_CPPv316PrintMeasurementdd"></span><span id="_CPPv216PrintMeasurementdd"></span><span id="PrintMeasurement__double.double"></span><span class="target" id="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrintMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416PrintMeasurementdd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Prints a measurement value and its uncertainty. </p>
+<p>This function prints a measurement value and its uncertainty to the console.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420FitPeakWithTSpectrumP4TH1Dd">
+<span id="_CPPv320FitPeakWithTSpectrumP4TH1Dd"></span><span id="_CPPv220FitPeakWithTSpectrumP4TH1Dd"></span><span id="FitPeakWithTSpectrum__TH1DP.double"></span><span class="target" id="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeakWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits a peak in a histogram using TSpectrum. </p>
+<p>This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hist</strong> – The histogram to fit. </p></li>
+<li><p><strong>threshold</strong> – The threshold for peak detection. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A TFitResultPtr containing the fit result. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414FindHistogramsP5TFileRK7TStringRK7TString">
+<span id="_CPPv314FindHistogramsP5TFileRK7TStringRK7TString"></span><span id="_CPPv214FindHistogramsP5TFileRK7TStringRK7TString"></span><span id="FindHistograms__TFileP.TStringCR.TStringCR"></span><span class="target" id="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TH1D</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TH1D</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FindHistograms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inFile</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histName_total</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Finds histograms in a ROOT file. </p>
+<p>This function finds and retrieves histograms from a ROOT file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inFile</strong> – The input ROOT file. </p></li>
+<li><p><strong>histName_total</strong> – The name of the total histogram. </p></li>
+<li><p><strong>histName</strong> – The name of the specific histogram. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A tuple containing pointers to the total histogram and the specific histogram. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString">
+<span id="_CPPv320SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"></span><span id="_CPPv220SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"></span><span id="SaveFitResultsToFile__TCanvasP.TH1DP.TFitResultPtr.TStringCR"></span><span class="target" id="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SaveFitResultsToFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TCanvas</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">canvas</span></span>, <span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fitResult</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outputFileName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Saves fit results to a ROOT file. </p>
+<p>This function saves the fit results and the corresponding histogram to a ROOT file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>canvas</strong> – The canvas containing the fit plot. </p></li>
+<li><p><strong>hist</strong> – The histogram to save. </p></li>
+<li><p><strong>fitResult</strong> – The fit result to save. </p></li>
+<li><p><strong>outputFileName</strong> – The name of the output ROOT file. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<p>Header file for AnalyzeTWFragm.cc. </p>
+<p>This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum in a certain range (energy-dependent, the bins outside the range are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g. TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root. To be run with root -l -b -q ‘AnalyzeTWFragm.cc()’. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411SumNentriesP5TFile">
+<span id="_CPPv311SumNentriesP5TFile"></span><span id="_CPPv211SumNentriesP5TFile"></span><span id="SumNentries__TFileP"></span><span class="target" id="AnalyzeTWFragm_8h_1aabad4b700eccd2608a76d82430bfea3a"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SumNentries</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">file</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411SumNentriesP5TFile" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Sums the number of entries in a ROOT file. </p>
+<p>This function iterates over the keys in the provided ROOT file and sums the entries of objects whose names match the pattern “nentries_run_\d+”.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>file</strong> – Pointer to the ROOT file. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Total number of entries. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile">
+<span id="_CPPv324FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"></span><span id="_CPPv224FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"></span><span id="FitHistogramsInDirectory__TDirectoryP.double.double.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.TFileP"></span><span class="target" id="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitHistogramsInDirectory</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TDirectory</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dir</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsHe</span></span>, <span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits histograms in a directory and stores the results. </p>
+<p>This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dir</strong> – Pointer to the directory containing the histograms. </p></li>
+<li><p><strong>threshold</strong> – Minimum number of entries required to fit a histogram. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>fitMeansP</strong> – Map to store the mean values of the proton fits. </p></li>
+<li><p><strong>fitErrorsP</strong> – Map to store the errors of the proton fits. </p></li>
+<li><p><strong>fitMeansHe</strong> – Map to store the mean values of the helium fits. </p></li>
+<li><p><strong>fitErrorsHe</strong> – Map to store the errors of the helium fits. </p></li>
+<li><p><strong>outputFile</strong> – Pointer to the output ROOT file to store the fitted histograms. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">
+<span id="_CPPv311ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="ProcessFile__ssCR.double.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R"></span><span class="target" id="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file and fits the histograms. </p>
+<p>This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – Name of the ROOT file. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>fitMeansP</strong> – Map to store the mean values of the proton fits. </p></li>
+<li><p><strong>fitMeansHe</strong> – Map to store the mean values of the helium fits. </p></li>
+<li><p><strong>fitErrorsP</strong> – Map to store the errors of the proton fits. </p></li>
+<li><p><strong>fitErrorsHe</strong> – Map to store the errors of the helium fits. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString">
+<span id="_CPPv321FitPeaksWithTSpectrumP4TH1DdddRK7TString"></span><span id="_CPPv221FitPeaksWithTSpectrumP4TH1DdddRK7TString"></span><span id="FitPeaksWithTSpectrum__TH1DP.double.double.double.TStringCR"></span><span class="target" id="AnalyzeTWFragm_8h_1a65f48b2f9841534aef2f32eb95f83b43"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeaksWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">thresh_peak_low</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">thresh_peak_high</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layerBarCombination</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits peaks in a histogram using TSpectrum. </p>
+<p>This function fits two peaks in the specified histogram using TSpectrum. The peaks are fitted with Gaussian functions, and the fit results are returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hist</strong> – Pointer to the histogram. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>thresh_peak_low</strong> – Lower threshold for peak search. </p></li>
+<li><p><strong>thresh_peak_high</strong> – Upper threshold for peak search. </p></li>
+<li><p><strong>layerBarCombination</strong> – String representing the layer and bar combination. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pair of fit results for the proton and helium peaks. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
+<p>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root. To be run with root -l -b -q ‘AnalyzeTWMC.cc()’. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE">
+<span id="_CPPv311ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"></span><span id="ProcessFile__ssCR.i.std::map:i.double:R.std::map:i.double:R.std::map:i.double:R.std::map:i.double:R"></span><span class="target" id="AnalyzeTWMC_8h_1aafbdc017754d8392bf014a36767842e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeanP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeanHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file to fit the charge distribution. </p>
+<p>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12.), and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – The name of the ROOT file to process. </p></li>
+<li><p><strong>energy</strong> – The energy value associated with the file. </p></li>
+<li><p><strong>fitMeanP</strong> – A map to store the mean fit values for protons. </p></li>
+<li><p><strong>fitMeanHe</strong> – A map to store the mean fit values for helium. </p></li>
+<li><p><strong>fitErrorP</strong> – A map to store the fit errors for protons. </p></li>
+<li><p><strong>fitErrorHe</strong> – A map to store the fit errors for helium. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421FitPeaksWithTSpectrumP4TH1Di">
+<span id="_CPPv321FitPeaksWithTSpectrumP4TH1Di"></span><span id="_CPPv221FitPeaksWithTSpectrumP4TH1Di"></span><span id="FitPeaksWithTSpectrum__TH1DP.i"></span><span class="target" id="AnalyzeTWMC_8h_1a15e3e63c2fe3026d9a34aa8bbcc77a6d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeaksWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421FitPeaksWithTSpectrumP4TH1Di" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits the peaks in a histogram using TSpectrum. </p>
+<p>This function uses TSpectrum to search for peaks in a histogram within a specified range. It then fits the found peaks with Gaussian functions. The first peak is assumed to be for protons, and the second peak (if found) is assumed to be for heliums.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hist</strong> – The histogram to fit. </p></li>
+<li><p><strong>energy</strong> – The energy value associated with the histogram. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of TFitResultPtr, where the first element is the fit result for protons and the second element is the fit result for helium. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<p>Header file for plotting charge distribution histograms from ROOT files. </p>
+<p>Macro that plots the charge given by the fit performed in AnalyzePeakCrystal.cc in all the available crystals vs the beam energy. The fit results are stored in objects, named like Fit_result_Charge_Calo_crystalId_1 inside the e.g. Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root file. To be run with root -l -b -q ‘CaloPeakEnergyDisplay.cc()’ it loops on every crystalID and extracts the fit values only on the available IDs. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE">
+<span id="_CPPv326ConvertFileNumbersToStringRKNSt6vectorIiEE"></span><span id="_CPPv226ConvertFileNumbersToStringRKNSt6vectorIiEE"></span><span id="ConvertFileNumbersToString__std::vector:i:CR"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConvertFileNumbersToString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">energies</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Converts a vector of energy values to a comma-separated string. </p>
+<p>This function converts a vector of energy values to a comma-separated string.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>energies</strong> – A vector of energy values. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string containing the energy values separated by commas. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416RoundMeasurementdd">
+<span id="_CPPv316RoundMeasurementdd"></span><span id="_CPPv216RoundMeasurementdd"></span><span id="RoundMeasurement__double.double"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1ab4907eeeea5fe95544ce97afbb74d65d"></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416RoundMeasurementdd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Rounds a measurement value and its uncertainty. </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
+<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with root -l -b -q ‘CalibrateFragm.cc()’. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">
+<span id="_CPPv311ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="_CPPv211ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="ProcessFile__TStringCR.i.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R"></span><span class="target" id="CalibrateFragm_8h_1acdc0930628c2b53e29747f1b28afa1cb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file to extract fit results for protons and helium. </p>
+<p>This function processes a ROOT file containing fit results for protons and helium. It extracts the mean and error values for each fit and stores them in the provided maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – The name of the ROOT file to process. </p></li>
+<li><p><strong>energy</strong> – The energy value associated with the file. </p></li>
+<li><p><strong>fitMeansP</strong> – A map to store the mean fit values for protons. </p></li>
+<li><p><strong>fitMeansHe</strong> – A map to store the mean fit values for helium. </p></li>
+<li><p><strong>fitErrorsP</strong> – A map to store the fit errors for protons. </p></li>
+<li><p><strong>fitErrorsHe</strong> – A map to store the fit errors for helium. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv422PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE">
+<span id="_CPPv322PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE"></span><span id="_CPPv222PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE"></span><span id="PlotFitResultsCombined__std::map:TString.std::map:i.double::CR.std::map:TString.std::map:i.double::CR.std::map:TString.std::map:i.double::CR.std::map:TString.std::map:i.double::CR.std::map:i.double:CR.std::map:i.double:CR"></span><span class="target" id="CalibrateFragm_8h_1a2e0c3be0d7ea9ae813950b6af2c1e174"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PlotFitResultsCombined</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansP</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsP</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansHe</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsHe</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">elossP</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">elossHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv422PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Plots the combined fit results for protons and helium. </p>
+<p>This function plots the combined fit results for protons and helium. It creates graphs for the fit results and performs a combined fit with a linear function. The fit values are stored in a map and returned.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fitMeansP</strong> – A map containing the mean fit values for protons. </p></li>
+<li><p><strong>fitErrorsP</strong> – A map containing the fit errors for protons. </p></li>
+<li><p><strong>fitMeansHe</strong> – A map containing the mean fit values for helium. </p></li>
+<li><p><strong>fitErrorsHe</strong> – A map containing the fit errors for helium. </p></li>
+<li><p><strong>elossP</strong> – A map containing the energy loss values for protons. </p></li>
+<li><p><strong>elossHe</strong> – A map containing the energy loss values for helium. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A map containing the fit values for each layer-bar combination. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421WriteFitValuesOrderedRKNSt3mapI7TStringdEE">
+<span id="_CPPv321WriteFitValuesOrderedRKNSt3mapI7TStringdEE"></span><span id="_CPPv221WriteFitValuesOrderedRKNSt3mapI7TStringdEE"></span><span id="WriteFitValuesOrdered__std::map:TString.double:CR"></span><span class="target" id="CalibrateFragm_8h_1a661388630a24bdf651364f968813ec3c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WriteFitValuesOrdered</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitValues</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421WriteFitValuesOrderedRKNSt3mapI7TStringdEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Writes the fit values to a configuration file. </p>
+<p>This function writes the fit values to a configuration file. The fit values are sorted by bar ID and written to the file in a specific format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>fitValues</strong> – A map containing the fit values for each layer-bar combination. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="CalibrateFragm_8h_1ab4907eeeea5fe95544ce97afbb74d65d"></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Rounds a measurement value and its uncertainty. </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">HIT 2022 Analysis</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">PrintMeasurement()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dd"><code class="docutils literal notranslate"><span class="pre">FitPeakWithTSpectrum()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString"><code class="docutils literal notranslate"><span class="pre">FindHistograms()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"><code class="docutils literal notranslate"><span class="pre">SaveFitResultsToFile()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv411SumNentriesP5TFile"><code class="docutils literal notranslate"><span class="pre">SumNentries()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"><code class="docutils literal notranslate"><span class="pre">FitHistogramsInDirectory()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1Di"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE"><code class="docutils literal notranslate"><span class="pre">ConvertFileNumbersToString()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv416RoundMeasurementdd"><code class="docutils literal notranslate"><span class="pre">RoundMeasurement()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv422PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE"><code class="docutils literal notranslate"><span class="pre">PlotFitResultsCombined()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#_CPPv421WriteFitValuesOrderedRKNSt3mapI7TStringdEE"><code class="docutils literal notranslate"><span class="pre">WriteFitValuesOrdered()</span></code></a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to HIT2022 Analysis’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2025, Lorenzo Pierfederici.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 7.2.6</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/api.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
