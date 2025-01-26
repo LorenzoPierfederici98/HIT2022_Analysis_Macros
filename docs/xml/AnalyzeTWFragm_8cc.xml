@@ -1,0 +1,793 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="AnalyzeTWFragm_8cc" kind="file" language="C++">
+    <compoundname>AnalyzeTWFragm.cc</compoundname>
+    <includes refid="AnalyzeTWFragm_8h" local="yes">AnalyzeTWFragm.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc</label>
+        <link refid="AnalyzeTWFragm_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AnalyzeTWFragm.h</label>
+        <link refid="AnalyzeTWFragm_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="5">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="7">
+        <label>TF1.h</label>
+      </node>
+      <node id="3">
+        <label>TFile.h</label>
+      </node>
+      <node id="8">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="6">
+        <label>TH1.h</label>
+      </node>
+      <node id="4">
+        <label>TKey.h</label>
+      </node>
+      <node id="10">
+        <label>TNamed.h</label>
+      </node>
+      <node id="11">
+        <label>TSpectrum.h</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="14">
+        <label>map</label>
+      </node>
+      <node id="15">
+        <label>regex</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="AnalyzeTWFragm_8cc_1a681163084492177f1b73f77bb682163c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AnalyzeTWFragm</definition>
+        <argsstring>()</argsstring>
+        <name>AnalyzeTWFragm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" line="12" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="12" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="AnalyzeTWFragm_8cc_1aabad4b700eccd2608a76d82430bfea3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int SumNentries</definition>
+        <argsstring>(TFile *file)</argsstring>
+        <name>SumNentries</name>
+        <param>
+          <type>TFile *</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Sums the number of entries in a ROOT file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function iterates over the keys in the provided ROOT file and sums the entries of objects whose names match the pattern &quot;nentries_run_\\d+&quot;.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the ROOT file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Total number of entries. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" line="31" column="5" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="31" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="AnalyzeTWFragm_8cc_1a6c75f7227727efc6541cf19ea6fec148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FitHistogramsInDirectory</definition>
+        <argsstring>(TDirectory *dir, double threshold, double energy, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansP, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsP, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansHe, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsHe, TFile *outputFile)</argsstring>
+        <name>FitHistogramsInDirectory</name>
+        <param>
+          <type>TDirectory *</type>
+          <declname>dir</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>threshold</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansP</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsP</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansHe</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsHe</declname>
+        </param>
+        <param>
+          <type>TFile *</type>
+          <declname>outputFile</declname>
+        </param>
+        <briefdescription>
+<para>Fits histograms in a directory and stores the results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the directory containing the histograms. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>threshold</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Minimum number of entries required to fit a histogram. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the mean values of the proton fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the errors of the proton fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the mean values of the helium fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the errors of the helium fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>outputFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the output ROOT file to store the fitted histograms. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" line="49" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="49" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="AnalyzeTWFragm_8cc_1abb0f053729deb39169a04ad7965ed097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const std::string &amp;fileName, double energy, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansP, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansHe, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsP, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsHe)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansP</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansHe</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsP</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsHe</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file and fits the histograms. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the ROOT file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the mean values of the proton fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the mean values of the helium fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the errors of the proton fits. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the errors of the helium fits. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" line="136" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="136" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="AnalyzeTWFragm_8cc_1a65f48b2f9841534aef2f32eb95f83b43" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; TFitResultPtr, TFitResultPtr &gt;</type>
+        <definition>std::pair&lt; TFitResultPtr, TFitResultPtr &gt; FitPeaksWithTSpectrum</definition>
+        <argsstring>(TH1D *hist, double energy, double thresh_peak_low, double thresh_peak_high, const TString &amp;layerBarCombination)</argsstring>
+        <name>FitPeaksWithTSpectrum</name>
+        <param>
+          <type>TH1D *</type>
+          <declname>hist</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>thresh_peak_low</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>thresh_peak_high</declname>
+        </param>
+        <param>
+          <type>const TString &amp;</type>
+          <declname>layerBarCombination</declname>
+        </param>
+        <briefdescription>
+<para>Fits peaks in a histogram using TSpectrum. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function fits two peaks in the specified histogram using TSpectrum. The peaks are fitted with Gaussian functions, and the fit results are returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the histogram. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thresh_peak_low</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lower threshold for peak search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>thresh_peak_high</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Upper threshold for peak search. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layerBarCombination</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>String representing the layer and bar combination. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Pair of fit results for the proton and helium peaks. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" line="175" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="175" bodyend="375"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Macro<sp/>that<sp/>fits<sp/>the<sp/>charge<sp/>distribution<sp/>from<sp/>the<sp/>AnalyzeTWChargeTime.cc<sp/>merged<sp/>output<sp/>files<sp/>(for<sp/>fragmentation<sp/>runs).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>A<sp/>fit<sp/>is<sp/>performed<sp/>with<sp/>2<sp/>separate<sp/>gaussians,<sp/>one<sp/>for<sp/>proton<sp/>and<sp/>one<sp/>for<sp/>helium<sp/>peaks.<sp/>The<sp/>fit<sp/>limits<sp/>for<sp/>the<sp/>proton</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>peaks<sp/>depend<sp/>on<sp/>the<sp/>beam<sp/>energy.<sp/>Only<sp/>the<sp/>histograms<sp/>whose<sp/>entries<sp/>are<sp/>greater<sp/>than<sp/>a<sp/>fraction<sp/>of<sp/>the<sp/>sum<sp/>of<sp/>the<sp/>merged<sp/>files</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>total<sp/>event<sp/>number<sp/>are<sp/>fitted<sp/>(the<sp/>entries<sp/>of<sp/>each<sp/>file<sp/>part<sp/>of<sp/>the<sp/>merged<sp/>output<sp/>are<sp/>saved<sp/>in<sp/>it<sp/>and<sp/>summed).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>histogram<sp/>peaks<sp/>are<sp/>automatically<sp/>found<sp/>with<sp/>TSPectrum<sp/>in<sp/>a<sp/>certain<sp/>range<sp/>(energy-dependent,<sp/>the<sp/>bins<sp/>outside<sp/>the<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/>are<sp/>set<sp/>to<sp/>0<sp/>and<sp/>the<sp/>peaks<sp/>are<sp/>searched<sp/>for<sp/>inbetween);<sp/>the<sp/>fits<sp/>are<sp/>then<sp/>performed<sp/>within<sp/>a<sp/>certain<sp/>bin-range<sp/>centered<sp/>around</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>peak,<sp/>depending<sp/>on<sp/>the<sp/>specific<sp/>bar<sp/>and<sp/>beam<sp/>energy.<sp/>The<sp/>fit<sp/>results<sp/>are<sp/>stored<sp/>in<sp/>files<sp/>name<sp/>like<sp/>e.g.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/>TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root.<sp/>To<sp/>be<sp/>run<sp/>with<sp/>root<sp/>-l<sp/>-b<sp/>-q<sp/>&apos;AnalyzeTWFragm.cc()&apos;.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="AnalyzeTWFragm_8h" kindref="compound">AnalyzeTWFragm.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AnalyzeTWFragm()<sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>double&gt;&gt;<sp/>filesAndEnergies<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;TW/AnaFOOT_TW_Decoded_HIT2022_fragm_100MeV.root&quot;</highlight><highlight class="normal">,<sp/>100},</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;TW/AnaFOOT_TW_Decoded_HIT2022_fragm_140MeV.root&quot;</highlight><highlight class="normal">,<sp/>140},</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;TW/AnaFOOT_TW_Decoded_HIT2022_fragm_200MeV.root&quot;</highlight><highlight class="normal">,<sp/>200},</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;TW/AnaFOOT_TW_Decoded_HIT2022_fragm_220MeV.root&quot;</highlight><highlight class="normal">,<sp/>220}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;<sp/>fitMeansP;<sp/><sp/></highlight><highlight class="comment">//<sp/>protons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;<sp/>fitErrorsP;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;<sp/>fitMeansHe;<sp/><sp/></highlight><highlight class="comment">//<sp/>heliums</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;<sp/>fitErrorsHe;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>[fileName,<sp/>energy]<sp/>:<sp/>filesAndEnergies)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ProcessFile(fileName,<sp/>energy,<sp/>fitMeansP,<sp/>fitMeansHe,<sp/>fitErrorsP,<sp/>fitErrorsHe);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SumNentries(TFile*<sp/>file)<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalNentries<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>TIter<sp/>next(file-&gt;GetListOfKeys());</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>TKey*<sp/>key;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>std::regex<sp/>nentriesRegex(</highlight><highlight class="stringliteral">&quot;nentries_run_\\d+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((key<sp/>=<sp/>(TKey*)next()))<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TObject*<sp/>obj<sp/>=<sp/>key-&gt;ReadObj();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TNamed*<sp/>nentriesObj<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">TNamed*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(obj);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nentriesObj<sp/>&amp;&amp;<sp/>std::regex_match(nentriesObj-&gt;GetName(),<sp/>nentriesRegex))<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>totalNentries<sp/>+=<sp/>std::stoi(nentriesObj-&gt;GetTitle());</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>obj;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>totalNentries;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>fit<sp/>histograms<sp/>in<sp/>a<sp/>directory<sp/>and<sp/>store<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FitHistogramsInDirectory(</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>TDirectory*<sp/>dir,<sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>threshold,<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,<sp/></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,<sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,<sp/></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe,<sp/></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>outputFile</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dir)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>TIter<sp/>next(dir-&gt;GetListOfKeys());</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>TKey*<sp/>key;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((key<sp/>=<sp/>(TKey*)next()))<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TObject*<sp/>obj<sp/>=<sp/>key-&gt;ReadObj();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TH1D*<sp/>hist<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">TH1D*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(obj);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!hist)<sp/>{</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>obj;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TString<sp/>histName<sp/>=<sp/>hist-&gt;GetName();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!histName.BeginsWith(</highlight><highlight class="stringliteral">&quot;Charge_Layer&quot;</highlight><highlight class="normal">))<sp/>{</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>hist;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>layer<sp/>and<sp/>bar<sp/>identifiers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TString<sp/>layerBarCombination<sp/>=<sp/>histName(7,<sp/>histName.Length()<sp/>-<sp/>7);<sp/><sp/></highlight><highlight class="comment">//<sp/>e.g.<sp/>LayerY_bar9</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>outputFile-&gt;cd();</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;Draw();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Fit<sp/>histogram<sp/>if<sp/>above<sp/>the<sp/>threshold</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(hist-&gt;GetEntries()<sp/>&gt;<sp/>threshold)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>bins<sp/>of<sp/>the<sp/>original<sp/>histograms<sp/>before<sp/>thresh_peak_low<sp/>beyond<sp/>thresh_peak_high</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>are<sp/>set<sp/>to<sp/>0<sp/>and<sp/>2<sp/>peaks<sp/>are<sp/>searched<sp/>for<sp/>inbetween</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thresh_peak_high;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thresh_peak_low<sp/>=<sp/>1.;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>100)<sp/>{</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thresh_peak_high<sp/>=<sp/>15.;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>140)<sp/>{</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thresh_peak_high<sp/>=<sp/>12.;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>200)<sp/>{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thresh_peak_high<sp/>=<sp/>9.;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>220)<sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thresh_peak_high<sp/>=<sp/>8.5;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>thresh_peak_low<sp/>=<sp/>0.85;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;beam<sp/>energy:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>energy<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MeV/u<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>layerBarCombination<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::pair&lt;TFitResultPtr,<sp/>TFitResultPtr&gt;<sp/>fitResults<sp/>=<sp/>FitPeaksWithTSpectrum(hist,<sp/>energy,<sp/>thresh_peak_low,<sp/>thresh_peak_high,<sp/>layerBarCombination);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFitResultPtr<sp/>fitResult1<sp/>=<sp/>fitResults.first,<sp/>fitResult2<sp/>=<sp/>fitResults.second;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult1.Get()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanChargeP<sp/>=<sp/>fitResult1-&gt;Parameter(1);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdChargeP<sp/>=<sp/>fitResult1-&gt;Parameter(2);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanChargeErrP<sp/>=<sp/>fitResult1-&gt;Error(1);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(meanChargeP<sp/>&gt;<sp/>0<sp/>||<sp/>stdChargeP<sp/>/<sp/>meanChargeP<sp/>&lt;<sp/>0.2<sp/>||<sp/>meanChargeP<sp/>/<sp/>meanChargeErrP<sp/>-<sp/>1<sp/>&gt;<sp/>0.5)<sp/>{</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitMeansHe[layerBarCombination][energy]<sp/>=<sp/>meanChargeP;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitErrorsHe[layerBarCombination][energy]<sp/>=<sp/>meanChargeErrP;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult1-&gt;Write(Form(</highlight><highlight class="stringliteral">&quot;FitResultP_%s&quot;</highlight><highlight class="normal">,<sp/>layerBarCombination.Data()));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult2.Get()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanChargeHe<sp/>=<sp/>fitResult2-&gt;Parameter(1);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdChargeHe<sp/>=<sp/>fitResult2-&gt;Parameter(2);</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanChargeErrHe<sp/>=<sp/>fitResult2-&gt;Error(1);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(meanChargeHe<sp/>&gt;<sp/>0<sp/>||<sp/>stdChargeHe<sp/>/<sp/>meanChargeHe<sp/>&lt;<sp/>0.2<sp/>||<sp/>meanChargeHe<sp/>/<sp/>meanChargeErrHe<sp/>-<sp/>1<sp/>&gt;<sp/>0.5)<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitMeansP[layerBarCombination][energy]<sp/>=<sp/>meanChargeHe;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitErrorsP[layerBarCombination][energy]<sp/>=<sp/>meanChargeErrHe;</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult2-&gt;Write(Form(</highlight><highlight class="stringliteral">&quot;FitResultHe_%s&quot;</highlight><highlight class="normal">,<sp/>layerBarCombination.Data()));</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>histogram<sp/>with<sp/>both<sp/>fits<sp/>to<sp/>the<sp/>output<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;Write();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>hist;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="134"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ProcessFile(</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe</highlight></codeline>
+<codeline lineno="143"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>file<sp/>=<sp/>TFile::Open(fileName.c_str(),<sp/></highlight><highlight class="stringliteral">&quot;READ&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file<sp/>||<sp/>file-&gt;IsZombie())<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>totalNentries<sp/>=<sp/>SumNentries(file);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>threshold<sp/>=<sp/>0.009<sp/>*<sp/>totalNentries;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Processing<sp/>file:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>Total<sp/>nentries:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>totalNentries<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>Threshold:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>threshold<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>output<sp/>ROOT<sp/>file<sp/>to<sp/>store<sp/>fitted<sp/>histograms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>outputFileName<sp/>=<sp/>TString(fileName).ReplaceAll(</highlight><highlight class="stringliteral">&quot;.root&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;_Fit.root&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>outputFile<sp/>=<sp/>TFile::Open(outputFileName,<sp/></highlight><highlight class="stringliteral">&quot;RECREATE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::string&gt;<sp/>directories<sp/>=<sp/>{</highlight><highlight class="stringliteral">&quot;ChargeTimeLayerX&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ChargeTimeLayerY&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>dirName<sp/>:<sp/>directories)<sp/>{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TDirectory*<sp/>dir<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">TDirectory*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(file-&gt;Get(dirName.c_str()));</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!dir)<sp/>{</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Directory<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>dirName<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>not<sp/>found<sp/>in<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>FitHistogramsInDirectory(dir,<sp/>threshold,<sp/>energy,<sp/>fitMeansP,<sp/>fitMeansHe,<sp/>fitErrorsP,<sp/>fitErrorsHe,<sp/>outputFile);</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>outputFile-&gt;Close();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>file-&gt;Close();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>outputFile;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal">std::pair&lt;TFitResultPtr,<sp/>TFitResultPtr&gt;<sp/>FitPeaksWithTSpectrum(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thresh_peak_low,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>thresh_peak_high,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>layerBarCombination)<sp/>{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>layerStart<sp/>=<sp/>layerBarCombination.Index(</highlight><highlight class="stringliteral">&quot;Layer&quot;</highlight><highlight class="normal">)<sp/>+<sp/>5;<sp/></highlight><highlight class="comment">//<sp/>&quot;Layer&quot;<sp/>is<sp/>5<sp/>characters<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>barStart<sp/>=<sp/>layerBarCombination.Index(</highlight><highlight class="stringliteral">&quot;_bar&quot;</highlight><highlight class="normal">)<sp/>+<sp/>4;<sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>&quot;_bar&quot;<sp/>is<sp/>4<sp/>characters<sp/>long</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>layer<sp/>(e.g.,<sp/>&apos;X&apos;<sp/>or<sp/>&apos;Y&apos;)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>layer<sp/>=<sp/>layerBarCombination(layerStart,<sp/>1);<sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>one<sp/>character<sp/>at<sp/>layerStart</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Extract<sp/>the<sp/>bar<sp/>number<sp/>as<sp/>a<sp/>string<sp/>and<sp/>convert<sp/>to<sp/>integer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>barString<sp/>=<sp/>layerBarCombination(barStart,<sp/>layerBarCombination.Length()<sp/>-<sp/>barStart);</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>barNumber<sp/>=<sp/>barString.Atoi();</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nPeaks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binLow<sp/>=<sp/>hist-&gt;FindBin(thresh_peak_low);<sp/></highlight><highlight class="comment">//<sp/>Find<sp/>the<sp/>bin<sp/>corresponding<sp/>to<sp/>x<sp/>=<sp/>low_thresh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binHigh<sp/>=<sp/>hist-&gt;FindBin(thresh_peak_high);</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binMax<sp/>=<sp/>hist-&gt;GetNbinsX();<sp/></highlight><highlight class="comment">//<sp/>Upper<sp/>limit<sp/>of<sp/>the<sp/>histogram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Clone<sp/>the<sp/>histogram<sp/>and<sp/>set<sp/>the<sp/>desired<sp/>range</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>TH1D*<sp/>histRestricted<sp/>=<sp/>(TH1D*)hist-&gt;Clone(</highlight><highlight class="stringliteral">&quot;histRestricted&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin<sp/>=<sp/>1;<sp/>bin<sp/>&lt;<sp/>binLow;<sp/>++bin)<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>histRestricted-&gt;SetBinContent(bin,<sp/>0);<sp/></highlight><highlight class="comment">//<sp/>Zero<sp/>out<sp/>bins<sp/>below<sp/>x<sp/>=<sp/>thresh</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bin<sp/>=<sp/>binHigh;<sp/>bin<sp/>&lt;<sp/>binMax;<sp/>++bin)<sp/>{</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>histRestricted-&gt;SetBinContent(bin,<sp/>0);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Use<sp/>TSpectrum<sp/>to<sp/>search<sp/>for<sp/>peaks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>TSpectrum<sp/>spectrum(2);<sp/></highlight><highlight class="comment">//<sp/>Max<sp/>number<sp/>of<sp/>peaks<sp/>to<sp/>find</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>nPeaks<sp/>=<sp/>spectrum.Search(histRestricted,<sp/>2,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>0.0015);<sp/></highlight><highlight class="comment">//<sp/>Use<sp/>the<sp/>restricted<sp/>histogram</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>histRestricted;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>of<sp/>peaks:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nPeaks<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>TFitResultPtr<sp/>fitResult1,<sp/>fitResult2;</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>*peakPositions<sp/>=<sp/>spectrum.GetPositionX();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sort<sp/>peaks:<sp/>the<sp/>first<sp/>belongs<sp/>to<sp/>protons,<sp/>the<sp/>second<sp/>to<sp/>heliums</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>sortedPeaks(peakPositions,<sp/>peakPositions<sp/>+<sp/>nPeaks);</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/>std::sort(sortedPeaks.begin(),<sp/>sortedPeaks.end());</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nPeaks<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>peaks<sp/>found<sp/>beyond<sp/>threshold<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>1.<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nPeaks<sp/>&gt;=<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x1<sp/>=<sp/>sortedPeaks[0];</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x1<sp/>&lt;<sp/>1.2084<sp/>&amp;&amp;<sp/>energy<sp/>==<sp/>100)<sp/>{<sp/></highlight><highlight class="comment">//<sp/>fix<sp/>LayerX_bar1<sp/>at<sp/>100<sp/>MeV/u</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x1<sp/>=<sp/>3.268;</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;first<sp/>peak<sp/>found<sp/>at<sp/>x=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>x1<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binMax1<sp/>=<sp/>hist-&gt;FindBin(x1);</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>2<sp/>if<sp/>energy<sp/>&gt;<sp/>200,<sp/>3<sp/>otherwise</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bins_fit_p<sp/>=<sp/>(energy<sp/>&gt;=<sp/>200)<sp/>?<sp/>2<sp/>:<sp/>3;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>100)<sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerY_bar19&quot;</highlight><highlight class="normal"><sp/>||<sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>(barNumber<sp/>==<sp/>0<sp/>||<sp/>barNumber<sp/>==<sp/>1)))<sp/>{</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_p<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>barNumber<sp/>&gt;<sp/>16)<sp/>{</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_p<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>19)<sp/>{</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_p<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>200)<sp/>{</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>(barNumber<sp/>&lt;<sp/>2))<sp/>{</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_p<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>(barNumber<sp/>==<sp/>1))<sp/>{</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_p<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binLow1<sp/>=<sp/>std::max(1,<sp/>binMax1<sp/>-<sp/>bins_fit_p);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binHigh1<sp/>=<sp/>std::min(hist-&gt;GetNbinsX(),<sp/>binMax1<sp/>+<sp/>bins_fit_p);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TF1*<sp/>gaus1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TF1(</highlight><highlight class="stringliteral">&quot;gaus1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/>hist-&gt;GetBinLowEdge(binLow1),<sp/>hist-&gt;GetBinLowEdge(binHigh1<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus1-&gt;SetParameter(1,<sp/>x1);</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus1-&gt;SetParLimits(1,<sp/>x1<sp/>-<sp/>0.1,<sp/>x1<sp/>+<sp/>0.1);</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult1<sp/>=<sp/>hist-&gt;Fit(</highlight><highlight class="stringliteral">&quot;gaus1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult1-&gt;Status()<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;fit<sp/>1<sp/>failed&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult1<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;GetListOfFunctions()-&gt;Add(gaus1);</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus1-&gt;SetLineColor(kBlue);</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus1-&gt;Draw(</highlight><highlight class="stringliteral">&quot;same&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nPeaks<sp/>==<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x2<sp/>=<sp/>sortedPeaks[1];</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(x2<sp/>-<sp/>sortedPeaks[0]<sp/>&lt;<sp/>2.5)</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>sortedPeaks[0]<sp/>*<sp/>4;</highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>100)<sp/>{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerX_bar1&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>12.5884;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerY_bar19&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>10.9;</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerX_bar19&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>10.;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>140<sp/>&amp;&amp;<sp/>layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerY_bar19&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>8.89;</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>220)<sp/>{</highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerX_bar1&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>7.8;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerX_bar0&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>5.9;</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layerBarCombination<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;LayerY_bar0&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>x2<sp/>=<sp/>6.;</highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;second<sp/>peak<sp/>found<sp/>at<sp/>x=&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>x2<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binMax2<sp/>=<sp/>hist-&gt;FindBin(x2);</highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bins_fit_he<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>100<sp/>&amp;&amp;<sp/>(barNumber<sp/>&lt;<sp/>5<sp/>||<sp/>barNumber<sp/>&gt;<sp/>15)){</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>2<sp/>||<sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>barNumber<sp/>==<sp/>4))<sp/>{</highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>4;</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>barNumber<sp/>==<sp/>17)<sp/>{</highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>7;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>19)<sp/>{</highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>140){</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>(barNumber<sp/>==<sp/>1<sp/>||<sp/>barNumber<sp/>==<sp/>4<sp/>||<sp/>barNumber<sp/>&gt;<sp/>17)){</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>(barNumber<sp/>==<sp/>0<sp/>||<sp/>barNumber<sp/>&gt;<sp/>14)){</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>200)<sp/>{</highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>&lt;<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>barNumber<sp/>==<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>(barNumber<sp/>&gt;<sp/>16<sp/>&amp;&amp;<sp/>barNumber<sp/>!=<sp/>18))<sp/>{</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;<sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>barNumber<sp/>&gt;<sp/>15)<sp/>{</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(energy<sp/>==<sp/>220)<sp/>{</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;X&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>3<sp/>||<sp/>barNumber<sp/>==<sp/>4)<sp/>{</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>0<sp/>||<sp/>barNumber<sp/>==<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(layer<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Y&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>2<sp/>||<sp/>barNumber<sp/>==<sp/>1<sp/>||<sp/>barNumber<sp/>&gt;<sp/>14)<sp/>{</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>6;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>8;</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(barNumber<sp/>==<sp/>6<sp/>||<sp/>barNumber<sp/>==<sp/>7)<sp/>{</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bins_fit_he<sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binLow2<sp/>=<sp/>std::max(1,<sp/>binMax2<sp/>-<sp/>bins_fit_he);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binHigh2<sp/>=<sp/>std::min(hist-&gt;GetNbinsX(),<sp/>binMax2<sp/>+<sp/>bins_fit_he);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TF1*<sp/>gaus2<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TF1(</highlight><highlight class="stringliteral">&quot;gaus2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/>hist-&gt;GetBinLowEdge(binLow2),<sp/>hist-&gt;GetBinLowEdge(binHigh2<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus2-&gt;SetParameter(1,<sp/>x2);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus2-&gt;SetParLimits(1,<sp/>x2<sp/>-<sp/>0.1,<sp/>x2<sp/>+<sp/>0.1);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult2<sp/>=<sp/>hist-&gt;Fit(</highlight><highlight class="stringliteral">&quot;gaus2&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;RS+&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult2-&gt;Status()<sp/>!=<sp/>0){</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;fit<sp/>2<sp/>failed&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult2<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;GetListOfFunctions()-&gt;Add(gaus2);</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus2-&gt;SetLineColor(kRed);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus2-&gt;Draw(</highlight><highlight class="stringliteral">&quot;same&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{fitResult1,<sp/>fitResult2};</highlight></codeline>
+<codeline lineno="375"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc"/>
+  </compounddef>
+</doxygen>

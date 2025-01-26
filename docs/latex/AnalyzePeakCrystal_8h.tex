@@ -1,0 +1,133 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Analyze\+Peak\+Crystal.h File Reference}
+\hypertarget{AnalyzePeakCrystal_8h}{}\label{AnalyzePeakCrystal_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzePeakCrystal.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzePeakCrystal.h}}
+
+
+Header file for processing and fitting charge distribution histograms from ROOT files.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TH1\+D.\+h$>$}\newline
+{\ttfamily \#include $<$TFit\+Result\+Ptr.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TLegend.\+h$>$}\newline
+{\ttfamily \#include $<$TObj\+String.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+Include dependency graph for Analyze\+Peak\+Crystal.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AnalyzePeakCrystal_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{AnalyzePeakCrystal_8h_a5aadeca6af3105a72d885dcc752237db}{Print\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Prints a measurement value and its uncertainty. \end{DoxyCompactList}\item 
+TFit\+Result\+Ptr \mbox{\hyperlink{AnalyzePeakCrystal_8h_a814766d4b881835f9ba65bc6bcb27b0d}{Fit\+Peak\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, double threshold)
+\begin{DoxyCompactList}\small\item\em Fits a peak in a histogram using TSpectrum. \end{DoxyCompactList}\item 
+std\+::tuple$<$ TH1D \texorpdfstring{$\ast$}{*}, TH1D \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{AnalyzePeakCrystal_8h_aee07cb059be4125e9378b6ec353e11a3}{Find\+Histograms}} (TFile \texorpdfstring{$\ast$}{*}in\+File, const TString \&hist\+Name\+\_\+total, const TString \&hist\+Name)
+\begin{DoxyCompactList}\small\item\em Finds histograms in a ROOT file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AnalyzePeakCrystal_8h_aec202f6e32bb23c6bb5ffe63a7d2e7df}{Save\+Fit\+Results\+To\+File}} (TCanvas \texorpdfstring{$\ast$}{*}canvas, TH1D \texorpdfstring{$\ast$}{*}hist, TFit\+Result\+Ptr fit\+Result, const TString \&output\+File\+Name)
+\begin{DoxyCompactList}\small\item\em Saves fit results to a ROOT file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for processing and fitting charge distribution histograms from ROOT files. 
+
+Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the Ana\+Lyze\+Calo.\+cc merged output files (the histograms are automatically summed). To be run with e.\+g. root -\/l -\/b -\/q \textquotesingle{}Analyze\+Peak\+Crystal.\+cc(x\+\_\+min, x\+\_\+max, fit\+\_\+thresh)\textquotesingle{}, -\/b doesn\textquotesingle{}t display plots. In an interval between x\+\_\+min and x\+\_\+max a peak beyond fit\+\_\+thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.\+g. Calo/\+Ana\+FOOT\+\_\+\+Calo\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+Me\+V\+\_\+\+Fit.\+root which also store the crystal\+ID charge histogram and the fit plot restricted in \mbox{[}x\+\_\+min, x\+\_\+max\mbox{]}. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{AnalyzePeakCrystal_8h_aee07cb059be4125e9378b6ec353e11a3}\label{AnalyzePeakCrystal_8h_aee07cb059be4125e9378b6ec353e11a3} 
+\index{AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}!FindHistograms@{FindHistograms}}
+\index{FindHistograms@{FindHistograms}!AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}}
+\doxysubsubsection{\texorpdfstring{FindHistograms()}{FindHistograms()}}
+{\footnotesize\ttfamily std\+::tuple$<$ TH1D \texorpdfstring{$\ast$}{*}, TH1D \texorpdfstring{$\ast$}{*} $>$ Find\+Histograms (\begin{DoxyParamCaption}\item[{TFile \texorpdfstring{$\ast$}{*}}]{in\+File,  }\item[{const TString \&}]{hist\+Name\+\_\+total,  }\item[{const TString \&}]{hist\+Name }\end{DoxyParamCaption})}
+
+
+
+Finds histograms in a ROOT file. 
+
+This function finds and retrieves histograms from a ROOT file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+File} & The input ROOT file. \\
+\hline
+{\em hist\+Name\+\_\+total} & The name of the total histogram. \\
+\hline
+{\em hist\+Name} & The name of the specific histogram. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A tuple containing pointers to the total histogram and the specific histogram. 
+\end{DoxyReturn}
+\Hypertarget{AnalyzePeakCrystal_8h_a814766d4b881835f9ba65bc6bcb27b0d}\label{AnalyzePeakCrystal_8h_a814766d4b881835f9ba65bc6bcb27b0d} 
+\index{AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}!FitPeakWithTSpectrum@{FitPeakWithTSpectrum}}
+\index{FitPeakWithTSpectrum@{FitPeakWithTSpectrum}!AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}}
+\doxysubsubsection{\texorpdfstring{FitPeakWithTSpectrum()}{FitPeakWithTSpectrum()}}
+{\footnotesize\ttfamily TFit\+Result\+Ptr Fit\+Peak\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{double}]{threshold }\end{DoxyParamCaption})}
+
+
+
+Fits a peak in a histogram using TSpectrum. 
+
+This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & The histogram to fit. \\
+\hline
+{\em threshold} & The threshold for peak detection. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A TFit\+Result\+Ptr containing the fit result. 
+\end{DoxyReturn}
+\Hypertarget{AnalyzePeakCrystal_8h_a5aadeca6af3105a72d885dcc752237db}\label{AnalyzePeakCrystal_8h_a5aadeca6af3105a72d885dcc752237db} 
+\index{AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}!PrintMeasurement@{PrintMeasurement}}
+\index{PrintMeasurement@{PrintMeasurement}!AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}}
+\doxysubsubsection{\texorpdfstring{PrintMeasurement()}{PrintMeasurement()}}
+{\footnotesize\ttfamily void Print\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Prints a measurement value and its uncertainty. 
+
+This function prints a measurement value and its uncertainty to the console.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{AnalyzePeakCrystal_8h_aec202f6e32bb23c6bb5ffe63a7d2e7df}\label{AnalyzePeakCrystal_8h_aec202f6e32bb23c6bb5ffe63a7d2e7df} 
+\index{AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}!SaveFitResultsToFile@{SaveFitResultsToFile}}
+\index{SaveFitResultsToFile@{SaveFitResultsToFile}!AnalyzePeakCrystal.h@{AnalyzePeakCrystal.h}}
+\doxysubsubsection{\texorpdfstring{SaveFitResultsToFile()}{SaveFitResultsToFile()}}
+{\footnotesize\ttfamily void Save\+Fit\+Results\+To\+File (\begin{DoxyParamCaption}\item[{TCanvas \texorpdfstring{$\ast$}{*}}]{canvas,  }\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{TFit\+Result\+Ptr}]{fit\+Result,  }\item[{const TString \&}]{output\+File\+Name }\end{DoxyParamCaption})}
+
+
+
+Saves fit results to a ROOT file. 
+
+This function saves the fit results and the corresponding histogram to a ROOT file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em canvas} & The canvas containing the fit plot. \\
+\hline
+{\em hist} & The histogram to save. \\
+\hline
+{\em fit\+Result} & The fit result to save. \\
+\hline
+{\em output\+File\+Name} & The name of the output ROOT file. \\
+\hline
+\end{DoxyParams}

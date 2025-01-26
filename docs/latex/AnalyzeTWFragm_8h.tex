@@ -1,0 +1,153 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Analyze\+TWFragm.h File Reference}
+\hypertarget{AnalyzeTWFragm_8h}{}\label{AnalyzeTWFragm_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWFragm.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWFragm.h}}
+
+
+Header file for Analyze\+TWFragm.\+cc.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for Analyze\+TWFragm.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AnalyzeTWFragm_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{AnalyzeTWFragm_8h_aabad4b700eccd2608a76d82430bfea3a}{Sum\+Nentries}} (TFile \texorpdfstring{$\ast$}{*}file)
+\begin{DoxyCompactList}\small\item\em Sums the number of entries in a ROOT file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148}{Fit\+Histograms\+In\+Directory}} (TDirectory \texorpdfstring{$\ast$}{*}dir, double threshold, double energy, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+MeansP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+ErrorsP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Means\+He, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Errors\+He, TFile \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Fits histograms in a directory and stores the results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AnalyzeTWFragm_8h_abb0f053729deb39169a04ad7965ed097}{Process\+File}} (const std\+::string \&file\+Name, double energy, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+MeansP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Means\+He, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+ErrorsP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Errors\+He)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file and fits the histograms. \end{DoxyCompactList}\item 
+std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ \mbox{\hyperlink{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43}{Fit\+Peaks\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, double energy, double thresh\+\_\+peak\+\_\+low, double thresh\+\_\+peak\+\_\+high, const TString \&layer\+Bar\+Combination)
+\begin{DoxyCompactList}\small\item\em Fits peaks in a histogram using TSpectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for Analyze\+TWFragm.\+cc. 
+
+This file contains function declarations for fitting the charge distribution from the Analyze\+TWCharge\+Time.\+cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum in a certain range (energy-\/dependent, the bins outside the range are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.\+g. TW/\+Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+Me\+V\+\_\+\+Fit.\+root. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+TWFragm.\+cc()\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148}\label{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148} 
+\index{AnalyzeTWFragm.h@{AnalyzeTWFragm.h}!FitHistogramsInDirectory@{FitHistogramsInDirectory}}
+\index{FitHistogramsInDirectory@{FitHistogramsInDirectory}!AnalyzeTWFragm.h@{AnalyzeTWFragm.h}}
+\doxysubsubsection{\texorpdfstring{FitHistogramsInDirectory()}{FitHistogramsInDirectory()}}
+{\footnotesize\ttfamily void Fit\+Histograms\+In\+Directory (\begin{DoxyParamCaption}\item[{TDirectory \texorpdfstring{$\ast$}{*}}]{dir,  }\item[{double}]{threshold,  }\item[{double}]{energy,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+MeansP,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+ErrorsP,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Means\+He,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Errors\+He,  }\item[{TFile \texorpdfstring{$\ast$}{*}}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+Fits histograms in a directory and stores the results. 
+
+This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Pointer to the directory containing the histograms. \\
+\hline
+{\em threshold} & Minimum number of entries required to fit a histogram. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em fit\+MeansP} & Map to store the mean values of the proton fits. \\
+\hline
+{\em fit\+ErrorsP} & Map to store the errors of the proton fits. \\
+\hline
+{\em fit\+Means\+He} & Map to store the mean values of the helium fits. \\
+\hline
+{\em fit\+Errors\+He} & Map to store the errors of the helium fits. \\
+\hline
+{\em output\+File} & Pointer to the output ROOT file to store the fitted histograms. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43}\label{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43} 
+\index{AnalyzeTWFragm.h@{AnalyzeTWFragm.h}!FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}}
+\index{FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}!AnalyzeTWFragm.h@{AnalyzeTWFragm.h}}
+\doxysubsubsection{\texorpdfstring{FitPeaksWithTSpectrum()}{FitPeaksWithTSpectrum()}}
+{\footnotesize\ttfamily std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ Fit\+Peaks\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{double}]{energy,  }\item[{double}]{thresh\+\_\+peak\+\_\+low,  }\item[{double}]{thresh\+\_\+peak\+\_\+high,  }\item[{const TString \&}]{layer\+Bar\+Combination }\end{DoxyParamCaption})}
+
+
+
+Fits peaks in a histogram using TSpectrum. 
+
+This function fits two peaks in the specified histogram using TSpectrum. The peaks are fitted with Gaussian functions, and the fit results are returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & Pointer to the histogram. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em thresh\+\_\+peak\+\_\+low} & Lower threshold for peak search. \\
+\hline
+{\em thresh\+\_\+peak\+\_\+high} & Upper threshold for peak search. \\
+\hline
+{\em layer\+Bar\+Combination} & String representing the layer and bar combination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Pair of fit results for the proton and helium peaks. 
+\end{DoxyReturn}
+\Hypertarget{AnalyzeTWFragm_8h_abb0f053729deb39169a04ad7965ed097}\label{AnalyzeTWFragm_8h_abb0f053729deb39169a04ad7965ed097} 
+\index{AnalyzeTWFragm.h@{AnalyzeTWFragm.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!AnalyzeTWFragm.h@{AnalyzeTWFragm.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{double}]{energy,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+MeansP,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Means\+He,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+ErrorsP,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Errors\+He }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file and fits the histograms. 
+
+This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the ROOT file. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em fit\+MeansP} & Map to store the mean values of the proton fits. \\
+\hline
+{\em fit\+Means\+He} & Map to store the mean values of the helium fits. \\
+\hline
+{\em fit\+ErrorsP} & Map to store the errors of the proton fits. \\
+\hline
+{\em fit\+Errors\+He} & Map to store the errors of the helium fits. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{AnalyzeTWFragm_8h_aabad4b700eccd2608a76d82430bfea3a}\label{AnalyzeTWFragm_8h_aabad4b700eccd2608a76d82430bfea3a} 
+\index{AnalyzeTWFragm.h@{AnalyzeTWFragm.h}!SumNentries@{SumNentries}}
+\index{SumNentries@{SumNentries}!AnalyzeTWFragm.h@{AnalyzeTWFragm.h}}
+\doxysubsubsection{\texorpdfstring{SumNentries()}{SumNentries()}}
+{\footnotesize\ttfamily int Sum\+Nentries (\begin{DoxyParamCaption}\item[{TFile \texorpdfstring{$\ast$}{*}}]{file }\end{DoxyParamCaption})}
+
+
+
+Sums the number of entries in a ROOT file. 
+
+This function iterates over the keys in the provided ROOT file and sums the entries of objects whose names match the pattern "{}nentries\+\_\+run\+\_\+\textbackslash{}\textbackslash{}d+"{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file} & Pointer to the ROOT file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total number of entries. 
+\end{DoxyReturn}

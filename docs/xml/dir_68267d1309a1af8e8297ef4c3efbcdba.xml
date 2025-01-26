@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src</compoundname>
+    <innerfile refid="AnalyzePeakCrystal_8cc">AnalyzePeakCrystal.cc</innerfile>
+    <innerfile refid="AnalyzePeakCrystal_8h">AnalyzePeakCrystal.h</innerfile>
+    <innerfile refid="AnalyzeTWFragm_8cc">AnalyzeTWFragm.cc</innerfile>
+    <innerfile refid="AnalyzeTWFragm_8h">AnalyzeTWFragm.h</innerfile>
+    <innerfile refid="AnalyzeTWMC_8cc">AnalyzeTWMC.cc</innerfile>
+    <innerfile refid="AnalyzeTWMC_8h">AnalyzeTWMC.h</innerfile>
+    <innerfile refid="CalibrateFragm_8cc">CalibrateFragm.cc</innerfile>
+    <innerfile refid="CalibrateFragm_8h">CalibrateFragm.h</innerfile>
+    <innerfile refid="CaloPeakEnergyDisplay_8cc">CaloPeakEnergyDisplay.cc</innerfile>
+    <innerfile refid="CaloPeakEnergyDisplay_8h">CaloPeakEnergyDisplay.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/"/>
+  </compounddef>
+</doxygen>

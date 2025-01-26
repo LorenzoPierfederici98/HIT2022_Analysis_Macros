@@ -1,0 +1,79 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Calo\+Peak\+Energy\+Display.h File Reference}
+\hypertarget{CaloPeakEnergyDisplay_8h}{}\label{CaloPeakEnergyDisplay_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CaloPeakEnergyDisplay.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CaloPeakEnergyDisplay.h}}
+
+
+Header file for plotting charge distribution histograms from ROOT files.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TFit\+Result.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+Include dependency graph for Calo\+Peak\+Energy\+Display.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CaloPeakEnergyDisplay_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{CaloPeakEnergyDisplay_8h_ad2291774551251ac39112a4b52e463ee}{Convert\+File\+Numbers\+To\+String}} (const std\+::vector$<$ int $>$ \&energies)
+\begin{DoxyCompactList}\small\item\em Converts a vector of energy values to a comma-\/separated string. \end{DoxyCompactList}\item 
+pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{CaloPeakEnergyDisplay_8h_ab4907eeeea5fe95544ce97afbb74d65d}{Round\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for plotting charge distribution histograms from ROOT files. 
+
+Macro that plots the charge given by the fit performed in Analyze\+Peak\+Crystal.\+cc in all the available crystals vs the beam energy. The fit results are stored in objects, named like Fit\+\_\+result\+\_\+\+Charge\+\_\+\+Calo\+\_\+crystal\+Id\+\_\+1 inside the e.\+g. Calo/\+Ana\+FOOT\+\_\+\+Calo\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+Me\+V\+\_\+\+Fit.\+root file. To be run with root -\/l -\/b -\/q \textquotesingle{}Calo\+Peak\+Energy\+Display.\+cc()\textquotesingle{} it loops on every crystal\+ID and extracts the fit values only on the available IDs. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{CaloPeakEnergyDisplay_8h_ad2291774551251ac39112a4b52e463ee}\label{CaloPeakEnergyDisplay_8h_ad2291774551251ac39112a4b52e463ee} 
+\index{CaloPeakEnergyDisplay.h@{CaloPeakEnergyDisplay.h}!ConvertFileNumbersToString@{ConvertFileNumbersToString}}
+\index{ConvertFileNumbersToString@{ConvertFileNumbersToString}!CaloPeakEnergyDisplay.h@{CaloPeakEnergyDisplay.h}}
+\doxysubsubsection{\texorpdfstring{ConvertFileNumbersToString()}{ConvertFileNumbersToString()}}
+{\footnotesize\ttfamily std\+::string Convert\+File\+Numbers\+To\+String (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ int $>$ \&}]{energies }\end{DoxyParamCaption})}
+
+
+
+Converts a vector of energy values to a comma-\/separated string. 
+
+This function converts a vector of energy values to a comma-\/separated string.
+
+
+\begin{DoxyParams}{Parameters}
+{\em energies} & A vector of energy values. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A string containing the energy values separated by commas. 
+\end{DoxyReturn}
+\Hypertarget{CaloPeakEnergyDisplay_8h_ab4907eeeea5fe95544ce97afbb74d65d}\label{CaloPeakEnergyDisplay_8h_ab4907eeeea5fe95544ce97afbb74d65d} 
+\index{CaloPeakEnergyDisplay.h@{CaloPeakEnergyDisplay.h}!RoundMeasurement@{RoundMeasurement}}
+\index{RoundMeasurement@{RoundMeasurement}!CaloPeakEnergyDisplay.h@{CaloPeakEnergyDisplay.h}}
+\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
+{\footnotesize\ttfamily pair$<$ std\+::string, std\+::string $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Rounds a measurement value and its uncertainty. 
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty. 
+\end{DoxyReturn}

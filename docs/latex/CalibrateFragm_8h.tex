@@ -1,0 +1,142 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Calibrate\+Fragm.h File Reference}
+\hypertarget{CalibrateFragm_8h}{}\label{CalibrateFragm_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateFragm.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateFragm.h}}
+
+
+Header file for processing and fitting charge distribution histograms from ROOT files.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for Calibrate\+Fragm.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CalibrateFragm_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{CalibrateFragm_8h_acdc0930628c2b53e29747f1b28afa1cb}{Process\+File}} (const TString \&file\+Name, int energy, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+MeansP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Means\+He, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+ErrorsP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Errors\+He)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file to extract fit results for protons and helium. \end{DoxyCompactList}\item 
+std\+::map$<$ TString, double $>$ \mbox{\hyperlink{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174}{Plot\+Fit\+Results\+Combined}} (const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+MeansP, const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+ErrorsP, const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Means\+He, const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Errors\+He, const std\+::map$<$ int, double $>$ \&elossP, const std\+::map$<$ int, double $>$ \&eloss\+He)
+\begin{DoxyCompactList}\small\item\em Plots the combined fit results for protons and helium. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CalibrateFragm_8h_a661388630a24bdf651364f968813ec3c}{Write\+Fit\+Values\+Ordered}} (const std\+::map$<$ TString, double $>$ \&fit\+Values)
+\begin{DoxyCompactList}\small\item\em Writes the fit values to a configuration file. \end{DoxyCompactList}\item 
+pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{CalibrateFragm_8h_ab4907eeeea5fe95544ce97afbb74d65d}{Round\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for processing and fitting charge distribution histograms from ROOT files. 
+
+Macro that plots the fit results on protons and helium peaks given by the Analyze\+TWFragm.\+cc macro vs the energies retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with root -\/l -\/b -\/q \textquotesingle{}Calibrate\+Fragm.\+cc()\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174}\label{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174} 
+\index{CalibrateFragm.h@{CalibrateFragm.h}!PlotFitResultsCombined@{PlotFitResultsCombined}}
+\index{PlotFitResultsCombined@{PlotFitResultsCombined}!CalibrateFragm.h@{CalibrateFragm.h}}
+\doxysubsubsection{\texorpdfstring{PlotFitResultsCombined()}{PlotFitResultsCombined()}}
+{\footnotesize\ttfamily std\+::map$<$ TString, double $>$ Plot\+Fit\+Results\+Combined (\begin{DoxyParamCaption}\item[{const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+MeansP,  }\item[{const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+ErrorsP,  }\item[{const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Means\+He,  }\item[{const std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Errors\+He,  }\item[{const std\+::map$<$ int, double $>$ \&}]{elossP,  }\item[{const std\+::map$<$ int, double $>$ \&}]{eloss\+He }\end{DoxyParamCaption})}
+
+
+
+Plots the combined fit results for protons and helium. 
+
+This function plots the combined fit results for protons and helium. It creates graphs for the fit results and performs a combined fit with a linear function. The fit values are stored in a map and returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fit\+MeansP} & A map containing the mean fit values for protons. \\
+\hline
+{\em fit\+ErrorsP} & A map containing the fit errors for protons. \\
+\hline
+{\em fit\+Means\+He} & A map containing the mean fit values for helium. \\
+\hline
+{\em fit\+Errors\+He} & A map containing the fit errors for helium. \\
+\hline
+{\em elossP} & A map containing the energy loss values for protons. \\
+\hline
+{\em eloss\+He} & A map containing the energy loss values for helium. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A map containing the fit values for each layer-\/bar combination. 
+\end{DoxyReturn}
+\Hypertarget{CalibrateFragm_8h_acdc0930628c2b53e29747f1b28afa1cb}\label{CalibrateFragm_8h_acdc0930628c2b53e29747f1b28afa1cb} 
+\index{CalibrateFragm.h@{CalibrateFragm.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!CalibrateFragm.h@{CalibrateFragm.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const TString \&}]{file\+Name,  }\item[{int}]{energy,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+MeansP,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Means\+He,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+ErrorsP,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{fit\+Errors\+He }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file to extract fit results for protons and helium. 
+
+This function processes a ROOT file containing fit results for protons and helium. It extracts the mean and error values for each fit and stores them in the provided maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the ROOT file to process. \\
+\hline
+{\em energy} & The energy value associated with the file. \\
+\hline
+{\em fit\+MeansP} & A map to store the mean fit values for protons. \\
+\hline
+{\em fit\+Means\+He} & A map to store the mean fit values for helium. \\
+\hline
+{\em fit\+ErrorsP} & A map to store the fit errors for protons. \\
+\hline
+{\em fit\+Errors\+He} & A map to store the fit errors for helium. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CalibrateFragm_8h_ab4907eeeea5fe95544ce97afbb74d65d}\label{CalibrateFragm_8h_ab4907eeeea5fe95544ce97afbb74d65d} 
+\index{CalibrateFragm.h@{CalibrateFragm.h}!RoundMeasurement@{RoundMeasurement}}
+\index{RoundMeasurement@{RoundMeasurement}!CalibrateFragm.h@{CalibrateFragm.h}}
+\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
+{\footnotesize\ttfamily pair$<$ std\+::string, std\+::string $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Rounds a measurement value and its uncertainty. 
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty. 
+\end{DoxyReturn}
+\Hypertarget{CalibrateFragm_8h_a661388630a24bdf651364f968813ec3c}\label{CalibrateFragm_8h_a661388630a24bdf651364f968813ec3c} 
+\index{CalibrateFragm.h@{CalibrateFragm.h}!WriteFitValuesOrdered@{WriteFitValuesOrdered}}
+\index{WriteFitValuesOrdered@{WriteFitValuesOrdered}!CalibrateFragm.h@{CalibrateFragm.h}}
+\doxysubsubsection{\texorpdfstring{WriteFitValuesOrdered()}{WriteFitValuesOrdered()}}
+{\footnotesize\ttfamily void Write\+Fit\+Values\+Ordered (\begin{DoxyParamCaption}\item[{const std\+::map$<$ TString, double $>$ \&}]{fit\+Values }\end{DoxyParamCaption})}
+
+
+
+Writes the fit values to a configuration file. 
+
+This function writes the fit values to a configuration file. The fit values are sorted by bar ID and written to the file in a specific format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em fit\+Values} & A map containing the fit values for each layer-\/bar combination. \\
+\hline
+\end{DoxyParams}

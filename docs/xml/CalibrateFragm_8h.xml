@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="CalibrateFragm_8h" kind="file" language="C++">
+    <compoundname>CalibrateFragm.h</compoundname>
+    <includes local="no">TFile.h</includes>
+    <includes local="no">TKey.h</includes>
+    <includes local="no">TDirectory.h</includes>
+    <includes local="no">TH1.h</includes>
+    <includes local="no">TF1.h</includes>
+    <includes local="no">TGraphErrors.h</includes>
+    <includes local="no">TCanvas.h</includes>
+    <includes local="no">TNamed.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">regex</includes>
+    <includedby refid="CalibrateFragm_8cc" local="yes">/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h</label>
+        <link refid="CalibrateFragm_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="4">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="6">
+        <label>TF1.h</label>
+      </node>
+      <node id="2">
+        <label>TFile.h</label>
+      </node>
+      <node id="7">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="5">
+        <label>TH1.h</label>
+      </node>
+      <node id="3">
+        <label>TKey.h</label>
+      </node>
+      <node id="9">
+        <label>TNamed.h</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="13">
+        <label>regex</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="CalibrateFragm_8h_1acdc0930628c2b53e29747f1b28afa1cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const TString &amp;fileName, int energy, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansP, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansHe, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsP, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsHe)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const TString &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansP</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansHe</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsP</declname>
+        </param>
+        <param>
+          <type>std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsHe</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file to extract fit results for protons and helium. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes a ROOT file containing fit results for protons and helium. It extracts the mean and error values for each fit and stores them in the provided maps.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the ROOT file to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The energy value associated with the file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map to store the mean fit values for protons. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map to store the mean fit values for helium. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map to store the fit errors for protons. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map to store the fit errors for helium. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" line="39" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="35" bodyend="108" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CalibrateFragm_8h_1a2e0c3be0d7ea9ae813950b6af2c1e174" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; TString, double &gt;</type>
+        <definition>std::map&lt; TString, double &gt; PlotFitResultsCombined</definition>
+        <argsstring>(const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansP, const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsP, const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitMeansHe, const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;fitErrorsHe, const std::map&lt; int, double &gt; &amp;elossP, const std::map&lt; int, double &gt; &amp;elossHe)</argsstring>
+        <name>PlotFitResultsCombined</name>
+        <param>
+          <type>const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansP</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsP</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitMeansHe</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;</type>
+          <declname>fitErrorsHe</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; int, double &gt; &amp;</type>
+          <declname>elossP</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; int, double &gt; &amp;</type>
+          <declname>elossHe</declname>
+        </param>
+        <briefdescription>
+<para>Plots the combined fit results for protons and helium. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function plots the combined fit results for protons and helium. It creates graphs for the fit results and performs a combined fit with a linear function. The fit values are stored in a map and returned.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fitMeansP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the mean fit values for protons. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the fit errors for protons. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitMeansHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the mean fit values for helium. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitErrorsHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the fit errors for helium. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elossP</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the energy loss values for protons. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>elossHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the energy loss values for helium. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A map containing the fit values for each layer-bar combination. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" line="61" column="10" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="110" bodyend="263" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" declline="61" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="CalibrateFragm_8h_1a661388630a24bdf651364f968813ec3c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteFitValuesOrdered</definition>
+        <argsstring>(const std::map&lt; TString, double &gt; &amp;fitValues)</argsstring>
+        <name>WriteFitValuesOrdered</name>
+        <param>
+          <type>const std::map&lt; TString, double &gt; &amp;</type>
+          <declname>fitValues</declname>
+        </param>
+        <briefdescription>
+<para>Writes the fit values to a configuration file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the fit values to a configuration file. The fit values are sorted by bar ID and written to the file in a specific format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fitValues</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A map containing the fit values for each layer-bar combination. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" line="77" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="265" bodyend="330" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" declline="77" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CalibrateFragm_8h_1ab4907eeeea5fe95544ce97afbb74d65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pair&lt; std::string, std::string &gt;</type>
+        <definition>pair&lt; std::string, std::string &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" line="89" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="332" bodyend="352" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" declline="89" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for processing and fitting charge distribution histograms from ROOT files. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with root -l -b -q &apos;CalibrateFragm.cc()&apos;. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TKey.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TDirectory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TNamed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateFragm_8h_1acdc0930628c2b53e29747f1b28afa1cb" kindref="member">ProcessFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>fileName,<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,<sp/></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,<sp/></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,<sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">std::map&lt;TString,<sp/>double&gt;<sp/><ref refid="CalibrateFragm_8h_1a2e0c3be0d7ea9ae813950b6af2c1e174" kindref="member">PlotFitResultsCombined</ref>(</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;int,<sp/>double&gt;&amp;<sp/>elossP,</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;int,<sp/>double&gt;&amp;<sp/>elossHe);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateFragm_8h_1a661388630a24bdf651364f968813ec3c" kindref="member">WriteFitValuesOrdered</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;TString,<sp/>double&gt;&amp;<sp/>fitValues);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal">pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="CalibrateFragm_8h_1ab4907eeeea5fe95544ce97afbb74d65d" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h"/>
+  </compounddef>
+</doxygen>

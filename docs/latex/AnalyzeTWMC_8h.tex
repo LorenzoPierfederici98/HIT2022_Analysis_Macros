@@ -1,0 +1,92 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Analyze\+TWMC.h File Reference}
+\hypertarget{AnalyzeTWMC_8h}{}\label{AnalyzeTWMC_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWMC.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWMC.h}}
+
+
+Header file for processing and fitting charge distribution histograms from ROOT files.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for Analyze\+TWMC.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AnalyzeTWMC_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{AnalyzeTWMC_8h_aafbdc017754d8392bf014a36767842e4}{Process\+File}} (const std\+::string \&file\+Name, int energy, std\+::map$<$ int, double $>$ \&fit\+MeanP, std\+::map$<$ int, double $>$ \&fit\+Mean\+He, std\+::map$<$ int, double $>$ \&fit\+ErrorP, std\+::map$<$ int, double $>$ \&fit\+Error\+He)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file to fit the charge distribution. \end{DoxyCompactList}\item 
+std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ \mbox{\hyperlink{AnalyzeTWMC_8h_a15e3e63c2fe3026d9a34aa8bbcc77a6d}{Fit\+Peaks\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, int energy)
+\begin{DoxyCompactList}\small\item\em Fits the peaks in a histogram using TSpectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for processing and fitting charge distribution histograms from ROOT files. 
+
+Macro that fits the charge distribution from the Analyze\+TWCharge\+Time.\+cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-\/range centered around the peak. The fit results are stored in files name like e.\+g. TW/\+Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+MC\+\_\+\+HIT2022\+\_\+\+MC\+\_\+140\+\_\+\+Fit.\+root. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+TWMC.\+cc()\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{AnalyzeTWMC_8h_a15e3e63c2fe3026d9a34aa8bbcc77a6d}\label{AnalyzeTWMC_8h_a15e3e63c2fe3026d9a34aa8bbcc77a6d} 
+\index{AnalyzeTWMC.h@{AnalyzeTWMC.h}!FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}}
+\index{FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}!AnalyzeTWMC.h@{AnalyzeTWMC.h}}
+\doxysubsubsection{\texorpdfstring{FitPeaksWithTSpectrum()}{FitPeaksWithTSpectrum()}}
+{\footnotesize\ttfamily std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ Fit\+Peaks\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{int}]{energy }\end{DoxyParamCaption})}
+
+
+
+Fits the peaks in a histogram using TSpectrum. 
+
+This function uses TSpectrum to search for peaks in a histogram within a specified range. It then fits the found peaks with Gaussian functions. The first peak is assumed to be for protons, and the second peak (if found) is assumed to be for heliums.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & The histogram to fit. \\
+\hline
+{\em energy} & The energy value associated with the histogram. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of TFit\+Result\+Ptr, where the first element is the fit result for protons and the second element is the fit result for helium. 
+\end{DoxyReturn}
+\Hypertarget{AnalyzeTWMC_8h_aafbdc017754d8392bf014a36767842e4}\label{AnalyzeTWMC_8h_aafbdc017754d8392bf014a36767842e4} 
+\index{AnalyzeTWMC.h@{AnalyzeTWMC.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!AnalyzeTWMC.h@{AnalyzeTWMC.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{int}]{energy,  }\item[{std\+::map$<$ int, double $>$ \&}]{fit\+MeanP,  }\item[{std\+::map$<$ int, double $>$ \&}]{fit\+Mean\+He,  }\item[{std\+::map$<$ int, double $>$ \&}]{fit\+ErrorP,  }\item[{std\+::map$<$ int, double $>$ \&}]{fit\+Error\+He }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file to fit the charge distribution. 
+
+This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12.), and then fitted within a certain bin-\/range centered around the peak. The fit results are stored in files named like e.\+g. TW/\+Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+MC\+\_\+\+HIT2022\+\_\+\+MC\+\_\+140\+\_\+\+Fit.\+root.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the ROOT file to process. \\
+\hline
+{\em energy} & The energy value associated with the file. \\
+\hline
+{\em fit\+MeanP} & A map to store the mean fit values for protons. \\
+\hline
+{\em fit\+Mean\+He} & A map to store the mean fit values for helium. \\
+\hline
+{\em fit\+ErrorP} & A map to store the fit errors for protons. \\
+\hline
+{\em fit\+Error\+He} & A map to store the fit errors for helium. \\
+\hline
+\end{DoxyParams}

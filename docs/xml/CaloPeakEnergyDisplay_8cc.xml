@@ -1,0 +1,300 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="CaloPeakEnergyDisplay_8cc" kind="file" language="C++">
+    <compoundname>CaloPeakEnergyDisplay.cc</compoundname>
+    <includes refid="CaloPeakEnergyDisplay_8h" local="yes">CaloPeakEnergyDisplay.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc</label>
+        <link refid="CaloPeakEnergyDisplay_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CaloPeakEnergyDisplay.h</label>
+        <link refid="CaloPeakEnergyDisplay_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="4">
+        <label>TF1.h</label>
+      </node>
+      <node id="3">
+        <label>TFile.h</label>
+      </node>
+      <node id="5">
+        <label>TFitResult.h</label>
+      </node>
+      <node id="7">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="CaloPeakEnergyDisplay_8cc_1adc508e7103ed5c207d628d4025f558dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CaloPeakEnergyDisplay</definition>
+        <argsstring>()</argsstring>
+        <name>CaloPeakEnergyDisplay</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" line="9" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" bodystart="9" bodyend="116"/>
+      </memberdef>
+      <memberdef kind="function" id="CaloPeakEnergyDisplay_8cc_1ad2291774551251ac39112a4b52e463ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string ConvertFileNumbersToString</definition>
+        <argsstring>(const std::vector&lt; int &gt; &amp;energies)</argsstring>
+        <name>ConvertFileNumbersToString</name>
+        <param>
+          <type>const std::vector&lt; int &gt; &amp;</type>
+          <declname>energies</declname>
+        </param>
+        <briefdescription>
+<para>Converts a vector of energy values to a comma-separated string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function converts a vector of energy values to a comma-separated string.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>energies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of energy values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A string containing the energy values separated by commas. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" line="118" column="13" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" bodystart="118" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="CaloPeakEnergyDisplay_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pair&lt; std::string, std::string &gt;</type>
+        <definition>pair&lt; std::string, std::string &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" line="129" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" bodystart="129" bodyend="149"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Macro<sp/>that<sp/>plots<sp/>the<sp/>charge<sp/>given<sp/>by<sp/>the<sp/>fit<sp/>performed<sp/>in<sp/>AnalyzePeakCrystal.cc<sp/>in<sp/>all</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>the<sp/>available<sp/>crystals<sp/>vs<sp/>the<sp/>beam<sp/>energy.<sp/>The<sp/>fit<sp/>results<sp/>are<sp/>stored<sp/>in<sp/>objects,<sp/>named<sp/>like</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Fit_result_Charge_Calo_crystalId_1<sp/>inside<sp/>the<sp/>e.g.<sp/>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root<sp/>file.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/>To<sp/>be<sp/>run<sp/>with<sp/>root<sp/>-l<sp/>-b<sp/>-q<sp/>&apos;CaloPeakEnergyDisplay.cc()&apos;<sp/>it<sp/>loops<sp/>on<sp/>every<sp/>crystalID<sp/>and<sp/>extracts<sp/>the<sp/>fit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/>values<sp/>only<sp/>on<sp/>the<sp/>available<sp/>IDs.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="CaloPeakEnergyDisplay_8h" kindref="compound">CaloPeakEnergyDisplay.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CaloPeakEnergyDisplay()<sp/>{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>double&gt;&gt;<sp/>filesAndEnergies<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_100MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>100},</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>140},</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_180MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>180},</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_200MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>200},</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_220MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>220}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>energies<sp/>=<sp/>{100,<sp/>140,<sp/>180,<sp/>200,<sp/>220};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>crystalID<sp/>=<sp/>0;<sp/>crystalID<sp/>&lt;<sp/>63;<sp/>crystalID++)<sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TCanvas<sp/>*canvas<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TCanvas(</highlight><highlight class="stringliteral">&quot;canvas&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Calo<sp/>Fit<sp/>Results<sp/>vs<sp/>Energies&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>600);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TGraphErrors<sp/>*graph<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TGraphErrors();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pointIndex<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[fileName,<sp/>energy]<sp/>:<sp/>filesAndEnergies)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFile<sp/>*inFile<sp/>=<sp/>TFile::Open(fileName.c_str());</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!inFile<sp/>||<sp/>inFile-&gt;IsZombie())<sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Could<sp/>not<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(inFile)<sp/>inFile-&gt;Close();<sp/></highlight><highlight class="comment">//<sp/>Ensure<sp/>file<sp/>is<sp/>closed<sp/>if<sp/>it<sp/>exists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFitResult<sp/>*fitresult<sp/>=<sp/>(TFitResult<sp/>*)inFile-&gt;Get(Form(</highlight><highlight class="stringliteral">&quot;Fit_result_Charge_Calo_crystalId_%d&quot;</highlight><highlight class="normal">,<sp/>crystalID));</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!fitresult)<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Warning:<sp/>Fit<sp/>results<sp/>not<sp/>found<sp/>in<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inFile-&gt;Close();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>mean<sp/>charge<sp/>and<sp/>error</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double_t<sp/>mean_charge<sp/>=<sp/>fitresult-&gt;Parameter(1);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Double_t<sp/>mean_charge_error<sp/>=<sp/>fitresult-&gt;ParError(1);</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Crystal<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>crystalID<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>Energy<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>energy<sp/></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MeV:<sp/>Mean<sp/>Charge<sp/>=<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mean_charge<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>±<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mean_charge_error<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>point<sp/>to<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetPoint(pointIndex,<sp/>energy,<sp/>mean_charge);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetPointError(pointIndex,<sp/>0,<sp/>mean_charge_error);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++pointIndex;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>inFile-&gt;Close();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(graph-&gt;GetN()<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>valid<sp/>points<sp/>for<sp/>crystal<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>crystalID<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>graph;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>canvas;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>energiesStr<sp/>=<sp/>ConvertFileNumbersToString(energies);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Customize<sp/>the<sp/>graph</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetTitle(Form(</highlight><highlight class="stringliteral">&quot;Beam<sp/>Energies<sp/>HE:<sp/>%s<sp/>MeV<sp/>|<sp/>Crystal<sp/>ID:<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>energiesStr.c_str(),<sp/>crystalID));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetMarkerStyle(24);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetMarkerSize(1.2);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;GetXaxis()-&gt;SetTitle(</highlight><highlight class="stringliteral">&quot;Beam<sp/>Energy<sp/>[MeV]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;GetYaxis()-&gt;SetTitle(</highlight><highlight class="stringliteral">&quot;Mean<sp/>Charge<sp/>[a.u.]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetMinimum(0.0);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>x_max<sp/>=<sp/>graph-&gt;GetXaxis()-&gt;GetXmax();</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Perform<sp/>linear<sp/>fit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TF1<sp/>*f1<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TF1(</highlight><highlight class="stringliteral">&quot;f1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;pol1&quot;</highlight><highlight class="normal">,<sp/>0.,<sp/>graph-&gt;GetXaxis()-&gt;GetXmax());</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFitResultPtr<sp/>fitresult_linear<sp/>=<sp/>graph-&gt;Fit(f1,<sp/></highlight><highlight class="stringliteral">&quot;S&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!fitresult_linear.Get()<sp/>||<sp/>fitresult_linear-&gt;Status()<sp/>!=<sp/>0)<sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Linear<sp/>fit<sp/>failed<sp/>for<sp/>crystal<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>crystalID<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[intercept,<sp/>sigma_intercept]<sp/>=<sp/>RoundMeasurement(fitresult_linear-&gt;Parameter(0),<sp/>fitresult_linear-&gt;ParError(0));</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[slope,<sp/>sigma_slope]<sp/>=<sp/>RoundMeasurement(fitresult_linear-&gt;Parameter(1),<sp/>fitresult_linear-&gt;ParError(1));</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>chi2<sp/>=<sp/>fitresult_linear-&gt;Chi2();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//int<sp/>ndf<sp/>=<sp/>fitresult_linear-&gt;Ndf();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TPaveText<sp/>*fitInfo<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TPaveText(0.3,<sp/>0.7,<sp/>0.45,<sp/>0.85,<sp/></highlight><highlight class="stringliteral">&quot;NDC&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitInfo-&gt;SetFillColor(0);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitInfo-&gt;AddText(Form(</highlight><highlight class="stringliteral">&quot;Intercept<sp/>[a.u.]<sp/>=<sp/>%s#pm<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>intercept.c_str(),<sp/>sigma_intercept.c_str()));</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitInfo-&gt;AddText(Form(</highlight><highlight class="stringliteral">&quot;Slope<sp/>[a.u.<sp/>/<sp/>MeV]<sp/>=<sp/>%s#pm<sp/>%s&quot;</highlight><highlight class="normal">,<sp/>slope.c_str(),<sp/>sigma_slope.c_str()));</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//fitInfo-&gt;AddText(Form(&quot;#chi^{2}<sp/>/<sp/>ndf<sp/>=<sp/>%.2f<sp/>/<sp/>%d&quot;,<sp/>chi2,<sp/>ndf));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitInfo-&gt;SetTextSize(0.03);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;GetXaxis()-&gt;SetLimits(0.,<sp/>x_max);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1-&gt;SetParameter(0,<sp/>std::stod(intercept));</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1-&gt;SetParameter(1,<sp/>std::stod(slope));</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Draw<sp/>fit<sp/>info</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;Draw(</highlight><highlight class="stringliteral">&quot;AP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>f1-&gt;Draw(</highlight><highlight class="stringliteral">&quot;same&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvas-&gt;cd();</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitInfo-&gt;Draw(</highlight><highlight class="stringliteral">&quot;same&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvas-&gt;Modified();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvas-&gt;Update();</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>canvas-&gt;SaveAs(Form(</highlight><highlight class="stringliteral">&quot;Plots/Merged_Calo_FitCharge_Energy_Crystal_%d.png&quot;</highlight><highlight class="normal">,<sp/>crystalID));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>fitInfo;</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>f1;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>graph;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>canvas;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="116"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal">std::string<sp/>ConvertFileNumbersToString(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>energies)<sp/>{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>energies.size();<sp/>++i)<sp/>{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>energies[i];</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(i<sp/>!=<sp/>energies.size()<sp/>-<sp/>1)<sp/>{</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;,<sp/>&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>a<sp/>comma<sp/>and<sp/>space<sp/>between<sp/>numbers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>ss.str();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">pair&lt;std::string,<sp/>std::string&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty)<sp/>{</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>the<sp/>order<sp/>of<sp/>magnitude<sp/>of<sp/>the<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uncertaintyOrder<sp/>=<sp/>(int)std::floor(std::log10(uncertainty));</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundingFactor<sp/>=<sp/>std::pow(10,<sp/>uncertaintyOrder);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Round<sp/>uncertainty<sp/>to<sp/>1<sp/>significant<sp/>figure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundedUncertainty<sp/>=<sp/>std::round(uncertainty<sp/>/<sp/>roundingFactor)<sp/>*<sp/>roundingFactor;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>the<sp/>value<sp/>to<sp/>match<sp/>the<sp/>precision<sp/>of<sp/>the<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundedValue<sp/>=<sp/>std::round(value<sp/>/<sp/>roundingFactor)<sp/>*<sp/>roundingFactor;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>the<sp/>number<sp/>of<sp/>decimal<sp/>places<sp/>to<sp/>display<sp/>based<sp/>on<sp/>the<sp/>rounded<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>decimalPlaces<sp/>=<sp/>std::max(0,<sp/>-uncertaintyOrder);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Format<sp/>value<sp/>and<sp/>uncertainty<sp/>into<sp/>strings<sp/>with<sp/>the<sp/>required<sp/>precision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>valueStream,<sp/>uncertaintyStream;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>valueStream<sp/>&lt;&lt;<sp/>std::fixed<sp/>&lt;&lt;<sp/>std::setprecision(decimalPlaces)<sp/>&lt;&lt;<sp/>roundedValue;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/>uncertaintyStream<sp/>&lt;&lt;<sp/>std::fixed<sp/>&lt;&lt;<sp/>std::setprecision(decimalPlaces)<sp/>&lt;&lt;<sp/>roundedUncertainty;</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{valueStream.str(),<sp/>uncertaintyStream.str()};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc"/>
+  </compounddef>
+</doxygen>

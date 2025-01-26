@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="AnalyzePeakCrystal_8cc" kind="file"><name>AnalyzePeakCrystal.cc</name>
+    <member refid="AnalyzePeakCrystal_8cc_1a88bec13ed9c957dba2ee562a6d361e5f" kind="function"><name>AnalyzePeakCrystal</name></member>
+    <member refid="AnalyzePeakCrystal_8cc_1a5aadeca6af3105a72d885dcc752237db" kind="function"><name>PrintMeasurement</name></member>
+    <member refid="AnalyzePeakCrystal_8cc_1a814766d4b881835f9ba65bc6bcb27b0d" kind="function"><name>FitPeakWithTSpectrum</name></member>
+    <member refid="AnalyzePeakCrystal_8cc_1aee07cb059be4125e9378b6ec353e11a3" kind="function"><name>FindHistograms</name></member>
+    <member refid="AnalyzePeakCrystal_8cc_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kind="function"><name>SaveFitResultsToFile</name></member>
+  </compound>
+  <compound refid="AnalyzePeakCrystal_8h" kind="file"><name>AnalyzePeakCrystal.h</name>
+    <member refid="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db" kind="function"><name>PrintMeasurement</name></member>
+    <member refid="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d" kind="function"><name>FitPeakWithTSpectrum</name></member>
+    <member refid="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3" kind="function"><name>FindHistograms</name></member>
+    <member refid="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kind="function"><name>SaveFitResultsToFile</name></member>
+  </compound>
+  <compound refid="AnalyzeTWFragm_8cc" kind="file"><name>AnalyzeTWFragm.cc</name>
+    <member refid="AnalyzeTWFragm_8cc_1a681163084492177f1b73f77bb682163c" kind="function"><name>AnalyzeTWFragm</name></member>
+    <member refid="AnalyzeTWFragm_8cc_1aabad4b700eccd2608a76d82430bfea3a" kind="function"><name>SumNentries</name></member>
+    <member refid="AnalyzeTWFragm_8cc_1a6c75f7227727efc6541cf19ea6fec148" kind="function"><name>FitHistogramsInDirectory</name></member>
+    <member refid="AnalyzeTWFragm_8cc_1abb0f053729deb39169a04ad7965ed097" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTWFragm_8cc_1a65f48b2f9841534aef2f32eb95f83b43" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="AnalyzeTWFragm_8h" kind="file"><name>AnalyzeTWFragm.h</name>
+    <member refid="AnalyzeTWFragm_8h_1aabad4b700eccd2608a76d82430bfea3a" kind="function"><name>SumNentries</name></member>
+    <member refid="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148" kind="function"><name>FitHistogramsInDirectory</name></member>
+    <member refid="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTWFragm_8h_1a65f48b2f9841534aef2f32eb95f83b43" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="AnalyzeTWMC_8cc" kind="file"><name>AnalyzeTWMC.cc</name>
+    <member refid="AnalyzeTWMC_8cc_1a4bbdba97ef8d0f4472258070cd19f46b" kind="function"><name>AnalyzeTWMC</name></member>
+    <member refid="AnalyzeTWMC_8cc_1aafbdc017754d8392bf014a36767842e4" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTWMC_8cc_1a15e3e63c2fe3026d9a34aa8bbcc77a6d" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="AnalyzeTWMC_8h" kind="file"><name>AnalyzeTWMC.h</name>
+    <member refid="AnalyzeTWMC_8h_1aafbdc017754d8392bf014a36767842e4" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTWMC_8h_1a15e3e63c2fe3026d9a34aa8bbcc77a6d" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="CalibrateFragm_8cc" kind="file"><name>CalibrateFragm.cc</name>
+    <member refid="CalibrateFragm_8cc_1a10864667a2825af8de8cbc872f4dd0e2" kind="function"><name>CalibrateFragm</name></member>
+    <member refid="CalibrateFragm_8cc_1acdc0930628c2b53e29747f1b28afa1cb" kind="function"><name>ProcessFile</name></member>
+    <member refid="CalibrateFragm_8cc_1a2e0c3be0d7ea9ae813950b6af2c1e174" kind="function"><name>PlotFitResultsCombined</name></member>
+    <member refid="CalibrateFragm_8cc_1a661388630a24bdf651364f968813ec3c" kind="function"><name>WriteFitValuesOrdered</name></member>
+    <member refid="CalibrateFragm_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="CalibrateFragm_8h" kind="file"><name>CalibrateFragm.h</name>
+    <member refid="CalibrateFragm_8h_1acdc0930628c2b53e29747f1b28afa1cb" kind="function"><name>ProcessFile</name></member>
+    <member refid="CalibrateFragm_8h_1a2e0c3be0d7ea9ae813950b6af2c1e174" kind="function"><name>PlotFitResultsCombined</name></member>
+    <member refid="CalibrateFragm_8h_1a661388630a24bdf651364f968813ec3c" kind="function"><name>WriteFitValuesOrdered</name></member>
+    <member refid="CalibrateFragm_8h_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="CaloPeakEnergyDisplay_8cc" kind="file"><name>CaloPeakEnergyDisplay.cc</name>
+    <member refid="CaloPeakEnergyDisplay_8cc_1adc508e7103ed5c207d628d4025f558dc" kind="function"><name>CaloPeakEnergyDisplay</name></member>
+    <member refid="CaloPeakEnergyDisplay_8cc_1ad2291774551251ac39112a4b52e463ee" kind="function"><name>ConvertFileNumbersToString</name></member>
+    <member refid="CaloPeakEnergyDisplay_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="CaloPeakEnergyDisplay_8h" kind="file"><name>CaloPeakEnergyDisplay.h</name>
+    <member refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kind="function"><name>ConvertFileNumbersToString</name></member>
+    <member refid="CaloPeakEnergyDisplay_8h_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src</name>
+  </compound>
+</doxygenindex>

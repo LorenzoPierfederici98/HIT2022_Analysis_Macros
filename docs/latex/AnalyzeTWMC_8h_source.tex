@@ -1,0 +1,33 @@
+\doxysection{Analyze\+TWMC.\+h}
+\hypertarget{AnalyzeTWMC_8h_source}{}\label{AnalyzeTWMC_8h_source}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWMC.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWMC.h}}
+\mbox{\hyperlink{AnalyzeTWMC_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTWMC_8h_aafbdc017754d8392bf014a36767842e4}{ProcessFile}}(}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName,\ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{int}\ energy,\ }
+\DoxyCodeLine{00047\ \ \ \ \ std::map<int,\ double>\&\ fitMeanP,}
+\DoxyCodeLine{00048\ \ \ \ \ std::map<int,\ double>\&\ fitMeanHe,}
+\DoxyCodeLine{00049\ \ \ \ \ std::map<int,\ double>\&\ fitErrorP,}
+\DoxyCodeLine{00050\ \ \ \ \ std::map<int,\ double>\&\ fitErrorHe}
+\DoxyCodeLine{00051\ );}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00064\ std::pair<TFitResultPtr,\ TFitResultPtr>\ \mbox{\hyperlink{AnalyzeTWMC_8h_a15e3e63c2fe3026d9a34aa8bbcc77a6d}{FitPeaksWithTSpectrum}}(TH1D\ *hist,\ \textcolor{keywordtype}{int}\ energy);}
+
+\end{DoxyCode}
