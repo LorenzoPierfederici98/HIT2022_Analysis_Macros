@@ -1,5 +1,3 @@
-API DOCUMENTATION
-=================
 
 AnalyzePeakCrystal
 ---------------------
