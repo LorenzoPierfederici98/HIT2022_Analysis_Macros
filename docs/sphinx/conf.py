@@ -38,6 +38,11 @@ breathe_default_project = "HIT 2022 Analysis"
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
+html_logo = "../FOOT_logo.png"
+html_theme_options = {
+    'logo_only': True,
+    'display_version': False,
+}
 
 
 # -- Options for HTML output -------------------------------------------------
