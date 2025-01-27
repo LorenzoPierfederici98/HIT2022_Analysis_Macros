@@ -10,7 +10,7 @@
  * The histogram peaks are automatically found with TSPectrum in a certain range (energy-dependent, the bins outside the range
  * are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-range centered around
  * the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g.
- * TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root. To be run with root -l -b -q 'AnalyzeTWFragm.cc()'.
+ * `TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root`. To be run with `root -l -b -q 'AnalyzeTWFragm.cc()'`.
  * 
  */
 

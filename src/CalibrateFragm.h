@@ -5,7 +5,7 @@
  * Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies
  * retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values
  * are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file.
- * To be run with root -l -b -q 'CalibrateFragm.cc()'.
+ * To be run with `root -l -b -q 'CalibrateFragm.cc()'`.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

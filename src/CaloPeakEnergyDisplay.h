@@ -4,8 +4,8 @@
  * 
  * Macro that plots the charge given by the fit performed in AnalyzePeakCrystal.cc in all
  * the available crystals vs the beam energy. The fit results are stored in objects, named like
- * Fit_result_Charge_Calo_crystalId_1 inside the e.g. Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root file.
- * To be run with root -l -b -q 'CaloPeakEnergyDisplay.cc()' it loops on every crystalID and extracts the fit
+ * `Fit_result_Charge_Calo_crystalId_1` inside the e.g. `Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root` file.
+ * To be run with `root -l -b -q 'CaloPeakEnergyDisplay.cc()'` it loops on every crystalID and extracts the fit
  * values only on the available IDs.
  */
 
