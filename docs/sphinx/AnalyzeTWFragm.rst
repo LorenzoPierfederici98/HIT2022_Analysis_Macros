@@ -2,5 +2,5 @@ AnalyzeTWFragm.h Documentation
 
 ==============================
 
-.. doxygenfile:: AnalyzeTWFragm.h
+.. doxygengroup:: AnalyzeTWFragm.h
     :project: HIT 2022 Analysis

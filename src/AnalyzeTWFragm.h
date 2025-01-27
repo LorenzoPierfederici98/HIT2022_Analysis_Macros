@@ -2,7 +2,7 @@
  * @file AnalyzeTWFragm.h
  * @brief Header file for AnalyzeTWFragm.cc
  * 
- * @mainpage This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files
+ * This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files
  * (for  fragmentation runs).
  * A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton
  * peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files
@@ -11,6 +11,10 @@
  * are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-range centered around
  * the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g.
  * TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root. To be run with root -l -b -q 'AnalyzeTWFragm.cc()'.
+ * 
+ * @addtogroup AnalyzeTWFragm AnalyzeTWFragm Functions
+ * @ingroup AnalysisModules
+ * @{
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)
@@ -111,3 +115,5 @@ std::pair<TFitResultPtr, TFitResultPtr> FitPeaksWithTSpectrum(
     double thresh_peak_high, 
     const TString& layerBarCombination
 );
+
+/** @} */ // End of group AnalyzeTWFragm
