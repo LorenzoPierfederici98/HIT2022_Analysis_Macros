@@ -8,9 +8,6 @@ build:
     python: "3.10"
   apt_packages:
     - doxygen
-  jobs:
-    - echo "Starting the Doxygen build process..."
-    - cd docs/ && doxygen Doxyfile
 
 # Build documentation in the docs/sphinx directory
 sphinx:
