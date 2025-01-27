@@ -12,8 +12,6 @@
  * the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g.
  * TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root. To be run with root -l -b -q 'AnalyzeTWFragm.cc()'.
  * 
- * @addtogroup AnalyzeTWFragm AnalyzeTWFragm Functions
- * @{
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)
@@ -114,5 +112,3 @@ std::pair<TFitResultPtr, TFitResultPtr> FitPeaksWithTSpectrum(
     double thresh_peak_high, 
     const TString& layerBarCombination
 );
-
-/** @} */ // End of group AnalyzeTWFragm
