@@ -225,7 +225,7 @@
 <para>Header file for processing and fitting charge distribution histograms from ROOT files. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root. To be run with root -l -b -q &apos;AnalyzeTWMC.cc()&apos;. </para>
+<para>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. <computeroutput>TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root</computeroutput>. To be run with <lsquo/>root -l -b -q &apos;AnalyzeTWMC.cc()<rsquo/>`. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

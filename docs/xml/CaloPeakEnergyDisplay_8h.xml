@@ -131,7 +131,7 @@
 <para>Header file for plotting charge distribution histograms from ROOT files. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that plots the charge given by the fit performed in AnalyzePeakCrystal.cc in all the available crystals vs the beam energy. The fit results are stored in objects, named like Fit_result_Charge_Calo_crystalId_1 inside the e.g. Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root file. To be run with root -l -b -q &apos;CaloPeakEnergyDisplay.cc()&apos; it loops on every crystalID and extracts the fit values only on the available IDs. </para>
+<para>Macro that plots the charge given by the fit performed in AnalyzePeakCrystal.cc in all the available crystals vs the beam energy. The fit results are stored in objects, named like <computeroutput>Fit_result_Charge_Calo_crystalId_1</computeroutput> inside the e.g. <computeroutput>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root</computeroutput> file. To be run with <lsquo/>root -l -b -q &apos;CaloPeakEnergyDisplay.cc()<rsquo/>` it loops on every crystalID and extracts the fit values only on the available IDs. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

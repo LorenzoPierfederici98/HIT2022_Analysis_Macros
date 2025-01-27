@@ -51,4 +51,5 @@ html_theme_options = {
 #extensions.append("sphinx_wagtail_theme")
 #html_theme = 'sphinx_wagtail_theme'
 html_theme = 'sphinx_rtd_theme'
+html_theme_path = ['/mnt/c/Users/Lorenzo/AppData/Local/Packages/PythonSoftwareFoundation.Python.3.10_qbz5n2kfra8p0/LocalCache/local-packages/Python310/site-packages']
 html_static_path = ['_static']

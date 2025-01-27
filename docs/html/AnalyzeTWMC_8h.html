@@ -150,7 +150,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root. To be run with root -l -b -q 'AnalyzeTWMC.cc()'. </p>
+<p>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. <code>TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root</code>. To be run with &lsquo;root -l -b -q 'AnalyzeTWMC.cc()&rsquo;`. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a15e3e63c2fe3026d9a34aa8bbcc77a6d" name="a15e3e63c2fe3026d9a34aa8bbcc77a6d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a15e3e63c2fe3026d9a34aa8bbcc77a6d">&#9670;&#160;</a></span>FitPeaksWithTSpectrum()</h2>
