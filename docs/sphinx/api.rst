@@ -1,31 +1,31 @@
 API DOCUMENTATION
 =================
 
-AnalyzePeakCrystal.h
+AnalyzePeakCrystal
 ---------------------
 
 .. doxygenfile:: AnalyzePeakCrystal.h
    :project: HIT 2022 Analysis
 
-AnalyzeTWFragm.h
+AnalyzeTWFragm
 ----------------
 
 .. doxygenfile:: AnalyzeTWFragm.h
    :project: HIT 2022 Analysis
 
-AnalyzeTWMC.h
+AnalyzeTWMC
 -------------
 
 .. doxygenfile:: AnalyzeTWMC.h
    :project: HIT 2022 Analysis
 
-CaloPeakEnergyDisplay.h
+CaloPeakEnergyDisplay
 -----------------------
 
 .. doxygenfile:: CaloPeakEnergyDisplay.h
    :project: HIT 2022 Analysis
 
-CalibrateFragm.h
+CalibrateFragm
 ----------------
 
 .. doxygenfile:: CalibrateFragm.h
