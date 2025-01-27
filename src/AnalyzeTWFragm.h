@@ -13,7 +13,6 @@
  * TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root. To be run with root -l -b -q 'AnalyzeTWFragm.cc()'.
  * 
  * @addtogroup AnalyzeTWFragm AnalyzeTWFragm Functions
- * @ingroup AnalysisModules
  * @{
  */
 
