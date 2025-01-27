@@ -8,7 +8,7 @@ build:
     python: "3.10"
   apt_packages:
     - doxygen
-  commands:
+  jobs:
     - echo "Starting the Doxygen build process..."
     - cd docs/ && doxygen Doxyfile
 
