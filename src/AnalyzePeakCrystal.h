@@ -1,6 +1,6 @@
 /**
  * @file AnalyzePeakCrystal.h
- * @brief Header file for processing and fitting charge distribution histograms from ROOT files.
+ * @brief Header file for processing and fitting charge distribution histograms from ROOT files. BBBBBB
  * 
  * Macro that fits the 1D charge histograms for a given crystal of the calorimeter.
  * The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed).
