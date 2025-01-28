@@ -15,7 +15,7 @@ def run_doxygen():
     doxygen_path = os.path.abspath("../Doxyfile")  # Adjust based on the location
     if os.path.exists(doxygen_path):
         print("Running Doxygen...")
-        subprocess.run(["doxygen Doxyfile", doxygen_path], check=True)
+        subprocess.run(["doxygen", doxygen_path], check=True)
     else:
         print("DoxyFile not found. Skipping Doxygen step.")
 
