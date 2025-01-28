@@ -9,7 +9,7 @@
 import os
 import sys
 import subprocess
-sys.path.insert(0, os.path.abspath('../src'))
+sys.path.insert(0, os.path.abspath('../../src'))
 
 def run_doxygen():
     doxygen_path = os.path.abspath("../Doxyfile")  # Adjust based on the location
