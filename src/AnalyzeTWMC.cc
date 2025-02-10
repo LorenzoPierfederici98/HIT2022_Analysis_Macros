@@ -1,4 +1,4 @@
-// Macro that fits the charge distribution from the AnalyzeTWFragMC.cc output files (for MC runs).
+// Macro that fits the energy loss distribution from the AnalyzeTWFragMC.cc output files (for MC runs).
 // A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically
 // found with TSPectrum and then fitted within a certain bin-range centered around the peak. The fit results
 // are stored in files name like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root (created if they don't already exist,

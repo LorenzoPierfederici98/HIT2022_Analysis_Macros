@@ -1,16 +1,17 @@
 // Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies
-// retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values
-// are fitted with a 1 parameter linear function; these parameters (on per bar) are written in the configuration file.
+// loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro).
+// The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar)
+// are written in the configuration file.
 // To be run with root -l -b -q 'CalibrateFragm.cc()'
 
 #include "CalibrateFragm.h"
 
 void CalibrateFragm() {
     std::vector<std::pair<std::string, int>> filesAndEnergies = {
-        {"TW/AnaFOOT_TW_Decoded_HIT2022_fragm_100MeV_Fit.root", 100},
-        {"TW/AnaFOOT_TW_Decoded_HIT2022_fragm_140MeV_Fit.root", 140},
-        {"TW/AnaFOOT_TW_Decoded_HIT2022_fragm_200MeV_Fit.root", 200},
-        {"TW/AnaFOOT_TW_Decoded_HIT2022_fragm_220MeV_Fit.root", 220}
+        {"TW/cuts/AnaFOOT_TW_Decoded_HIT2022_fragm_100MeV_Fit.root", 100},
+        {"TW/cuts/AnaFOOT_TW_Decoded_HIT2022_fragm_140MeV_Fit.root", 140},
+        {"TW/cuts/AnaFOOT_TW_Decoded_HIT2022_fragm_200MeV_Fit.root", 200},
+        {"TW/cuts/AnaFOOT_TW_Decoded_HIT2022_fragm_220MeV_Fit.root", 220}
     };
     // Smeared MC values
     // std::map<int, double>elossP = {{100, 2.721}, {140, 2.020}, {200, 1.4761}, {220, 1.4267}};  // energy loss for protons, from MC
@@ -45,11 +46,20 @@ void ProcessFile(const TString& fileName,
         return;
     }
 
+    // Access the "ChargeFit" directory
+    TDirectory* chargeFitDir = (TDirectory*)inputFile->Get("ChargeFit");
+    if (!chargeFitDir) {
+        std::cerr << "Directory 'ChargeFit' not found in file: " << fileName << std::endl;
+        inputFile->Close();
+        delete inputFile;
+        return;
+    }
+
     // Temporary storage for layer-bar combinations with both fits
     std::map<TString, std::pair<TFitResult *, TFitResult *>> validResults;
 
-    // Loop through all objects in the file
-    TIter nextKey(inputFile->GetListOfKeys());
+    // Loop through all objects in the "ChargeFit" directory
+    TIter nextKey(chargeFitDir->GetListOfKeys());
     TKey* key;
     while ((key = (TKey*)nextKey())) {
         TString objectName = key->GetName();
@@ -63,8 +73,8 @@ void ProcessFile(const TString& fileName,
         TString layerBarName = objectName;
         layerBarName.Remove(0, objectName.First('_') + 1);
 
-        // Retrieve the fit result object
-        TFitResult *fitResult = (TFitResult *)inputFile->Get(objectName);
+        // Retrieve the fit result object from "ChargeFit" directory
+        TFitResult *fitResult = (TFitResult *)chargeFitDir->Get(objectName);
         if (!fitResult || !fitResult->IsValid()) continue;
 
         // Store the fit result in the temporary map
@@ -96,6 +106,7 @@ void ProcessFile(const TString& fileName,
         fitErrorsP[layerBarName][energy] = errorP;
         fitMeansHe[layerBarName][energy] = meanHe;
         fitErrorsHe[layerBarName][energy] = errorHe;
+
         if (layerBarName == "LayerX_bar9") {
             cout << "meanP: " << meanP << " errorP: " << errorP << endl;
             cout << "meanHe: " << meanHe << " errorHe: " << errorHe << endl;
@@ -106,6 +117,7 @@ void ProcessFile(const TString& fileName,
     inputFile->Close();
     delete inputFile;
 }
+
 
 std::map<TString, double> PlotFitResultsCombined(
     const std::map<TString, std::map<int, double>>& fitMeansP,
@@ -248,7 +260,7 @@ std::map<TString, double> PlotFitResultsCombined(
             legend->SetTextSize(0.03);
             legend->Draw();
 
-            c->SaveAs(Form("Plots/Fragmentation_%s.png", layerBarName.Data()));
+            c->SaveAs(Form("Plots/cuts/Fragmentation_%s.png", layerBarName.Data()));
 
             delete combinedFit;
             delete combinedGraph;
