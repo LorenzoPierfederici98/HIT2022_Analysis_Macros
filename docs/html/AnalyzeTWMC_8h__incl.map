@@ -1,5 +1,5 @@
 <map id="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.h" name="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.h">
-<area shape="rect" id="Node000001" title="Header file for processing and fitting charge distribution histograms from ROOT files." alt="" coords="559,5,768,60"/>
+<area shape="rect" id="Node000001" title="Header file for processing and fitting energy loss distribution histograms from ROOT files." alt="" coords="559,5,768,60"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,108,71,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="559,46,344,71,85,111,84,105,344,65,558,41"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="95,108,159,133"/>

@@ -34,14 +34,14 @@ void \mbox{\hyperlink{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148}{Fit\+
 \begin{DoxyCompactList}\small\item\em Fits histograms in a directory and stores the results. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{AnalyzeTWFragm_8h_abb0f053729deb39169a04ad7965ed097}{Process\+File}} (const std\+::string \&file\+Name, double energy, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+MeansP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Means\+He, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+ErrorsP, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&fit\+Errors\+He)
 \begin{DoxyCompactList}\small\item\em Processes a ROOT file and fits the histograms. \end{DoxyCompactList}\item 
-std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ \mbox{\hyperlink{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43}{Fit\+Peaks\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, double energy, double thresh\+\_\+peak\+\_\+low, double thresh\+\_\+peak\+\_\+high, const TString \&layer\+Bar\+Combination)
+std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ \mbox{\hyperlink{AnalyzeTWFragm_8h_a14f0293f4852a5be3aa203d1aedcf64c}{Fit\+Peaks\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, double energy, const TString \&layer\+Bar\+Combination)
 \begin{DoxyCompactList}\small\item\em Fits peaks in a histogram using TSpectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 Header file for Analyze\+TWFragm.\+cc. 
 
-This file contains function declarations for fitting the charge distribution from the Analyze\+TWCharge\+Time.\+cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum in a certain range (energy-\/dependent, the bins outside the range are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.\+g. {\ttfamily TW/\+Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+Me\+V\+\_\+\+Fit.\+root}. To be run with `root -\/l -\/b -\/q \textquotesingle{}Analyze\+TWFragm.\+cc()'\`{}. 
+This file contains function declarations for fitting charge distributions from the Analyze\+TWCharge\+Time.\+cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.\+g. Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+Me\+V\+\_\+\+Fit.\+root (created if they don\textquotesingle{}t already exist, or overwritten if they do), inside of the Charge\+Fit directory. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+TWFragm.\+cc()\textquotesingle{}. 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148}\label{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148} 
@@ -54,7 +54,7 @@ This file contains function declarations for fitting the charge distribution fro
 
 Fits histograms in a directory and stores the results. 
 
-This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.
+This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the bar and beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.
 
 
 \begin{DoxyParams}{Parameters}
@@ -75,11 +75,11 @@ This function fits the histograms in the specified directory using two separate 
 {\em output\+File} & Pointer to the output ROOT file to store the fitted histograms. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43}\label{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43} 
+\Hypertarget{AnalyzeTWFragm_8h_a14f0293f4852a5be3aa203d1aedcf64c}\label{AnalyzeTWFragm_8h_a14f0293f4852a5be3aa203d1aedcf64c} 
 \index{AnalyzeTWFragm.h@{AnalyzeTWFragm.h}!FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}}
 \index{FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}!AnalyzeTWFragm.h@{AnalyzeTWFragm.h}}
 \doxysubsubsection{\texorpdfstring{FitPeaksWithTSpectrum()}{FitPeaksWithTSpectrum()}}
-{\footnotesize\ttfamily std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ Fit\+Peaks\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{double}]{energy,  }\item[{double}]{thresh\+\_\+peak\+\_\+low,  }\item[{double}]{thresh\+\_\+peak\+\_\+high,  }\item[{const TString \&}]{layer\+Bar\+Combination }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ Fit\+Peaks\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{double}]{energy,  }\item[{const TString \&}]{layer\+Bar\+Combination }\end{DoxyParamCaption})}
 
 
 
@@ -92,10 +92,6 @@ This function fits two peaks in the specified histogram using TSpectrum. The pea
 {\em hist} & Pointer to the histogram. \\
 \hline
 {\em energy} & Beam energy. \\
-\hline
-{\em thresh\+\_\+peak\+\_\+low} & Lower threshold for peak search. \\
-\hline
-{\em thresh\+\_\+peak\+\_\+high} & Upper threshold for peak search. \\
 \hline
 {\em layer\+Bar\+Combination} & String representing the layer and bar combination. \\
 \hline

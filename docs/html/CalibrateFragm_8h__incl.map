@@ -1,5 +1,5 @@
 <map id="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h" name="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.h">
-<area shape="rect" id="Node000001" title="Header file for processing and fitting charge distribution histograms from ROOT files." alt="" coords="492,5,707,60"/>
+<area shape="rect" id="Node000001" title="Header file for the charge&#45;energy calibration." alt="" coords="492,5,707,60"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,108,71,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="492,49,306,74,85,111,84,105,305,68,491,44"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="95,108,159,133"/>

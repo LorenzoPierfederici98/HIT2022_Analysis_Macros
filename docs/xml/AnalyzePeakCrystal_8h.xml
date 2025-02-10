@@ -285,7 +285,7 @@
 <para>Header file for processing and fitting charge distribution histograms from ROOT files. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. <lsquo/>root -l -b -q &apos;AnalyzePeakCrystal.cc()<rsquo/>`<computeroutput>, -b doesn&apos;t display plots. In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.g.</computeroutput>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root` which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </para>
+<para>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. root -l -b -q &apos;AnalyzePeakCrystal.cc()&apos;, -b doesn&apos;t display plots. In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.g. <computeroutput>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root</computeroutput> which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

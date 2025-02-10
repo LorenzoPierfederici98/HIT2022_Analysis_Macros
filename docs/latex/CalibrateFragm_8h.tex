@@ -2,7 +2,7 @@
 \hypertarget{CalibrateFragm_8h}{}\label{CalibrateFragm_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateFragm.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateFragm.h}}
 
 
-Header file for processing and fitting charge distribution histograms from ROOT files.  
+Header file for the charge-\/energy calibration.  
 
 
 {\ttfamily \#include $<$TFile.\+h$>$}\newline
@@ -17,7 +17,8 @@ Header file for processing and fitting charge distribution histograms from ROOT 
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$regex$>$}\newline
-Include dependency graph for Calibrate\+Fragm.\+h\+:\nopagebreak
+Include dependency graph for Calibrate\+Fragm.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,9 +39,9 @@ pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{CalibrateFragm_8h_ab49
 
 
 \doxysubsection{Detailed Description}
-Header file for processing and fitting charge distribution histograms from ROOT files. 
+Header file for the charge-\/energy calibration. 
 
-Macro that plots the fit results on protons and helium peaks given by the Analyze\+TWFragm.\+cc macro vs the energies retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with `root -\/l -\/b -\/q \textquotesingle{}Calibrate\+Fragm.\+cc()'\`{}. 
+Macro that plots the fit results on protons and helium peaks given by the Analyze\+TWFragm.\+cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the Analyze\+TWMC.\+cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with root -\/l -\/b -\/q \textquotesingle{}Calibrate\+Fragm.\+cc()\textquotesingle{}. 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174}\label{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174} 

@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="CalibrateTof_8h" kind="file" language="C++">
+    <compoundname>CalibrateTof.h</compoundname>
+    <includes local="no">TFile.h</includes>
+    <includes local="no">TFitResultPtr.h</includes>
+    <includes local="no">TGraphErrors.h</includes>
+    <includes local="no">TCanvas.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">sstream</includes>
+    <includes local="no">tuple</includes>
+    <includes local="no">map</includes>
+    <includes local="no">algorithm</includes>
+    <includes local="no">iomanip</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">cstdio</includes>
+    <includes local="yes">TString.h</includes>
+    <includedby refid="CalibrateTof_8cc" local="yes">/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h</label>
+        <link refid="CalibrateTof_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="2">
+        <label>TFile.h</label>
+      </node>
+      <node id="3">
+        <label>TFitResultPtr.h</label>
+      </node>
+      <node id="4">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="17">
+        <label>TString.h</label>
+      </node>
+      <node id="13">
+        <label>algorithm</label>
+      </node>
+      <node id="15">
+        <label>cmath</label>
+      </node>
+      <node id="16">
+        <label>cstdio</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>iomanip</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>map</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>tuple</label>
+      </node>
+      <node id="7">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="CalibrateTof_8h_1acbf260d366bf4b7dc33d00c2b2f2552f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TFitResult *</type>
+        <definition>TFitResult * LoadFitResult</definition>
+        <argsstring>(const std::string &amp;fileName, const std::string &amp;fitResultName)</argsstring>
+        <name>LoadFitResult</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fitResultName</declname>
+        </param>
+        <briefdescription>
+<para>Loads a fit result from a specified file and directory. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file containing the fit result. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fitResultName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the fit result to load. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pointer to the loaded TFitResult, or nullptr if an error occurs. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="41" column="12" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="30" bodyend="49" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="41" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ExtractMeanValues</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::string &amp;layer, int bar, std::vector&lt; double &gt; &amp;means, std::vector&lt; double &gt; &amp;meanErrors)</argsstring>
+        <name>ExtractMeanValues</name>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;</type>
+          <declname>filesAndEnergies</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>layer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bar</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>means</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanErrors</declname>
+        </param>
+        <briefdescription>
+<para>Extracts mean values and uncertainties from fit results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filesAndEnergies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of pairs containing file names and corresponding energies. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The layer identifier (e.g., &quot;X&quot; or &quot;Y&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bar number. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>means</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector to store the extracted mean values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanErrors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector to store the extracted mean errors. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="52" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="52" bodyend="63" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="CalibrateTof_8h_1a2976661d2feaa11e0d6d557df1dbdf05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteMeanDifferences</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergiesMC, const std::string &amp;layer, int bar)</argsstring>
+        <name>WriteMeanDifferences</name>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;</type>
+          <declname>filesAndEnergies</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;</type>
+          <declname>filesAndEnergiesMC</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>layer</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>bar</declname>
+        </param>
+        <briefdescription>
+<para>Writes the differences between data and MC mean values to calibration files. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the fit values to configuration files. The fit values are sorted by bar ID and written to the file in a specific format.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>filesAndEnergies</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of pairs containing data file names and corresponding energies. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>filesAndEnergiesMC</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A vector of pairs containing MC file names and corresponding energies. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>layer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The layer identifier (e.g., &quot;X&quot; or &quot;Y&quot;). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>bar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bar number. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="65" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="65" bodyend="146" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="65" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for the ToF calibration. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). To be run with root -l -b -q &apos;CalibrateTof.cc()&apos;. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFitResultPtr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;tuple&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;algorithm&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdio&gt;</highlight><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">//<sp/>for<sp/>sscanf</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;TString.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">TFitResult*<sp/><ref refid="CalibrateTof_8h_1acbf260d366bf4b7dc33d00c2b2f2552f" kindref="member">LoadFitResult</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fitResultName);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea" kindref="member">ExtractMeanValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergies,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>layer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bar,<sp/>std::vector&lt;double&gt;&amp;<sp/>means,<sp/>std::vector&lt;double&gt;&amp;<sp/>meanErrors);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateTof_8h_1a2976661d2feaa11e0d6d557df1dbdf05" kindref="member">WriteMeanDifferences</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergies,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergiesMC,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>layer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bar);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h"/>
+  </compounddef>
+</doxygen>

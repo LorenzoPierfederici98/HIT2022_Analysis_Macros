@@ -1,0 +1,145 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Analyze\+Tof\+MC.h File Reference}
+\hypertarget{AnalyzeTofMC_8h}{}\label{AnalyzeTofMC_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTofMC.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTofMC.h}}
+
+
+Header file for Analyze\+Tof\+MC.\+cc.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for Analyze\+Tof\+MC.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{AnalyzeTofMC_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{AnalyzeTofMC_8h_a528148d5c0683839f6dec9f9a13ef9b6}{Process\+File}} (const std\+::string \&file\+Name, int energy, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&Tof\+Means\+MC, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&Tof\+Errors\+MC)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file and fits the histograms. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{AnalyzeTofMC_8h_a2136ab016ddeabc904c87316e8d034b0}{Fit\+Histograms\+In\+Directory}} (TDirectory \texorpdfstring{$\ast$}{*}dir, int energy, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&Tof\+Means\+MC, std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&Tof\+Errors\+MC, TFile \texorpdfstring{$\ast$}{*}output\+File)
+\begin{DoxyCompactList}\small\item\em Fits histograms in a directory and stores the results. \end{DoxyCompactList}\item 
+TFit\+Result\+Ptr \mbox{\hyperlink{AnalyzeTofMC_8h_a82f501f613b6a51643fcadd61ce5ba9b}{Fit\+Peaks\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, int energy, const TString \&layer\+Bar\+Combination)
+\begin{DoxyCompactList}\small\item\em Fits peaks in a histogram using TSpectrum. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for Analyze\+Tof\+MC.\+cc. 
+
+This file contains function declarations for fitting ToF (Time of Flight) distributions from the Analyze\+TWFrag\+MC.\+cc output files (for MC runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSpectrum; the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.\+g. Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+\_\+\+Fit.\+root (created if they don\textquotesingle{}t already exist, or overwritten if they do), inside of the Tof\+Fit directory. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+Tof\+MC.\+cc()\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{AnalyzeTofMC_8h_a2136ab016ddeabc904c87316e8d034b0}\label{AnalyzeTofMC_8h_a2136ab016ddeabc904c87316e8d034b0} 
+\index{AnalyzeTofMC.h@{AnalyzeTofMC.h}!FitHistogramsInDirectory@{FitHistogramsInDirectory}}
+\index{FitHistogramsInDirectory@{FitHistogramsInDirectory}!AnalyzeTofMC.h@{AnalyzeTofMC.h}}
+\doxysubsubsection{\texorpdfstring{FitHistogramsInDirectory()}{FitHistogramsInDirectory()}}
+{\footnotesize\ttfamily void Fit\+Histograms\+In\+Directory (\begin{DoxyParamCaption}\item[{TDirectory \texorpdfstring{$\ast$}{*}}]{dir,  }\item[{int}]{energy,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{Tof\+Means\+MC,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{Tof\+Errors\+MC,  }\item[{TFile \texorpdfstring{$\ast$}{*}}]{output\+File }\end{DoxyParamCaption})}
+
+
+
+Fits histograms in a directory and stores the results. 
+
+This function fits the histograms in the specified directory using a gaussian function. The fit results are stored in the provided maps and written to the output file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Pointer to the directory containing the histograms. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em Tof\+Means\+MC} & Map to store the mean values of the fits. \\
+\hline
+{\em Tof\+Errors\+MC} & Map to store the errors of the fits. \\
+\hline
+{\em output\+File} & Pointer to the output ROOT file to store the fitted histograms.\\
+\hline
+\end{DoxyParams}
+This function fits the histograms in the specified directory using a gaussian function. The fit results are stored in the provided maps and written to the output file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dir} & Pointer to the directory containing the histograms. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em Tof\+Means} & Map to store the mean values of the fits. \\
+\hline
+{\em Tof\+Errors} & Map to store the errors of the fits. \\
+\hline
+{\em output\+File} & Pointer to the output ROOT file to store the fitted histograms. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{AnalyzeTofMC_8h_a82f501f613b6a51643fcadd61ce5ba9b}\label{AnalyzeTofMC_8h_a82f501f613b6a51643fcadd61ce5ba9b} 
+\index{AnalyzeTofMC.h@{AnalyzeTofMC.h}!FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}}
+\index{FitPeaksWithTSpectrum@{FitPeaksWithTSpectrum}!AnalyzeTofMC.h@{AnalyzeTofMC.h}}
+\doxysubsubsection{\texorpdfstring{FitPeaksWithTSpectrum()}{FitPeaksWithTSpectrum()}}
+{\footnotesize\ttfamily TFit\+Result\+Ptr Fit\+Peaks\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{int}]{energy,  }\item[{const TString \&}]{layer\+Bar\+Combination }\end{DoxyParamCaption})}
+
+
+
+Fits peaks in a histogram using TSpectrum. 
+
+This function fits peaks in the specified histogram using TSpectrum and a gaussian function. The fit results are returned as a TFit\+Result\+Ptr.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & Pointer to the histogram. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em layer\+Bar\+Combination} & String representing the layer and bar combination. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TFit\+Result\+Ptr containing the fit results. 
+\end{DoxyReturn}
+\Hypertarget{AnalyzeTofMC_8h_a528148d5c0683839f6dec9f9a13ef9b6}\label{AnalyzeTofMC_8h_a528148d5c0683839f6dec9f9a13ef9b6} 
+\index{AnalyzeTofMC.h@{AnalyzeTofMC.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!AnalyzeTofMC.h@{AnalyzeTofMC.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{int}]{energy,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{Tof\+Means\+MC,  }\item[{std\+::map$<$ TString, std\+::map$<$ int, double $>$ $>$ \&}]{Tof\+Errors\+MC }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file and fits the histograms. 
+
+This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the ROOT file. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em Tof\+Means\+MC} & Map to store the mean values of the fits. \\
+\hline
+{\em Tof\+Errors\+MC} & Map to store the errors of the fits.\\
+\hline
+\end{DoxyParams}
+This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the ROOT file. \\
+\hline
+{\em energy} & Beam energy. \\
+\hline
+{\em Tof\+Means} & Map to store the mean values of the fits. \\
+\hline
+{\em Tof\+Errors} & Map to store the errors of the fits. \\
+\hline
+\end{DoxyParams}

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writefitvaluesordered_0',['WriteFitValuesOrdered',['../CalibrateFragm_8h.html#a661388630a24bdf651364f968813ec3c',1,'CalibrateFragm.cc']]]
+  ['roundmeasurement_0',['roundmeasurement',['../CalibrateFragm_8h.html#ab4907eeeea5fe95544ce97afbb74d65d',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc'],['../CaloPeakEnergyDisplay_8h.html#ab4907eeeea5fe95544ce97afbb74d65d',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc']]]
 ];

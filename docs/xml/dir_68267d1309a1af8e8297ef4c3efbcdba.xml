@@ -4,12 +4,18 @@
     <compoundname>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src</compoundname>
     <innerfile refid="AnalyzePeakCrystal_8cc">AnalyzePeakCrystal.cc</innerfile>
     <innerfile refid="AnalyzePeakCrystal_8h">AnalyzePeakCrystal.h</innerfile>
+    <innerfile refid="AnalyzeTofFragm_8cc">AnalyzeTofFragm.cc</innerfile>
+    <innerfile refid="AnalyzeTofFragm_8h">AnalyzeTofFragm.h</innerfile>
+    <innerfile refid="AnalyzeTofMC_8cc">AnalyzeTofMC.cc</innerfile>
+    <innerfile refid="AnalyzeTofMC_8h">AnalyzeTofMC.h</innerfile>
     <innerfile refid="AnalyzeTWFragm_8cc">AnalyzeTWFragm.cc</innerfile>
     <innerfile refid="AnalyzeTWFragm_8h">AnalyzeTWFragm.h</innerfile>
     <innerfile refid="AnalyzeTWMC_8cc">AnalyzeTWMC.cc</innerfile>
     <innerfile refid="AnalyzeTWMC_8h">AnalyzeTWMC.h</innerfile>
     <innerfile refid="CalibrateFragm_8cc">CalibrateFragm.cc</innerfile>
     <innerfile refid="CalibrateFragm_8h">CalibrateFragm.h</innerfile>
+    <innerfile refid="CalibrateTof_8cc">CalibrateTof.cc</innerfile>
+    <innerfile refid="CalibrateTof_8h">CalibrateTof.h</innerfile>
     <innerfile refid="CaloPeakEnergyDisplay_8cc">CaloPeakEnergyDisplay.cc</innerfile>
     <innerfile refid="CaloPeakEnergyDisplay_8h">CaloPeakEnergyDisplay.h</innerfile>
     <briefdescription>

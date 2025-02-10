@@ -3,38 +3,38 @@
 \mbox{\hyperlink{CalibrateFragm_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <regex>}}
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CalibrateFragm_8h_acdc0930628c2b53e29747f1b28afa1cb}{ProcessFile}}(\textcolor{keyword}{const}\ TString\&\ fileName,\ }
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ energy,\ }
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,\ }
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,\ }
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,\ }
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe);}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00061\ std::map<TString,\ double>\ \mbox{\hyperlink{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174}{PlotFitResultsCombined}}(}
-\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,}
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,}
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,}
-\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe,}
-\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ double>\&\ elossP,}
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ double>\&\ elossHe);}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00077\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CalibrateFragm_8h_a661388630a24bdf651364f968813ec3c}{WriteFitValuesOrdered}}(\textcolor{keyword}{const}\ std::map<TString,\ double>\&\ fitValues);}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00089\ pair<std::string,\ std::string>\ \mbox{\hyperlink{CalibrateFragm_8h_ab4907eeeea5fe95544ce97afbb74d65d}{RoundMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CalibrateFragm_8h_acdc0930628c2b53e29747f1b28afa1cb}{ProcessFile}}(\textcolor{keyword}{const}\ TString\&\ fileName,\ }
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ energy,\ }
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,\ }
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,\ }
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,\ }
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00062\ std::map<TString,\ double>\ \mbox{\hyperlink{CalibrateFragm_8h_a2e0c3be0d7ea9ae813950b6af2c1e174}{PlotFitResultsCombined}}(}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,}
+\DoxyCodeLine{00065\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,}
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{const}\ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe,}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ double>\&\ elossP,}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{const}\ std::map<int,\ double>\&\ elossHe);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00078\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CalibrateFragm_8h_a661388630a24bdf651364f968813ec3c}{WriteFitValuesOrdered}}(\textcolor{keyword}{const}\ std::map<TString,\ double>\&\ fitValues);}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00090\ pair<std::string,\ std::string>\ \mbox{\hyperlink{CalibrateFragm_8h_ab4907eeeea5fe95544ce97afbb74d65d}{RoundMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
 
 \end{DoxyCode}

@@ -2,7 +2,7 @@
 \hypertarget{AnalyzeTWMC_8h}{}\label{AnalyzeTWMC_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWMC.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTWMC.h}}
 
 
-Header file for processing and fitting charge distribution histograms from ROOT files.  
+Header file for processing and fitting energy loss distribution histograms from ROOT files.  
 
 
 {\ttfamily \#include $<$TFile.\+h$>$}\newline
@@ -18,7 +18,8 @@ Header file for processing and fitting charge distribution histograms from ROOT 
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$regex$>$}\newline
-Include dependency graph for Analyze\+TWMC.\+h\+:\nopagebreak
+Include dependency graph for Analyze\+TWMC.\+h\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,9 +36,9 @@ std\+::pair$<$ TFit\+Result\+Ptr, TFit\+Result\+Ptr $>$ \mbox{\hyperlink{Analyze
 
 
 \doxysubsection{Detailed Description}
-Header file for processing and fitting charge distribution histograms from ROOT files. 
+Header file for processing and fitting energy loss distribution histograms from ROOT files. 
 
-Macro that fits the charge distribution from the Analyze\+TWCharge\+Time.\+cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-\/range centered around the peak. The fit results are stored in files name like e.\+g. {\ttfamily TW/\+Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+MC\+\_\+\+HIT2022\+\_\+\+MC\+\_\+140\+\_\+\+Fit.\+root}. To be run with `root -\/l -\/b -\/q \textquotesingle{}Analyze\+TWMC.\+cc()'\`{}. 
+Macro that fits the energy loss distribution from the Analyze\+TWFrag\+MC.\+cc output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum and then fitted within a certain bin-\/range centered around the peak. The fit results are stored in files name like e.\+g. Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+MC\+\_\+\+HIT2022\+\_\+\+MC\+\_\+140\+\_\+\+Fit.\+root. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+TWMC.\+cc()\textquotesingle{}. 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{AnalyzeTWMC_8h_a15e3e63c2fe3026d9a34aa8bbcc77a6d}\label{AnalyzeTWMC_8h_a15e3e63c2fe3026d9a34aa8bbcc77a6d} 
@@ -72,7 +73,7 @@ A pair of TFit\+Result\+Ptr, where the first element is the fit result for proto
 
 Processes a ROOT file to fit the charge distribution. 
 
-This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12.), and then fitted within a certain bin-\/range centered around the peak. The fit results are stored in files named like e.\+g. TW/\+Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+MC\+\_\+\+HIT2022\+\_\+\+MC\+\_\+140\+\_\+\+Fit.\+root.
+This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-\/range centered around the peak. The fit results are stored in files named like e.\+g. Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+MC\+\_\+\+HIT2022\+\_\+\+MC\+\_\+140\+\_\+\+Fit.\+root.
 
 
 \begin{DoxyParams}{Parameters}

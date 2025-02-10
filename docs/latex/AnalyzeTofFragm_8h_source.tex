@@ -1,0 +1,39 @@
+\doxysection{Analyze\+Tof\+Fragm.\+h}
+\hypertarget{AnalyzeTofFragm_8h_source}{}\label{AnalyzeTofFragm_8h_source}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTofFragm.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/AnalyzeTofFragm.h}}
+\mbox{\hyperlink{AnalyzeTofFragm_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\ \#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\ \#include\ <TFile.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\ \#include\ <TKey.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\ \#include\ <TDirectory.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\ \#include\ <TH1.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\ \#include\ <TF1.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\ \#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\ \#include\ <TCanvas.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\ \#include\ <TNamed.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\ \#include\ <TSpectrum.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\ \#include\ <iostream>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\ \#include\ <vector>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\ \#include\ <map>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\ \#include\ <regex>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\ \#endif}}
+\DoxyCodeLine{00028\ \ }
+\DoxyCodeLine{00040\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTofFragm_8h_a58aa16b94804392225cab0761e0e0b73}{ProcessFile}}(}
+\DoxyCodeLine{00041\ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName,}
+\DoxyCodeLine{00042\ \ \ \ \ \ \textcolor{keywordtype}{int}\ energy,}
+\DoxyCodeLine{00043\ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ TofMeans,}
+\DoxyCodeLine{00044\ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ TofErrors}
+\DoxyCodeLine{00045\ \ );}
+\DoxyCodeLine{00046\ \ }
+\DoxyCodeLine{00059\ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTofFragm_8h_ab7381314d22509d291beb58f457e9092}{FitHistogramsInDirectory}}(}
+\DoxyCodeLine{00060\ \ \ \ \ \ TDirectory*\ dir,}
+\DoxyCodeLine{00061\ \ \ \ \ \ \textcolor{keywordtype}{int}\ energy,}
+\DoxyCodeLine{00062\ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ TofMeans,}
+\DoxyCodeLine{00063\ \ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ TofErrors,}
+\DoxyCodeLine{00064\ \ \ \ \ \ TFile*\ outputFile}
+\DoxyCodeLine{00065\ \ );}
+\DoxyCodeLine{00066\ \ }
+\DoxyCodeLine{00078\ \ TFitResultPtr\ \mbox{\hyperlink{AnalyzeTofFragm_8h_a82f501f613b6a51643fcadd61ce5ba9b}{FitPeaksWithTSpectrum}}(TH1D\ *hist,\ \textcolor{keywordtype}{int}\ energy,\ \textcolor{keyword}{const}\ TString\ \&layerBarCombination);}
+
+\end{DoxyCode}

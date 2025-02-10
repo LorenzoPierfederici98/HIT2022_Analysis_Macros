@@ -1,0 +1,36 @@
+\doxysection{Calibrate\+Tof.\+h}
+\hypertarget{CalibrateTof_8h_source}{}\label{CalibrateTof_8h_source}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateTof.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateTof.h}}
+\mbox{\hyperlink{CalibrateTof_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TFitResultPtr.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <tuple>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <cstdio>}\ \ \textcolor{comment}{//\ for\ sscanf}}
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#include\ "{}TString.h"{}}}
+\DoxyCodeLine{00032\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00041\ TFitResult*\ \mbox{\hyperlink{CalibrateTof_8h_acbf260d366bf4b7dc33d00c2b2f2552f}{LoadFitResult}}(\textcolor{keyword}{const}\ std::string\&\ fileName,\ \textcolor{keyword}{const}\ std::string\&\ fitResultName);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CalibrateTof_8h_a3709ac7cbea5496ed4a4436aa1efdcea}{ExtractMeanValues}}(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ int>>\&\ filesAndEnergies,\ \textcolor{keyword}{const}\ std::string\&\ layer,\ \textcolor{keywordtype}{int}\ bar,\ std::vector<double>\&\ means,\ std::vector<double>\&\ meanErrors);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00065\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05}{WriteMeanDifferences}}(\textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ int>>\&\ filesAndEnergies,\ \textcolor{keyword}{const}\ std::vector<std::pair<std::string,\ int>>\&\ filesAndEnergiesMC,\ \textcolor{keyword}{const}\ std::string\&\ layer,\ \textcolor{keywordtype}{int}\ bar);}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ }
+
+\end{DoxyCode}

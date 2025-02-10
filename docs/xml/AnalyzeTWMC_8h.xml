@@ -121,7 +121,7 @@
 <para>Processes a ROOT file to fit the charge distribution. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12.), and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</para>
+<para>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fileName</parametername>
@@ -218,14 +218,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.h" line="64" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.cc" bodystart="91" bodyend="178" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.h" declline="64" declcolumn="11"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.h" line="64" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.cc" bodystart="91" bodyend="162" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWMC.h" declline="64" declcolumn="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Header file for processing and fitting charge distribution histograms from ROOT files. </para>
+<para>Header file for processing and fitting energy loss distribution histograms from ROOT files. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. <computeroutput>TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root</computeroutput>. To be run with <lsquo/>root -l -b -q &apos;AnalyzeTWMC.cc()<rsquo/>`. </para>
+<para>Macro that fits the energy loss distribution from the AnalyzeTWFragMC.cc output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum and then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root. To be run with root -l -b -q &apos;AnalyzeTWMC.cc()&apos;. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

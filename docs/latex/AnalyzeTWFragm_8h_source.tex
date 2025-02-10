@@ -3,50 +3,48 @@
 \mbox{\hyperlink{AnalyzeTWFragm_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00030\ \textcolor{preprocessor}{\#include\ <regex>}}
-\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00032\ }
-\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{AnalyzeTWFragm_8h_aabad4b700eccd2608a76d82430bfea3a}{SumNentries}}(TFile*\ file);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148}{FitHistogramsInDirectory}}(}
-\DoxyCodeLine{00062\ \ \ \ \ TDirectory*\ dir,\ }
-\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{double}\ threshold,\ }
-\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordtype}{double}\ energy,\ }
-\DoxyCodeLine{00065\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,\ }
-\DoxyCodeLine{00066\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,\ }
-\DoxyCodeLine{00067\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,\ }
-\DoxyCodeLine{00068\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe,\ }
-\DoxyCodeLine{00069\ \ \ \ \ TFile*\ outputFile}
-\DoxyCodeLine{00070\ );}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00086\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTWFragm_8h_abb0f053729deb39169a04ad7965ed097}{ProcessFile}}(}
-\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName,\ }
-\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{double}\ energy,\ }
-\DoxyCodeLine{00089\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,}
-\DoxyCodeLine{00090\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,}
-\DoxyCodeLine{00091\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,}
-\DoxyCodeLine{00092\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe}
-\DoxyCodeLine{00093\ );}
-\DoxyCodeLine{00094\ }
-\DoxyCodeLine{00108\ std::pair<TFitResultPtr,\ TFitResultPtr>\ \mbox{\hyperlink{AnalyzeTWFragm_8h_a65f48b2f9841534aef2f32eb95f83b43}{FitPeaksWithTSpectrum}}(}
-\DoxyCodeLine{00109\ \ \ \ \ TH1D\ *hist,\ }
-\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{double}\ energy,\ }
-\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordtype}{double}\ thresh\_peak\_low,\ }
-\DoxyCodeLine{00112\ \ \ \ \ \textcolor{keywordtype}{double}\ thresh\_peak\_high,\ }
-\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keyword}{const}\ TString\&\ layerBarCombination}
-\DoxyCodeLine{00114\ );}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00040\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{AnalyzeTWFragm_8h_aabad4b700eccd2608a76d82430bfea3a}{SumNentries}}(TFile*\ file);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTWFragm_8h_a6c75f7227727efc6541cf19ea6fec148}{FitHistogramsInDirectory}}(}
+\DoxyCodeLine{00060\ \ \ \ \ TDirectory*\ dir,\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{double}\ threshold,\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{double}\ energy,\ }
+\DoxyCodeLine{00063\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,\ }
+\DoxyCodeLine{00064\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,\ }
+\DoxyCodeLine{00065\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,\ }
+\DoxyCodeLine{00066\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe,\ }
+\DoxyCodeLine{00067\ \ \ \ \ TFile*\ outputFile}
+\DoxyCodeLine{00068\ );}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00084\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzeTWFragm_8h_abb0f053729deb39169a04ad7965ed097}{ProcessFile}}(}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName,\ }
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordtype}{double}\ energy,\ }
+\DoxyCodeLine{00087\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansP,}
+\DoxyCodeLine{00088\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitMeansHe,}
+\DoxyCodeLine{00089\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsP,}
+\DoxyCodeLine{00090\ \ \ \ \ std::map<TString,\ std::map<int,\ double>>\&\ fitErrorsHe}
+\DoxyCodeLine{00091\ );}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00104\ std::pair<TFitResultPtr,\ TFitResultPtr>\ \mbox{\hyperlink{AnalyzeTWFragm_8h_a14f0293f4852a5be3aa203d1aedcf64c}{FitPeaksWithTSpectrum}}(}
+\DoxyCodeLine{00105\ \ \ \ \ TH1D\ *hist,\ }
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{double}\ energy,\ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keyword}{const}\ TString\&\ layerBarCombination}
+\DoxyCodeLine{00108\ );}
 
 \end{DoxyCode}

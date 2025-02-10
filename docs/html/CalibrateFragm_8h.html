@@ -87,7 +87,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for processing and fitting charge distribution histograms from ROOT files.  
+<p>Header file for the charge-energy calibration.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;TFile.h&gt;</code><br />
 <code>#include &lt;TKey.h&gt;</code><br />
@@ -106,7 +106,7 @@ Include dependency graph for CalibrateFragm.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="CalibrateFragm_8h__incl.png" border="0" usemap="#a_2mnt_2c_2Users_2Lorenzo_2Desktop_2HIT2022__Analysis__Macros_2src_2CalibrateFragm_8h" alt=""/></div>
 <map name="a_2mnt_2c_2Users_2Lorenzo_2Desktop_2HIT2022__Analysis__Macros_2src_2CalibrateFragm_8h" id="a_2mnt_2c_2Users_2Lorenzo_2Desktop_2HIT2022__Analysis__Macros_2src_2CalibrateFragm_8h">
-<area shape="rect" title="Header file for processing and fitting charge distribution histograms from ROOT files." alt="" coords="492,5,707,60"/>
+<area shape="rect" title="Header file for the charge&#45;energy calibration." alt="" coords="492,5,707,60"/>
 <area shape="rect" title=" " alt="" coords="5,108,71,133"/>
 <area shape="poly" title=" " alt="" coords="492,49,306,74,85,111,84,105,305,68,491,44"/>
 <area shape="rect" title=" " alt="" coords="95,108,159,133"/>
@@ -152,8 +152,8 @@ Functions</h2></td></tr>
 <tr class="separator:ab4907eeeea5fe95544ce97afbb74d65d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with &lsquo;root -l -b -q 'CalibrateFragm.cc()&rsquo;`. </p>
+<div class="textblock"><p>Header file for the charge-energy calibration. </p>
+<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with root -l -b -q 'CalibrateFragm.cc()'. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a2e0c3be0d7ea9ae813950b6af2c1e174" name="a2e0c3be0d7ea9ae813950b6af2c1e174"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2e0c3be0d7ea9ae813950b6af2c1e174">&#9670;&#160;</a></span>PlotFitResultsCombined()</h2>

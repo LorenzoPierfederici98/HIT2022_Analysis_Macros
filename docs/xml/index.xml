@@ -13,18 +13,40 @@
     <member refid="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3" kind="function"><name>FindHistograms</name></member>
     <member refid="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kind="function"><name>SaveFitResultsToFile</name></member>
   </compound>
+  <compound refid="AnalyzeTofFragm_8cc" kind="file"><name>AnalyzeTofFragm.cc</name>
+    <member refid="AnalyzeTofFragm_8cc_1a0a80cf6511619d4769fb43711c4f6aba" kind="function"><name>AnalyzeTofFragm</name></member>
+    <member refid="AnalyzeTofFragm_8cc_1ab7381314d22509d291beb58f457e9092" kind="function"><name>FitHistogramsInDirectory</name></member>
+    <member refid="AnalyzeTofFragm_8cc_1a58aa16b94804392225cab0761e0e0b73" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTofFragm_8cc_1a82f501f613b6a51643fcadd61ce5ba9b" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="AnalyzeTofFragm_8h" kind="file"><name>AnalyzeTofFragm.h</name>
+    <member refid="AnalyzeTofFragm_8h_1a58aa16b94804392225cab0761e0e0b73" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTofFragm_8h_1ab7381314d22509d291beb58f457e9092" kind="function"><name>FitHistogramsInDirectory</name></member>
+    <member refid="AnalyzeTofFragm_8h_1a82f501f613b6a51643fcadd61ce5ba9b" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="AnalyzeTofMC_8cc" kind="file"><name>AnalyzeTofMC.cc</name>
+    <member refid="AnalyzeTofMC_8cc_1a587be8c5082f7295f7c9fbad734298b6" kind="function"><name>AnalyzeTofMC</name></member>
+    <member refid="AnalyzeTofMC_8cc_1a2136ab016ddeabc904c87316e8d034b0" kind="function"><name>FitHistogramsInDirectory</name></member>
+    <member refid="AnalyzeTofMC_8cc_1a528148d5c0683839f6dec9f9a13ef9b6" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTofMC_8cc_1a82f501f613b6a51643fcadd61ce5ba9b" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
+  <compound refid="AnalyzeTofMC_8h" kind="file"><name>AnalyzeTofMC.h</name>
+    <member refid="AnalyzeTofMC_8h_1a528148d5c0683839f6dec9f9a13ef9b6" kind="function"><name>ProcessFile</name></member>
+    <member refid="AnalyzeTofMC_8h_1a2136ab016ddeabc904c87316e8d034b0" kind="function"><name>FitHistogramsInDirectory</name></member>
+    <member refid="AnalyzeTofMC_8h_1a82f501f613b6a51643fcadd61ce5ba9b" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+  </compound>
   <compound refid="AnalyzeTWFragm_8cc" kind="file"><name>AnalyzeTWFragm.cc</name>
     <member refid="AnalyzeTWFragm_8cc_1a681163084492177f1b73f77bb682163c" kind="function"><name>AnalyzeTWFragm</name></member>
     <member refid="AnalyzeTWFragm_8cc_1aabad4b700eccd2608a76d82430bfea3a" kind="function"><name>SumNentries</name></member>
     <member refid="AnalyzeTWFragm_8cc_1a6c75f7227727efc6541cf19ea6fec148" kind="function"><name>FitHistogramsInDirectory</name></member>
     <member refid="AnalyzeTWFragm_8cc_1abb0f053729deb39169a04ad7965ed097" kind="function"><name>ProcessFile</name></member>
-    <member refid="AnalyzeTWFragm_8cc_1a65f48b2f9841534aef2f32eb95f83b43" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+    <member refid="AnalyzeTWFragm_8cc_1a14f0293f4852a5be3aa203d1aedcf64c" kind="function"><name>FitPeaksWithTSpectrum</name></member>
   </compound>
   <compound refid="AnalyzeTWFragm_8h" kind="file"><name>AnalyzeTWFragm.h</name>
     <member refid="AnalyzeTWFragm_8h_1aabad4b700eccd2608a76d82430bfea3a" kind="function"><name>SumNentries</name></member>
     <member refid="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148" kind="function"><name>FitHistogramsInDirectory</name></member>
     <member refid="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097" kind="function"><name>ProcessFile</name></member>
-    <member refid="AnalyzeTWFragm_8h_1a65f48b2f9841534aef2f32eb95f83b43" kind="function"><name>FitPeaksWithTSpectrum</name></member>
+    <member refid="AnalyzeTWFragm_8h_1a14f0293f4852a5be3aa203d1aedcf64c" kind="function"><name>FitPeaksWithTSpectrum</name></member>
   </compound>
   <compound refid="AnalyzeTWMC_8cc" kind="file"><name>AnalyzeTWMC.cc</name>
     <member refid="AnalyzeTWMC_8cc_1a4bbdba97ef8d0f4472258070cd19f46b" kind="function"><name>AnalyzeTWMC</name></member>
@@ -47,6 +69,17 @@
     <member refid="CalibrateFragm_8h_1a2e0c3be0d7ea9ae813950b6af2c1e174" kind="function"><name>PlotFitResultsCombined</name></member>
     <member refid="CalibrateFragm_8h_1a661388630a24bdf651364f968813ec3c" kind="function"><name>WriteFitValuesOrdered</name></member>
     <member refid="CalibrateFragm_8h_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="CalibrateTof_8cc" kind="file"><name>CalibrateTof.cc</name>
+    <member refid="CalibrateTof_8cc_1ac3e156b9b06a8292f0804f9f6a49301d" kind="function"><name>CalibrateTof</name></member>
+    <member refid="CalibrateTof_8cc_1acbf260d366bf4b7dc33d00c2b2f2552f" kind="function"><name>LoadFitResult</name></member>
+    <member refid="CalibrateTof_8cc_1a3709ac7cbea5496ed4a4436aa1efdcea" kind="function"><name>ExtractMeanValues</name></member>
+    <member refid="CalibrateTof_8cc_1a2976661d2feaa11e0d6d557df1dbdf05" kind="function"><name>WriteMeanDifferences</name></member>
+  </compound>
+  <compound refid="CalibrateTof_8h" kind="file"><name>CalibrateTof.h</name>
+    <member refid="CalibrateTof_8h_1acbf260d366bf4b7dc33d00c2b2f2552f" kind="function"><name>LoadFitResult</name></member>
+    <member refid="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea" kind="function"><name>ExtractMeanValues</name></member>
+    <member refid="CalibrateTof_8h_1a2976661d2feaa11e0d6d557df1dbdf05" kind="function"><name>WriteMeanDifferences</name></member>
   </compound>
   <compound refid="CaloPeakEnergyDisplay_8cc" kind="file"><name>CaloPeakEnergyDisplay.cc</name>
     <member refid="CaloPeakEnergyDisplay_8cc_1adc508e7103ed5c207d628d4025f558dc" kind="function"><name>CaloPeakEnergyDisplay</name></member>

@@ -1,0 +1,114 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Calibrate\+Tof.h File Reference}
+\hypertarget{CalibrateTof_8h}{}\label{CalibrateTof_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateTof.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/CalibrateTof.h}}
+
+
+Header file for the ToF calibration.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TFit\+Result\+Ptr.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$cstdio$>$}\newline
+{\ttfamily \#include "{}TString.\+h"{}}\newline
+Include dependency graph for Calibrate\+Tof.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{CalibrateTof_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+TFit\+Result \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{CalibrateTof_8h_acbf260d366bf4b7dc33d00c2b2f2552f}{Load\+Fit\+Result}} (const std\+::string \&file\+Name, const std\+::string \&fit\+Result\+Name)
+\begin{DoxyCompactList}\small\item\em Loads a fit result from a specified file and directory. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CalibrateTof_8h_a3709ac7cbea5496ed4a4436aa1efdcea}{Extract\+Mean\+Values}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies, const std\+::string \&layer, int bar, std\+::vector$<$ double $>$ \&means, std\+::vector$<$ double $>$ \&mean\+Errors)
+\begin{DoxyCompactList}\small\item\em Extracts mean values and uncertainties from fit results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05}{Write\+Mean\+Differences}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies, const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies\+MC, const std\+::string \&layer, int bar)
+\begin{DoxyCompactList}\small\item\em Writes the differences between data and MC mean values to calibration files. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for the ToF calibration. 
+
+This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the Analyze\+Tof\+Fragm.\+cc and Analyze\+Tof\+MC.\+cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). To be run with root -\/l -\/b -\/q \textquotesingle{}Calibrate\+Tof.\+cc()\textquotesingle{}. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{CalibrateTof_8h_a3709ac7cbea5496ed4a4436aa1efdcea}\label{CalibrateTof_8h_a3709ac7cbea5496ed4a4436aa1efdcea} 
+\index{CalibrateTof.h@{CalibrateTof.h}!ExtractMeanValues@{ExtractMeanValues}}
+\index{ExtractMeanValues@{ExtractMeanValues}!CalibrateTof.h@{CalibrateTof.h}}
+\doxysubsubsection{\texorpdfstring{ExtractMeanValues()}{ExtractMeanValues()}}
+{\footnotesize\ttfamily void Extract\+Mean\+Values (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies,  }\item[{const std\+::string \&}]{layer,  }\item[{int}]{bar,  }\item[{std\+::vector$<$ double $>$ \&}]{means,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Errors }\end{DoxyParamCaption})}
+
+
+
+Extracts mean values and uncertainties from fit results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em files\+And\+Energies} & A vector of pairs containing file names and corresponding energies. \\
+\hline
+{\em layer} & The layer identifier (e.\+g., "{}\+X"{} or "{}\+Y"{}). \\
+\hline
+{\em bar} & The bar number. \\
+\hline
+{\em means} & A vector to store the extracted mean values. \\
+\hline
+{\em mean\+Errors} & A vector to store the extracted mean errors. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{CalibrateTof_8h_acbf260d366bf4b7dc33d00c2b2f2552f}\label{CalibrateTof_8h_acbf260d366bf4b7dc33d00c2b2f2552f} 
+\index{CalibrateTof.h@{CalibrateTof.h}!LoadFitResult@{LoadFitResult}}
+\index{LoadFitResult@{LoadFitResult}!CalibrateTof.h@{CalibrateTof.h}}
+\doxysubsubsection{\texorpdfstring{LoadFitResult()}{LoadFitResult()}}
+{\footnotesize\ttfamily TFit\+Result \texorpdfstring{$\ast$}{*} Load\+Fit\+Result (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{const std\+::string \&}]{fit\+Result\+Name }\end{DoxyParamCaption})}
+
+
+
+Loads a fit result from a specified file and directory. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & The name of the file containing the fit result. \\
+\hline
+{\em fit\+Result\+Name} & The name of the fit result to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the loaded TFit\+Result, or nullptr if an error occurs. 
+\end{DoxyReturn}
+\Hypertarget{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05}\label{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05} 
+\index{CalibrateTof.h@{CalibrateTof.h}!WriteMeanDifferences@{WriteMeanDifferences}}
+\index{WriteMeanDifferences@{WriteMeanDifferences}!CalibrateTof.h@{CalibrateTof.h}}
+\doxysubsubsection{\texorpdfstring{WriteMeanDifferences()}{WriteMeanDifferences()}}
+{\footnotesize\ttfamily void Write\+Mean\+Differences (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies\+MC,  }\item[{const std\+::string \&}]{layer,  }\item[{int}]{bar }\end{DoxyParamCaption})}
+
+
+
+Writes the differences between data and MC mean values to calibration files. 
+
+This function writes the fit values to configuration files. The fit values are sorted by bar ID and written to the file in a specific format.
+
+
+\begin{DoxyParams}{Parameters}
+{\em files\+And\+Energies} & A vector of pairs containing data file names and corresponding energies. \\
+\hline
+{\em files\+And\+Energies\+MC} & A vector of pairs containing MC file names and corresponding energies. \\
+\hline
+{\em layer} & The layer identifier (e.\+g., "{}\+X"{} or "{}\+Y"{}). \\
+\hline
+{\em bar} & The bar number. \\
+\hline
+\end{DoxyParams}
