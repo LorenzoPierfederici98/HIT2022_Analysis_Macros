@@ -29,4 +29,11 @@ CalibrateFragm
 .. doxygenfile:: CalibrateFragm.h
    :project: HIT 2022 Analysis
 
+CalibrateTof
+-------------
+
+.. doxygenfile:: CalibrateTof.h
+   :project: HIT 2022 Analysis
+
+
 
