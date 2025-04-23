@@ -915,7 +915,6 @@
 <para>Rounds a measurement value and its uncertainty.   </para>
         </briefdescription>
         <detaileddescription>
-<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
 <para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -936,8 +935,7 @@
 </parameterlist>
 <simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty.  </para>
 </simplesect>
-Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
-<para>Rounds a measurement value and its uncertainty.  </para>
+Rounds a measurement value and its uncertainty.  </para>
 <para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>

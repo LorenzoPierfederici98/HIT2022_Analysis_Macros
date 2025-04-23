@@ -155,7 +155,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad2291774551251ac39112a4b52e463ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a vector of integers representing energies to a comma-separated string.  <br /></td></tr>
 <tr class="separator:ad2291774551251ac39112a4b52e463ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ad7fc5517b3ca53aced9f056accb5dd" id="r_a2ad7fc5517b3ca53aced9f056accb5dd"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CaloPeakEnergyDisplay_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd">RoundMeasurement</a> (double value, double uncertainty)</td></tr>
-<tr class="memdesc:a2ad7fc5517b3ca53aced9f056accb5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.  <br /></td></tr>
+<tr class="memdesc:a2ad7fc5517b3ca53aced9f056accb5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a measurement value and its uncertainty.    <br /></td></tr>
 <tr class="separator:a2ad7fc5517b3ca53aced9f056accb5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -215,16 +215,16 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty. </p>
+<p>Rounds a measurement value and its uncertainty.   </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The value to be rounded. </td></tr>
-    <tr><td class="paramname">uncertainty</td><td>The uncertainty associated with the value. </td></tr>
+    <tr><td class="paramname">value</td><td>The measurement value. </td></tr>
+    <tr><td class="paramname">uncertainty</td><td>The uncertainty of the measurement. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A pair containing the rounded value and rounded uncertainty.</dd></dl>
-<p>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</p>
+<dl class="section return"><dt>Returns</dt><dd>A pair of strings containing the rounded value and uncertainty.  </dd></dl>
 <p>Rounds a measurement value and its uncertainty.  </p>
 <p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
 <dl class="params"><dt>Parameters</dt><dd>
