@@ -571,16 +571,17 @@
           <declname>uncertainty</declname>
         </param>
         <briefdescription>
-<para>Rounds a measurement value and its uncertainty to appropriate significant figures. </para>
+<para>Rounds a measurement value and its uncertainty.   </para>
         </briefdescription>
         <detaileddescription>
-<para>This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.</para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The measurement value to round. </para>
+<para>The measurement value. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -592,11 +593,10 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A pair containing the rounded value and uncertainty as strings.</para>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty.  </para>
 </simplesect>
-Rounds a measurement value and its uncertainty to appropriate significant figures.</para>
-<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
-<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty.  </para>
 <para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -621,7 +621,7 @@ Rounds a measurement value and its uncertainty to appropriate significant figure
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="150" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="150" declcolumn="11"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="142" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="142" declcolumn="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -685,8 +685,9 @@ Rounds a measurement value and its uncertainty to appropriate significant figure
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_err_vec</highlight></codeline>
 <codeline lineno="138"><highlight class="normal">);</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="150"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h"/>
   </compounddef>

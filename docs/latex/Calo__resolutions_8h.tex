@@ -21,8 +21,7 @@ Header file for Calo\+\_\+resolutions.\+cc.
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$regex$>$}\newline
-Include dependency graph for Calo\+\_\+resolutions.\+h\+:
-\nopagebreak
+Include dependency graph for Calo\+\_\+resolutions.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -35,7 +34,7 @@ Include dependency graph for Calo\+\_\+resolutions.\+h\+:
 void \mbox{\hyperlink{Calo__resolutions_8h_ae42deae8bf798058b77d8a228427dddb}{Process\+File}} (const std\+::string \&file\+Name, const int energy, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res\+\_\+err)
 \begin{DoxyCompactList}\small\item\em Processes a ROOT file and calculates the resolution for each crystal. \end{DoxyCompactList}\item 
 std\+::pair$<$ double, double $>$ \mbox{\hyperlink{Calo__resolutions_8h_a2ad7fc5517b3ca53aced9f056accb5dd}{Round\+Measurement}} (double value, double uncertainty)
-\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty to the appropriate significant figures. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty.   \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{Calo__resolutions_8h_aebb2d0ec4b031210878491c63b1908ef}{Plot\+Resolutions}} (const std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res, const std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res\+\_\+err)
 \begin{DoxyCompactList}\small\item\em Plots the resolution as a function of beam energy for each crystal. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -96,21 +95,23 @@ This function reads the fit results from the specified ROOT file, calculates the
 
 
 
-Rounds a measurement value and its uncertainty to the appropriate significant figures. 
+Rounds a measurement value and its uncertainty.   
 
-This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & The measurement value to round. \\
+{\em value} & The measurement value. \\
 \hline
 {\em uncertainty} & The uncertainty of the measurement. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A pair containing the rounded value and uncertainty.
+A pair of strings containing the rounded value and uncertainty.  
 \end{DoxyReturn}
-Rounds a measurement value and its uncertainty to the appropriate significant figures.
+Rounds a measurement value and its uncertainty.  
 
 This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 

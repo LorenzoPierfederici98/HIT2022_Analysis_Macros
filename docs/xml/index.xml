@@ -119,7 +119,7 @@
     <member refid="TW__resolutions_8h_1aad661d4c7037778af8afc75d9cfc82af" kind="function"><name>FitHistograms</name></member>
     <member refid="TW__resolutions_8h_1a02c7c5bce27bbd7305a4f78b242bf035" kind="function"><name>ProcessFile</name></member>
     <member refid="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kind="function"><name>FitWithTSpectrum</name></member>
-    <member refid="TW__resolutions_8h_1aef8173c6ef6ad91f94ff7aed04dbc57d" kind="function"><name>WriteElossTable</name></member>
+    <member refid="TW__resolutions_8h_1a70a0181fb46626b661e03c6a299a82d1" kind="function"><name>WriteElossTable</name></member>
     <member refid="TW__resolutions_8h_1a59aa5a05a061a274c82311aaf5137ee4" kind="function"><name>WriteTofTable</name></member>
     <member refid="TW__resolutions_8h_1ab559ccd64309e7e7e34f94723cb06fe7" kind="function"><name>OpenElossFile</name></member>
     <member refid="TW__resolutions_8h_1a313a1c48700390e15fb773d67c056d1e" kind="function"><name>OpenTofFile</name></member>

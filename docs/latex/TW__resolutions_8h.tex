@@ -21,8 +21,7 @@ Header file for TW\+\_\+resolutions.\+cc.
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$regex$>$}\newline
-Include dependency graph for TW\+\_\+resolutions.\+h\+:
-\nopagebreak
+Include dependency graph for TW\+\_\+resolutions.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -38,7 +37,7 @@ void \mbox{\hyperlink{TW__resolutions_8h_a02c7c5bce27bbd7305a4f78b242bf035}{Proc
 \begin{DoxyCompactList}\small\item\em Processes a ROOT file and calculates resolutions for ToF and Eloss. \end{DoxyCompactList}\item 
 TFit\+Result\+Ptr \mbox{\hyperlink{TW__resolutions_8h_a7c1379d234367f611e9cb241b1f49847}{Fit\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, int energy)
 \begin{DoxyCompactList}\small\item\em Fits a histogram using TSpectrum for peak detection. \end{DoxyCompactList}\item 
-s void \mbox{\hyperlink{TW__resolutions_8h_aef8173c6ef6ad91f94ff7aed04dbc57d}{Write\+Eloss\+Table}} (std\+::ofstream \&out\+File, int energy, double mean\+Eloss\+He, double std\+Eloss\+He, double R\+\_\+\+He, double mean\+Eloss\+Err\+He, double std\+Eloss\+Err\+He, double R\+\_\+\+He\+\_\+err)
+void \mbox{\hyperlink{TW__resolutions_8h_a70a0181fb46626b661e03c6a299a82d1}{Write\+Eloss\+Table}} (std\+::ofstream \&out\+File, int energy, double mean\+Eloss\+He, double std\+Eloss\+He, double R\+\_\+\+He, double mean\+Eloss\+Err\+He, double std\+Eloss\+Err\+He, double R\+\_\+\+He\+\_\+err)
 \begin{DoxyCompactList}\small\item\em Writes Eloss results to a La\+TeX table. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{TW__resolutions_8h_a59aa5a05a061a274c82311aaf5137ee4}{Write\+Tof\+Table}} (std\+::ofstream \&out\+File, int energy, double mean\+Tof, double mean\+Tof\+Err, double R\+\_\+\+Tof, double R\+\_\+\+Tof\+\_\+err)
 \begin{DoxyCompactList}\small\item\em Writes ToF results to a La\+TeX table. \end{DoxyCompactList}\item 
@@ -53,7 +52,7 @@ void \mbox{\hyperlink{TW__resolutions_8h_a9d4d462e980c97c3c83e2395a4b30979}{Clos
 void \mbox{\hyperlink{TW__resolutions_8h_ac05499726ae87bcc5ec712f14e99867f}{Plot\+Resolution\+Graphs}} (const std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+err\+\_\+vec)
 \begin{DoxyCompactList}\small\item\em Plots resolution graphs for ToF and Eloss. \end{DoxyCompactList}\item 
 std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{Round\+Measurement}} (double value, double uncertainty)
-\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty to appropriate significant figures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty.   \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -261,25 +260,25 @@ This function reads histograms from the specified ROOT file, performs fits, and 
 
 
 
-Rounds a measurement value and its uncertainty to appropriate significant figures. 
+Rounds a measurement value and its uncertainty.   
 
-This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & The measurement value to round. \\
+{\em value} & The measurement value. \\
 \hline
 {\em uncertainty} & The uncertainty of the measurement. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A pair containing the rounded value and uncertainty as strings.
+A pair of strings containing the rounded value and uncertainty.  
 \end{DoxyReturn}
-Rounds a measurement value and its uncertainty to appropriate significant figures.
-
 Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
 
-Rounds a measurement value and its uncertainty to the appropriate significant figures.
+Rounds a measurement value and its uncertainty.  
 
 This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 
@@ -293,11 +292,11 @@ This function rounds a measurement value and its uncertainty to the appropriate 
 \begin{DoxyReturn}{Returns}
 A pair of strings containing the rounded value and uncertainty. 
 \end{DoxyReturn}
-\Hypertarget{TW__resolutions_8h_aef8173c6ef6ad91f94ff7aed04dbc57d}\label{TW__resolutions_8h_aef8173c6ef6ad91f94ff7aed04dbc57d} 
+\Hypertarget{TW__resolutions_8h_a70a0181fb46626b661e03c6a299a82d1}\label{TW__resolutions_8h_a70a0181fb46626b661e03c6a299a82d1} 
 \index{TW\_resolutions.h@{TW\_resolutions.h}!WriteElossTable@{WriteElossTable}}
 \index{WriteElossTable@{WriteElossTable}!TW\_resolutions.h@{TW\_resolutions.h}}
 \doxysubsubsection{\texorpdfstring{WriteElossTable()}{WriteElossTable()}}
-{\footnotesize\ttfamily s void Write\+Eloss\+Table (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File,  }\item[{int}]{energy,  }\item[{double}]{mean\+Eloss\+He,  }\item[{double}]{std\+Eloss\+He,  }\item[{double}]{R\+\_\+\+He,  }\item[{double}]{mean\+Eloss\+Err\+He,  }\item[{double}]{std\+Eloss\+Err\+He,  }\item[{double}]{R\+\_\+\+He\+\_\+err }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Write\+Eloss\+Table (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File,  }\item[{int}]{energy,  }\item[{double}]{mean\+Eloss\+He,  }\item[{double}]{std\+Eloss\+He,  }\item[{double}]{R\+\_\+\+He,  }\item[{double}]{mean\+Eloss\+Err\+He,  }\item[{double}]{std\+Eloss\+Err\+He,  }\item[{double}]{R\+\_\+\+He\+\_\+err }\end{DoxyParamCaption})}
 
 
 

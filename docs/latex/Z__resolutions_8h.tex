@@ -20,8 +20,7 @@ Header file for Z\+\_\+resolutions.\+cc.
 {\ttfamily \#include $<$vector$>$}\newline
 {\ttfamily \#include $<$map$>$}\newline
 {\ttfamily \#include $<$regex$>$}\newline
-Include dependency graph for Z\+\_\+resolutions.\+h\+:
-\nopagebreak
+Include dependency graph for Z\+\_\+resolutions.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -46,7 +45,7 @@ void \mbox{\hyperlink{Z__resolutions_8h_afaad6cbd1c71c2461d830e374f574434}{Close
 void \mbox{\hyperlink{Z__resolutions_8h_a016555409fa0e6777994e083a713e05e}{Plot\+Resolution\+Graphs}} (const std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+err\+\_\+vec)
 \begin{DoxyCompactList}\small\item\em Plots resolution graphs for Z. \end{DoxyCompactList}\item 
 std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{Round\+Measurement}} (double value, double uncertainty)
-\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty to appropriate significant figures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty.   \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -196,25 +195,25 @@ This function reads histograms from the specified ROOT file, performs fits, and 
 
 
 
-Rounds a measurement value and its uncertainty to appropriate significant figures. 
+Rounds a measurement value and its uncertainty.   
 
-This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 
 
 \begin{DoxyParams}{Parameters}
-{\em value} & The measurement value to round. \\
+{\em value} & The measurement value. \\
 \hline
 {\em uncertainty} & The uncertainty of the measurement. \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A pair containing the rounded value and uncertainty as strings.
+A pair of strings containing the rounded value and uncertainty.  
 \end{DoxyReturn}
-Rounds a measurement value and its uncertainty to appropriate significant figures.
-
 Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
 
-Rounds a measurement value and its uncertainty to the appropriate significant figures.
+Rounds a measurement value and its uncertainty.  
 
 This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 

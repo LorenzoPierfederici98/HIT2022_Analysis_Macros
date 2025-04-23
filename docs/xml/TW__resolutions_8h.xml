@@ -471,9 +471,9 @@
         </inbodydescription>
         <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="110" column="15" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="215" bodyend="254" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="110" declcolumn="15"/>
       </memberdef>
-      <memberdef kind="function" id="TW__resolutions_8h_1aef8173c6ef6ad91f94ff7aed04dbc57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>s void</type>
-        <definition>s void WriteElossTable</definition>
+      <memberdef kind="function" id="TW__resolutions_8h_1a70a0181fb46626b661e03c6a299a82d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteElossTable</definition>
         <argsstring>(std::ofstream &amp;outFile, int energy, double meanElossHe, double stdElossHe, double R_He, double meanElossErrHe, double stdElossErrHe, double R_He_err)</argsstring>
         <name>WriteElossTable</name>
         <param>
@@ -912,16 +912,17 @@
           <declname>uncertainty</declname>
         </param>
         <briefdescription>
-<para>Rounds a measurement value and its uncertainty to appropriate significant figures. </para>
+<para>Rounds a measurement value and its uncertainty.   </para>
         </briefdescription>
         <detaileddescription>
-<para>This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.</para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The measurement value to round. </para>
+<para>The measurement value. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -933,11 +934,10 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A pair containing the rounded value and uncertainty as strings.</para>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty.  </para>
 </simplesect>
-Rounds a measurement value and its uncertainty to appropriate significant figures.</para>
-<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
-<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty.  </para>
 <para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -962,7 +962,7 @@ Rounds a measurement value and its uncertainty to appropriate significant figure
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="211" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="211" declcolumn="11"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="203" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="203" declcolumn="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -1023,9 +1023,9 @@ Rounds a measurement value and its uncertainty to appropriate significant figure
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Tof</highlight></codeline>
 <codeline lineno="99"><highlight class="normal">);</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal">TFitResultPtr<sp/><ref refid="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kindref="member">FitWithTSpectrum</ref>(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy);s</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">TFitResultPtr<sp/><ref refid="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kindref="member">FitWithTSpectrum</ref>(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy);</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1aef8173c6ef6ad91f94ff7aed04dbc57d" kindref="member">WriteElossTable</ref>(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1a70a0181fb46626b661e03c6a299a82d1" kindref="member">WriteElossTable</ref>(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He,</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossErrHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossErrHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He_err);</highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight></codeline>
@@ -1052,8 +1052,9 @@ Rounds a measurement value and its uncertainty to appropriate significant figure
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec</highlight></codeline>
 <codeline lineno="199"><highlight class="normal">);</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="211"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
-<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h"/>
   </compounddef>
