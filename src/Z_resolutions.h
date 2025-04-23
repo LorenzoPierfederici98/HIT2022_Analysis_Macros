@@ -138,6 +138,6 @@ void PlotResolutionGraphs(
 );
 
 
-/*! @copydoc RoundMeasurement(double,double)
-*/
+/// \cond
 std::pair<std::string, std::string> RoundMeasurement(double value, double uncertainty);
+/// \endcond

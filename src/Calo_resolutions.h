@@ -41,10 +41,9 @@
  */
 void ProcessFile(const std::string& fileName, const int energy, std::map<int, std::vector<std::pair<int, double>>>& Res, std::map<int, std::vector<std::pair<int, double>>>& Res_err);
 
-/*! @copydoc RoundMeasurement(double,double)
-*/
+/// \cond
 std::pair<double, double> RoundMeasurement(double value, double uncertainty);
-
+/// \endcond
 /**
  * @brief Plots the resolution as a function of beam energy for each crystal.
  * 
