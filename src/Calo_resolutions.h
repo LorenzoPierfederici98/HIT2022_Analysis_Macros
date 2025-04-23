@@ -41,7 +41,7 @@
  */
 void ProcessFile(const std::string& fileName, const int energy, std::map<int, std::vector<std::pair<int, double>>>& Res, std::map<int, std::vector<std::pair<int, double>>>& Res_err);
 
-/*! @copydoc RoundMeasurement
+/*! @copydoc RoundMeasurement(double,double)
 */
 std::pair<double, double> RoundMeasurement(double value, double uncertainty);
 
