@@ -43,7 +43,9 @@ void \mbox{\hyperlink{Z__resolutions_8h_ad867a67690e3dd7ac7f46e6123580b80}{Open\
 void \mbox{\hyperlink{Z__resolutions_8h_afaad6cbd1c71c2461d830e374f574434}{Close\+ZFile}} (std\+::ofstream \&out\+File)
 \begin{DoxyCompactList}\small\item\em Closes a La\+TeX file for Z results. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{Z__resolutions_8h_a016555409fa0e6777994e083a713e05e}{Plot\+Resolution\+Graphs}} (const std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+err\+\_\+vec)
-\begin{DoxyCompactList}\small\item\em Plots resolution graphs for Z. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Plots resolution graphs for Z. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{Round\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty.   \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -185,6 +187,44 @@ This function reads histograms from the specified ROOT file, performs fits, and 
 {\em Latex\+File\+\_\+Z} & Output stream for the Z La\+TeX table. \\
 \hline
 \end{DoxyParams}
+\Hypertarget{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}\label{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!RoundMeasurement@{RoundMeasurement}}
+\index{RoundMeasurement@{RoundMeasurement}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Rounds a measurement value and its uncertainty.   
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty.  
+\end{DoxyReturn}
+Rounds a measurement value and its uncertainty.  
+
+Rounds a measurement value and its uncertainty.  
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty. 
+\end{DoxyReturn}
 \Hypertarget{Z__resolutions_8h_abc8a567abccc89e3f6585bf4c1c38d52}\label{Z__resolutions_8h_abc8a567abccc89e3f6585bf4c1c38d52} 
 \index{Z\_resolutions.h@{Z\_resolutions.h}!WriteZTable@{WriteZTable}}
 \index{WriteZTable@{WriteZTable}!Z\_resolutions.h@{Z\_resolutions.h}}

@@ -89,6 +89,7 @@
   </compound>
   <compound refid="Calo__resolutions_8h" kind="file"><name>Calo_resolutions.h</name>
     <member refid="Calo__resolutions_8h_1ae42deae8bf798058b77d8a228427dddb" kind="function"><name>ProcessFile</name></member>
+    <member refid="Calo__resolutions_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kind="function"><name>RoundMeasurement</name></member>
     <member refid="Calo__resolutions_8h_1aebb2d0ec4b031210878491c63b1908ef" kind="function"><name>PlotResolutions</name></member>
   </compound>
   <compound refid="CaloPeakEnergyDisplay_8cc" kind="file"><name>CaloPeakEnergyDisplay.cc</name>
@@ -98,6 +99,7 @@
   </compound>
   <compound refid="CaloPeakEnergyDisplay_8h" kind="file"><name>CaloPeakEnergyDisplay.h</name>
     <member refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kind="function"><name>ConvertFileNumbersToString</name></member>
+    <member refid="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kind="function"><name>RoundMeasurement</name></member>
   </compound>
   <compound refid="TW__resolutions_8cc" kind="file"><name>TW_resolutions.cc</name>
     <member refid="TW__resolutions_8cc_1a54f512bea6673fc75f19efed54515420" kind="function"><name>TW_resolutions</name></member>
@@ -124,6 +126,7 @@
     <member refid="TW__resolutions_8h_1aada91a63fcdac00b6709bce94b912b86" kind="function"><name>CloseElossFile</name></member>
     <member refid="TW__resolutions_8h_1a9d4d462e980c97c3c83e2395a4b30979" kind="function"><name>CloseTofFile</name></member>
     <member refid="TW__resolutions_8h_1ac05499726ae87bcc5ec712f14e99867f" kind="function"><name>PlotResolutionGraphs</name></member>
+    <member refid="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kind="function"><name>RoundMeasurement</name></member>
   </compound>
   <compound refid="Z__resolutions_8cc" kind="file"><name>Z_resolutions.cc</name>
     <member refid="Z__resolutions_8cc_1aaedd04d8fdafcdd8c4c3bb9a8fe2b291" kind="function"><name>Z_resolutions</name></member>
@@ -144,6 +147,7 @@
     <member refid="Z__resolutions_8h_1ad867a67690e3dd7ac7f46e6123580b80" kind="function"><name>OpenZFile</name></member>
     <member refid="Z__resolutions_8h_1afaad6cbd1c71c2461d830e374f574434" kind="function"><name>CloseZFile</name></member>
     <member refid="Z__resolutions_8h_1a016555409fa0e6777994e083a713e05e" kind="function"><name>PlotResolutionGraphs</name></member>
+    <member refid="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kind="function"><name>RoundMeasurement</name></member>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src</name>
   </compound>
