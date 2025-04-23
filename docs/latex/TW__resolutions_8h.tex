@@ -50,9 +50,7 @@ void \mbox{\hyperlink{TW__resolutions_8h_aada91a63fcdac00b6709bce94b912b86}{Clos
 void \mbox{\hyperlink{TW__resolutions_8h_a9d4d462e980c97c3c83e2395a4b30979}{Close\+Tof\+File}} (std\+::ofstream \&out\+File)
 \begin{DoxyCompactList}\small\item\em Closes a La\+TeX file for ToF results. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{TW__resolutions_8h_ac05499726ae87bcc5ec712f14e99867f}{Plot\+Resolution\+Graphs}} (const std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+err\+\_\+vec)
-\begin{DoxyCompactList}\small\item\em Plots resolution graphs for ToF and Eloss. \end{DoxyCompactList}\item 
-std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{Round\+Measurement}} (double value, double uncertainty)
-\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty.   \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Plots resolution graphs for ToF and Eloss. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -252,42 +250,6 @@ This function reads histograms from the specified ROOT file, performs fits, and 
 {\em Latex\+File\+\_\+\+Tof} & Output stream for the ToF La\+TeX table. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}\label{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6} 
-\index{TW\_resolutions.h@{TW\_resolutions.h}!RoundMeasurement@{RoundMeasurement}}
-\index{RoundMeasurement@{RoundMeasurement}!TW\_resolutions.h@{TW\_resolutions.h}}
-\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
-{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
-
-
-
-Rounds a measurement value and its uncertainty.   
-
-This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
-
-
-\begin{DoxyParams}{Parameters}
-{\em value} & The measurement value. \\
-\hline
-{\em uncertainty} & The uncertainty of the measurement. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pair of strings containing the rounded value and uncertainty.  
-\end{DoxyReturn}
-Rounds a measurement value and its uncertainty.  
-
-This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
-
-
-\begin{DoxyParams}{Parameters}
-{\em value} & The measurement value. \\
-\hline
-{\em uncertainty} & The uncertainty of the measurement. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pair of strings containing the rounded value and uncertainty. 
-\end{DoxyReturn}
 \Hypertarget{TW__resolutions_8h_a70a0181fb46626b661e03c6a299a82d1}\label{TW__resolutions_8h_a70a0181fb46626b661e03c6a299a82d1} 
 \index{TW\_resolutions.h@{TW\_resolutions.h}!WriteElossTable@{WriteElossTable}}
 \index{WriteElossTable@{WriteElossTable}!TW\_resolutions.h@{TW\_resolutions.h}}

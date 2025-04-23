@@ -169,9 +169,6 @@ Functions</h2></td></tr>
 <tr class="memitem:ae42deae8bf798058b77d8a228427dddb" id="r_ae42deae8bf798058b77d8a228427dddb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Calo__resolutions_8h.html#ae42deae8bf798058b77d8a228427dddb">ProcessFile</a> (const std::string &amp;fileName, const int energy, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</td></tr>
 <tr class="memdesc:ae42deae8bf798058b77d8a228427dddb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Processes a ROOT file and calculates the resolution for each crystal.  <br /></td></tr>
 <tr class="separator:ae42deae8bf798058b77d8a228427dddb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2ad7fc5517b3ca53aced9f056accb5dd" id="r_a2ad7fc5517b3ca53aced9f056accb5dd"><td class="memItemLeft" align="right" valign="top">std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Calo__resolutions_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd">RoundMeasurement</a> (double value, double uncertainty)</td></tr>
-<tr class="memdesc:a2ad7fc5517b3ca53aced9f056accb5dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a measurement value and its uncertainty.    <br /></td></tr>
-<tr class="separator:a2ad7fc5517b3ca53aced9f056accb5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebb2d0ec4b031210878491c63b1908ef" id="r_aebb2d0ec4b031210878491c63b1908ef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Calo__resolutions_8h.html#aebb2d0ec4b031210878491c63b1908ef">PlotResolutions</a> (const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</td></tr>
 <tr class="memdesc:aebb2d0ec4b031210878491c63b1908ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots the resolution as a function of beam energy for each crystal.  <br /></td></tr>
 <tr class="separator:aebb2d0ec4b031210878491c63b1908ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,55 +264,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a2ad7fc5517b3ca53aced9f056accb5dd" name="a2ad7fc5517b3ca53aced9f056accb5dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2ad7fc5517b3ca53aced9f056accb5dd">&#9670;&#160;</a></span>RoundMeasurement()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::pair&lt; double, double &gt; RoundMeasurement </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>uncertainty</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Rounds a measurement value and its uncertainty.   </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>The measurement value. </td></tr>
-    <tr><td class="paramname">uncertainty</td><td>The uncertainty of the measurement. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pair of strings containing the rounded value and uncertainty.  </dd></dl>
-<p>Rounds a measurement value and its uncertainty.  </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>The measurement value. </td></tr>
-    <tr><td class="paramname">uncertainty</td><td>The uncertainty of the measurement. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pair of strings containing the rounded value and uncertainty. </dd></dl>
 
 </div>
 </div>

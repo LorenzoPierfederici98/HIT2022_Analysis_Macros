@@ -184,9 +184,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a016555409fa0e6777994e083a713e05e" id="r_a016555409fa0e6777994e083a713e05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z__resolutions_8h.html#a016555409fa0e6777994e083a713e05e">PlotResolutionGraphs</a> (const std::vector&lt; double &gt; &amp;R_Z_vec, const std::vector&lt; double &gt; &amp;R_Z_err_vec)</td></tr>
 <tr class="memdesc:a016555409fa0e6777994e083a713e05e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Plots resolution graphs for Z.  <br /></td></tr>
 <tr class="separator:a016555409fa0e6777994e083a713e05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56d523c54cc171aa9e0ab754857f64d6" id="r_a56d523c54cc171aa9e0ab754857f64d6"><td class="memItemLeft" align="right" valign="top">std::pair&lt; std::string, std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="Z__resolutions_8h.html#a56d523c54cc171aa9e0ab754857f64d6">RoundMeasurement</a> (double value, double uncertainty)</td></tr>
-<tr class="memdesc:a56d523c54cc171aa9e0ab754857f64d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rounds a measurement value and its uncertainty.    <br /></td></tr>
-<tr class="separator:a56d523c54cc171aa9e0ab754857f64d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for Z_resolutions.cc. </p>
@@ -466,55 +463,6 @@ Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a id="a56d523c54cc171aa9e0ab754857f64d6" name="a56d523c54cc171aa9e0ab754857f64d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a56d523c54cc171aa9e0ab754857f64d6">&#9670;&#160;</a></span>RoundMeasurement()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::pair&lt; std::string, std::string &gt; RoundMeasurement </td>
-          <td>(</td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>value</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>uncertainty</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Rounds a measurement value and its uncertainty.   </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>The measurement value. </td></tr>
-    <tr><td class="paramname">uncertainty</td><td>The uncertainty of the measurement. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pair of strings containing the rounded value and uncertainty.  </dd></dl>
-<p>Rounds a measurement value and its uncertainty.  </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">value</td><td>The measurement value. </td></tr>
-    <tr><td class="paramname">uncertainty</td><td>The uncertainty of the measurement. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>A pair of strings containing the rounded value and uncertainty. </dd></dl>
 
 </div>
 </div>
