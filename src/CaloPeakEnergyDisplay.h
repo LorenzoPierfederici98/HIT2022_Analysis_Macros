@@ -32,5 +32,4 @@
 std::string ConvertFileNumbersToString(const std::vector<int>& energies);
 
 /// \copydoc RoundMeasurement
-/// \copybrief RoundMeasurement
 std::pair<double, double> RoundMeasurement(double value, double uncertainty);
