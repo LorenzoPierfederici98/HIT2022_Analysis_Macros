@@ -1,0 +1,62 @@
+\doxysection{Z\+\_\+resolutions.\+h}
+\hypertarget{Z__resolutions_8h_source}{}\label{Z__resolutions_8h_source}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/Z\_resolutions.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/Z\_resolutions.h}}
+\mbox{\hyperlink{Z__resolutions_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TRandom3.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00029\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00045\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Z__resolutions_8h_af480f62255be31912e5201650f336ea5}{ProcessFile}}(}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{const}\ std::string\&\ fileName,}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{keywordtype}{int}\ energy,}
+\DoxyCodeLine{00048\ \ \ \ \ std::vector<double>\&\ R\_Z\_vec,}
+\DoxyCodeLine{00049\ \ \ \ \ std::vector<double>\&\ R\_Z\_err\_vec,}
+\DoxyCodeLine{00050\ \ \ \ \ std::vector<double>\&\ meanZ\_vec,}
+\DoxyCodeLine{00051\ \ \ \ \ std::vector<double>\&\ meanZ\_err\_vec,}
+\DoxyCodeLine{00052\ \ \ \ \ std::ofstream\&\ LatexFile\_Z}
+\DoxyCodeLine{00053\ );}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00069\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Z__resolutions_8h_a475ba69ff2ad8505cfa33751901d81ea}{FitHistograms}}(}
+\DoxyCodeLine{00070\ \ \ \ \ TFile*\ inFile,}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{int}\ energy,}
+\DoxyCodeLine{00072\ \ \ \ \ std::vector<double>\&\ R\_Z\_vec,}
+\DoxyCodeLine{00073\ \ \ \ \ std::vector<double>\&\ R\_Z\_err\_vec,}
+\DoxyCodeLine{00074\ \ \ \ \ std::vector<double>\&\ meanZ\_vec,}
+\DoxyCodeLine{00075\ \ \ \ \ std::vector<double>\&\ meanZ\_err\_vec,}
+\DoxyCodeLine{00076\ \ \ \ \ std::ofstream\&\ LatexFile\_Z}
+\DoxyCodeLine{00077\ );}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00088\ TFitResultPtr\ \mbox{\hyperlink{Z__resolutions_8h_a7c1379d234367f611e9cb241b1f49847}{FitWithTSpectrum}}(TH1D\ *hist,\ \textcolor{keywordtype}{int}\ energy);}
+\DoxyCodeLine{00089\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Z__resolutions_8h_abc8a567abccc89e3f6585bf4c1c38d52}{WriteZTable}}(std::ofstream\&\ outFile,\ \textcolor{keywordtype}{int}\ energy,\ }
+\DoxyCodeLine{00105\ \ \ \ \ \textcolor{keywordtype}{double}\ meanZ,\ \textcolor{keywordtype}{double}\ stdZ,\ \textcolor{keywordtype}{double}\ R\_Z,}
+\DoxyCodeLine{00106\ \ \ \ \ \textcolor{keywordtype}{double}\ meanErrZ,\ \textcolor{keywordtype}{double}\ stdErrZ,\ \textcolor{keywordtype}{double}\ R\_Z\_err);}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00115\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Z__resolutions_8h_ad867a67690e3dd7ac7f46e6123580b80}{OpenZFile}}(std::ofstream\&\ outFile);}
+\DoxyCodeLine{00116\ }
+\DoxyCodeLine{00124\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Z__resolutions_8h_afaad6cbd1c71c2461d830e374f574434}{CloseZFile}}(std::ofstream\&\ outFile);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00135\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Z__resolutions_8h_a016555409fa0e6777994e083a713e05e}{PlotResolutionGraphs}}(}
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ R\_Z\_vec,}
+\DoxyCodeLine{00137\ \ \ \ \ \textcolor{keyword}{const}\ std::vector<double>\&\ R\_Z\_err\_vec}
+\DoxyCodeLine{00138\ );}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00150\ std::pair<std::string,\ std::string>\ \mbox{\hyperlink{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{RoundMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
+\DoxyCodeLine{00151\ }
+
+\end{DoxyCode}

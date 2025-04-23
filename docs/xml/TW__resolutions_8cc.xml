@@ -1,0 +1,1372 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="TW__resolutions_8cc" kind="file" language="C++">
+    <compoundname>TW_resolutions.cc</compoundname>
+    <includes refid="TW__resolutions_8h" local="yes">TW_resolutions.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc</label>
+        <link refid="TW__resolutions_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>TW_resolutions.h</label>
+        <link refid="TW__resolutions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="5">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="7">
+        <label>TF1.h</label>
+      </node>
+      <node id="3">
+        <label>TFile.h</label>
+      </node>
+      <node id="10">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="6">
+        <label>TH1.h</label>
+      </node>
+      <node id="4">
+        <label>TKey.h</label>
+      </node>
+      <node id="12">
+        <label>TNamed.h</label>
+      </node>
+      <node id="8">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="13">
+        <label>TSpectrum.h</label>
+      </node>
+      <node id="15">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="17">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>numeric</label>
+      </node>
+      <node id="18">
+        <label>regex</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="TW__resolutions_8cc_1a54f512bea6673fc75f19efed54515420" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TW_resolutions</definition>
+        <argsstring>()</argsstring>
+        <name>TW_resolutions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="7" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="7" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1aad661d4c7037778af8afc75d9cfc82af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FitHistograms</definition>
+        <argsstring>(TFile *inFile, int energy, std::vector&lt; double &gt; &amp;R_He_vec, std::vector&lt; double &gt; &amp;R_He_err_vec, std::vector&lt; double &gt; &amp;meanEloss_vec, std::vector&lt; double &gt; &amp;meanEloss_err_vec, std::vector&lt; double &gt; &amp;R_Tof_vec, std::vector&lt; double &gt; &amp;R_Tof_err_vec, std::vector&lt; double &gt; &amp;meanTof_vec, std::vector&lt; double &gt; &amp;meanTof_err_vec, std::ofstream &amp;LatexFile_Eloss, std::ofstream &amp;LatexFile_Tof)</argsstring>
+        <name>FitHistograms</name>
+        <param>
+          <type>TFile *</type>
+          <declname>inFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Eloss</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Tof</declname>
+        </param>
+        <briefdescription>
+<para>Fits histograms for ToF and Eloss resolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to LaTeX files.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the input ROOT file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Eloss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the Eloss LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Tof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the ToF LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="41" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="41" bodyend="178"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1a02c7c5bce27bbd7305a4f78b242bf035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const std::string &amp;fileName, int energy, std::vector&lt; double &gt; &amp;R_He_vec, std::vector&lt; double &gt; &amp;R_He_err_vec, std::vector&lt; double &gt; &amp;meanEloss_vec, std::vector&lt; double &gt; &amp;meanEloss_err_vec, std::vector&lt; double &gt; &amp;R_Tof_vec, std::vector&lt; double &gt; &amp;R_Tof_err_vec, std::vector&lt; double &gt; &amp;meanTof_vec, std::vector&lt; double &gt; &amp;meanTof_err_vec, std::ofstream &amp;LatexFile_Eloss, std::ofstream &amp;LatexFile_Tof)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Eloss</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Tof</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file and calculates resolutions for ToF and Eloss. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the ROOT file to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Eloss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the Eloss LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Tof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the ToF LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="180" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="180" bodyend="213"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1a7c1379d234367f611e9cb241b1f49847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TFitResultPtr</type>
+        <definition>TFitResultPtr FitWithTSpectrum</definition>
+        <argsstring>(TH1D *hist, int energy)</argsstring>
+        <name>FitWithTSpectrum</name>
+        <param>
+          <type>TH1D *</type>
+          <declname>hist</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <briefdescription>
+<para>Fits a histogram using TSpectrum for peak detection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the histogram to fit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TFitResultPtr containing the fit results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="215" column="15" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="215" bodyend="254"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1a70a0181fb46626b661e03c6a299a82d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteElossTable</definition>
+        <argsstring>(std::ofstream &amp;outFile, int energy, double meanElossHe, double stdElossHe, double R_He, double meanElossErrHe, double stdElossErrHe, double R_He_err)</argsstring>
+        <name>WriteElossTable</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanElossHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>stdElossHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_He</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanElossErrHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>stdElossErrHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_He_err</declname>
+        </param>
+        <briefdescription>
+<para>Writes Eloss results to a LaTeX table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the Eloss results, including mean, standard deviation, and resolution, to a LaTeX table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanElossHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean Eloss value for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stdElossHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Standard deviation of Eloss for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resolution for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanElossErrHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the mean Eloss for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stdElossErrHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the standard deviation of Eloss for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the resolution for He. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="256" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="256" bodyend="270"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1aaada03daa7e756a994fe3fc9176a482f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteTofTable</definition>
+        <argsstring>(std::ofstream &amp;outFile, int energy, double meanTof, double meanTofErr, double stdTof, double stdTofErr)</argsstring>
+        <name>WriteTofTable</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanTof</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanTofErr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_Tof</declname>
+          <defname>stdTof</defname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_Tof_err</declname>
+          <defname>stdTofErr</defname>
+        </param>
+        <briefdescription>
+<para>Writes ToF results to a LaTeX table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the ToF results, including mean and resolution, to a LaTeX table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean ToF value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTofErr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the mean ToF value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resolution for ToF. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the resolution for ToF. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="272" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="272" bodyend="285"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1ab559ccd64309e7e7e34f94723cb06fe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenElossFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>OpenElossFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Opens a LaTeX file for Eloss results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="287" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="287" bodyend="296"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1a313a1c48700390e15fb773d67c056d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenTofFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>OpenTofFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Opens a LaTeX file for ToF results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="298" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="298" bodyend="307"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1aada91a63fcdac00b6709bce94b912b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseElossFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>CloseElossFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Closes a LaTeX file for Eloss results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="309" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="309" bodyend="320"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1a9d4d462e980c97c3c83e2395a4b30979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseTofFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>CloseTofFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Closes a LaTeX file for ToF results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="322" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="322" bodyend="333"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1ac05499726ae87bcc5ec712f14e99867f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlotResolutionGraphs</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;R_He_vec, const std::vector&lt; double &gt; &amp;R_He_err_vec, const std::vector&lt; double &gt; &amp;meanEloss_vec, const std::vector&lt; double &gt; &amp;meanEloss_err_vec, const std::vector&lt; double &gt; &amp;R_Tof_vec, const std::vector&lt; double &gt; &amp;R_Tof_err_vec, const std::vector&lt; double &gt; &amp;meanTof_vec, const std::vector&lt; double &gt; &amp;meanTof_err_vec)</argsstring>
+        <name>PlotResolutionGraphs</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_err_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_err_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_err_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_err_vec</declname>
+        </param>
+        <briefdescription>
+<para>Plots resolution graphs for ToF and Eloss. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates graphs for ToF and Eloss resolutions and saves them as PNG files. The eloss resolutions at each beam energy are plotted against the mean energy loss value, the TOF resolutions against the mean TOF value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>R_He_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing He resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing He resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean Eloss values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean Eloss uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing ToF resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing ToF resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean ToF values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean ToF uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="335" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="335" bodyend="388"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>pair&lt; std::string, std::string &gt;</type>
+        <definition>pair&lt; std::string, std::string &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rounds a measurement value and its uncertainty to appropriate significant figures.</para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" line="391" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="391" bodyend="411"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//<sp/>Macro<sp/>that<sp/>computes<sp/>the<sp/>energy<sp/>loss<sp/>(sigma/mu)<sp/>and<sp/>TOF<sp/>resolutions<sp/>(sigma)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/>from<sp/>the<sp/>calibrated<sp/>energy<sp/>loss<sp/>histogram<sp/>and<sp/>calibrated<sp/>TOF<sp/>histogram<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/>all<sp/>the<sp/>TW<sp/>bars.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="TW__resolutions_8h" kindref="compound">TW_resolutions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TW_resolutions()<sp/>{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;<sp/>filesAndEnergies<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;calibrated/AnaFOOT_TW_Decoded_HIT2022_100MeV.root&quot;</highlight><highlight class="normal">,<sp/>100},</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;calibrated/AnaFOOT_TW_Decoded_HIT2022_140MeV.root&quot;</highlight><highlight class="normal">,<sp/>140},</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;calibrated/AnaFOOT_TW_Decoded_HIT2022_200MeV.root&quot;</highlight><highlight class="normal">,<sp/>200},</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;calibrated/AnaFOOT_TW_Decoded_HIT2022_220MeV.root&quot;</highlight><highlight class="normal">,<sp/>220}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>LatexFileName_Eloss<sp/>=<sp/>TString(</highlight><highlight class="stringliteral">&quot;ElossResolutions.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>LatexFileName_Tof<sp/>=<sp/>TString(</highlight><highlight class="stringliteral">&quot;TofResolutions.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>LatexFile_Eloss(LatexFileName_Eloss.Data());</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream<sp/>LatexFile_Tof(LatexFileName_Tof.Data());</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>OpenElossFile(LatexFile_Eloss);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>OpenTofFile(LatexFile_Tof);</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>energies;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>R_He_vec,<sp/>R_He_err_vec,<sp/>meanEloss_vec,<sp/>meanEloss_err_vec;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>R_Tof_vec,<sp/>R_Tof_err_vec,<sp/>meanTof_vec,<sp/>meanTof_err_vec;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>[fileName,<sp/>energy]<sp/>:<sp/>filesAndEnergies)<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energies.push_back(energy);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ProcessFile(fileName,<sp/>energy,<sp/>R_He_vec,<sp/>R_He_err_vec,<sp/>meanEloss_vec,<sp/>meanEloss_err_vec,<sp/>R_Tof_vec,<sp/>R_Tof_err_vec,<sp/>meanTof_vec,<sp/>meanTof_err_vec,<sp/>LatexFile_Eloss,<sp/>LatexFile_Tof);</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>CloseElossFile(LatexFile_Eloss);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>CloseTofFile(LatexFile_Tof);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>PlotResolutionGraphs(R_He_vec,<sp/>R_He_err_vec,<sp/>meanEloss_vec,<sp/>meanEloss_err_vec,<sp/>R_Tof_vec,<sp/>R_Tof_err_vec,<sp/>meanTof_vec,<sp/>meanTof_err_vec);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Function<sp/>to<sp/>fit<sp/>histograms<sp/>in<sp/>a<sp/>directory<sp/>and<sp/>store<sp/>results</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>FitHistograms(</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>inFile,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_vec,</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_err_vec,</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_vec,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_err_vec,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_vec,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_err_vec,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_vec,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Eloss,</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Tof</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!inFile)<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TIter<sp/>next(inFile-&gt;GetListOfKeys());</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>TKey*<sp/>key;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((key<sp/>=<sp/>(TKey*)next()))<sp/>{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TObject*<sp/>obj<sp/>=<sp/>key-&gt;ReadObj();</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TH1D*<sp/>hist<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal">TH1D*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(obj);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!hist)<sp/>{</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>obj;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TString<sp/>histName<sp/>=<sp/>hist-&gt;GetName();</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(histName<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Eloss&quot;</highlight><highlight class="normal">)<sp/>{<sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;beam<sp/>energy:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>energy<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MeV/u<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;Draw();</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFitResultPtr<sp/>fitResult<sp/>=<sp/>FitWithTSpectrum(hist,<sp/>energy);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//FitStats<sp/>statsEloss<sp/>=<sp/>FitResampling(hist,<sp/>energy,<sp/>fitResult-&gt;Parameter(1),<sp/>fitResult-&gt;Parameter(2));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossHe<sp/>=<sp/>fitResult-&gt;Parameter(1);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossErrHe<sp/>=<sp/>fitResult-&gt;Error(1);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>meanElossErrHe<sp/>=<sp/>statsEloss.stddevOfMean;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossHe<sp/>=<sp/>fitResult-&gt;Parameter(2);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossErrHe<sp/>=<sp/>fitResult-&gt;Error(2);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//double<sp/>stdElossErrHe<sp/>=<sp/>statsEloss.stddevOfSigmas;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He_err;</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult.Get()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cov_mu_sigma_He<sp/>=<sp/>fitResult-&gt;CovMatrix(1,<sp/>2);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(meanElossErrHe<sp/>&gt;<sp/>0.000045)<sp/>meanElossErrHe<sp/>=<sp/>0.0001;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stdElossErrHe<sp/>&gt;<sp/>0.000045)<sp/>stdElossErrHe<sp/>=<sp/>0.0001;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(meanElossHe<sp/>&gt;<sp/>0<sp/>||<sp/>stdElossHe<sp/>/<sp/>meanElossHe<sp/>&lt;<sp/>0.2<sp/>||<sp/>meanElossHe<sp/>/<sp/>meanElossErrHe<sp/>-<sp/>1<sp/>&gt;<sp/>0.5)<sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He<sp/>=<sp/>stdElossHe<sp/>/<sp/>meanElossHe;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_err<sp/>=<sp/>(1.<sp/>/<sp/>meanElossHe)<sp/>*<sp/>sqrt(pow(stdElossErrHe,<sp/>2)<sp/>+<sp/>pow(R_He<sp/>*<sp/>meanElossErrHe,<sp/>2));</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(R_He_err<sp/>&gt;=<sp/>0.00005)<sp/>R_He_err<sp/>=<sp/>0.0001;</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[R_He_str,<sp/>R_He_err_str]<sp/>=<sp/>RoundMeasurement(R_He,<sp/>R_He_err);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He<sp/>=<sp/>std::stod(R_He_str);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_err<sp/>=<sp/>std::stod(R_He_err_str);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He<sp/>*=<sp/>100.;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_err<sp/>*=<sp/>100.;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_vec.push_back(R_He);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_err_vec.push_back(R_He_err);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[meanElossHe_str,<sp/>meanElossErrHe_str]<sp/>=<sp/>RoundMeasurement(meanElossHe,<sp/>meanElossErrHe);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[stdElossHe_str,<sp/>stdElossErrHe_str]<sp/>=<sp/>RoundMeasurement(stdElossHe,<sp/>stdElossErrHe);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanElossHe<sp/>=<sp/>std::stod(meanElossHe_str);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanElossErrHe<sp/>=<sp/>std::stod(meanElossErrHe_str);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdElossHe<sp/>=<sp/>std::stod(stdElossHe_str);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdElossErrHe<sp/>=<sp/>std::stod(stdElossErrHe_str);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanEloss_vec.push_back(meanElossHe);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanEloss_err_vec.push_back(meanElossErrHe);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult-&gt;Write(Form(</highlight><highlight class="stringliteral">&quot;FitResultHe&quot;</highlight><highlight class="normal">),<sp/>TObject::kOverwrite);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;heliums<sp/>resolution<sp/>(%):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>R_He<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>+/-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>R_He_err<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;cov_mu_sigma_He:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cov_mu_sigma_He<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WriteElossTable(LatexFile_Eloss,<sp/>energy,</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanElossHe,<sp/>stdElossHe,<sp/>R_He,</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanElossErrHe,<sp/>stdElossErrHe,<sp/>R_He_err);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>histogram<sp/>with<sp/>both<sp/>fits<sp/>to<sp/>the<sp/>output<sp/>file</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;Write(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>TObject::kOverwrite);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(histName<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ToF&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;beam<sp/>energy:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>energy<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MeV/u<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;Draw();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFitResultPtr<sp/>fitResult<sp/>=<sp/>FitWithTSpectrum(hist,<sp/>energy);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanTof<sp/>=<sp/>fitResult-&gt;Parameter(1);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanTofErr<sp/>=<sp/>fitResult-&gt;Error(1);s</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdTof<sp/>=<sp/>fitResult-&gt;Parameter(2);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdTofErr<sp/>=<sp/>fitResult-&gt;Error(2);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(meanTofErr<sp/>&gt;=<sp/>0.00005)<sp/>meanTofErr<sp/>=<sp/>0.0001;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult.Get()<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[meanTof_str,<sp/>meanTofErr_str]<sp/>=<sp/>RoundMeasurement(meanTof,<sp/>meanTofErr);</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanTof<sp/>=<sp/>std::stod(meanTof_str);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanTofErr<sp/>=<sp/>std::stod(meanTofErr_str);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>conversion<sp/>from<sp/>ns<sp/>to<sp/>ps</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdTof<sp/>*=<sp/>1000.;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdTofErr<sp/>*=<sp/>1000.;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(stdTofErr<sp/>&gt;=<sp/>0.05)<sp/>stdTofErr<sp/>=<sp/>0.1;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[stdTof_str,<sp/>stdTofErr_str]<sp/>=<sp/>RoundMeasurement(stdTof,<sp/>stdTofErr);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdTof<sp/>=<sp/>std::stod(stdTof_str);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdTofErr<sp/>=<sp/>std::stod(stdTofErr_str);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_Tof_vec.push_back(stdTof);</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_Tof_err_vec.push_back(stdTofErr);</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanTof_vec.push_back(meanTof);</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanTof_err_vec.push_back(meanTofErr);</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;TOF<sp/>resolution<sp/>(ps):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>stdTof<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>+/-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>stdTofErr<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WriteTofTable(LatexFile_Tof,<sp/>energy,<sp/>meanTof,<sp/>meanTofErr,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>stdTof,<sp/>stdTofErr);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult-&gt;Write(Form(</highlight><highlight class="stringliteral">&quot;fitResultTOF&quot;</highlight><highlight class="normal">),<sp/>TObject::kOverwrite);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;Write(</highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>TObject::kOverwrite);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>hist;</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="178"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ProcessFile(</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_vec,</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_err_vec,</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_vec,</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_err_vec,</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_vec,</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_err_vec,</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_vec,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec,</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Eloss,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Tof</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>file<sp/>=<sp/>TFile::Open(fileName.c_str(),<sp/></highlight><highlight class="stringliteral">&quot;READ&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file<sp/>||<sp/>file-&gt;IsZombie())<sp/>{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="199"><highlight class="normal"></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Processing<sp/>file:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="201"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Create<sp/>an<sp/>output<sp/>ROOT<sp/>file<sp/>to<sp/>store<sp/>fitted<sp/>histograms</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>TString<sp/>outputFileName<sp/>=<sp/>TString(fileName).ReplaceAll(</highlight><highlight class="stringliteral">&quot;.root&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;_Fit.root&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>outputFile<sp/>=<sp/>TFile::Open(outputFileName,<sp/></highlight><highlight class="stringliteral">&quot;UPDATE&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/>outputFile-&gt;cd();</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>FitHistograms(file,<sp/>energy,<sp/>R_He_vec,<sp/>R_He_err_vec,<sp/>meanEloss_vec,<sp/>meanEloss_err_vec,<sp/>R_Tof_vec,<sp/>R_Tof_err_vec,<sp/>meanTof_vec,<sp/>meanTof_err_vec,<sp/>LatexFile_Eloss,<sp/>LatexFile_Tof);</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/>outputFile-&gt;Close();</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/>file-&gt;Close();</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>outputFile;</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>file;</highlight></codeline>
+<codeline lineno="213"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"></highlight></codeline>
+<codeline lineno="215"><highlight class="normal">TFitResultPtr<sp/>FitWithTSpectrum(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy)</highlight></codeline>
+<codeline lineno="216"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nPeaks<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>TSpectrum<sp/>spectrum(1);</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>nPeaks<sp/>=<sp/>spectrum.Search(hist,<sp/>1,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/>0.0015);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;#<sp/>of<sp/>peaks:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>nPeaks<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>TFitResultPtr<sp/>fitResult;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nPeaks<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;No<sp/>TOF<sp/>peaks<sp/>found&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>peakPosition<sp/>=<sp/>spectrum.GetPositionX()[0];</highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((TString(hist-&gt;GetName())<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;Eloss&quot;</highlight><highlight class="normal">)<sp/>&amp;&amp;<sp/>energy<sp/>==<sp/>220)<sp/>peakPosition<sp/>=<sp/>5.22;</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binFit<sp/>=<sp/>(TString(hist-&gt;GetName())<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;ToF&quot;</highlight><highlight class="normal">)<sp/>?<sp/>5<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(TString(hist-&gt;GetName())<sp/>==<sp/>&quot;ToF&quot;<sp/>&amp;&amp;<sp/>energy<sp/>==<sp/>100)<sp/>binFit<sp/>=<sp/>3;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binPeak<sp/>=<sp/>hist-&gt;FindBin(peakPosition);</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binLow<sp/>=<sp/>std::max(1,<sp/>binPeak<sp/>-<sp/>binFit);</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>binHigh<sp/>=<sp/>std::min(hist-&gt;GetNbinsX(),<sp/>binPeak<sp/>+<sp/>binFit);</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TF1<sp/>*gaus<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TF1(</highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/>hist-&gt;GetBinLowEdge(binLow),<sp/>hist-&gt;GetBinLowEdge(binHigh<sp/>+<sp/>1));</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus-&gt;SetParameter(1,<sp/>peakPosition);</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus-&gt;SetParLimits(1,<sp/>peakPosition<sp/>-<sp/>0.5,<sp/>peakPosition<sp/>+<sp/>0.5);</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>fitResult<sp/>=<sp/>hist-&gt;Fit(</highlight><highlight class="stringliteral">&quot;gaus&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;QRS&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(fitResult-&gt;Status()<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;fit<sp/>failed&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>hist-&gt;GetListOfFunctions()-&gt;Add(gaus);</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus-&gt;SetLineColor(kRed);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gaus-&gt;Draw(</highlight><highlight class="stringliteral">&quot;same&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>fitResult;</highlight></codeline>
+<codeline lineno="254"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WriteElossTable(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He,</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossErrHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossErrHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He_err)</highlight></codeline>
+<codeline lineno="259"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!outFile.is_open())<sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Output<sp/>file<sp/>stream<sp/>is<sp/>not<sp/>open.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>LaTeX<sp/>table<sp/>row<sp/>with<sp/>errors<sp/>in<sp/>\pm<sp/>notation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile<sp/>&lt;&lt;<sp/>energy<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&amp;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>meanElossHe<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>$\\pm<sp/>$<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>meanElossErrHe<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&amp;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>stdElossHe<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>$\\pm<sp/>$<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>stdElossErrHe<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&amp;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>R_He<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>$\\pm<sp/>$<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>R_He_err<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>\\\\<sp/>\\midrule\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>WriteTofTable(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanTof,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanTofErr,</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdTof,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdTofErr)</highlight></codeline>
+<codeline lineno="275"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!outFile.is_open())<sp/>{</highlight></codeline>
+<codeline lineno="277"><highlight class="normal">std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Output<sp/>file<sp/>stream<sp/>is<sp/>not<sp/>open.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="279"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Write<sp/>LaTeX<sp/>table<sp/>row<sp/>with<sp/>errors<sp/>in<sp/>\pm<sp/>notation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal">outFile<sp/>&lt;&lt;<sp/>energy<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&amp;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal">&lt;&lt;<sp/>meanTof<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>$\\pm<sp/>$<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>meanTofErr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&amp;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal">&lt;&lt;<sp/>stdTof<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>$\\pm<sp/>$<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>stdTofErr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>\\\\<sp/>\\midrule\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="285"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenElossFile(std::ofstream&amp;<sp/>outFile)</highlight></codeline>
+<codeline lineno="288"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>LaTeX<sp/>table<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\\begin{table}[h]\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\centering\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\begin{tabular}{cccc}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="293"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\\toprule\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Beam<sp/>energy<sp/>&amp;<sp/>$\\mu(\\Delta<sp/>E)$<sp/>&amp;<sp/>$\\sigma(\\Delta<sp/>E)$<sp/>&amp;<sp/>$R_{\\Delta<sp/>E}$\\\\<sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="295"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{[}MeV/u{]}<sp/>&amp;<sp/>{[}MeV{]}<sp/>&amp;<sp/>{[}MeV{]}<sp/>&amp;<sp/>{[}\\%{]}\\\\<sp/>\\midrule\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="296"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>OpenTofFile(std::ofstream&amp;<sp/>outFile)</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>LaTeX<sp/>table<sp/>header</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\\begin{table}[h]\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\centering\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\begin{tabular}{ccc}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\\toprule\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Beam<sp/>energy<sp/>&amp;<sp/>$\\mu(TOF)$<sp/>&amp;<sp/>$R_{TOF}$<sp/>$(\\sigma)$\\\\<sp/>\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{[}MeV/u{]}<sp/>&amp;<sp/>{[}ns{]}<sp/>&amp;<sp/>{[}ps{]}\\\\<sp/>\\midrule\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CloseElossFile(std::ofstream&amp;<sp/>outFile)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(!outFile.is_open())<sp/>return;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>LaTeX<sp/>table<sp/>footer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\\bottomrule\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\end{tabular}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\caption{Calibrated<sp/>$\\Delta<sp/>E$<sp/>resolution<sp/>results<sp/>at<sp/>each<sp/>beam<sp/>energy<sp/>value.}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\label{Tab:Eloss_resolutions}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\\end{table}\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile.close();</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;LaTeX<sp/>table<sp/>written<sp/>successfully.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="320"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>CloseTofFile(std::ofstream&amp;<sp/>outFile)</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>(!outFile.is_open())<sp/>return;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Write<sp/>LaTeX<sp/>table<sp/>footer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>\\bottomrule\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\end{tabular}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\caption{Calibrated<sp/>TOF<sp/>resolution<sp/>results<sp/>at<sp/>each<sp/>beam<sp/>energy<sp/>value.}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/><sp/><sp/><sp/>\\label{Tab:TOF_resolutions}\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\\end{table}\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"><sp/><sp/><sp/><sp/>outFile.close();</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;LaTeX<sp/>table<sp/>written<sp/>successfully.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="333"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="334"><highlight class="normal"></highlight></codeline>
+<codeline lineno="335"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PlotResolutionGraphs(</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_vec,</highlight></codeline>
+<codeline lineno="337"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_err_vec,</highlight></codeline>
+<codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_vec,</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_err_vec,</highlight></codeline>
+<codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_vec,</highlight></codeline>
+<codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_err_vec,</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_vec,</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec</highlight></codeline>
+<codeline lineno="344"><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>gStyle-&gt;SetTitleSize(0.07,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"></highlight></codeline>
+<codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------<sp/>Canvas<sp/>1:<sp/>R_He<sp/>vs<sp/>meanEloss<sp/>-----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cEloss<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TCanvas(</highlight><highlight class="stringliteral">&quot;cEloss&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Helium<sp/>Resolution<sp/>vs<sp/>Energy<sp/>Loss&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>600);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/>cEloss-&gt;SetGrid();</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>cEloss-&gt;SetMargin(0.15,<sp/>0.1,<sp/>0.15,<sp/>0.1);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>gMeanEloss<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TGraphErrors(meanEloss_vec.size(),</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanEloss_vec.data(),</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_vec.data(),</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanEloss_err_vec.data(),</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_He_err_vec.data());</highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;SetTitle(</highlight><highlight class="stringliteral">&quot;Calibrated<sp/>energy<sp/>loss<sp/>resolutions;#mu(#Delta<sp/>E)<sp/>[MeV];Resolution<sp/>[%]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;SetMarkerStyle(20);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;SetMarkerSize(1.5);</highlight></codeline>
+<codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;SetLineWidth(2);</highlight></codeline>
+<codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;GetXaxis()-&gt;SetTitleSize(0.05);</highlight></codeline>
+<codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;GetYaxis()-&gt;SetTitleSize(0.05);</highlight></codeline>
+<codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/>gMeanEloss-&gt;Draw(</highlight><highlight class="stringliteral">&quot;AP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/>cEloss-&gt;SaveAs(</highlight><highlight class="stringliteral">&quot;Plots/Eloss_Resolution.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>-----------<sp/>Canvas<sp/>2:<sp/>R_Tof<sp/>vs<sp/>meanTof<sp/>-----------</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>cTof<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TCanvas(</highlight><highlight class="stringliteral">&quot;cTof&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;TOF<sp/>Resolution<sp/>vs<sp/>TOF&quot;</highlight><highlight class="normal">,<sp/>800,<sp/>600);</highlight></codeline>
+<codeline lineno="370"><highlight class="normal"><sp/><sp/><sp/><sp/>cTof-&gt;SetGrid();</highlight></codeline>
+<codeline lineno="371"><highlight class="normal"><sp/><sp/><sp/><sp/>cTof-&gt;SetMargin(0.15,<sp/>0.1,<sp/>0.15,<sp/>0.1);</highlight></codeline>
+<codeline lineno="372"><highlight class="normal"></highlight></codeline>
+<codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>gRTof<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TGraphErrors(meanTof_vec.size(),</highlight></codeline>
+<codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanTof_vec.data(),</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_Tof_vec.data(),</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>meanTof_err_vec.data(),</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>R_Tof_err_vec.data());</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;SetTitle(</highlight><highlight class="stringliteral">&quot;Calibrated<sp/>TOF<sp/>resolutions;#mu(TOF)<sp/>[ns];Resolution<sp/>[ps]&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;SetMarkerStyle(20);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;SetMarkerSize(1.5);</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;SetLineWidth(2);</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;GetXaxis()-&gt;SetTitleSize(0.05);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;GetYaxis()-&gt;SetTitleSize(0.05);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/>gRTof-&gt;Draw(</highlight><highlight class="stringliteral">&quot;AP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="386"><highlight class="normal"></highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/>cTof-&gt;SaveAs(</highlight><highlight class="stringliteral">&quot;Plots/TOF_Resolution.png&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"></highlight></codeline>
+<codeline lineno="390"><highlight class="normal"></highlight></codeline>
+<codeline lineno="391"><highlight class="normal">pair&lt;std::string,<sp/>std::string&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty)<sp/>{</highlight></codeline>
+<codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>the<sp/>order<sp/>of<sp/>magnitude<sp/>of<sp/>the<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="393"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>uncertaintyOrder<sp/>=<sp/>(int)std::floor(std::log10(uncertainty));</highlight></codeline>
+<codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundingFactor<sp/>=<sp/>std::pow(10,<sp/>uncertaintyOrder);</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"></highlight></codeline>
+<codeline lineno="396"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Round<sp/>uncertainty<sp/>to<sp/>1<sp/>significant<sp/>figure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundedUncertainty<sp/>=<sp/>std::round(uncertainty<sp/>/<sp/>roundingFactor)<sp/>*<sp/>roundingFactor;</highlight></codeline>
+<codeline lineno="398"><highlight class="normal"></highlight></codeline>
+<codeline lineno="399"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Adjust<sp/>the<sp/>value<sp/>to<sp/>match<sp/>the<sp/>precision<sp/>of<sp/>the<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="400"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundedValue<sp/>=<sp/>std::round(value<sp/>/<sp/>roundingFactor)<sp/>*<sp/>roundingFactor;</highlight></codeline>
+<codeline lineno="401"><highlight class="normal"></highlight></codeline>
+<codeline lineno="402"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Determine<sp/>the<sp/>number<sp/>of<sp/>decimal<sp/>places<sp/>to<sp/>display<sp/>based<sp/>on<sp/>the<sp/>rounded<sp/>uncertainty</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="403"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>decimalPlaces<sp/>=<sp/>std::max(0,<sp/>-uncertaintyOrder);</highlight></codeline>
+<codeline lineno="404"><highlight class="normal"></highlight></codeline>
+<codeline lineno="405"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Format<sp/>value<sp/>and<sp/>uncertainty<sp/>into<sp/>strings<sp/>with<sp/>the<sp/>required<sp/>precision</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="406"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>valueStream,<sp/>uncertaintyStream;</highlight></codeline>
+<codeline lineno="407"><highlight class="normal"><sp/><sp/><sp/><sp/>valueStream<sp/>&lt;&lt;<sp/>std::fixed<sp/>&lt;&lt;<sp/>std::setprecision(decimalPlaces)<sp/>&lt;&lt;<sp/>roundedValue;</highlight></codeline>
+<codeline lineno="408"><highlight class="normal"><sp/><sp/><sp/><sp/>uncertaintyStream<sp/>&lt;&lt;<sp/>std::fixed<sp/>&lt;&lt;<sp/>std::setprecision(decimalPlaces)<sp/>&lt;&lt;<sp/>roundedUncertainty;</highlight></codeline>
+<codeline lineno="409"><highlight class="normal"></highlight></codeline>
+<codeline lineno="410"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{valueStream.str(),<sp/>uncertaintyStream.str()};</highlight></codeline>
+<codeline lineno="411"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc"/>
+  </compounddef>
+</doxygen>

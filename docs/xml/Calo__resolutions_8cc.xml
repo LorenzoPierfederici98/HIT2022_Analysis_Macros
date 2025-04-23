@@ -1,0 +1,404 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Calo__resolutions_8cc" kind="file" language="C++">
+    <compoundname>Calo_resolutions.cc</compoundname>
+    <includes refid="Calo__resolutions_8h" local="yes">Calo_resolutions.h</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc</label>
+        <link refid="Calo__resolutions_8cc"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Calo_resolutions.h</label>
+        <link refid="Calo__resolutions_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="5">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="7">
+        <label>TF1.h</label>
+      </node>
+      <node id="3">
+        <label>TFile.h</label>
+      </node>
+      <node id="10">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="6">
+        <label>TH1.h</label>
+      </node>
+      <node id="4">
+        <label>TKey.h</label>
+      </node>
+      <node id="12">
+        <label>TNamed.h</label>
+      </node>
+      <node id="8">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="13">
+        <label>TSpectrum.h</label>
+      </node>
+      <node id="15">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="17">
+        <label>map</label>
+      </node>
+      <node id="9">
+        <label>numeric</label>
+      </node>
+      <node id="18">
+        <label>regex</label>
+      </node>
+      <node id="16">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Calo__resolutions_8cc_1a6a4fc92bbbae15d4c1102a530743e3b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Calo_resolutions</definition>
+        <argsstring>()</argsstring>
+        <name>Calo_resolutions</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" line="3" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" bodystart="3" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="Calo__resolutions_8cc_1ae42deae8bf798058b77d8a228427dddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const std::string &amp;fileName, const int energy, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res_err</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file and calculates the resolution for each crystal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads the fit results from the specified ROOT file, calculates the resolution (standard deviation divided by the mean, expressed as a percentage), and stores the results in the provided maps.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the ROOT file to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the calculated resolutions for each crystal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Res_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the uncertainties of the calculated resolutions for each crystal. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" line="32" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" bodystart="32" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="Calo__resolutions_8cc_1a2ad7fc5517b3ca53aced9f056accb5dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Rounds a measurement value and its uncertainty to appropriate significant figures.</para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" line="84" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" bodystart="84" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="Calo__resolutions_8cc_1aebb2d0ec4b031210878491c63b1908ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlotResolutions</definition>
+        <argsstring>(const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</argsstring>
+        <name>PlotResolutions</name>
+        <param>
+          <type>const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res_err</declname>
+        </param>
+        <briefdescription>
+<para>Plots the resolution as a function of beam energy for each crystal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates a graph for each crystal, showing the resolution as a function of beam energy. The graphs are saved as PNG files in the <computeroutput>Plots</computeroutput> directory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map containing the resolutions for each crystal at different beam energies. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Res_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map containing the uncertainties of the resolutions for each crystal at different beam energies. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" line="92" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" bodystart="92" bodyend="131"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Calo__resolutions_8h" kindref="compound">Calo_resolutions.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Calo_resolutions()</highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;<sp/>filesAndEnergies<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_100MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>100},</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>140},</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_180MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>180},</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_200MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>200},</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;Calo/AnaFOOT_Calo_Decoded_HIT2022_220MeV_Fit.root&quot;</highlight><highlight class="normal">,<sp/>220}</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>energies<sp/>=<sp/>{100,<sp/>140,<sp/>180,<sp/>200,<sp/>220};</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>resolution<sp/>values:<sp/>for<sp/>each<sp/>crystal<sp/>there&apos;s<sp/>a<sp/>vector<sp/>of<sp/>at<sp/>most<sp/>5<sp/>values</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1<sp/>value<sp/>for<sp/>each<sp/>beam<sp/>energy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;<sp/>Res;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;int,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;<sp/>Res_err;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>crystals<sp/>with<sp/>at<sp/>least<sp/>two<sp/>points<sp/>in<sp/>the<sp/>mean<sp/>charge<sp/>vs<sp/>beam<sp/>energy<sp/>plot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;int&gt;<sp/>validCrystals<sp/>=<sp/>{0,<sp/>1,<sp/>2,<sp/>3,<sp/>4,<sp/>6,<sp/>7,<sp/>8,<sp/>9,<sp/>10,<sp/>12,<sp/>13,<sp/>15,<sp/>16,<sp/>18,<sp/>20,<sp/>21,<sp/>23,<sp/>24,<sp/>26};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>&amp;[fileName,<sp/>energy]<sp/>:<sp/>filesAndEnergies)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ProcessFile(fileName,<sp/>energy,<sp/>Res,<sp/>Res_err);</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>PlotResolutions(Res,<sp/>Res_err);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ProcessFile(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res,<sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res_err)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>inFile<sp/>=<sp/>TFile::Open(fileName.c_str(),<sp/></highlight><highlight class="stringliteral">&quot;READ&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!inFile<sp/>||<sp/>inFile-&gt;IsZombie())<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Error:<sp/>Unable<sp/>to<sp/>open<sp/>file<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>fileName<sp/>&lt;&lt;<sp/>std::endl;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Processing<sp/>energy:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>energy<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>MeV/u&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>TIter<sp/>next(inFile-&gt;GetListOfKeys());</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>TKey*<sp/>key;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>((key<sp/>=<sp/>(TKey*)next()))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TObject*<sp/>obj<sp/>=<sp/>key-&gt;ReadObj();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TString<sp/>objectName<sp/>=<sp/>key-&gt;GetName();</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(objectName.BeginsWith(</highlight><highlight class="stringliteral">&quot;Fit_result&quot;</highlight><highlight class="normal">))</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>lastUnderscore<sp/>=<sp/>objectName.Last(</highlight><highlight class="charliteral">&apos;_&apos;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TString<sp/>numberPart<sp/>=<sp/>objectName(lastUnderscore<sp/>+<sp/>1,<sp/>objectName.Length()<sp/>-<sp/>lastUnderscore<sp/>-<sp/>1);</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>crystalId<sp/>=<sp/>numberPart.Atoi();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;crystal<sp/>ID:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>crystalId<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TFitResult*<sp/>fitResult<sp/>=<sp/>(TFitResult<sp/>*)<sp/>inFile-&gt;Get(objectName);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean<sp/>=<sp/>fitResult-&gt;Parameter(1);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>mean_err<sp/>=<sp/>fitResult-&gt;ParError(1);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>std<sp/>=<sp/>fitResult-&gt;Parameter(2);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>std_err<sp/>=<sp/>fitResult-&gt;ParError(2);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>cov_mean_std<sp/>=<sp/>fitResult-&gt;GetCovarianceMatrix()(1,<sp/>2);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>resolution<sp/>in<sp/>%</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>res<sp/>=<sp/>100.<sp/>*<sp/>std<sp/>/<sp/>mean;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>res_err<sp/>=<sp/>100<sp/>*<sp/>(1.<sp/>/<sp/>mean)<sp/>*<sp/>sqrt(pow(std_err,<sp/>2)<sp/>+<sp/>pow(res<sp/>*<sp/>mean_err,<sp/>2));</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>[res_round,<sp/>res_err_round]<sp/>=<sp/>RoundMeasurement(res,<sp/>res_err);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res<sp/>=<sp/>res_round;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>res_err<sp/>=<sp/>res_err_round;</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;mean:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mean<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>+/-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>mean_err<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;std:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>+/-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>std_err<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;covariance:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>cov_mean_std<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Resolution<sp/>(%):<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>res<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>+/-<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>res_err<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Res[crystalId].emplace_back(energy,<sp/>res);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Res_err[crystalId].emplace_back(energy,<sp/>res_err);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>significantFigures<sp/>=<sp/>(int)std::ceil(-std::log10(uncertainty));</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundingFactor<sp/>=<sp/>std::pow(10,<sp/>significantFigures);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundedUncertainty<sp/>=<sp/>std::round(uncertainty<sp/>*<sp/>roundingFactor)<sp/>/<sp/>roundingFactor;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>roundedValue<sp/>=<sp/>std::round(value<sp/>*<sp/>roundingFactor)<sp/>/<sp/>roundingFactor;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>{roundedValue,<sp/>roundedUncertainty};</highlight></codeline>
+<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>PlotResolutions(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res_err)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>[crystalId,<sp/>resVec]<sp/>:<sp/>Res)</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal">&amp;<sp/>errVec<sp/>=<sp/>Res_err.at(crystalId);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>nPoints<sp/>=<sp/>resVec.size();</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;<sp/>energies(nPoints),<sp/>resolutions(nPoints),<sp/>errors(nPoints);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>nPoints;<sp/>++i)</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>energies[i]<sp/>=<sp/>resVec[i].first;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>resolutions[i]<sp/>=<sp/>resVec[i].second;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>errors[i]<sp/>=<sp/>errVec[i].second;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TGraphErrors*<sp/>graph<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TGraphErrors(nPoints,<sp/>energies.data(),<sp/>resolutions.data(),<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">,<sp/>errors.data());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetTitle(Form(</highlight><highlight class="stringliteral">&quot;Resolution<sp/>vs<sp/>beam<sp/>energy<sp/>crystal<sp/>ID<sp/>%d;Beam<sp/>Energy<sp/>[MeV/u];Resolution<sp/>[%%]&quot;</highlight><highlight class="normal">,<sp/>crystalId));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetMarkerStyle(20);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;SetMarkerSize(1.5);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>gStyle-&gt;SetTitleSize(0.07,<sp/></highlight><highlight class="stringliteral">&quot;T&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;GetXaxis()-&gt;SetTitleSize(0.05);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;GetYaxis()-&gt;SetTitleSize(0.05);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TF1*<sp/>func<sp/>=<sp/>new<sp/>TF1(&quot;res_energy&quot;,<sp/>&quot;[0]/sqrt(x)&quot;,<sp/>100,<sp/>220);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//func-&gt;SetParameters(10.<sp/>*<sp/>resolutions[0]);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//graph-&gt;Fit(func,<sp/>&quot;R&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//func-&gt;SetLineColor(kRed);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//func-&gt;SetLineWidth(2);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TCanvas*<sp/>c<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>TCanvas(Form(</highlight><highlight class="stringliteral">&quot;c_crystal_%d&quot;</highlight><highlight class="normal">,<sp/>crystalId),<sp/>Form(</highlight><highlight class="stringliteral">&quot;Crystal<sp/>%d&quot;</highlight><highlight class="normal">,<sp/>crystalId),<sp/>800,<sp/>600);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;SetMargin(0.12,<sp/>0.12,<sp/>0.15,<sp/>0.15);<sp/></highlight><highlight class="comment">//<sp/>Left,<sp/>Right,<sp/>Bottom,<sp/>Top<sp/>margins</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;SetGrid();</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>graph-&gt;Draw(</highlight><highlight class="stringliteral">&quot;AP&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//func-&gt;Draw(&quot;SAME&quot;);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>c-&gt;SaveAs(Form(</highlight><highlight class="stringliteral">&quot;Plots/CaloRes_crystal_%d.png&quot;</highlight><highlight class="normal">,<sp/>crystalId));</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc"/>
+  </compounddef>
+</doxygen>

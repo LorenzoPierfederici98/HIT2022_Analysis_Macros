@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="41" column="12" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="30" bodyend="49" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="41" declcolumn="12"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="41" column="12" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="36" bodyend="55" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="41" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,13 +222,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="52" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="52" bodyend="63" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="52" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="52" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="58" bodyend="69" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="52" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="CalibrateTof_8h_1a2976661d2feaa11e0d6d557df1dbdf05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="CalibrateTof_8h_1a56ae1ed9e3d3405ee8e7bee444c02c9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void WriteMeanDifferences</definition>
-        <argsstring>(const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergiesMC, const std::string &amp;layer, int bar)</argsstring>
+        <argsstring>(const std::map&lt; int, std::vector&lt; std::string &gt; &gt; calibFiles, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergiesMC, const std::string &amp;layer, int bar)</argsstring>
         <name>WriteMeanDifferences</name>
+        <param>
+          <type>const std::map&lt; int, std::vector&lt; std::string &gt; &gt;</type>
+          <declname>calibFiles</declname>
+        </param>
         <param>
           <type>const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;</type>
           <declname>filesAndEnergies</declname>
@@ -287,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="65" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="65" bodyend="146" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="65" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" line="65" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.cc" bodystart="71" bodyend="156" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateTof.h" declline="65" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -323,7 +327,7 @@
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea" kindref="member">ExtractMeanValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergies,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>layer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bar,<sp/>std::vector&lt;double&gt;&amp;<sp/>means,<sp/>std::vector&lt;double&gt;&amp;<sp/>meanErrors);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateTof_8h_1a2976661d2feaa11e0d6d557df1dbdf05" kindref="member">WriteMeanDifferences</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergies,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergiesMC,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>layer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bar);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="CalibrateTof_8h_1a56ae1ed9e3d3405ee8e7bee444c02c9e" kindref="member">WriteMeanDifferences</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::string&gt;&gt;<sp/>calibFiles,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergies,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;std::pair&lt;std::string,<sp/>int&gt;&gt;&amp;<sp/>filesAndEnergiesMC,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>layer,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>bar);</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>

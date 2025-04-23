@@ -1,0 +1,1060 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="TW__resolutions_8h" kind="file" language="C++">
+    <compoundname>TW_resolutions.h</compoundname>
+    <includes local="no">TFile.h</includes>
+    <includes local="no">TKey.h</includes>
+    <includes local="no">TDirectory.h</includes>
+    <includes local="no">TH1.h</includes>
+    <includes local="no">TF1.h</includes>
+    <includes local="no">TRandom3.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">TGraphErrors.h</includes>
+    <includes local="no">TCanvas.h</includes>
+    <includes local="no">TNamed.h</includes>
+    <includes local="no">TSpectrum.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">regex</includes>
+    <includedby refid="TW__resolutions_8cc" local="yes">/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h</label>
+        <link refid="TW__resolutions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="4">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="6">
+        <label>TF1.h</label>
+      </node>
+      <node id="2">
+        <label>TFile.h</label>
+      </node>
+      <node id="9">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="5">
+        <label>TH1.h</label>
+      </node>
+      <node id="3">
+        <label>TKey.h</label>
+      </node>
+      <node id="11">
+        <label>TNamed.h</label>
+      </node>
+      <node id="7">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="12">
+        <label>TSpectrum.h</label>
+      </node>
+      <node id="14">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>numeric</label>
+      </node>
+      <node id="17">
+        <label>regex</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="TW__resolutions_8h_1aad661d4c7037778af8afc75d9cfc82af" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FitHistograms</definition>
+        <argsstring>(TFile *inFile, int energy, std::vector&lt; double &gt; &amp;R_He_vec, std::vector&lt; double &gt; &amp;R_He_err_vec, std::vector&lt; double &gt; &amp;meanEloss_vec, std::vector&lt; double &gt; &amp;meanEloss_err_vec, std::vector&lt; double &gt; &amp;R_Tof_vec, std::vector&lt; double &gt; &amp;R_Tof_err_vec, std::vector&lt; double &gt; &amp;meanTof_vec, std::vector&lt; double &gt; &amp;meanTof_err_vec, std::ofstream &amp;LatexFile_Eloss, std::ofstream &amp;LatexFile_Tof)</argsstring>
+        <name>FitHistograms</name>
+        <param>
+          <type>TFile *</type>
+          <declname>inFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Eloss</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Tof</declname>
+        </param>
+        <briefdescription>
+<para>Fits histograms for ToF and Eloss resolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to LaTeX files.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the input ROOT file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Eloss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the Eloss LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Tof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the ToF LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="52" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="41" bodyend="178" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="52" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1a02c7c5bce27bbd7305a4f78b242bf035" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const std::string &amp;fileName, int energy, std::vector&lt; double &gt; &amp;R_He_vec, std::vector&lt; double &gt; &amp;R_He_err_vec, std::vector&lt; double &gt; &amp;meanEloss_vec, std::vector&lt; double &gt; &amp;meanEloss_err_vec, std::vector&lt; double &gt; &amp;R_Tof_vec, std::vector&lt; double &gt; &amp;R_Tof_err_vec, std::vector&lt; double &gt; &amp;meanTof_vec, std::vector&lt; double &gt; &amp;meanTof_err_vec, std::ofstream &amp;LatexFile_Eloss, std::ofstream &amp;LatexFile_Tof)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_err_vec</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Eloss</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Tof</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file and calculates resolutions for ToF and Eloss. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the ROOT file to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store He resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Eloss uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store ToF resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean ToF uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Eloss</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the Eloss LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Tof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the ToF LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="86" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="180" bodyend="213" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="86" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TFitResultPtr</type>
+        <definition>TFitResultPtr FitWithTSpectrum</definition>
+        <argsstring>(TH1D *hist, int energy)</argsstring>
+        <name>FitWithTSpectrum</name>
+        <param>
+          <type>TH1D *</type>
+          <declname>hist</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <briefdescription>
+<para>Fits a histogram using TSpectrum for peak detection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the histogram to fit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TFitResultPtr containing the fit results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="110" column="15" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="215" bodyend="254" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="110" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1aef8173c6ef6ad91f94ff7aed04dbc57d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>s void</type>
+        <definition>s void WriteElossTable</definition>
+        <argsstring>(std::ofstream &amp;outFile, int energy, double meanElossHe, double stdElossHe, double R_He, double meanElossErrHe, double stdElossErrHe, double R_He_err)</argsstring>
+        <name>WriteElossTable</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanElossHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>stdElossHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_He</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanElossErrHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>stdElossErrHe</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_He_err</declname>
+        </param>
+        <briefdescription>
+<para>Writes Eloss results to a LaTeX table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the Eloss results, including mean, standard deviation, and resolution, to a LaTeX table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanElossHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean Eloss value for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stdElossHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Standard deviation of Eloss for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resolution for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanElossErrHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the mean Eloss for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stdElossErrHe</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the standard deviation of Eloss for He. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the resolution for He. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="126" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="256" bodyend="270" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="126" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1a59aa5a05a061a274c82311aaf5137ee4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteTofTable</definition>
+        <argsstring>(std::ofstream &amp;outFile, int energy, double meanTof, double meanTofErr, double R_Tof, double R_Tof_err)</argsstring>
+        <name>WriteTofTable</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanTof</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanTofErr</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_Tof</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_Tof_err</declname>
+        </param>
+        <briefdescription>
+<para>Writes ToF results to a LaTeX table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the ToF results, including mean and resolution, to a LaTeX table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean ToF value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTofErr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the mean ToF value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resolution for ToF. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the resolution for ToF. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="142" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="272" bodyend="285" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="142" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1ab559ccd64309e7e7e34f94723cb06fe7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenElossFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>OpenElossFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Opens a LaTeX file for Eloss results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="151" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="287" bodyend="296" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="151" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1a313a1c48700390e15fb773d67c056d1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenTofFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>OpenTofFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Opens a LaTeX file for ToF results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="158" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="298" bodyend="307" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="158" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1aada91a63fcdac00b6709bce94b912b86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseElossFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>CloseElossFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Closes a LaTeX file for Eloss results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="165" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="309" bodyend="320" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="165" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1a9d4d462e980c97c3c83e2395a4b30979" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseTofFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>CloseTofFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Closes a LaTeX file for ToF results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="172" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="322" bodyend="333" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="172" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1ac05499726ae87bcc5ec712f14e99867f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlotResolutionGraphs</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;R_He_vec, const std::vector&lt; double &gt; &amp;R_He_err_vec, const std::vector&lt; double &gt; &amp;meanEloss_vec, const std::vector&lt; double &gt; &amp;meanEloss_err_vec, const std::vector&lt; double &gt; &amp;R_Tof_vec, const std::vector&lt; double &gt; &amp;R_Tof_err_vec, const std::vector&lt; double &gt; &amp;meanTof_vec, const std::vector&lt; double &gt; &amp;meanTof_err_vec)</argsstring>
+        <name>PlotResolutionGraphs</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_He_err_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanEloss_err_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Tof_err_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>meanTof_err_vec</declname>
+        </param>
+        <briefdescription>
+<para>Plots resolution graphs for ToF and Eloss. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates graphs for ToF and Eloss resolutions and saves them as PNG files. The eloss resolutions at each beam energy are plotted against the mean energy loss value, the TOF resolutions against the mean TOF value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>R_He_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing He resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_He_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing He resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean Eloss values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanEloss_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean Eloss uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing ToF resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Tof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing ToF resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean ToF values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanTof_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing mean ToF uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="190" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="335" bodyend="388" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="190" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::string, std::string &gt;</type>
+        <definition>std::pair&lt; std::string, std::string &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty to appropriate significant figures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value to round. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair containing the rounded value and uncertainty as strings.</para>
+</simplesect>
+Rounds a measurement value and its uncertainty to appropriate significant figures.</para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" line="211" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h" declline="211" declcolumn="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for TW_resolutions.cc. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains function declarations for analyzing and plotting the resolution of Time-Of-Flight (TOF) and energy loss (Eloss). The energy loss and TOF histograms, considering the response of all the TW bars, for the merged runs without target at each beam energy are fitted with gaussian functions; the resolution on the energy loss is retrieved as sigma/mu, the resolution on TOF is evaluated as sigma. The results are stored in LaTeX tables and plotted. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TKey.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TDirectory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TRandom3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TNamed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1aad661d4c7037778af8afc75d9cfc82af" kindref="member">FitHistograms</ref>(</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>inFile,</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_vec,</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_err_vec,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_vec,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_err_vec,</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_vec,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_err_vec,</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_vec,</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec,</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Eloss,</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Tof</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1a02c7c5bce27bbd7305a4f78b242bf035" kindref="member">ProcessFile</ref>(</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_vec,</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_err_vec,</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_vec,</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_err_vec,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_vec,</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_err_vec,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_vec,</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec,</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Eloss,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Tof</highlight></codeline>
+<codeline lineno="99"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">TFitResultPtr<sp/><ref refid="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kindref="member">FitWithTSpectrum</ref>(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy);s</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1aef8173c6ef6ad91f94ff7aed04dbc57d" kindref="member">WriteElossTable</ref>(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He,</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanElossErrHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdElossErrHe,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_He_err);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1a59aa5a05a061a274c82311aaf5137ee4" kindref="member">WriteTofTable</ref>(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanTof,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanTofErr,</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_Tof,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_Tof_err);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1ab559ccd64309e7e7e34f94723cb06fe7" kindref="member">OpenElossFile</ref>(std::ofstream&amp;<sp/>outFile);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1a313a1c48700390e15fb773d67c056d1e" kindref="member">OpenTofFile</ref>(std::ofstream&amp;<sp/>outFile);</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1aada91a63fcdac00b6709bce94b912b86" kindref="member">CloseElossFile</ref>(std::ofstream&amp;<sp/>outFile);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1a9d4d462e980c97c3c83e2395a4b30979" kindref="member">CloseTofFile</ref>(std::ofstream&amp;<sp/>outFile);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="TW__resolutions_8h_1ac05499726ae87bcc5ec712f14e99867f" kindref="member">PlotResolutionGraphs</ref>(</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_vec,</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_He_err_vec,</highlight></codeline>
+<codeline lineno="193"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_vec,</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanEloss_err_vec,</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_vec,</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Tof_err_vec,</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_vec,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>meanTof_err_vec</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,316 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Calo__resolutions_8h" kind="file" language="C++">
+    <compoundname>Calo_resolutions.h</compoundname>
+    <includes local="no">TFile.h</includes>
+    <includes local="no">TKey.h</includes>
+    <includes local="no">TDirectory.h</includes>
+    <includes local="no">TH1.h</includes>
+    <includes local="no">TF1.h</includes>
+    <includes local="no">TRandom3.h</includes>
+    <includes local="no">numeric</includes>
+    <includes local="no">TGraphErrors.h</includes>
+    <includes local="no">TCanvas.h</includes>
+    <includes local="no">TNamed.h</includes>
+    <includes local="no">TSpectrum.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">regex</includes>
+    <includedby refid="Calo__resolutions_8cc" local="yes">/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h</label>
+        <link refid="Calo__resolutions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="4">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="6">
+        <label>TF1.h</label>
+      </node>
+      <node id="2">
+        <label>TFile.h</label>
+      </node>
+      <node id="9">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="5">
+        <label>TH1.h</label>
+      </node>
+      <node id="3">
+        <label>TKey.h</label>
+      </node>
+      <node id="11">
+        <label>TNamed.h</label>
+      </node>
+      <node id="7">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="12">
+        <label>TSpectrum.h</label>
+      </node>
+      <node id="14">
+        <label>fstream</label>
+      </node>
+      <node id="13">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>numeric</label>
+      </node>
+      <node id="17">
+        <label>regex</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Calo__resolutions_8h_1ae42deae8bf798058b77d8a228427dddb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const std::string &amp;fileName, const int energy, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res</declname>
+        </param>
+        <param>
+          <type>std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res_err</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file and calculates the resolution for each crystal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads the fit results from the specified ROOT file, calculates the resolution (standard deviation divided by the mean, expressed as a percentage), and stores the results in the provided maps.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the ROOT file to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the calculated resolutions for each crystal. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Res_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map to store the uncertainties of the calculated resolutions for each crystal. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h" line="42" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" bodystart="32" bodyend="82" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h" declline="42" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Calo__resolutions_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty to the appropriate significant figures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value to round. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair containing the rounded value and uncertainty.</para>
+</simplesect>
+Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h" line="54" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h" declline="54" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="Calo__resolutions_8h_1aebb2d0ec4b031210878491c63b1908ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlotResolutions</definition>
+        <argsstring>(const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</argsstring>
+        <name>PlotResolutions</name>
+        <param>
+          <type>const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;</type>
+          <declname>Res_err</declname>
+        </param>
+        <briefdescription>
+<para>Plots the resolution as a function of beam energy for each crystal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates a graph for each crystal, showing the resolution as a function of beam energy. The graphs are saved as PNG files in the <computeroutput>Plots</computeroutput> directory.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>Res</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map containing the resolutions for each crystal at different beam energies. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Res_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Map containing the uncertainties of the resolutions for each crystal at different beam energies. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h" line="65" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.cc" bodystart="92" bodyend="131" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h" declline="65" declcolumn="6"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for Calo_resolutions.cc. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains function declarations and necessary includes for analyzing and plotting the resolution of calorimeter crystals as a function of beam energy. The analysis is performed using ROOT libraries, and the resolution is calculated based on the mean and standard deviation of Gaussian fits to charge histograms. The results are stored and plotted for further analysis. </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TKey.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TDirectory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TRandom3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;numeric&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TNamed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Calo__resolutions_8h_1ae42deae8bf798058b77d8a228427dddb" kindref="member">ProcessFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res,<sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res_err);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/><ref refid="Calo__resolutions_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Calo__resolutions_8h_1aebb2d0ec4b031210878491c63b1908ef" kindref="member">PlotResolutions</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res,</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">,<sp/>std::vector&lt;std::pair&lt;int,<sp/>double&gt;&gt;&gt;&amp;<sp/>Res_err);</highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Calo_resolutions.h"/>
+  </compounddef>
+</doxygen>

@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('AnalyzePeakCrystal_8h.html',''); initR
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for processing and fitting charge distribution histograms from ROOT files.  
+<p>Header file for AnalyzePeakCrystal.cc.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;TFile.h&gt;</code><br />
 <code>#include &lt;TCanvas.h&gt;</code><br />
@@ -121,7 +121,7 @@ Include dependency graph for AnalyzePeakCrystal.h:</div>
 <div class="dyncontent">
 <div class="center"><img src="AnalyzePeakCrystal_8h__incl.png" border="0" usemap="#a_2mnt_2c_2Users_2Lorenzo_2Desktop_2HIT2022__Analysis__Macros_2src_2AnalyzePeakCrystal_8h" alt=""/></div>
 <map name="a_2mnt_2c_2Users_2Lorenzo_2Desktop_2HIT2022__Analysis__Macros_2src_2AnalyzePeakCrystal_8h" id="a_2mnt_2c_2Users_2Lorenzo_2Desktop_2HIT2022__Analysis__Macros_2src_2AnalyzePeakCrystal_8h">
-<area shape="rect" title="Header file for processing and fitting charge distribution histograms from ROOT files." alt="" coords="449,5,694,60"/>
+<area shape="rect" title="Header file for AnalyzePeakCrystal.cc." alt="" coords="449,5,694,60"/>
 <area shape="rect" title=" " alt="" coords="5,108,71,133"/>
 <area shape="poly" title=" " alt="" coords="449,52,280,76,85,110,84,105,279,71,448,46"/>
 <area shape="rect" title=" " alt="" coords="95,108,184,133"/>
@@ -152,21 +152,21 @@ Include dependency graph for AnalyzePeakCrystal.h:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a5aadeca6af3105a72d885dcc752237db" id="r_a5aadeca6af3105a72d885dcc752237db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AnalyzePeakCrystal_8h.html#a5aadeca6af3105a72d885dcc752237db">PrintMeasurement</a> (double value, double uncertainty)</td></tr>
-<tr class="memdesc:a5aadeca6af3105a72d885dcc752237db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a measurement value and its uncertainty.  <br /></td></tr>
+<tr class="memdesc:a5aadeca6af3105a72d885dcc752237db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the measurement value and its uncertainty.  <br /></td></tr>
 <tr class="separator:a5aadeca6af3105a72d885dcc752237db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a814766d4b881835f9ba65bc6bcb27b0d" id="r_a814766d4b881835f9ba65bc6bcb27b0d"><td class="memItemLeft" align="right" valign="top">TFitResultPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AnalyzePeakCrystal_8h.html#a814766d4b881835f9ba65bc6bcb27b0d">FitPeakWithTSpectrum</a> (TH1D *hist, double threshold)</td></tr>
-<tr class="memdesc:a814766d4b881835f9ba65bc6bcb27b0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fits a peak in a histogram using TSpectrum.  <br /></td></tr>
-<tr class="separator:a814766d4b881835f9ba65bc6bcb27b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72e2657579c5be6f6e4d73d8be4b5ec8" id="r_a72e2657579c5be6f6e4d73d8be4b5ec8"><td class="memItemLeft" align="right" valign="top">TFitResultPtr&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AnalyzePeakCrystal_8h.html#a72e2657579c5be6f6e4d73d8be4b5ec8">FitPeakWithTSpectrum</a> (TH1D *hist, int energy, int crystal_ID)</td></tr>
+<tr class="memdesc:a72e2657579c5be6f6e4d73d8be4b5ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fits a peak in the given histogram using TSpectrum and a Gaussian function.  <br /></td></tr>
+<tr class="separator:a72e2657579c5be6f6e4d73d8be4b5ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee07cb059be4125e9378b6ec353e11a3" id="r_aee07cb059be4125e9378b6ec353e11a3"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; TH1D *, TH1D * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AnalyzePeakCrystal_8h.html#aee07cb059be4125e9378b6ec353e11a3">FindHistograms</a> (TFile *inFile, const TString &amp;histName_total, const TString &amp;histName)</td></tr>
-<tr class="memdesc:aee07cb059be4125e9378b6ec353e11a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds histograms in a ROOT file.  <br /></td></tr>
+<tr class="memdesc:aee07cb059be4125e9378b6ec353e11a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves histograms for a specific crystal and the total charge from the input ROOT file.  <br /></td></tr>
 <tr class="separator:aee07cb059be4125e9378b6ec353e11a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aec202f6e32bb23c6bb5ffe63a7d2e7df" id="r_aec202f6e32bb23c6bb5ffe63a7d2e7df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="AnalyzePeakCrystal_8h.html#aec202f6e32bb23c6bb5ffe63a7d2e7df">SaveFitResultsToFile</a> (TCanvas *canvas, TH1D *hist, TFitResultPtr fitResult, const TString &amp;outputFileName)</td></tr>
-<tr class="memdesc:aec202f6e32bb23c6bb5ffe63a7d2e7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves fit results to a ROOT file.  <br /></td></tr>
+<tr class="memdesc:aec202f6e32bb23c6bb5ffe63a7d2e7df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Saves the fit results, histograms, and plots to an output ROOT file.  <br /></td></tr>
 <tr class="separator:aec202f6e32bb23c6bb5ffe63a7d2e7df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. root -l -b -q 'AnalyzePeakCrystal.cc()', -b doesn't display plots. In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.g. <code>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root</code> which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </p>
+<div class="textblock"><p>Header file for AnalyzePeakCrystal.cc. </p>
+<p>This file contains function declarations for analyzing and fitting charge histograms for calorimeter crystals. The charge histograms of every crystal are fitted with a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit results are saved in output files, along with the histograms and fit plots. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="aee07cb059be4125e9378b6ec353e11a3" name="aee07cb059be4125e9378b6ec353e11a3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aee07cb059be4125e9378b6ec353e11a3">&#9670;&#160;</a></span>FindHistograms()</h2>
@@ -200,22 +200,22 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Finds histograms in a ROOT file. </p>
-<p>This function finds and retrieves histograms from a ROOT file.</p>
+<p>Retrieves histograms for a specific crystal and the total charge from the input ROOT file. </p>
+<p>This function searches for and retrieves the specified histograms from the input file. It returns pointers to the crystal-specific histogram and the total charge histogram.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">inFile</td><td>The input ROOT file. </td></tr>
-    <tr><td class="paramname">histName_total</td><td>The name of the total histogram. </td></tr>
-    <tr><td class="paramname">histName</td><td>The name of the specific histogram. </td></tr>
+    <tr><td class="paramname">inFile</td><td>Pointer to the input ROOT file. </td></tr>
+    <tr><td class="paramname">histName_total</td><td>Name of the total charge histogram. </td></tr>
+    <tr><td class="paramname">histName</td><td>Name of the histogram for the specific crystal. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A tuple containing pointers to the total histogram and the specific histogram. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing pointers to the crystal histogram and the total charge histogram. </dd></dl>
 
 </div>
 </div>
-<a id="a814766d4b881835f9ba65bc6bcb27b0d" name="a814766d4b881835f9ba65bc6bcb27b0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a814766d4b881835f9ba65bc6bcb27b0d">&#9670;&#160;</a></span>FitPeakWithTSpectrum()</h2>
+<a id="a72e2657579c5be6f6e4d73d8be4b5ec8" name="a72e2657579c5be6f6e4d73d8be4b5ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72e2657579c5be6f6e4d73d8be4b5ec8">&#9670;&#160;</a></span>FitPeakWithTSpectrum()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -229,8 +229,14 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">double&#160;</td>
-          <td class="paramname"><em>threshold</em>&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>energy</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>crystal_ID</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -240,16 +246,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Fits a peak in a histogram using TSpectrum. </p>
-<p>This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.</p>
+<p>Fits a peak in the given histogram using TSpectrum and a Gaussian function. </p>
+<p>This function detects peaks in the histogram using TSpectrum and fits the detected peak with a Gaussian function. The fit results are returned as a TFitResultPtr.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">hist</td><td>The histogram to fit. </td></tr>
-    <tr><td class="paramname">threshold</td><td>The threshold for peak detection. </td></tr>
+    <tr><td class="paramname">hist</td><td>Pointer to the histogram to fit. </td></tr>
+    <tr><td class="paramname">energy</td><td>Beam energy in MeV/u. </td></tr>
+    <tr><td class="paramname">crystal_ID</td><td>The ID of the crystal being analyzed. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A TFitResultPtr containing the fit result. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>TFitResultPtr containing the fit results. </dd></dl>
 
 </div>
 </div>
@@ -279,12 +286,12 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Prints a measurement value and its uncertainty. </p>
-<p>This function prints a measurement value and its uncertainty to the console.</p>
+<p>Prints the measurement value and its uncertainty. </p>
+<p>This function formats and prints the peak position and its uncertainty with significant figures based on the uncertainty.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">value</td><td>The measurement value. </td></tr>
-    <tr><td class="paramname">uncertainty</td><td>The uncertainty of the measurement. </td></tr>
+    <tr><td class="paramname">value</td><td>The measurement value (e.g., peak position). </td></tr>
+    <tr><td class="paramname">uncertainty</td><td>The uncertainty in the measurement. </td></tr>
   </table>
   </dd>
 </dl>
@@ -329,14 +336,14 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Saves fit results to a ROOT file. </p>
-<p>This function saves the fit results and the corresponding histogram to a ROOT file.</p>
+<p>Saves the fit results, histograms, and plots to an output ROOT file. </p>
+<p>This function writes the histogram, fit results, and canvas to the specified output file. It creates the output file if it does not exist or updates it if it does.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">canvas</td><td>The canvas containing the fit plot. </td></tr>
-    <tr><td class="paramname">hist</td><td>The histogram to save. </td></tr>
-    <tr><td class="paramname">fitResult</td><td>The fit result to save. </td></tr>
-    <tr><td class="paramname">outputFileName</td><td>The name of the output ROOT file. </td></tr>
+    <tr><td class="paramname">canvas</td><td>Pointer to the canvas containing the fit plot. </td></tr>
+    <tr><td class="paramname">hist</td><td>Pointer to the histogram being analyzed. </td></tr>
+    <tr><td class="paramname">fitResult</td><td>The fit results to save. </td></tr>
+    <tr><td class="paramname">outputFileName</td><td>Name of the output ROOT file. </td></tr>
   </table>
   </dd>
 </dl>

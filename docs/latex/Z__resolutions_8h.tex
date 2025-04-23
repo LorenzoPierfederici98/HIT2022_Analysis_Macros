@@ -1,0 +1,261 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Z\+\_\+resolutions.h File Reference}
+\hypertarget{Z__resolutions_8h}{}\label{Z__resolutions_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/Z\_resolutions.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/Z\_resolutions.h}}
+
+
+Header file for Z\+\_\+resolutions.\+cc.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TRandom3.\+h$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for Z\+\_\+resolutions.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Z__resolutions_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Z__resolutions_8h_af480f62255be31912e5201650f336ea5}{Process\+File}} (const std\+::string \&file\+Name, int energy, std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Z\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Z\+\_\+err\+\_\+vec, std\+::ofstream \&Latex\+File\+\_\+Z)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file and calculates resolutions for Z (charge). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Z__resolutions_8h_a475ba69ff2ad8505cfa33751901d81ea}{Fit\+Histograms}} (TFile \texorpdfstring{$\ast$}{*}in\+File, int energy, std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Z\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Z\+\_\+err\+\_\+vec, std\+::ofstream \&Latex\+File\+\_\+Z)
+\begin{DoxyCompactList}\small\item\em Fits histograms for Z resolutions. \end{DoxyCompactList}\item 
+TFit\+Result\+Ptr \mbox{\hyperlink{Z__resolutions_8h_a7c1379d234367f611e9cb241b1f49847}{Fit\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, int energy)
+\begin{DoxyCompactList}\small\item\em Fits a histogram using TSpectrum for peak detection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Z__resolutions_8h_abc8a567abccc89e3f6585bf4c1c38d52}{Write\+ZTable}} (std\+::ofstream \&out\+File, int energy, double meanZ, double stdZ, double R\+\_\+Z, double mean\+ErrZ, double std\+ErrZ, double R\+\_\+\+Z\+\_\+err)
+\begin{DoxyCompactList}\small\item\em Writes Z results to a La\+TeX table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Z__resolutions_8h_ad867a67690e3dd7ac7f46e6123580b80}{Open\+ZFile}} (std\+::ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Opens a La\+TeX file for Z results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Z__resolutions_8h_afaad6cbd1c71c2461d830e374f574434}{Close\+ZFile}} (std\+::ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Closes a La\+TeX file for Z results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Z__resolutions_8h_a016555409fa0e6777994e083a713e05e}{Plot\+Resolution\+Graphs}} (const std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Z\+\_\+err\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Plots resolution graphs for Z. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{Round\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty to appropriate significant figures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for Z\+\_\+resolutions.\+cc. 
+
+This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-\/\+Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in La\+TeX tables and plotted.\+s 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Z__resolutions_8h_afaad6cbd1c71c2461d830e374f574434}\label{Z__resolutions_8h_afaad6cbd1c71c2461d830e374f574434} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!CloseZFile@{CloseZFile}}
+\index{CloseZFile@{CloseZFile}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{CloseZFile()}{CloseZFile()}}
+{\footnotesize\ttfamily void Close\+ZFile (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Closes a La\+TeX file for Z results. 
+
+This function finalizes and closes the La\+TeX file for Z results.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Z__resolutions_8h_a475ba69ff2ad8505cfa33751901d81ea}\label{Z__resolutions_8h_a475ba69ff2ad8505cfa33751901d81ea} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!FitHistograms@{FitHistograms}}
+\index{FitHistograms@{FitHistograms}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{FitHistograms()}{FitHistograms()}}
+{\footnotesize\ttfamily void Fit\+Histograms (\begin{DoxyParamCaption}\item[{TFile \texorpdfstring{$\ast$}{*}}]{in\+File,  }\item[{int}]{energy,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Z\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Z\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Z\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Z\+\_\+err\+\_\+vec,  }\item[{std\+::ofstream \&}]{Latex\+File\+\_\+Z }\end{DoxyParamCaption})}
+
+
+
+Fits histograms for Z resolutions. 
+
+This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to a La\+TeX file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+File} & Pointer to the input ROOT file. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em R\+\_\+\+Z\+\_\+vec} & Vector to store Z resolution values. \\
+\hline
+{\em R\+\_\+\+Z\+\_\+err\+\_\+vec} & Vector to store Z resolution uncertainties. \\
+\hline
+{\em mean\+Z\+\_\+vec} & Vector to store mean Z values. \\
+\hline
+{\em mean\+Z\+\_\+err\+\_\+vec} & Vector to store mean Z uncertainties. \\
+\hline
+{\em Latex\+File\+\_\+Z} & Output stream for the Z La\+TeX table. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Z__resolutions_8h_a7c1379d234367f611e9cb241b1f49847}\label{Z__resolutions_8h_a7c1379d234367f611e9cb241b1f49847} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!FitWithTSpectrum@{FitWithTSpectrum}}
+\index{FitWithTSpectrum@{FitWithTSpectrum}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{FitWithTSpectrum()}{FitWithTSpectrum()}}
+{\footnotesize\ttfamily TFit\+Result\+Ptr Fit\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{int}]{energy }\end{DoxyParamCaption})}
+
+
+
+Fits a histogram using TSpectrum for peak detection. 
+
+This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & Pointer to the histogram to fit. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TFit\+Result\+Ptr containing the fit results. 
+\end{DoxyReturn}
+\Hypertarget{Z__resolutions_8h_ad867a67690e3dd7ac7f46e6123580b80}\label{Z__resolutions_8h_ad867a67690e3dd7ac7f46e6123580b80} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!OpenZFile@{OpenZFile}}
+\index{OpenZFile@{OpenZFile}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{OpenZFile()}{OpenZFile()}}
+{\footnotesize\ttfamily void Open\+ZFile (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Opens a La\+TeX file for Z results. 
+
+This function initializes the La\+TeX file for storing Z results.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Z__resolutions_8h_a016555409fa0e6777994e083a713e05e}\label{Z__resolutions_8h_a016555409fa0e6777994e083a713e05e} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!PlotResolutionGraphs@{PlotResolutionGraphs}}
+\index{PlotResolutionGraphs@{PlotResolutionGraphs}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{PlotResolutionGraphs()}{PlotResolutionGraphs()}}
+{\footnotesize\ttfamily void Plot\+Resolution\+Graphs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Z\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Z\+\_\+err\+\_\+vec }\end{DoxyParamCaption})}
+
+
+
+Plots resolution graphs for Z. 
+
+This function creates graphs for Z resolutions and saves them as PNG files. The Z resolutions at each beam energy are plotted against the mean Z value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em R\+\_\+\+Z\+\_\+vec} & Vector containing Z resolution values. \\
+\hline
+{\em R\+\_\+\+Z\+\_\+err\+\_\+vec} & Vector containing Z resolution uncertainties. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Z__resolutions_8h_af480f62255be31912e5201650f336ea5}\label{Z__resolutions_8h_af480f62255be31912e5201650f336ea5} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{int}]{energy,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Z\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Z\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Z\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Z\+\_\+err\+\_\+vec,  }\item[{std\+::ofstream \&}]{Latex\+File\+\_\+Z }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file and calculates resolutions for Z (charge). 
+
+This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to a La\+TeX file.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the ROOT file to process. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em R\+\_\+\+Z\+\_\+vec} & Vector to store Z resolution values. \\
+\hline
+{\em R\+\_\+\+Z\+\_\+err\+\_\+vec} & Vector to store Z resolution uncertainties. \\
+\hline
+{\em mean\+Z\+\_\+vec} & Vector to store mean Z values. \\
+\hline
+{\em mean\+Z\+\_\+err\+\_\+vec} & Vector to store mean Z uncertainties. \\
+\hline
+{\em Latex\+File\+\_\+Z} & Output stream for the Z La\+TeX table. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}\label{Z__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!RoundMeasurement@{RoundMeasurement}}
+\index{RoundMeasurement@{RoundMeasurement}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Rounds a measurement value and its uncertainty to appropriate significant figures. 
+
+This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value to round. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the rounded value and uncertainty as strings.
+\end{DoxyReturn}
+Rounds a measurement value and its uncertainty to appropriate significant figures.
+
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
+
+Rounds a measurement value and its uncertainty to the appropriate significant figures.
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty. 
+\end{DoxyReturn}
+\Hypertarget{Z__resolutions_8h_abc8a567abccc89e3f6585bf4c1c38d52}\label{Z__resolutions_8h_abc8a567abccc89e3f6585bf4c1c38d52} 
+\index{Z\_resolutions.h@{Z\_resolutions.h}!WriteZTable@{WriteZTable}}
+\index{WriteZTable@{WriteZTable}!Z\_resolutions.h@{Z\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{WriteZTable()}{WriteZTable()}}
+{\footnotesize\ttfamily void Write\+ZTable (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File,  }\item[{int}]{energy,  }\item[{double}]{meanZ,  }\item[{double}]{stdZ,  }\item[{double}]{R\+\_\+Z,  }\item[{double}]{mean\+ErrZ,  }\item[{double}]{std\+ErrZ,  }\item[{double}]{R\+\_\+\+Z\+\_\+err }\end{DoxyParamCaption})}
+
+
+
+Writes Z results to a La\+TeX table. 
+
+This function writes the Z results, including mean, standard deviation, and resolution, to a La\+TeX table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em meanZ} & Mean Z value. \\
+\hline
+{\em stdZ} & Standard deviation of Z. \\
+\hline
+{\em R\+\_\+Z} & Resolution for Z. \\
+\hline
+{\em mean\+ErrZ} & Uncertainty in the mean Z value. \\
+\hline
+{\em std\+ErrZ} & Uncertainty in the standard deviation of Z. \\
+\hline
+{\em R\+\_\+\+Z\+\_\+err} & Uncertainty in the resolution for Z. \\
+\hline
+\end{DoxyParams}

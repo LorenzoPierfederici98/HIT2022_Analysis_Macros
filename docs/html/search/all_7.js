@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['savefitresultstofile_0',['SaveFitResultsToFile',['../AnalyzePeakCrystal_8h.html#aec202f6e32bb23c6bb5ffe63a7d2e7df',1,'AnalyzePeakCrystal.cc']]],
-  ['sumnentries_1',['SumNentries',['../AnalyzeTWFragm_8h.html#aabad4b700eccd2608a76d82430bfea3a',1,'AnalyzeTWFragm.cc']]]
+  ['roundmeasurement_0',['roundmeasurement',['../CalibrateFragm_8h.html#ab4907eeeea5fe95544ce97afbb74d65d',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc'],['../Calo__resolutions_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc'],['../CaloPeakEnergyDisplay_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc'],['../TW__resolutions_8h.html#a56d523c54cc171aa9e0ab754857f64d6',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc'],['../Z__resolutions_8h.html#a56d523c54cc171aa9e0ab754857f64d6',1,'RoundMeasurement(double value, double uncertainty):&#160;CalibrateFragm.cc']]]
 ];

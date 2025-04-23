@@ -3,13 +3,13 @@
   <compound refid="AnalyzePeakCrystal_8cc" kind="file"><name>AnalyzePeakCrystal.cc</name>
     <member refid="AnalyzePeakCrystal_8cc_1a88bec13ed9c957dba2ee562a6d361e5f" kind="function"><name>AnalyzePeakCrystal</name></member>
     <member refid="AnalyzePeakCrystal_8cc_1a5aadeca6af3105a72d885dcc752237db" kind="function"><name>PrintMeasurement</name></member>
-    <member refid="AnalyzePeakCrystal_8cc_1a814766d4b881835f9ba65bc6bcb27b0d" kind="function"><name>FitPeakWithTSpectrum</name></member>
+    <member refid="AnalyzePeakCrystal_8cc_1a72e2657579c5be6f6e4d73d8be4b5ec8" kind="function"><name>FitPeakWithTSpectrum</name></member>
     <member refid="AnalyzePeakCrystal_8cc_1aee07cb059be4125e9378b6ec353e11a3" kind="function"><name>FindHistograms</name></member>
     <member refid="AnalyzePeakCrystal_8cc_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kind="function"><name>SaveFitResultsToFile</name></member>
   </compound>
   <compound refid="AnalyzePeakCrystal_8h" kind="file"><name>AnalyzePeakCrystal.h</name>
     <member refid="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db" kind="function"><name>PrintMeasurement</name></member>
-    <member refid="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d" kind="function"><name>FitPeakWithTSpectrum</name></member>
+    <member refid="AnalyzePeakCrystal_8h_1a72e2657579c5be6f6e4d73d8be4b5ec8" kind="function"><name>FitPeakWithTSpectrum</name></member>
     <member refid="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3" kind="function"><name>FindHistograms</name></member>
     <member refid="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kind="function"><name>SaveFitResultsToFile</name></member>
   </compound>
@@ -74,21 +74,80 @@
     <member refid="CalibrateTof_8cc_1ac3e156b9b06a8292f0804f9f6a49301d" kind="function"><name>CalibrateTof</name></member>
     <member refid="CalibrateTof_8cc_1acbf260d366bf4b7dc33d00c2b2f2552f" kind="function"><name>LoadFitResult</name></member>
     <member refid="CalibrateTof_8cc_1a3709ac7cbea5496ed4a4436aa1efdcea" kind="function"><name>ExtractMeanValues</name></member>
-    <member refid="CalibrateTof_8cc_1a2976661d2feaa11e0d6d557df1dbdf05" kind="function"><name>WriteMeanDifferences</name></member>
+    <member refid="CalibrateTof_8cc_1a56ae1ed9e3d3405ee8e7bee444c02c9e" kind="function"><name>WriteMeanDifferences</name></member>
   </compound>
   <compound refid="CalibrateTof_8h" kind="file"><name>CalibrateTof.h</name>
     <member refid="CalibrateTof_8h_1acbf260d366bf4b7dc33d00c2b2f2552f" kind="function"><name>LoadFitResult</name></member>
     <member refid="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea" kind="function"><name>ExtractMeanValues</name></member>
-    <member refid="CalibrateTof_8h_1a2976661d2feaa11e0d6d557df1dbdf05" kind="function"><name>WriteMeanDifferences</name></member>
+    <member refid="CalibrateTof_8h_1a56ae1ed9e3d3405ee8e7bee444c02c9e" kind="function"><name>WriteMeanDifferences</name></member>
+  </compound>
+  <compound refid="Calo__resolutions_8cc" kind="file"><name>Calo_resolutions.cc</name>
+    <member refid="Calo__resolutions_8cc_1a6a4fc92bbbae15d4c1102a530743e3b4" kind="function"><name>Calo_resolutions</name></member>
+    <member refid="Calo__resolutions_8cc_1ae42deae8bf798058b77d8a228427dddb" kind="function"><name>ProcessFile</name></member>
+    <member refid="Calo__resolutions_8cc_1a2ad7fc5517b3ca53aced9f056accb5dd" kind="function"><name>RoundMeasurement</name></member>
+    <member refid="Calo__resolutions_8cc_1aebb2d0ec4b031210878491c63b1908ef" kind="function"><name>PlotResolutions</name></member>
+  </compound>
+  <compound refid="Calo__resolutions_8h" kind="file"><name>Calo_resolutions.h</name>
+    <member refid="Calo__resolutions_8h_1ae42deae8bf798058b77d8a228427dddb" kind="function"><name>ProcessFile</name></member>
+    <member refid="Calo__resolutions_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kind="function"><name>RoundMeasurement</name></member>
+    <member refid="Calo__resolutions_8h_1aebb2d0ec4b031210878491c63b1908ef" kind="function"><name>PlotResolutions</name></member>
   </compound>
   <compound refid="CaloPeakEnergyDisplay_8cc" kind="file"><name>CaloPeakEnergyDisplay.cc</name>
     <member refid="CaloPeakEnergyDisplay_8cc_1adc508e7103ed5c207d628d4025f558dc" kind="function"><name>CaloPeakEnergyDisplay</name></member>
+    <member refid="CaloPeakEnergyDisplay_8cc_1a2ad7fc5517b3ca53aced9f056accb5dd" kind="function"><name>RoundMeasurement</name></member>
     <member refid="CaloPeakEnergyDisplay_8cc_1ad2291774551251ac39112a4b52e463ee" kind="function"><name>ConvertFileNumbersToString</name></member>
-    <member refid="CaloPeakEnergyDisplay_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
   </compound>
   <compound refid="CaloPeakEnergyDisplay_8h" kind="file"><name>CaloPeakEnergyDisplay.h</name>
     <member refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kind="function"><name>ConvertFileNumbersToString</name></member>
-    <member refid="CaloPeakEnergyDisplay_8h_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+    <member refid="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="TW__resolutions_8cc" kind="file"><name>TW_resolutions.cc</name>
+    <member refid="TW__resolutions_8cc_1a54f512bea6673fc75f19efed54515420" kind="function"><name>TW_resolutions</name></member>
+    <member refid="TW__resolutions_8cc_1aad661d4c7037778af8afc75d9cfc82af" kind="function"><name>FitHistograms</name></member>
+    <member refid="TW__resolutions_8cc_1a02c7c5bce27bbd7305a4f78b242bf035" kind="function"><name>ProcessFile</name></member>
+    <member refid="TW__resolutions_8cc_1a7c1379d234367f611e9cb241b1f49847" kind="function"><name>FitWithTSpectrum</name></member>
+    <member refid="TW__resolutions_8cc_1a70a0181fb46626b661e03c6a299a82d1" kind="function"><name>WriteElossTable</name></member>
+    <member refid="TW__resolutions_8cc_1aaada03daa7e756a994fe3fc9176a482f" kind="function"><name>WriteTofTable</name></member>
+    <member refid="TW__resolutions_8cc_1ab559ccd64309e7e7e34f94723cb06fe7" kind="function"><name>OpenElossFile</name></member>
+    <member refid="TW__resolutions_8cc_1a313a1c48700390e15fb773d67c056d1e" kind="function"><name>OpenTofFile</name></member>
+    <member refid="TW__resolutions_8cc_1aada91a63fcdac00b6709bce94b912b86" kind="function"><name>CloseElossFile</name></member>
+    <member refid="TW__resolutions_8cc_1a9d4d462e980c97c3c83e2395a4b30979" kind="function"><name>CloseTofFile</name></member>
+    <member refid="TW__resolutions_8cc_1ac05499726ae87bcc5ec712f14e99867f" kind="function"><name>PlotResolutionGraphs</name></member>
+    <member refid="TW__resolutions_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="TW__resolutions_8h" kind="file"><name>TW_resolutions.h</name>
+    <member refid="TW__resolutions_8h_1aad661d4c7037778af8afc75d9cfc82af" kind="function"><name>FitHistograms</name></member>
+    <member refid="TW__resolutions_8h_1a02c7c5bce27bbd7305a4f78b242bf035" kind="function"><name>ProcessFile</name></member>
+    <member refid="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kind="function"><name>FitWithTSpectrum</name></member>
+    <member refid="TW__resolutions_8h_1aef8173c6ef6ad91f94ff7aed04dbc57d" kind="function"><name>WriteElossTable</name></member>
+    <member refid="TW__resolutions_8h_1a59aa5a05a061a274c82311aaf5137ee4" kind="function"><name>WriteTofTable</name></member>
+    <member refid="TW__resolutions_8h_1ab559ccd64309e7e7e34f94723cb06fe7" kind="function"><name>OpenElossFile</name></member>
+    <member refid="TW__resolutions_8h_1a313a1c48700390e15fb773d67c056d1e" kind="function"><name>OpenTofFile</name></member>
+    <member refid="TW__resolutions_8h_1aada91a63fcdac00b6709bce94b912b86" kind="function"><name>CloseElossFile</name></member>
+    <member refid="TW__resolutions_8h_1a9d4d462e980c97c3c83e2395a4b30979" kind="function"><name>CloseTofFile</name></member>
+    <member refid="TW__resolutions_8h_1ac05499726ae87bcc5ec712f14e99867f" kind="function"><name>PlotResolutionGraphs</name></member>
+    <member refid="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="Z__resolutions_8cc" kind="file"><name>Z_resolutions.cc</name>
+    <member refid="Z__resolutions_8cc_1aaedd04d8fdafcdd8c4c3bb9a8fe2b291" kind="function"><name>Z_resolutions</name></member>
+    <member refid="Z__resolutions_8cc_1af480f62255be31912e5201650f336ea5" kind="function"><name>ProcessFile</name></member>
+    <member refid="Z__resolutions_8cc_1a475ba69ff2ad8505cfa33751901d81ea" kind="function"><name>FitHistograms</name></member>
+    <member refid="Z__resolutions_8cc_1a7c1379d234367f611e9cb241b1f49847" kind="function"><name>FitWithTSpectrum</name></member>
+    <member refid="Z__resolutions_8cc_1abc8a567abccc89e3f6585bf4c1c38d52" kind="function"><name>WriteZTable</name></member>
+    <member refid="Z__resolutions_8cc_1ad867a67690e3dd7ac7f46e6123580b80" kind="function"><name>OpenZFile</name></member>
+    <member refid="Z__resolutions_8cc_1afaad6cbd1c71c2461d830e374f574434" kind="function"><name>CloseZFile</name></member>
+    <member refid="Z__resolutions_8cc_1a016555409fa0e6777994e083a713e05e" kind="function"><name>PlotResolutionGraphs</name></member>
+    <member refid="Z__resolutions_8cc_1ab4907eeeea5fe95544ce97afbb74d65d" kind="function"><name>RoundMeasurement</name></member>
+  </compound>
+  <compound refid="Z__resolutions_8h" kind="file"><name>Z_resolutions.h</name>
+    <member refid="Z__resolutions_8h_1af480f62255be31912e5201650f336ea5" kind="function"><name>ProcessFile</name></member>
+    <member refid="Z__resolutions_8h_1a475ba69ff2ad8505cfa33751901d81ea" kind="function"><name>FitHistograms</name></member>
+    <member refid="Z__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kind="function"><name>FitWithTSpectrum</name></member>
+    <member refid="Z__resolutions_8h_1abc8a567abccc89e3f6585bf4c1c38d52" kind="function"><name>WriteZTable</name></member>
+    <member refid="Z__resolutions_8h_1ad867a67690e3dd7ac7f46e6123580b80" kind="function"><name>OpenZFile</name></member>
+    <member refid="Z__resolutions_8h_1afaad6cbd1c71c2461d830e374f574434" kind="function"><name>CloseZFile</name></member>
+    <member refid="Z__resolutions_8h_1a016555409fa0e6777994e083a713e05e" kind="function"><name>PlotResolutionGraphs</name></member>
+    <member refid="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kind="function"><name>RoundMeasurement</name></member>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src</name>
   </compound>

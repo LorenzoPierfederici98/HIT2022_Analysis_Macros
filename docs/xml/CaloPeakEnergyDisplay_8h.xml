@@ -8,6 +8,10 @@
     <includes local="no">TCanvas.h</includes>
     <includes local="no">TGraphErrors.h</includes>
     <includes local="no">iostream</includes>
+    <includes local="no">string</includes>
+    <includes local="no">map</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">cmath</includes>
     <includes local="no">sstream</includes>
     <includedby refid="CaloPeakEnergyDisplay_8cc" local="yes">/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc</includedby>
     <incdepgraph>
@@ -28,6 +32,14 @@
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
       </node>
       <node id="5">
         <label>TCanvas.h</label>
@@ -44,11 +56,23 @@
       <node id="6">
         <label>TGraphErrors.h</label>
       </node>
+      <node id="11">
+        <label>cmath</label>
+      </node>
       <node id="7">
         <label>iostream</label>
       </node>
-      <node id="8">
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="12">
         <label>sstream</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
       </node>
     </incdepgraph>
     <sectiondef kind="func">
@@ -62,30 +86,29 @@
           <declname>energies</declname>
         </param>
         <briefdescription>
-<para>Converts a vector of energy values to a comma-separated string. </para>
+<para>Converts a vector of integers representing energies to a comma-separated string. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function converts a vector of energy values to a comma-separated string.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>energies</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>A vector of energy values. </para>
+<para>A vector of integers representing energies. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A string containing the energy values separated by commas. </para>
+<simplesect kind="return"><para>A string containing the comma-separated list of energies. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" line="30" column="13" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" bodystart="118" bodyend="127" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" declline="30" declcolumn="13"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" line="32" column="13" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.cc" bodystart="150" bodyend="159" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" declline="32" declcolumn="13"/>
       </memberdef>
-      <memberdef kind="function" id="CaloPeakEnergyDisplay_8h_1ab4907eeeea5fe95544ce97afbb74d65d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>pair&lt; std::string, std::string &gt;</type>
-        <definition>pair&lt; std::string, std::string &gt; RoundMeasurement</definition>
+      <memberdef kind="function" id="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, double &gt;</type>
+        <definition>std::pair&lt; double, double &gt; RoundMeasurement</definition>
         <argsstring>(double value, double uncertainty)</argsstring>
         <name>RoundMeasurement</name>
         <param>
@@ -97,9 +120,30 @@
           <declname>uncertainty</declname>
         </param>
         <briefdescription>
-<para>Rounds a measurement value and its uncertainty. </para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The value to be rounded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty associated with the value. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair containing the rounded value and rounded uncertainty.</para>
+</simplesect>
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
 <para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
@@ -124,14 +168,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" line="42" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="344" bodyend="364" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" declline="42" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" line="41" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" declline="41" declcolumn="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Header file for plotting charge distribution histograms from ROOT files. </para>
+<para>Header file for the CaloPeakEnergyDisplay macro. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that plots the charge given by the fit performed in AnalyzePeakCrystal.cc in all the available crystals vs the beam energy. The fit results are stored in objects, named like <computeroutput>Fit_result_Charge_Calo_crystalId_1</computeroutput> inside the e.g. <computeroutput>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root</computeroutput> file. To be run with <lsquo/>root -l -b -q &apos;CaloPeakEnergyDisplay.cc()<rsquo/>` it loops on every crystalID and extracts the fit values only on the available IDs. </para>
+<para>Macro that collects the charge fit results of AnalyzePeakCrystal.cc for every calorimeter crystal. A charge-beam energy plot is built for every crystal and fitted with a 1 parameter (slope) linear function. An intercalibration is then performed for those crystals with at least 2 fitted charge peaks out of 5 energy values, by computing the ratio of the slopes of a certain crystal with respect to crystal ID 0 (the central crystal). The calibration coefficients for every available crystal are stored in a file named SlopeRatios.cal. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
@@ -142,12 +186,16 @@
 <codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal">std::string<sp/><ref refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kindref="member">ConvertFileNumbersToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>energies);</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal">pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="CaloPeakEnergyDisplay_8h_1ab4907eeeea5fe95544ce97afbb74d65d" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>std::string,<sp/>std::stod</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">std::string<sp/><ref refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kindref="member">ConvertFileNumbersToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>energies);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/><ref refid="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h"/>
   </compounddef>

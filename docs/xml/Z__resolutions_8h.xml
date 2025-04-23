@@ -1,0 +1,693 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="en-US">
+  <compounddef id="Z__resolutions_8h" kind="file" language="C++">
+    <compoundname>Z_resolutions.h</compoundname>
+    <includes local="no">TFile.h</includes>
+    <includes local="no">TKey.h</includes>
+    <includes local="no">TDirectory.h</includes>
+    <includes local="no">TH1.h</includes>
+    <includes local="no">TF1.h</includes>
+    <includes local="no">TRandom3.h</includes>
+    <includes local="no">TGraphErrors.h</includes>
+    <includes local="no">TCanvas.h</includes>
+    <includes local="no">TNamed.h</includes>
+    <includes local="no">TSpectrum.h</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">regex</includes>
+    <includedby refid="Z__resolutions_8cc" local="yes">/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h</label>
+        <link refid="Z__resolutions_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>TCanvas.h</label>
+      </node>
+      <node id="4">
+        <label>TDirectory.h</label>
+      </node>
+      <node id="6">
+        <label>TF1.h</label>
+      </node>
+      <node id="2">
+        <label>TFile.h</label>
+      </node>
+      <node id="8">
+        <label>TGraphErrors.h</label>
+      </node>
+      <node id="5">
+        <label>TH1.h</label>
+      </node>
+      <node id="3">
+        <label>TKey.h</label>
+      </node>
+      <node id="10">
+        <label>TNamed.h</label>
+      </node>
+      <node id="7">
+        <label>TRandom3.h</label>
+      </node>
+      <node id="11">
+        <label>TSpectrum.h</label>
+      </node>
+      <node id="13">
+        <label>fstream</label>
+      </node>
+      <node id="12">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="16">
+        <label>regex</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Z__resolutions_8h_1af480f62255be31912e5201650f336ea5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ProcessFile</definition>
+        <argsstring>(const std::string &amp;fileName, int energy, std::vector&lt; double &gt; &amp;R_Z_vec, std::vector&lt; double &gt; &amp;R_Z_err_vec, std::vector&lt; double &gt; &amp;meanZ_vec, std::vector&lt; double &gt; &amp;meanZ_err_vec, std::ofstream &amp;LatexFile_Z)</argsstring>
+        <name>ProcessFile</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Z_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Z_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanZ_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanZ_err_vec</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Z</declname>
+        </param>
+        <briefdescription>
+<para>Processes a ROOT file and calculates resolutions for Z (charge). </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to a LaTeX file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the ROOT file to process. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store Z resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store Z resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanZ_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Z values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanZ_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Z uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the Z LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="45" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc" bodystart="29" bodyend="58" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="45" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1a475ba69ff2ad8505cfa33751901d81ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void FitHistograms</definition>
+        <argsstring>(TFile *inFile, int energy, std::vector&lt; double &gt; &amp;R_Z_vec, std::vector&lt; double &gt; &amp;R_Z_err_vec, std::vector&lt; double &gt; &amp;meanZ_vec, std::vector&lt; double &gt; &amp;meanZ_err_vec, std::ofstream &amp;LatexFile_Z)</argsstring>
+        <name>FitHistograms</name>
+        <param>
+          <type>TFile *</type>
+          <declname>inFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Z_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Z_err_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanZ_vec</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; double &gt; &amp;</type>
+          <declname>meanZ_err_vec</declname>
+        </param>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>LatexFile_Z</declname>
+        </param>
+        <briefdescription>
+<para>Fits histograms for Z resolutions. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to a LaTeX file.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the input ROOT file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store Z resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store Z resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanZ_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Z values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanZ_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector to store mean Z uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>LatexFile_Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the Z LaTeX table. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="69" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc" bodystart="60" bodyend="146" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="69" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>TFitResultPtr</type>
+        <definition>TFitResultPtr FitWithTSpectrum</definition>
+        <argsstring>(TH1D *hist, int energy)</argsstring>
+        <name>FitWithTSpectrum</name>
+        <param>
+          <type>TH1D *</type>
+          <declname>hist</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <briefdescription>
+<para>Fits a histogram using TSpectrum for peak detection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>hist</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Pointer to the histogram to fit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>TFitResultPtr containing the fit results. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="88" column="15" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/TW_resolutions.cc" bodystart="215" bodyend="254" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="88" declcolumn="15"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1abc8a567abccc89e3f6585bf4c1c38d52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void WriteZTable</definition>
+        <argsstring>(std::ofstream &amp;outFile, int energy, double meanZ, double stdZ, double R_Z, double meanErrZ, double stdErrZ, double R_Z_err)</argsstring>
+        <name>WriteZTable</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanZ</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>stdZ</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_Z</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>meanErrZ</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>stdErrZ</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>R_Z_err</declname>
+        </param>
+        <briefdescription>
+<para>Writes Z results to a LaTeX table. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function writes the Z results, including mean, standard deviation, and resolution, to a LaTeX table.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>energy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Mean Z value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stdZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Standard deviation of Z. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resolution for Z. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>meanErrZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the mean Z value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>stdErrZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the standard deviation of Z. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z_err</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Uncertainty in the resolution for Z. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="104" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc" bodystart="199" bodyend="213" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="104" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1ad867a67690e3dd7ac7f46e6123580b80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OpenZFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>OpenZFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Opens a LaTeX file for Z results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function initializes the LaTeX file for storing Z results.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="115" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc" bodystart="215" bodyend="224" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="115" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1afaad6cbd1c71c2461d830e374f574434" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CloseZFile</definition>
+        <argsstring>(std::ofstream &amp;outFile)</argsstring>
+        <name>CloseZFile</name>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>outFile</declname>
+        </param>
+        <briefdescription>
+<para>Closes a LaTeX file for Z results. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function finalizes and closes the LaTeX file for Z results.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>outFile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream for the LaTeX file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="124" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc" bodystart="226" bodyend="237" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="124" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1a016555409fa0e6777994e083a713e05e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlotResolutionGraphs</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;R_Z_vec, const std::vector&lt; double &gt; &amp;R_Z_err_vec)</argsstring>
+        <name>PlotResolutionGraphs</name>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Z_vec</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>R_Z_err_vec</declname>
+        </param>
+        <briefdescription>
+<para>Plots resolution graphs for Z. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function creates graphs for Z resolutions and saves them as PNG files. The Z resolutions at each beam energy are plotted against the mean Z value.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>R_Z_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing Z resolution values. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>R_Z_err_vec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector containing Z resolution uncertainties. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="135" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.cc" bodystart="239" bodyend="268" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="135" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::string, std::string &gt;</type>
+        <definition>std::pair&lt; std::string, std::string &gt; RoundMeasurement</definition>
+        <argsstring>(double value, double uncertainty)</argsstring>
+        <name>RoundMeasurement</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>uncertainty</declname>
+        </param>
+        <briefdescription>
+<para>Rounds a measurement value and its uncertainty to appropriate significant figures. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value to round. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair containing the rounded value and uncertainty as strings.</para>
+</simplesect>
+Rounds a measurement value and its uncertainty to appropriate significant figures.</para>
+<para>Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.</para>
+<para>Rounds a measurement value and its uncertainty to the appropriate significant figures.</para>
+<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The measurement value. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>uncertainty</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The uncertainty of the measurement. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" line="150" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h" declline="150" declcolumn="11"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Header file for Z_resolutions.cc. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in LaTeX tables and plotted.s </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TKey.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TDirectory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TRandom3.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TNamed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Z__resolutions_8h_1af480f62255be31912e5201650f336ea5" kindref="member">ProcessFile</ref>(</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_vec,</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_err_vec,</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanZ_vec,</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanZ_err_vec,</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Z</highlight></codeline>
+<codeline lineno="53"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Z__resolutions_8h_1a475ba69ff2ad8505cfa33751901d81ea" kindref="member">FitHistograms</ref>(</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>inFile,</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_vec,</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_err_vec,</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanZ_vec,</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;double&gt;&amp;<sp/>meanZ_err_vec,</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ofstream&amp;<sp/>LatexFile_Z</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">TFitResultPtr<sp/><ref refid="Z__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847" kindref="member">FitWithTSpectrum</ref>(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Z__resolutions_8h_1abc8a567abccc89e3f6585bf4c1c38d52" kindref="member">WriteZTable</ref>(std::ofstream&amp;<sp/>outFile,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanZ,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdZ,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_Z,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>meanErrZ,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>stdErrZ,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>R_Z_err);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Z__resolutions_8h_1ad867a67690e3dd7ac7f46e6123580b80" kindref="member">OpenZFile</ref>(std::ofstream&amp;<sp/>outFile);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Z__resolutions_8h_1afaad6cbd1c71c2461d830e374f574434" kindref="member">CloseZFile</ref>(std::ofstream&amp;<sp/>outFile);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Z__resolutions_8h_1a016555409fa0e6777994e083a713e05e" kindref="member">PlotResolutionGraphs</ref>(</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_vec,</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;double&gt;&amp;<sp/>R_Z_err_vec</highlight></codeline>
+<codeline lineno="138"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h"/>
+  </compounddef>
+</doxygen>

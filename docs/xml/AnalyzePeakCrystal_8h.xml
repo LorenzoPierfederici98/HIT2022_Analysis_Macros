@@ -90,16 +90,16 @@
           <declname>uncertainty</declname>
         </param>
         <briefdescription>
-<para>Prints a measurement value and its uncertainty. </para>
+<para>Prints the measurement value and its uncertainty. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function prints a measurement value and its uncertainty to the console.</para>
+<para>This function formats and prints the peak position and its uncertainty with significant figures based on the uncertainty.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>value</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The measurement value. </para>
+<para>The measurement value (e.g., peak position). </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -107,7 +107,7 @@
 <parametername>uncertainty</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The uncertainty of the measurement. </para>
+<para>The uncertainty in the measurement. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -115,50 +115,62 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="35" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="84" bodyend="90" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="35" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="34" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="111" bodyend="117" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="34" declcolumn="6"/>
       </memberdef>
-      <memberdef kind="function" id="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="AnalyzePeakCrystal_8h_1a72e2657579c5be6f6e4d73d8be4b5ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>TFitResultPtr</type>
         <definition>TFitResultPtr FitPeakWithTSpectrum</definition>
-        <argsstring>(TH1D *hist, double threshold)</argsstring>
+        <argsstring>(TH1D *hist, int energy, int crystal_ID)</argsstring>
         <name>FitPeakWithTSpectrum</name>
         <param>
           <type>TH1D *</type>
           <declname>hist</declname>
         </param>
         <param>
-          <type>double</type>
-          <declname>threshold</declname>
+          <type>int</type>
+          <declname>energy</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>crystal_ID</declname>
         </param>
         <briefdescription>
-<para>Fits a peak in a histogram using TSpectrum. </para>
+<para>Fits a peak in the given histogram using TSpectrum and a Gaussian function. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.</para>
+<para>This function detects peaks in the histogram using TSpectrum and fits the detected peak with a Gaussian function. The fit results are returned as a TFitResultPtr.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>hist</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The histogram to fit. </para>
+<para>Pointer to the histogram to fit. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>threshold</parametername>
+<parametername>energy</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The threshold for peak detection. </para>
+<para>Beam energy in MeV/u. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>crystal_ID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ID of the crystal being analyzed. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A TFitResultPtr containing the fit result. </para>
+<simplesect kind="return"><para>TFitResultPtr containing the fit results. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="46" column="15" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="93" bodyend="111" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="46" declcolumn="15"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="47" column="15" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="120" bodyend="143" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="47" declcolumn="15"/>
       </memberdef>
       <memberdef kind="function" id="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::tuple&lt; TH1D *, TH1D * &gt;</type>
@@ -178,16 +190,16 @@
           <declname>histName</declname>
         </param>
         <briefdescription>
-<para>Finds histograms in a ROOT file. </para>
+<para>Retrieves histograms for a specific crystal and the total charge from the input ROOT file. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function finds and retrieves histograms from a ROOT file.</para>
+<para>This function searches for and retrieves the specified histograms from the input file. It returns pointers to the crystal-specific histogram and the total charge histogram.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>inFile</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The input ROOT file. </para>
+<para>Pointer to the input ROOT file. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -195,7 +207,7 @@
 <parametername>histName_total</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The name of the total histogram. </para>
+<para>Name of the total charge histogram. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -203,17 +215,17 @@
 <parametername>histName</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The name of the specific histogram. </para>
+<para>Name of the histogram for the specific crystal. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A tuple containing pointers to the total histogram and the specific histogram. </para>
+<simplesect kind="return"><para>A tuple containing pointers to the crystal histogram and the total charge histogram. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="58" column="12" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="114" bodyend="121" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="58" declcolumn="12"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="60" column="12" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="146" bodyend="153" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="60" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -237,16 +249,16 @@
           <declname>outputFileName</declname>
         </param>
         <briefdescription>
-<para>Saves fit results to a ROOT file. </para>
+<para>Saves the fit results, histograms, and plots to an output ROOT file. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function saves the fit results and the corresponding histogram to a ROOT file.</para>
+<para>This function writes the histogram, fit results, and canvas to the specified output file. It creates the output file if it does not exist or updates it if it does.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>canvas</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The canvas containing the fit plot. </para>
+<para>Pointer to the canvas containing the fit plot. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -254,7 +266,7 @@
 <parametername>hist</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The histogram to save. </para>
+<para>Pointer to the histogram being analyzed. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -262,7 +274,7 @@
 <parametername>fitResult</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The fit result to save. </para>
+<para>The fit results to save. </para>
 </parameterdescription>
 </parameteritem>
 <parameteritem>
@@ -270,7 +282,7 @@
 <parametername>outputFileName</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The name of the output ROOT file. </para>
+<para>Name of the output ROOT file. </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -278,38 +290,38 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="70" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="123" bodyend="138" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="70" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" line="73" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.cc" bodystart="155" bodyend="170" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" declline="73" declcolumn="6"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Header file for processing and fitting charge distribution histograms from ROOT files. </para>
+<para>Header file for AnalyzePeakCrystal.cc. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. root -l -b -q &apos;AnalyzePeakCrystal.cc()&apos;, -b doesn&apos;t display plots. In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted. The fit results are inserted in files named like e.g. <computeroutput>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root</computeroutput> which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </para>
+<para>This file contains function declarations for analyzing and fitting charge histograms for calorimeter crystals. The charge histograms of every crystal are fitted with a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit results are saved in output files, along with the histograms and fit plots. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1D.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFitResultPtr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TLegend.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TObjString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db" kindref="member">PrintMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="46"><highlight class="normal">TFitResultPtr<sp/><ref refid="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d" kindref="member">FitPeakWithTSpectrum</ref>(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>threshold);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight></codeline>
-<codeline lineno="58"><highlight class="normal">std::tuple&lt;TH1D*,<sp/>TH1D*&gt;<sp/><ref refid="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3" kindref="member">FindHistograms</ref>(TFile<sp/>*inFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString<sp/>&amp;histName_total,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString<sp/>&amp;histName);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kindref="member">SaveFitResultsToFile</ref>(TCanvas*<sp/>canvas,<sp/>TH1D*<sp/>hist,<sp/>TFitResultPtr<sp/>fitResult,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>outputFileName);</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1D.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFitResultPtr.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TLegend.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TObjString.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db" kindref="member">PrintMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal">TFitResultPtr<sp/><ref refid="AnalyzePeakCrystal_8h_1a72e2657579c5be6f6e4d73d8be4b5ec8" kindref="member">FitPeakWithTSpectrum</ref>(TH1D<sp/>*hist,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>energy,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>crystal_ID);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal">std::tuple&lt;TH1D*,<sp/>TH1D*&gt;<sp/><ref refid="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3" kindref="member">FindHistograms</ref>(TFile<sp/>*inFile,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString<sp/>&amp;histName_total,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString<sp/>&amp;histName);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df" kindref="member">SaveFitResultsToFile</ref>(TCanvas*<sp/>canvas,<sp/>TH1D*<sp/>hist,<sp/>TFitResultPtr<sp/>fitResult,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>outputFileName);</highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h"/>
   </compounddef>

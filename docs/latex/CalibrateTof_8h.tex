@@ -35,7 +35,7 @@ TFit\+Result \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{CalibrateTof_8h_acbf260
 \begin{DoxyCompactList}\small\item\em Loads a fit result from a specified file and directory. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{CalibrateTof_8h_a3709ac7cbea5496ed4a4436aa1efdcea}{Extract\+Mean\+Values}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies, const std\+::string \&layer, int bar, std\+::vector$<$ double $>$ \&means, std\+::vector$<$ double $>$ \&mean\+Errors)
 \begin{DoxyCompactList}\small\item\em Extracts mean values and uncertainties from fit results. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05}{Write\+Mean\+Differences}} (const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies, const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies\+MC, const std\+::string \&layer, int bar)
+void \mbox{\hyperlink{CalibrateTof_8h_a56ae1ed9e3d3405ee8e7bee444c02c9e}{Write\+Mean\+Differences}} (const std\+::map$<$ int, std\+::vector$<$ std\+::string $>$ $>$ calib\+Files, const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies, const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&files\+And\+Energies\+MC, const std\+::string \&layer, int bar)
 \begin{DoxyCompactList}\small\item\em Writes the differences between data and MC mean values to calibration files. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -88,11 +88,11 @@ Loads a fit result from a specified file and directory.
 \begin{DoxyReturn}{Returns}
 A pointer to the loaded TFit\+Result, or nullptr if an error occurs. 
 \end{DoxyReturn}
-\Hypertarget{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05}\label{CalibrateTof_8h_a2976661d2feaa11e0d6d557df1dbdf05} 
+\Hypertarget{CalibrateTof_8h_a56ae1ed9e3d3405ee8e7bee444c02c9e}\label{CalibrateTof_8h_a56ae1ed9e3d3405ee8e7bee444c02c9e} 
 \index{CalibrateTof.h@{CalibrateTof.h}!WriteMeanDifferences@{WriteMeanDifferences}}
 \index{WriteMeanDifferences@{WriteMeanDifferences}!CalibrateTof.h@{CalibrateTof.h}}
 \doxysubsubsection{\texorpdfstring{WriteMeanDifferences()}{WriteMeanDifferences()}}
-{\footnotesize\ttfamily void Write\+Mean\+Differences (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies\+MC,  }\item[{const std\+::string \&}]{layer,  }\item[{int}]{bar }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Write\+Mean\+Differences (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, std\+::vector$<$ std\+::string $>$ $>$}]{calib\+Files,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies,  }\item[{const std\+::vector$<$ std\+::pair$<$ std\+::string, int $>$ $>$ \&}]{files\+And\+Energies\+MC,  }\item[{const std\+::string \&}]{layer,  }\item[{int}]{bar }\end{DoxyParamCaption})}
 
 
 

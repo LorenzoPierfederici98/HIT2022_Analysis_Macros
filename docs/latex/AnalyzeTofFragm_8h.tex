@@ -39,7 +39,7 @@ TFit\+Result\+Ptr \mbox{\hyperlink{AnalyzeTofFragm_8h_a82f501f613b6a51643fcadd61
 \doxysubsection{Detailed Description}
 Header file for Analyze\+Tof\+Fragm.\+cc. 
 
-This file contains function declarations for fitting ToF (Time of Flight) distributions from the Analyze\+TWCharge\+Time.\+cc merged output files (for fragmentation runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.\+g. Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+Me\+V\+\_\+\+Fit.\+root (created if they don\textquotesingle{}t already exist, or overwritten if they do), inside of the Tof\+Fit directory. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+Tof\+Fragm.\+cc()\textquotesingle{}. 
+This file contains function declarations for fitting ToF (Time of Flight) distributions from the Analyze\+TWCharge\+Time.\+cc merged output files (for fragmentation runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don\textquotesingle{}t already exist, or overwritten if they do. 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{AnalyzeTofFragm_8h_ab7381314d22509d291beb58f457e9092}\label{AnalyzeTofFragm_8h_ab7381314d22509d291beb58f457e9092} 

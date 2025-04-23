@@ -1,0 +1,353 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+TW\+\_\+resolutions.h File Reference}
+\hypertarget{TW__resolutions_8h}{}\label{TW__resolutions_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/TW\_resolutions.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/TW\_resolutions.h}}
+
+
+Header file for TW\+\_\+resolutions.\+cc.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TRandom3.\+h$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for TW\+\_\+resolutions.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{TW__resolutions_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{TW__resolutions_8h_aad661d4c7037778af8afc75d9cfc82af}{Fit\+Histograms}} (TFile \texorpdfstring{$\ast$}{*}in\+File, int energy, std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+err\+\_\+vec, std\+::ofstream \&Latex\+File\+\_\+\+Eloss, std\+::ofstream \&Latex\+File\+\_\+\+Tof)
+\begin{DoxyCompactList}\small\item\em Fits histograms for ToF and Eloss resolutions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_a02c7c5bce27bbd7305a4f78b242bf035}{Process\+File}} (const std\+::string \&file\+Name, int energy, std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+vec, std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+err\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+vec, std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+err\+\_\+vec, std\+::ofstream \&Latex\+File\+\_\+\+Eloss, std\+::ofstream \&Latex\+File\+\_\+\+Tof)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file and calculates resolutions for ToF and Eloss. \end{DoxyCompactList}\item 
+TFit\+Result\+Ptr \mbox{\hyperlink{TW__resolutions_8h_a7c1379d234367f611e9cb241b1f49847}{Fit\+With\+TSpectrum}} (TH1D \texorpdfstring{$\ast$}{*}hist, int energy)
+\begin{DoxyCompactList}\small\item\em Fits a histogram using TSpectrum for peak detection. \end{DoxyCompactList}\item 
+s void \mbox{\hyperlink{TW__resolutions_8h_aef8173c6ef6ad91f94ff7aed04dbc57d}{Write\+Eloss\+Table}} (std\+::ofstream \&out\+File, int energy, double mean\+Eloss\+He, double std\+Eloss\+He, double R\+\_\+\+He, double mean\+Eloss\+Err\+He, double std\+Eloss\+Err\+He, double R\+\_\+\+He\+\_\+err)
+\begin{DoxyCompactList}\small\item\em Writes Eloss results to a La\+TeX table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_a59aa5a05a061a274c82311aaf5137ee4}{Write\+Tof\+Table}} (std\+::ofstream \&out\+File, int energy, double mean\+Tof, double mean\+Tof\+Err, double R\+\_\+\+Tof, double R\+\_\+\+Tof\+\_\+err)
+\begin{DoxyCompactList}\small\item\em Writes ToF results to a La\+TeX table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_ab559ccd64309e7e7e34f94723cb06fe7}{Open\+Eloss\+File}} (std\+::ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Opens a La\+TeX file for Eloss results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_a313a1c48700390e15fb773d67c056d1e}{Open\+Tof\+File}} (std\+::ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Opens a La\+TeX file for ToF results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_aada91a63fcdac00b6709bce94b912b86}{Close\+Eloss\+File}} (std\+::ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Closes a La\+TeX file for Eloss results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_a9d4d462e980c97c3c83e2395a4b30979}{Close\+Tof\+File}} (std\+::ofstream \&out\+File)
+\begin{DoxyCompactList}\small\item\em Closes a La\+TeX file for ToF results. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{TW__resolutions_8h_ac05499726ae87bcc5ec712f14e99867f}{Plot\+Resolution\+Graphs}} (const std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+He\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Eloss\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+vec, const std\+::vector$<$ double $>$ \&R\+\_\+\+Tof\+\_\+err\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+vec, const std\+::vector$<$ double $>$ \&mean\+Tof\+\_\+err\+\_\+vec)
+\begin{DoxyCompactList}\small\item\em Plots resolution graphs for ToF and Eloss. \end{DoxyCompactList}\item 
+std\+::pair$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}{Round\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty to appropriate significant figures. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for TW\+\_\+resolutions.\+cc. 
+
+This file contains function declarations for analyzing and plotting the resolution of Time-\/\+Of-\/\+Flight (TOF) and energy loss (Eloss). The energy loss and TOF histograms, considering the response of all the TW bars, for the merged runs without target at each beam energy are fitted with gaussian functions; the resolution on the energy loss is retrieved as sigma/mu, the resolution on TOF is evaluated as sigma. The results are stored in La\+TeX tables and plotted. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{TW__resolutions_8h_aada91a63fcdac00b6709bce94b912b86}\label{TW__resolutions_8h_aada91a63fcdac00b6709bce94b912b86} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!CloseElossFile@{CloseElossFile}}
+\index{CloseElossFile@{CloseElossFile}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{CloseElossFile()}{CloseElossFile()}}
+{\footnotesize\ttfamily void Close\+Eloss\+File (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Closes a La\+TeX file for Eloss results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_a9d4d462e980c97c3c83e2395a4b30979}\label{TW__resolutions_8h_a9d4d462e980c97c3c83e2395a4b30979} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!CloseTofFile@{CloseTofFile}}
+\index{CloseTofFile@{CloseTofFile}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{CloseTofFile()}{CloseTofFile()}}
+{\footnotesize\ttfamily void Close\+Tof\+File (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Closes a La\+TeX file for ToF results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_aad661d4c7037778af8afc75d9cfc82af}\label{TW__resolutions_8h_aad661d4c7037778af8afc75d9cfc82af} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!FitHistograms@{FitHistograms}}
+\index{FitHistograms@{FitHistograms}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{FitHistograms()}{FitHistograms()}}
+{\footnotesize\ttfamily void Fit\+Histograms (\begin{DoxyParamCaption}\item[{TFile \texorpdfstring{$\ast$}{*}}]{in\+File,  }\item[{int}]{energy,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+He\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+He\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Eloss\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Eloss\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Tof\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Tof\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Tof\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Tof\+\_\+err\+\_\+vec,  }\item[{std\+::ofstream \&}]{Latex\+File\+\_\+\+Eloss,  }\item[{std\+::ofstream \&}]{Latex\+File\+\_\+\+Tof }\end{DoxyParamCaption})}
+
+
+
+Fits histograms for ToF and Eloss resolutions. 
+
+This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to La\+TeX files.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in\+File} & Pointer to the input ROOT file. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em R\+\_\+\+He\+\_\+vec} & Vector to store He resolution values. \\
+\hline
+{\em R\+\_\+\+He\+\_\+err\+\_\+vec} & Vector to store He resolution uncertainties. \\
+\hline
+{\em mean\+Eloss\+\_\+vec} & Vector to store mean Eloss values. \\
+\hline
+{\em mean\+Eloss\+\_\+err\+\_\+vec} & Vector to store mean Eloss uncertainties. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+vec} & Vector to store ToF resolution values. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+err\+\_\+vec} & Vector to store ToF resolution uncertainties. \\
+\hline
+{\em mean\+Tof\+\_\+vec} & Vector to store mean ToF values. \\
+\hline
+{\em mean\+Tof\+\_\+err\+\_\+vec} & Vector to store mean ToF uncertainties. \\
+\hline
+{\em Latex\+File\+\_\+\+Eloss} & Output stream for the Eloss La\+TeX table. \\
+\hline
+{\em Latex\+File\+\_\+\+Tof} & Output stream for the ToF La\+TeX table. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_a7c1379d234367f611e9cb241b1f49847}\label{TW__resolutions_8h_a7c1379d234367f611e9cb241b1f49847} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!FitWithTSpectrum@{FitWithTSpectrum}}
+\index{FitWithTSpectrum@{FitWithTSpectrum}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{FitWithTSpectrum()}{FitWithTSpectrum()}}
+{\footnotesize\ttfamily TFit\+Result\+Ptr Fit\+With\+TSpectrum (\begin{DoxyParamCaption}\item[{TH1D \texorpdfstring{$\ast$}{*}}]{hist,  }\item[{int}]{energy }\end{DoxyParamCaption})}
+
+
+
+Fits a histogram using TSpectrum for peak detection. 
+
+This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em hist} & Pointer to the histogram to fit. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+TFit\+Result\+Ptr containing the fit results. 
+\end{DoxyReturn}
+\Hypertarget{TW__resolutions_8h_ab559ccd64309e7e7e34f94723cb06fe7}\label{TW__resolutions_8h_ab559ccd64309e7e7e34f94723cb06fe7} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!OpenElossFile@{OpenElossFile}}
+\index{OpenElossFile@{OpenElossFile}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{OpenElossFile()}{OpenElossFile()}}
+{\footnotesize\ttfamily void Open\+Eloss\+File (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Opens a La\+TeX file for Eloss results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_a313a1c48700390e15fb773d67c056d1e}\label{TW__resolutions_8h_a313a1c48700390e15fb773d67c056d1e} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!OpenTofFile@{OpenTofFile}}
+\index{OpenTofFile@{OpenTofFile}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{OpenTofFile()}{OpenTofFile()}}
+{\footnotesize\ttfamily void Open\+Tof\+File (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File }\end{DoxyParamCaption})}
+
+
+
+Opens a La\+TeX file for ToF results. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_ac05499726ae87bcc5ec712f14e99867f}\label{TW__resolutions_8h_ac05499726ae87bcc5ec712f14e99867f} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!PlotResolutionGraphs@{PlotResolutionGraphs}}
+\index{PlotResolutionGraphs@{PlotResolutionGraphs}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{PlotResolutionGraphs()}{PlotResolutionGraphs()}}
+{\footnotesize\ttfamily void Plot\+Resolution\+Graphs (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ double $>$ \&}]{R\+\_\+\+He\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{R\+\_\+\+He\+\_\+err\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{mean\+Eloss\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{mean\+Eloss\+\_\+err\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Tof\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Tof\+\_\+err\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{mean\+Tof\+\_\+vec,  }\item[{const std\+::vector$<$ double $>$ \&}]{mean\+Tof\+\_\+err\+\_\+vec }\end{DoxyParamCaption})}
+
+
+
+Plots resolution graphs for ToF and Eloss. 
+
+This function creates graphs for ToF and Eloss resolutions and saves them as PNG files. The eloss resolutions at each beam energy are plotted against the mean energy loss value, the TOF resolutions against the mean TOF value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em R\+\_\+\+He\+\_\+vec} & Vector containing He resolution values. \\
+\hline
+{\em R\+\_\+\+He\+\_\+err\+\_\+vec} & Vector containing He resolution uncertainties. \\
+\hline
+{\em mean\+Eloss\+\_\+vec} & Vector containing mean Eloss values. \\
+\hline
+{\em mean\+Eloss\+\_\+err\+\_\+vec} & Vector containing mean Eloss uncertainties. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+vec} & Vector containing ToF resolution values. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+err\+\_\+vec} & Vector containing ToF resolution uncertainties. \\
+\hline
+{\em mean\+Tof\+\_\+vec} & Vector containing mean ToF values. \\
+\hline
+{\em mean\+Tof\+\_\+err\+\_\+vec} & Vector containing mean ToF uncertainties. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_a02c7c5bce27bbd7305a4f78b242bf035}\label{TW__resolutions_8h_a02c7c5bce27bbd7305a4f78b242bf035} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{int}]{energy,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+He\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+He\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Eloss\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Eloss\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Tof\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{R\+\_\+\+Tof\+\_\+err\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Tof\+\_\+vec,  }\item[{std\+::vector$<$ double $>$ \&}]{mean\+Tof\+\_\+err\+\_\+vec,  }\item[{std\+::ofstream \&}]{Latex\+File\+\_\+\+Eloss,  }\item[{std\+::ofstream \&}]{Latex\+File\+\_\+\+Tof }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file and calculates resolutions for ToF and Eloss. 
+
+This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the ROOT file to process. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em R\+\_\+\+He\+\_\+vec} & Vector to store He resolution values. \\
+\hline
+{\em R\+\_\+\+He\+\_\+err\+\_\+vec} & Vector to store He resolution uncertainties. \\
+\hline
+{\em mean\+Eloss\+\_\+vec} & Vector to store mean Eloss values. \\
+\hline
+{\em mean\+Eloss\+\_\+err\+\_\+vec} & Vector to store mean Eloss uncertainties. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+vec} & Vector to store ToF resolution values. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+err\+\_\+vec} & Vector to store ToF resolution uncertainties. \\
+\hline
+{\em mean\+Tof\+\_\+vec} & Vector to store mean ToF values. \\
+\hline
+{\em mean\+Tof\+\_\+err\+\_\+vec} & Vector to store mean ToF uncertainties. \\
+\hline
+{\em Latex\+File\+\_\+\+Eloss} & Output stream for the Eloss La\+TeX table. \\
+\hline
+{\em Latex\+File\+\_\+\+Tof} & Output stream for the ToF La\+TeX table. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6}\label{TW__resolutions_8h_a56d523c54cc171aa9e0ab754857f64d6} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!RoundMeasurement@{RoundMeasurement}}
+\index{RoundMeasurement@{RoundMeasurement}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
+{\footnotesize\ttfamily std\+::pair$<$ std\+::string, std\+::string $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Rounds a measurement value and its uncertainty to appropriate significant figures. 
+
+This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value to round. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the rounded value and uncertainty as strings.
+\end{DoxyReturn}
+Rounds a measurement value and its uncertainty to appropriate significant figures.
+
+Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
+
+Rounds a measurement value and its uncertainty to the appropriate significant figures.
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty. 
+\end{DoxyReturn}
+\Hypertarget{TW__resolutions_8h_aef8173c6ef6ad91f94ff7aed04dbc57d}\label{TW__resolutions_8h_aef8173c6ef6ad91f94ff7aed04dbc57d} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!WriteElossTable@{WriteElossTable}}
+\index{WriteElossTable@{WriteElossTable}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{WriteElossTable()}{WriteElossTable()}}
+{\footnotesize\ttfamily s void Write\+Eloss\+Table (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File,  }\item[{int}]{energy,  }\item[{double}]{mean\+Eloss\+He,  }\item[{double}]{std\+Eloss\+He,  }\item[{double}]{R\+\_\+\+He,  }\item[{double}]{mean\+Eloss\+Err\+He,  }\item[{double}]{std\+Eloss\+Err\+He,  }\item[{double}]{R\+\_\+\+He\+\_\+err }\end{DoxyParamCaption})}
+
+
+
+Writes Eloss results to a La\+TeX table. 
+
+This function writes the Eloss results, including mean, standard deviation, and resolution, to a La\+TeX table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em mean\+Eloss\+He} & Mean Eloss value for He. \\
+\hline
+{\em std\+Eloss\+He} & Standard deviation of Eloss for He. \\
+\hline
+{\em R\+\_\+\+He} & Resolution for He. \\
+\hline
+{\em mean\+Eloss\+Err\+He} & Uncertainty in the mean Eloss for He. \\
+\hline
+{\em std\+Eloss\+Err\+He} & Uncertainty in the standard deviation of Eloss for He. \\
+\hline
+{\em R\+\_\+\+He\+\_\+err} & Uncertainty in the resolution for He. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{TW__resolutions_8h_a59aa5a05a061a274c82311aaf5137ee4}\label{TW__resolutions_8h_a59aa5a05a061a274c82311aaf5137ee4} 
+\index{TW\_resolutions.h@{TW\_resolutions.h}!WriteTofTable@{WriteTofTable}}
+\index{WriteTofTable@{WriteTofTable}!TW\_resolutions.h@{TW\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{WriteTofTable()}{WriteTofTable()}}
+{\footnotesize\ttfamily void Write\+Tof\+Table (\begin{DoxyParamCaption}\item[{std\+::ofstream \&}]{out\+File,  }\item[{int}]{energy,  }\item[{double}]{mean\+Tof,  }\item[{double}]{mean\+Tof\+Err,  }\item[{double}]{R\+\_\+\+Tof,  }\item[{double}]{R\+\_\+\+Tof\+\_\+err }\end{DoxyParamCaption})}
+
+
+
+Writes ToF results to a La\+TeX table. 
+
+This function writes the ToF results, including mean and resolution, to a La\+TeX table.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out\+File} & Output stream for the La\+TeX file. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em mean\+Tof} & Mean ToF value. \\
+\hline
+{\em mean\+Tof\+Err} & Uncertainty in the mean ToF value. \\
+\hline
+{\em R\+\_\+\+Tof} & Resolution for ToF. \\
+\hline
+{\em R\+\_\+\+Tof\+\_\+err} & Uncertainty in the resolution for ToF. \\
+\hline
+\end{DoxyParams}

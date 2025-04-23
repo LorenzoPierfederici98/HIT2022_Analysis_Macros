@@ -106,38 +106,38 @@ $(document).ready(function(){initNavTree('AnalyzeTofFragm_8h_source.html',''); i
 </div><!--header-->
 <div class="contents">
 <a href="AnalyzeTofFragm_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor"> #if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor"> #include &lt;TFile.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor"> #include &lt;TKey.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor"> #include &lt;TDirectory.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor"> #include &lt;TH1.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor"> #include &lt;TF1.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor"> #include &lt;TGraphErrors.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor"> #include &lt;TCanvas.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor"> #include &lt;TNamed.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor"> #include &lt;TSpectrum.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor"> #include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor"> #include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor"> #include &lt;map&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor"> #include &lt;regex&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor"> #endif</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> <span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzeTofFragm_8h.html#a58aa16b94804392225cab0761e0e0b73">ProcessFile</a>(</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>     <span class="keyword">const</span> std::string&amp; fileName,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>     <span class="keywordtype">int</span> energy,</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofMeans,</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofErrors</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> );</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> <span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzeTofFragm_8h.html#ab7381314d22509d291beb58f457e9092">FitHistogramsInDirectory</a>(</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>     TDirectory* dir,</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>     <span class="keywordtype">int</span> energy,</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofMeans,</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofErrors,</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>     TFile* outputFile</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> );</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> TFitResultPtr <a class="code hl_function" href="AnalyzeTofFragm_8h.html#a82f501f613b6a51643fcadd61ce5ba9b">FitPeaksWithTSpectrum</a>(TH1D *hist, <span class="keywordtype">int</span> energy, <span class="keyword">const</span> TString &amp;layerBarCombination);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor"> #if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor"> #include &lt;TFile.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor"> #include &lt;TKey.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor"> #include &lt;TDirectory.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor"> #include &lt;TH1.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor"> #include &lt;TF1.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor"> #include &lt;TGraphErrors.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor"> #include &lt;TCanvas.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor"> #include &lt;TNamed.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor"> #include &lt;TSpectrum.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor"> #include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor"> #include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor"> #include &lt;map&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor"> #include &lt;regex&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor"> #endif</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> <span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzeTofFragm_8h.html#a58aa16b94804392225cab0761e0e0b73">ProcessFile</a>(</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>     <span class="keyword">const</span> std::string&amp; fileName,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>     <span class="keywordtype">int</span> energy,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofMeans,</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofErrors</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> );</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> <span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzeTofFragm_8h.html#ab7381314d22509d291beb58f457e9092">FitHistogramsInDirectory</a>(</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>     TDirectory* dir,</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>     <span class="keywordtype">int</span> energy,</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofMeans,</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>     std::map&lt;TString, std::map&lt;int, double&gt;&gt;&amp; TofErrors,</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>     TFile* outputFile</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span> );</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> TFitResultPtr <a class="code hl_function" href="AnalyzeTofFragm_8h.html#a82f501f613b6a51643fcadd61ce5ba9b">FitPeaksWithTSpectrum</a>(TH1D *hist, <span class="keywordtype">int</span> energy, <span class="keyword">const</span> TString &amp;layerBarCombination);</div>
 <div class="ttc" id="aAnalyzeTofFragm_8h_html_a58aa16b94804392225cab0761e0e0b73"><div class="ttname"><a href="AnalyzeTofFragm_8h.html#a58aa16b94804392225cab0761e0e0b73">ProcessFile</a></div><div class="ttdeci">void ProcessFile(const std::string &amp;fileName, int energy, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;TofMeans, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;TofErrors)</div><div class="ttdoc">Processes a ROOT file and fits the histograms.</div><div class="ttdef"><b>Definition</b> AnalyzeTofFragm.cc:74</div></div>
 <div class="ttc" id="aAnalyzeTofFragm_8h_html_a82f501f613b6a51643fcadd61ce5ba9b"><div class="ttname"><a href="AnalyzeTofFragm_8h.html#a82f501f613b6a51643fcadd61ce5ba9b">FitPeaksWithTSpectrum</a></div><div class="ttdeci">TFitResultPtr FitPeaksWithTSpectrum(TH1D *hist, int energy, const TString &amp;layerBarCombination)</div><div class="ttdoc">Fits peaks in a histogram using TSpectrum.</div><div class="ttdef"><b>Definition</b> AnalyzeTofFragm.cc:118</div></div>
 <div class="ttc" id="aAnalyzeTofFragm_8h_html_ab7381314d22509d291beb58f457e9092"><div class="ttname"><a href="AnalyzeTofFragm_8h.html#ab7381314d22509d291beb58f457e9092">FitHistogramsInDirectory</a></div><div class="ttdeci">void FitHistogramsInDirectory(TDirectory *dir, int energy, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;TofMeans, std::map&lt; TString, std::map&lt; int, double &gt; &gt; &amp;TofErrors, TFile *outputFile)</div><div class="ttdoc">Fits histograms in a directory and stores the results.</div><div class="ttdef"><b>Definition</b> AnalyzeTofFragm.cc:28</div></div>

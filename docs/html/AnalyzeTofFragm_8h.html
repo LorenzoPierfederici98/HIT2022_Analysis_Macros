@@ -169,7 +169,7 @@ Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for AnalyzeTofFragm.cc. </p>
-<p>This file contains function declarations for fitting ToF (Time of Flight) distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g. AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root (created if they don't already exist, or overwritten if they do), inside of the TofFit directory. To be run with root -l -b -q 'AnalyzeTofFragm.cc()'. </p>
+<p>This file contains function declarations for fitting ToF (Time of Flight) distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don't already exist, or overwritten if they do. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ab7381314d22509d291beb58f457e9092" name="ab7381314d22509d291beb58f457e9092"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7381314d22509d291beb58f457e9092">&#9670;&#160;</a></span>FitHistogramsInDirectory()</h2>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['writefitvaluesordered_0',['WriteFitValuesOrdered',['../CalibrateFragm_8h.html#a661388630a24bdf651364f968813ec3c',1,'CalibrateFragm.cc']]],
-  ['writemeandifferences_1',['WriteMeanDifferences',['../CalibrateTof_8h.html#a2976661d2feaa11e0d6d557df1dbdf05',1,'CalibrateTof.cc']]]
+  ['savefitresultstofile_0',['SaveFitResultsToFile',['../AnalyzePeakCrystal_8h.html#aec202f6e32bb23c6bb5ffe63a7d2e7df',1,'AnalyzePeakCrystal.cc']]],
+  ['sumnentries_1',['SumNentries',['../AnalyzeTWFragm_8h.html#aabad4b700eccd2608a76d82430bfea3a',1,'AnalyzeTWFragm.cc']]]
 ];

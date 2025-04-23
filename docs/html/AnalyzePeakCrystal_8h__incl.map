@@ -1,5 +1,5 @@
 <map id="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h" name="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzePeakCrystal.h">
-<area shape="rect" id="Node000001" title="Header file for processing and fitting charge distribution histograms from ROOT files." alt="" coords="449,5,694,60"/>
+<area shape="rect" id="Node000001" title="Header file for AnalyzePeakCrystal.cc." alt="" coords="449,5,694,60"/>
 <area shape="rect" id="Node000002" title=" " alt="" coords="5,108,71,133"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="449,52,280,76,85,110,84,105,279,71,448,46"/>
 <area shape="rect" id="Node000003" title=" " alt="" coords="95,108,184,133"/>

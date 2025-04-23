@@ -1,0 +1,126 @@
+\doxysection{/mnt/c/\+Users/\+Lorenzo/\+Desktop/\+HIT2022\+\_\+\+Analysis\+\_\+\+Macros/src/\+Calo\+\_\+resolutions.h File Reference}
+\hypertarget{Calo__resolutions_8h}{}\label{Calo__resolutions_8h}\index{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/Calo\_resolutions.h@{/mnt/c/Users/Lorenzo/Desktop/HIT2022\_Analysis\_Macros/src/Calo\_resolutions.h}}
+
+
+Header file for Calo\+\_\+resolutions.\+cc.  
+
+
+{\ttfamily \#include $<$TFile.\+h$>$}\newline
+{\ttfamily \#include $<$TKey.\+h$>$}\newline
+{\ttfamily \#include $<$TDirectory.\+h$>$}\newline
+{\ttfamily \#include $<$TH1.\+h$>$}\newline
+{\ttfamily \#include $<$TF1.\+h$>$}\newline
+{\ttfamily \#include $<$TRandom3.\+h$>$}\newline
+{\ttfamily \#include $<$numeric$>$}\newline
+{\ttfamily \#include $<$TGraph\+Errors.\+h$>$}\newline
+{\ttfamily \#include $<$TCanvas.\+h$>$}\newline
+{\ttfamily \#include $<$TNamed.\+h$>$}\newline
+{\ttfamily \#include $<$TSpectrum.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+Include dependency graph for Calo\+\_\+resolutions.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Calo__resolutions_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Calo__resolutions_8h_ae42deae8bf798058b77d8a228427dddb}{Process\+File}} (const std\+::string \&file\+Name, const int energy, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res, std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res\+\_\+err)
+\begin{DoxyCompactList}\small\item\em Processes a ROOT file and calculates the resolution for each crystal. \end{DoxyCompactList}\item 
+std\+::pair$<$ double, double $>$ \mbox{\hyperlink{Calo__resolutions_8h_a2ad7fc5517b3ca53aced9f056accb5dd}{Round\+Measurement}} (double value, double uncertainty)
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty to the appropriate significant figures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{Calo__resolutions_8h_aebb2d0ec4b031210878491c63b1908ef}{Plot\+Resolutions}} (const std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res, const std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&Res\+\_\+err)
+\begin{DoxyCompactList}\small\item\em Plots the resolution as a function of beam energy for each crystal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Header file for Calo\+\_\+resolutions.\+cc. 
+
+This file contains function declarations and necessary includes for analyzing and plotting the resolution of calorimeter crystals as a function of beam energy. The analysis is performed using ROOT libraries, and the resolution is calculated based on the mean and standard deviation of Gaussian fits to charge histograms. The results are stored and plotted for further analysis. 
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Calo__resolutions_8h_aebb2d0ec4b031210878491c63b1908ef}\label{Calo__resolutions_8h_aebb2d0ec4b031210878491c63b1908ef} 
+\index{Calo\_resolutions.h@{Calo\_resolutions.h}!PlotResolutions@{PlotResolutions}}
+\index{PlotResolutions@{PlotResolutions}!Calo\_resolutions.h@{Calo\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{PlotResolutions()}{PlotResolutions()}}
+{\footnotesize\ttfamily void Plot\+Resolutions (\begin{DoxyParamCaption}\item[{const std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&}]{Res,  }\item[{const std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&}]{Res\+\_\+err }\end{DoxyParamCaption})}
+
+
+
+Plots the resolution as a function of beam energy for each crystal. 
+
+This function creates a graph for each crystal, showing the resolution as a function of beam energy. The graphs are saved as PNG files in the {\ttfamily Plots} directory.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Res} & Map containing the resolutions for each crystal at different beam energies. \\
+\hline
+{\em Res\+\_\+err} & Map containing the uncertainties of the resolutions for each crystal at different beam energies. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Calo__resolutions_8h_ae42deae8bf798058b77d8a228427dddb}\label{Calo__resolutions_8h_ae42deae8bf798058b77d8a228427dddb} 
+\index{Calo\_resolutions.h@{Calo\_resolutions.h}!ProcessFile@{ProcessFile}}
+\index{ProcessFile@{ProcessFile}!Calo\_resolutions.h@{Calo\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{ProcessFile()}{ProcessFile()}}
+{\footnotesize\ttfamily void Process\+File (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{file\+Name,  }\item[{const int}]{energy,  }\item[{std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&}]{Res,  }\item[{std\+::map$<$ int, std\+::vector$<$ std\+::pair$<$ int, double $>$ $>$ $>$ \&}]{Res\+\_\+err }\end{DoxyParamCaption})}
+
+
+
+Processes a ROOT file and calculates the resolution for each crystal. 
+
+This function reads the fit results from the specified ROOT file, calculates the resolution (standard deviation divided by the mean, expressed as a percentage), and stores the results in the provided maps.
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Name} & Name of the ROOT file to process. \\
+\hline
+{\em energy} & Beam energy in Me\+V/u. \\
+\hline
+{\em Res} & Map to store the calculated resolutions for each crystal. \\
+\hline
+{\em Res\+\_\+err} & Map to store the uncertainties of the calculated resolutions for each crystal. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{Calo__resolutions_8h_a2ad7fc5517b3ca53aced9f056accb5dd}\label{Calo__resolutions_8h_a2ad7fc5517b3ca53aced9f056accb5dd} 
+\index{Calo\_resolutions.h@{Calo\_resolutions.h}!RoundMeasurement@{RoundMeasurement}}
+\index{RoundMeasurement@{RoundMeasurement}!Calo\_resolutions.h@{Calo\_resolutions.h}}
+\doxysubsubsection{\texorpdfstring{RoundMeasurement()}{RoundMeasurement()}}
+{\footnotesize\ttfamily std\+::pair$<$ double, double $>$ Round\+Measurement (\begin{DoxyParamCaption}\item[{double}]{value,  }\item[{double}]{uncertainty }\end{DoxyParamCaption})}
+
+
+
+Rounds a measurement value and its uncertainty to the appropriate significant figures. 
+
+This function rounds the given value and uncertainty to the number of significant figures determined by the uncertainty.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value to round. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the rounded value and uncertainty.
+\end{DoxyReturn}
+Rounds a measurement value and its uncertainty to the appropriate significant figures.
+
+This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
+
+
+\begin{DoxyParams}{Parameters}
+{\em value} & The measurement value. \\
+\hline
+{\em uncertainty} & The uncertainty of the measurement. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair of strings containing the rounded value and uncertainty. 
+\end{DoxyReturn}

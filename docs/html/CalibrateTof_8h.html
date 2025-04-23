@@ -172,9 +172,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a3709ac7cbea5496ed4a4436aa1efdcea" id="r_a3709ac7cbea5496ed4a4436aa1efdcea"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CalibrateTof_8h.html#a3709ac7cbea5496ed4a4436aa1efdcea">ExtractMeanValues</a> (const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::string &amp;layer, int bar, std::vector&lt; double &gt; &amp;means, std::vector&lt; double &gt; &amp;meanErrors)</td></tr>
 <tr class="memdesc:a3709ac7cbea5496ed4a4436aa1efdcea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts mean values and uncertainties from fit results.  <br /></td></tr>
 <tr class="separator:a3709ac7cbea5496ed4a4436aa1efdcea"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2976661d2feaa11e0d6d557df1dbdf05" id="r_a2976661d2feaa11e0d6d557df1dbdf05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CalibrateTof_8h.html#a2976661d2feaa11e0d6d557df1dbdf05">WriteMeanDifferences</a> (const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergiesMC, const std::string &amp;layer, int bar)</td></tr>
-<tr class="memdesc:a2976661d2feaa11e0d6d557df1dbdf05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the differences between data and MC mean values to calibration files.  <br /></td></tr>
-<tr class="separator:a2976661d2feaa11e0d6d557df1dbdf05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56ae1ed9e3d3405ee8e7bee444c02c9e" id="r_a56ae1ed9e3d3405ee8e7bee444c02c9e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="CalibrateTof_8h.html#a56ae1ed9e3d3405ee8e7bee444c02c9e">WriteMeanDifferences</a> (const std::map&lt; int, std::vector&lt; std::string &gt; &gt; calibFiles, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergies, const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;filesAndEnergiesMC, const std::string &amp;layer, int bar)</td></tr>
+<tr class="memdesc:a56ae1ed9e3d3405ee8e7bee444c02c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes the differences between data and MC mean values to calibration files.  <br /></td></tr>
+<tr class="separator:a56ae1ed9e3d3405ee8e7bee444c02c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Header file for the ToF calibration. </p>
@@ -276,8 +276,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a2976661d2feaa11e0d6d557df1dbdf05" name="a2976661d2feaa11e0d6d557df1dbdf05"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2976661d2feaa11e0d6d557df1dbdf05">&#9670;&#160;</a></span>WriteMeanDifferences()</h2>
+<a id="a56ae1ed9e3d3405ee8e7bee444c02c9e" name="a56ae1ed9e3d3405ee8e7bee444c02c9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56ae1ed9e3d3405ee8e7bee444c02c9e">&#9670;&#160;</a></span>WriteMeanDifferences()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -285,6 +285,12 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void WriteMeanDifferences </td>
           <td>(</td>
+          <td class="paramtype">const std::map&lt; int, std::vector&lt; std::string &gt; &gt;&#160;</td>
+          <td class="paramname"><em>calibFiles</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">const std::vector&lt; std::pair&lt; std::string, int &gt; &gt; &amp;&#160;</td>
           <td class="paramname"><em>filesAndEnergies</em>, </td>
         </tr>

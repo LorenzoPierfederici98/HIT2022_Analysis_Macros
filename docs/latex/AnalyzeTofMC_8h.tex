@@ -39,7 +39,7 @@ TFit\+Result\+Ptr \mbox{\hyperlink{AnalyzeTofMC_8h_a82f501f613b6a51643fcadd61ce5
 \doxysubsection{Detailed Description}
 Header file for Analyze\+Tof\+MC.\+cc. 
 
-This file contains function declarations for fitting ToF (Time of Flight) distributions from the Analyze\+TWFrag\+MC.\+cc output files (for MC runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSpectrum; the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.\+g. Ana\+FOOT\+\_\+\+TW\+\_\+\+Decoded\+\_\+\+HIT2022\+\_\+140\+\_\+\+Fit.\+root (created if they don\textquotesingle{}t already exist, or overwritten if they do), inside of the Tof\+Fit directory. To be run with root -\/l -\/b -\/q \textquotesingle{}Analyze\+Tof\+MC.\+cc()\textquotesingle{}. 
+This file contains function declarations for fitting ToF (Time of Flight) distributions from the Analyze\+TWFrag\+MC.\+cc output files (for MC runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSpectrum; the fits are then performed within a certain bin-\/range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don\textquotesingle{}t already exist, or overwritten if they do. 
 
 \doxysubsection{Function Documentation}
 \Hypertarget{AnalyzeTofMC_8h_a2136ab016ddeabc904c87316e8d034b0}\label{AnalyzeTofMC_8h_a2136ab016ddeabc904c87316e8d034b0} 

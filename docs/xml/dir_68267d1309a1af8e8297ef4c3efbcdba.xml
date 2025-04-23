@@ -16,8 +16,14 @@
     <innerfile refid="CalibrateFragm_8h">CalibrateFragm.h</innerfile>
     <innerfile refid="CalibrateTof_8cc">CalibrateTof.cc</innerfile>
     <innerfile refid="CalibrateTof_8h">CalibrateTof.h</innerfile>
+    <innerfile refid="Calo__resolutions_8cc">Calo_resolutions.cc</innerfile>
+    <innerfile refid="Calo__resolutions_8h">Calo_resolutions.h</innerfile>
     <innerfile refid="CaloPeakEnergyDisplay_8cc">CaloPeakEnergyDisplay.cc</innerfile>
     <innerfile refid="CaloPeakEnergyDisplay_8h">CaloPeakEnergyDisplay.h</innerfile>
+    <innerfile refid="TW__resolutions_8cc">TW_resolutions.cc</innerfile>
+    <innerfile refid="TW__resolutions_8h">TW_resolutions.h</innerfile>
+    <innerfile refid="Z__resolutions_8cc">Z_resolutions.cc</innerfile>
+    <innerfile refid="Z__resolutions_8h">Z_resolutions.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
