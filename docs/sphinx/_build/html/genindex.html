@@ -40,11 +40,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="api.html">AnalyzePeakCrystal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html#analyzetwfragm">AnalyzeTWFragm</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html#analyzetwmc">AnalyzeTWMC</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html#calopeakenergydisplay">CaloPeakEnergyDisplay</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api.html#calibratefragm">CalibrateFragm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html">Calorimeter Analysis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api.html#tof-wall-analysis">TOF-Wall Analysis</a></li>
 </ul>
 
         </div>
@@ -75,7 +72,10 @@
 
 <div class="genindex-jumpbox">
  <a href="#C"><strong>C</strong></a>
+ | <a href="#E"><strong>E</strong></a>
  | <a href="#F"><strong>F</strong></a>
+ | <a href="#L"><strong>L</strong></a>
+ | <a href="#O"><strong>O</strong></a>
  | <a href="#P"><strong>P</strong></a>
  | <a href="#R"><strong>R</strong></a>
  | <a href="#S"><strong>S</strong></a>
@@ -85,7 +85,23 @@
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv414CloseElossFileRNSt8ofstreamE">CloseElossFile (C++ function)</a>
+</li>
+      <li><a href="api.html#_CPPv412CloseTofFileRNSt8ofstreamE">CloseTofFile (C++ function)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv410CloseZFileRNSt8ofstreamE">CloseZFile (C++ function)</a>
+</li>
       <li><a href="api.html#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE">ConvertFileNumbersToString (C++ function)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv417ExtractMeanValuesRKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEE">ExtractMeanValues (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -95,13 +111,39 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api.html#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString">FindHistograms (C++ function)</a>
 </li>
-      <li><a href="api.html#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile">FitHistogramsInDirectory (C++ function)</a>
+      <li><a href="api.html#_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE">FitHistograms (C++ function)</a>, <a href="api.html#_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE">[1]</a>
+</li>
+      <li><a href="api.html#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile">FitHistogramsInDirectory (C++ function)</a>, <a href="api.html#_CPPv424FitHistogramsInDirectoryP10TDirectoryiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile">[1]</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString">FitPeaksWithTSpectrum (C++ function)</a>, <a href="api.html#_CPPv421FitPeaksWithTSpectrumP4TH1Di">[1]</a>
+      <li><a href="api.html#_CPPv421FitPeaksWithTSpectrumP4TH1DdRK7TString">FitPeaksWithTSpectrum (C++ function)</a>, <a href="api.html#_CPPv421FitPeaksWithTSpectrumP4TH1Di">[1]</a>, <a href="api.html#_CPPv421FitPeaksWithTSpectrumP4TH1DiRK7TString">[2]</a>
 </li>
-      <li><a href="api.html#_CPPv420FitPeakWithTSpectrumP4TH1Dd">FitPeakWithTSpectrum (C++ function)</a>
+      <li><a href="api.html#_CPPv420FitPeakWithTSpectrumP4TH1Dii">FitPeakWithTSpectrum (C++ function)</a>
+</li>
+      <li><a href="api.html#_CPPv416FitWithTSpectrumP4TH1Di">FitWithTSpectrum (C++ function)</a>, <a href="api.html#_CPPv416FitWithTSpectrumP4TH1Di">[1]</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="L">L</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv413LoadFitResultRKNSt6stringERKNSt6stringE">LoadFitResult (C++ function)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="O">O</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv413OpenElossFileRNSt8ofstreamE">OpenElossFile (C++ function)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv411OpenTofFileRNSt8ofstreamE">OpenTofFile (C++ function)</a>
+</li>
+      <li><a href="api.html#_CPPv49OpenZFileRNSt8ofstreamE">OpenZFile (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -111,11 +153,15 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api.html#_CPPv422PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE">PlotFitResultsCombined (C++ function)</a>
 </li>
+      <li><a href="api.html#_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEE">PlotResolutionGraphs (C++ function)</a>, <a href="api.html#_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEE">[1]</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv415PlotResolutionsRKNSt3mapIiNSt6vectorINSt4pairIidEEEEEERKNSt3mapIiNSt6vectorINSt4pairIidEEEEEE">PlotResolutions (C++ function)</a>
+</li>
       <li><a href="api.html#_CPPv416PrintMeasurementdd">PrintMeasurement (C++ function)</a>
 </li>
-      <li><a href="api.html#_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">ProcessFile (C++ function)</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">[1]</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE">[2]</a>
+      <li><a href="api.html#_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">ProcessFile (C++ function)</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEKiRNSt3mapIiNSt6vectorINSt4pairIidEEEEEERNSt3mapIiNSt6vectorINSt4pairIidEEEEEE">[1]</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">[2]</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">[3]</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE">[4]</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE">[5]</a>, <a href="api.html#_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE">[6]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -123,7 +169,7 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api.html#_CPPv416RoundMeasurementdd">RoundMeasurement (C++ function)</a>, <a href="api.html#_CPPv416RoundMeasurementdd">[1]</a>
+      <li><a href="api.html#_CPPv416RoundMeasurementdd">RoundMeasurement (C++ function)</a>, <a href="api.html#_CPPv416RoundMeasurementdd">[1]</a>, <a href="api.html#_CPPv416RoundMeasurementdd">[2]</a>, <a href="api.html#_CPPv416RoundMeasurementdd">[3]</a>, <a href="api.html#_CPPv416RoundMeasurementdd">[4]</a>
 </li>
   </ul></td>
 </tr></table>
@@ -143,7 +189,17 @@
 <h2 id="W">W</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv415WriteElossTableRNSt8ofstreamEidddddd">WriteElossTable (C++ function)</a>
+</li>
       <li><a href="api.html#_CPPv421WriteFitValuesOrderedRKNSt3mapI7TStringdEE">WriteFitValuesOrdered (C++ function)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api.html#_CPPv420WriteMeanDifferencesKNSt3mapIiNSt6vectorINSt6stringEEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEi">WriteMeanDifferences (C++ function)</a>
+</li>
+      <li><a href="api.html#_CPPv413WriteTofTableRNSt8ofstreamEidddd">WriteTofTable (C++ function)</a>
+</li>
+      <li><a href="api.html#_CPPv411WriteZTableRNSt8ofstreamEidddddd">WriteZTable (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>

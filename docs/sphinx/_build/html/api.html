@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AnalyzePeakCrystal &mdash; HIT 2022 Analysis 0.0.1 documentation</title>
+  <title>Calorimeter Analysis &mdash; HIT 2022 Analysis 0.0.1 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -42,34 +42,79 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">AnalyzePeakCrystal</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv416PrintMeasurementdd"><code class="docutils literal notranslate"><span class="pre">PrintMeasurement()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dd"><code class="docutils literal notranslate"><span class="pre">FitPeakWithTSpectrum()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString"><code class="docutils literal notranslate"><span class="pre">FindHistograms()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"><code class="docutils literal notranslate"><span class="pre">SaveFitResultsToFile()</span></code></a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Calorimeter Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#analyzepeakcrystal">AnalyzePeakCrystal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv416PrintMeasurementdd"><code class="docutils literal notranslate"><span class="pre">PrintMeasurement()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dii"><code class="docutils literal notranslate"><span class="pre">FitPeakWithTSpectrum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString"><code class="docutils literal notranslate"><span class="pre">FindHistograms()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"><code class="docutils literal notranslate"><span class="pre">SaveFitResultsToFile()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#analyzetwfragm">AnalyzeTWFragm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv411SumNentriesP5TFile"><code class="docutils literal notranslate"><span class="pre">SumNentries()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"><code class="docutils literal notranslate"><span class="pre">FitHistogramsInDirectory()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calopeakenergydisplay">CaloPeakEnergyDisplay</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE"><code class="docutils literal notranslate"><span class="pre">ConvertFileNumbersToString()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv416RoundMeasurementdd"><code class="docutils literal notranslate"><span class="pre">RoundMeasurement()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#analyzetwmc">AnalyzeTWMC</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1Di"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calo-resolutions">Calo_resolutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEKiRNSt3mapIiNSt6vectorINSt4pairIidEEEEEERNSt3mapIiNSt6vectorINSt4pairIidEEEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv415PlotResolutionsRKNSt3mapIiNSt6vectorINSt4pairIidEEEEEERKNSt3mapIiNSt6vectorINSt4pairIidEEEEEE"><code class="docutils literal notranslate"><span class="pre">PlotResolutions()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#calopeakenergydisplay">CaloPeakEnergyDisplay</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE"><code class="docutils literal notranslate"><span class="pre">ConvertFileNumbersToString()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv416RoundMeasurementdd"><code class="docutils literal notranslate"><span class="pre">RoundMeasurement()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="#calibratefragm">CalibrateFragm</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv422PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE"><code class="docutils literal notranslate"><span class="pre">PlotFitResultsCombined()</span></code></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#_CPPv421WriteFitValuesOrderedRKNSt3mapI7TStringdEE"><code class="docutils literal notranslate"><span class="pre">WriteFitValuesOrdered()</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="#tof-wall-analysis">TOF-Wall Analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#analyzetwfragm">AnalyzeTWFragm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411SumNentriesP5TFile"><code class="docutils literal notranslate"><span class="pre">SumNentries()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"><code class="docutils literal notranslate"><span class="pre">FitHistogramsInDirectory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdRK7TString"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analyzetwmc">AnalyzeTWMC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1Di"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#analyzetofmc">AnalyzeTofMC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"><code class="docutils literal notranslate"><span class="pre">FitHistogramsInDirectory()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DiRK7TString"><code class="docutils literal notranslate"><span class="pre">FitPeaksWithTSpectrum()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calibratefragm">CalibrateFragm</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRK7TStringiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv422PlotFitResultsCombinedRKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapI7TStringNSt3mapIidEEEERKNSt3mapIidEERKNSt3mapIidEE"><code class="docutils literal notranslate"><span class="pre">PlotFitResultsCombined()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv421WriteFitValuesOrderedRKNSt3mapI7TStringdEE"><code class="docutils literal notranslate"><span class="pre">WriteFitValuesOrdered()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#calibratetof">CalibrateTof</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413LoadFitResultRKNSt6stringERKNSt6stringE"><code class="docutils literal notranslate"><span class="pre">LoadFitResult()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv417ExtractMeanValuesRKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEE"><code class="docutils literal notranslate"><span class="pre">ExtractMeanValues()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv420WriteMeanDifferencesKNSt3mapIiNSt6vectorINSt6stringEEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEi"><code class="docutils literal notranslate"><span class="pre">WriteMeanDifferences()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#tw-resolutions">TW_resolutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">FitHistograms()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv416FitWithTSpectrumP4TH1Di"><code class="docutils literal notranslate"><span class="pre">FitWithTSpectrum()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv415WriteElossTableRNSt8ofstreamEidddddd"><code class="docutils literal notranslate"><span class="pre">WriteElossTable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413WriteTofTableRNSt8ofstreamEidddd"><code class="docutils literal notranslate"><span class="pre">WriteTofTable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413OpenElossFileRNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">OpenElossFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411OpenTofFileRNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">OpenTofFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv414CloseElossFileRNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">CloseElossFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv412CloseTofFileRNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">CloseTofFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEE"><code class="docutils literal notranslate"><span class="pre">PlotResolutionGraphs()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#z-resolutions">Z_resolutions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">ProcessFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">FitHistograms()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv411WriteZTableRNSt8ofstreamEidddddd"><code class="docutils literal notranslate"><span class="pre">WriteZTable()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv49OpenZFileRNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">OpenZFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv410CloseZFileRNSt8ofstreamE"><code class="docutils literal notranslate"><span class="pre">CloseZFile()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEE"><code class="docutils literal notranslate"><span class="pre">PlotResolutionGraphs()</span></code></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -88,7 +133,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">AnalyzePeakCrystal</li>
+      <li class="breadcrumb-item active">Calorimeter Analysis</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/api.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -98,41 +143,44 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="analyzepeakcrystal">
-<h1>AnalyzePeakCrystal<a class="headerlink" href="#analyzepeakcrystal" title="Link to this heading">¶</a></h1>
-<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that fits the 1D charge histograms for a given crystal of the calorimeter. The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed). To be run with e.g. root -l -b -q ‘AnalyzePeakCrystal.cc()`<code class="docutils literal notranslate"><span class="pre">,</span> <span class="pre">-b</span> <span class="pre">doesn't</span> <span class="pre">display</span> <span class="pre">plots.</span> <span class="pre">In</span> <span class="pre">an</span> <span class="pre">interval</span> <span class="pre">between</span> <span class="pre">x_min</span> <span class="pre">and</span> <span class="pre">x_max</span> <span class="pre">a</span> <span class="pre">peak</span> <span class="pre">beyond</span> <span class="pre">fit_thresh</span> <span class="pre">is</span> <span class="pre">automatically</span> <span class="pre">found</span> <span class="pre">with</span> <span class="pre">TSpectrum</span> <span class="pre">and</span> <span class="pre">fitted.</span> <span class="pre">The</span> <span class="pre">fit</span> <span class="pre">results</span> <span class="pre">are</span> <span class="pre">inserted</span> <span class="pre">in</span> <span class="pre">files</span> <span class="pre">named</span> <span class="pre">like</span> <span class="pre">e.g.</span></code>Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root` which also store the crystalID charge histogram and the fit plot restricted in [x_min, x_max]. </p>
+  <section id="calorimeter-analysis">
+<h1>Calorimeter Analysis<a class="headerlink" href="#calorimeter-analysis" title="Link to this heading">¶</a></h1>
+<section id="analyzepeakcrystal">
+<h2>AnalyzePeakCrystal<a class="headerlink" href="#analyzepeakcrystal" title="Link to this heading">¶</a></h2>
+<p>Header file for AnalyzePeakCrystal.cc. </p>
+<p>This file contains function declarations for analyzing and fitting charge histograms for calorimeter crystals. The charge histograms of every crystal are fitted with a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit results are saved in output files, along with the histograms and fit plots. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv416PrintMeasurementdd">
 <span id="_CPPv316PrintMeasurementdd"></span><span id="_CPPv216PrintMeasurementdd"></span><span id="PrintMeasurement__double.double"></span><span class="target" id="AnalyzePeakCrystal_8h_1a5aadeca6af3105a72d885dcc752237db"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PrintMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416PrintMeasurementdd" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Prints a measurement value and its uncertainty. </p>
-<p>This function prints a measurement value and its uncertainty to the console.</p>
+<dd><p>Prints the measurement value and its uncertainty. </p>
+<p>This function formats and prints the peak position and its uncertainty with significant figures based on the uncertainty.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+<li><p><strong>value</strong> – The measurement value (e.g., peak position). </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty in the measurement. </p></li>
 </ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv420FitPeakWithTSpectrumP4TH1Dd">
-<span id="_CPPv320FitPeakWithTSpectrumP4TH1Dd"></span><span id="_CPPv220FitPeakWithTSpectrumP4TH1Dd"></span><span id="FitPeakWithTSpectrum__TH1DP.double"></span><span class="target" id="AnalyzePeakCrystal_8h_1a814766d4b881835f9ba65bc6bcb27b0d"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeakWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dd" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Fits a peak in a histogram using TSpectrum. </p>
-<p>This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.</p>
+<dt class="sig sig-object cpp" id="_CPPv420FitPeakWithTSpectrumP4TH1Dii">
+<span id="_CPPv320FitPeakWithTSpectrumP4TH1Dii"></span><span id="_CPPv220FitPeakWithTSpectrumP4TH1Dii"></span><span id="FitPeakWithTSpectrum__TH1DP.i.i"></span><span class="target" id="AnalyzePeakCrystal_8h_1a72e2657579c5be6f6e4d73d8be4b5ec8"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeakWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">crystal_ID</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420FitPeakWithTSpectrumP4TH1Dii" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits a peak in the given histogram using TSpectrum and a Gaussian function. </p>
+<p>This function detects peaks in the histogram using TSpectrum and fits the detected peak with a Gaussian function. The fit results are returned as a TFitResultPtr.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>hist</strong> – The histogram to fit. </p></li>
-<li><p><strong>threshold</strong> – The threshold for peak detection. </p></li>
+<li><p><strong>hist</strong> – Pointer to the histogram to fit. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>crystal_ID</strong> – The ID of the crystal being analyzed. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A TFitResultPtr containing the fit result. </p>
+<dd class="field-even"><p>TFitResultPtr containing the fit results. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -140,18 +188,18 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv414FindHistogramsP5TFileRK7TStringRK7TString">
 <span id="_CPPv314FindHistogramsP5TFileRK7TStringRK7TString"></span><span id="_CPPv214FindHistogramsP5TFileRK7TStringRK7TString"></span><span id="FindHistograms__TFileP.TStringCR.TStringCR"></span><span class="target" id="AnalyzePeakCrystal_8h_1aee07cb059be4125e9378b6ec353e11a3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TH1D</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TH1D</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FindHistograms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inFile</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histName_total</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">histName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414FindHistogramsP5TFileRK7TStringRK7TString" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Finds histograms in a ROOT file. </p>
-<p>This function finds and retrieves histograms from a ROOT file.</p>
+<dd><p>Retrieves histograms for a specific crystal and the total charge from the input ROOT file. </p>
+<p>This function searches for and retrieves the specified histograms from the input file. It returns pointers to the crystal-specific histogram and the total charge histogram.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>inFile</strong> – The input ROOT file. </p></li>
-<li><p><strong>histName_total</strong> – The name of the total histogram. </p></li>
-<li><p><strong>histName</strong> – The name of the specific histogram. </p></li>
+<li><p><strong>inFile</strong> – Pointer to the input ROOT file. </p></li>
+<li><p><strong>histName_total</strong> – Name of the total charge histogram. </p></li>
+<li><p><strong>histName</strong> – Name of the histogram for the specific crystal. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A tuple containing pointers to the total histogram and the specific histogram. </p>
+<dd class="field-even"><p>A tuple containing pointers to the crystal histogram and the total charge histogram. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -159,15 +207,15 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString">
 <span id="_CPPv320SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"></span><span id="_CPPv220SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString"></span><span id="SaveFitResultsToFile__TCanvasP.TH1DP.TFitResultPtr.TStringCR"></span><span class="target" id="AnalyzePeakCrystal_8h_1aec202f6e32bb23c6bb5ffe63a7d2e7df"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SaveFitResultsToFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TCanvas</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">canvas</span></span>, <span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">fitResult</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outputFileName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420SaveFitResultsToFileP7TCanvasP4TH1D13TFitResultPtrRK7TString" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Saves fit results to a ROOT file. </p>
-<p>This function saves the fit results and the corresponding histogram to a ROOT file.</p>
+<dd><p>Saves the fit results, histograms, and plots to an output ROOT file. </p>
+<p>This function writes the histogram, fit results, and canvas to the specified output file. It creates the output file if it does not exist or updates it if it does.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>canvas</strong> – The canvas containing the fit plot. </p></li>
-<li><p><strong>hist</strong> – The histogram to save. </p></li>
-<li><p><strong>fitResult</strong> – The fit result to save. </p></li>
-<li><p><strong>outputFileName</strong> – The name of the output ROOT file. </p></li>
+<li><p><strong>canvas</strong> – Pointer to the canvas containing the fit plot. </p></li>
+<li><p><strong>hist</strong> – Pointer to the histogram being analyzed. </p></li>
+<li><p><strong>fitResult</strong> – The fit results to save. </p></li>
+<li><p><strong>outputFileName</strong> – Name of the output ROOT file. </p></li>
 </ul>
 </dd>
 </dl>
@@ -175,10 +223,127 @@
 
 </div>
 </section>
+<section id="calopeakenergydisplay">
+<h2>CaloPeakEnergyDisplay<a class="headerlink" href="#calopeakenergydisplay" title="Link to this heading">¶</a></h2>
+<p>Header file for the CaloPeakEnergyDisplay macro. </p>
+<p>Macro that collects the charge fit results of AnalyzePeakCrystal.cc for every calorimeter crystal. A charge-beam energy plot is built for every crystal and fitted with a 1 parameter (slope) linear function. An intercalibration is then performed for those crystals with at least 2 fitted charge peaks out of 5 energy values, by computing the ratio of the slopes of a certain crystal with respect to crystal ID 0 (the central crystal). The calibration coefficients for every available crystal are stored in a file named SlopeRatios.cal. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE">
+<span id="_CPPv326ConvertFileNumbersToStringRKNSt6vectorIiEE"></span><span id="_CPPv226ConvertFileNumbersToStringRKNSt6vectorIiEE"></span><span id="ConvertFileNumbersToString__std::vector:i:CR"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConvertFileNumbersToString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">energies</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Converts a vector of integers representing energies to a comma-separated string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>energies</strong> – A vector of integers representing energies. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A string containing the comma-separated list of energies. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416RoundMeasurementdd">
+<span id="_CPPv316RoundMeasurementdd"></span><span id="_CPPv216RoundMeasurementdd"></span><span id="RoundMeasurement__double.double"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416RoundMeasurementdd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Rounds a measurement value and its uncertainty.   </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<p>
+Rounds a measurement value and its uncertainty.  </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="calo-resolutions">
+<h2>Calo_resolutions<a class="headerlink" href="#calo-resolutions" title="Link to this heading">¶</a></h2>
+<p>Header file for Calo_resolutions.cc. </p>
+<p>This file contains function declarations and necessary includes for analyzing and plotting the resolution of calorimeter crystals as a function of beam energy. The analysis is performed using ROOT libraries, and the resolution is calculated based on the mean and standard deviation of Gaussian fits to charge histograms. The results are stored and plotted for further analysis. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEKiRNSt3mapIiNSt6vectorINSt4pairIidEEEEEERNSt3mapIiNSt6vectorINSt4pairIidEEEEEE">
+<span id="_CPPv311ProcessFileRKNSt6stringEKiRNSt3mapIiNSt6vectorINSt4pairIidEEEEEERNSt3mapIiNSt6vectorINSt4pairIidEEEEEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEKiRNSt3mapIiNSt6vectorINSt4pairIidEEEEEERNSt3mapIiNSt6vectorINSt4pairIidEEEEEE"></span><span id="ProcessFile__ssCR.iC.std::map:i.std::vector:std::pair:i.double:::R.std::map:i.std::vector:std::pair:i.double:::R"></span><span class="target" id="Calo__resolutions_8h_1ae42deae8bf798058b77d8a228427dddb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Res</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Res_err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEKiRNSt3mapIiNSt6vectorINSt4pairIidEEEEEERNSt3mapIiNSt6vectorINSt4pairIidEEEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file and calculates the resolution for each crystal. </p>
+<p>This function reads the fit results from the specified ROOT file, calculates the resolution (standard deviation divided by the mean, expressed as a percentage), and stores the results in the provided maps.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – Name of the ROOT file to process. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>Res</strong> – Map to store the calculated resolutions for each crystal. </p></li>
+<li><p><strong>Res_err</strong> – Map to store the uncertainties of the calculated resolutions for each crystal. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="Calo__resolutions_8h_1a2ad7fc5517b3ca53aced9f056accb5dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Rounds a measurement value and its uncertainty.   </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<p>
+Rounds a measurement value and its uncertainty.  </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415PlotResolutionsRKNSt3mapIiNSt6vectorINSt4pairIidEEEEEERKNSt3mapIiNSt6vectorINSt4pairIidEEEEEE">
+<span id="_CPPv315PlotResolutionsRKNSt3mapIiNSt6vectorINSt4pairIidEEEEEERKNSt3mapIiNSt6vectorINSt4pairIidEEEEEE"></span><span id="_CPPv215PlotResolutionsRKNSt3mapIiNSt6vectorINSt4pairIidEEEEEERKNSt3mapIiNSt6vectorINSt4pairIidEEEEEE"></span><span id="PlotResolutions__std::map:i.std::vector:std::pair:i.double:::CR.std::map:i.std::vector:std::pair:i.double:::CR"></span><span class="target" id="Calo__resolutions_8h_1aebb2d0ec4b031210878491c63b1908ef"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PlotResolutions</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Res</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">Res_err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415PlotResolutionsRKNSt3mapIiNSt6vectorINSt4pairIidEEEEEERKNSt3mapIiNSt6vectorINSt4pairIidEEEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Plots the resolution as a function of beam energy for each crystal. </p>
+<p>This function creates a graph for each crystal, showing the resolution as a function of beam energy. The graphs are saved as PNG files in the <code class="docutils literal notranslate"><span class="pre">Plots</span></code> directory.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>Res</strong> – Map containing the resolutions for each crystal at different beam energies. </p></li>
+<li><p><strong>Res_err</strong> – Map containing the uncertainties of the resolutions for each crystal at different beam energies. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+</section>
+<section id="tof-wall-analysis">
+<h1>TOF-Wall Analysis<a class="headerlink" href="#tof-wall-analysis" title="Link to this heading">¶</a></h1>
 <section id="analyzetwfragm">
-<h1>AnalyzeTWFragm<a class="headerlink" href="#analyzetwfragm" title="Link to this heading">¶</a></h1>
+<h2>AnalyzeTWFragm<a class="headerlink" href="#analyzetwfragm" title="Link to this heading">¶</a></h2>
 <p>Header file for AnalyzeTWFragm.cc. </p>
-<p>This file contains function declarations for fitting the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum in a certain range (energy-dependent, the bins outside the range are set to 0 and the peaks are searched for inbetween); the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in files named like e.g. <code class="docutils literal notranslate"><span class="pre">TW/AnaFOOT_TW_Decoded_HIT2022_140MeV_Fit.root</span></code>. To be run with root -l -b -q ‘AnalyzeTWFragm.cc()`. </p>
+<p>This file contains function declarations for fitting charge distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files named like e.g., created if they don’t already exist, or overwritten if they do. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -200,7 +365,7 @@
 <dt class="sig sig-object cpp" id="_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile">
 <span id="_CPPv324FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"></span><span id="_CPPv224FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"></span><span id="FitHistogramsInDirectory__TDirectoryP.double.double.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.TFileP"></span><span class="target" id="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitHistogramsInDirectory</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TDirectory</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dir</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">threshold</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsHe</span></span>, <span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryddRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Fits histograms in a directory and stores the results. </p>
-<p>This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.</p>
+<p>This function fits the histograms in the specified directory using two separate Gaussian functions, one for proton peaks and one for helium peaks. The fit limits depend on the bar and beam energy. Only histograms with entries greater than a specified threshold are fitted. The fit results are stored in the provided maps.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -237,8 +402,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString">
-<span id="_CPPv321FitPeaksWithTSpectrumP4TH1DdddRK7TString"></span><span id="_CPPv221FitPeaksWithTSpectrumP4TH1DdddRK7TString"></span><span id="FitPeaksWithTSpectrum__TH1DP.double.double.double.TStringCR"></span><span class="target" id="AnalyzeTWFragm_8h_1a65f48b2f9841534aef2f32eb95f83b43"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeaksWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">thresh_peak_low</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">thresh_peak_high</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layerBarCombination</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdddRK7TString" title="Link to this definition">¶</a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv421FitPeaksWithTSpectrumP4TH1DdRK7TString">
+<span id="_CPPv321FitPeaksWithTSpectrumP4TH1DdRK7TString"></span><span id="_CPPv221FitPeaksWithTSpectrumP4TH1DdRK7TString"></span><span id="FitPeaksWithTSpectrum__TH1DP.double.TStringCR"></span><span class="target" id="AnalyzeTWFragm_8h_1a14f0293f4852a5be3aa203d1aedcf64c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeaksWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layerBarCombination</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DdRK7TString" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Fits peaks in a histogram using TSpectrum. </p>
 <p>This function fits two peaks in the specified histogram using TSpectrum. The peaks are fitted with Gaussian functions, and the fit results are returned.</p>
 <dl class="field-list simple">
@@ -246,8 +411,6 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>hist</strong> – Pointer to the histogram. </p></li>
 <li><p><strong>energy</strong> – Beam energy. </p></li>
-<li><p><strong>thresh_peak_low</strong> – Lower threshold for peak search. </p></li>
-<li><p><strong>thresh_peak_high</strong> – Upper threshold for peak search. </p></li>
 <li><p><strong>layerBarCombination</strong> – String representing the layer and bar combination. </p></li>
 </ul>
 </dd>
@@ -260,16 +423,16 @@
 </div>
 </section>
 <section id="analyzetwmc">
-<h1>AnalyzeTWMC<a class="headerlink" href="#analyzetwmc" title="Link to this heading">¶</a></h1>
-<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that fits the charge distribution from the AnalyzeTWChargeTime.cc merged output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12., the bins outside the range are set to 0); the peaks are then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. <code class="docutils literal notranslate"><span class="pre">TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root</span></code>. To be run with root -l -b -q ‘AnalyzeTWMC.cc()`. </p>
+<h2>AnalyzeTWMC<a class="headerlink" href="#analyzetwmc" title="Link to this heading">¶</a></h2>
+<p>Header file for processing and fitting energy loss distribution histograms from ROOT files. </p>
+<p>Macro that fits the energy loss distribution from the AnalyzeTWFragMC.cc output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum and then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root. To be run with root -l -b -q ‘AnalyzeTWMC.cc()’. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE">
 <span id="_CPPv311ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"></span><span id="ProcessFile__ssCR.i.std::map:i.double:R.std::map:i.double:R.std::map:i.double:R.std::map:i.double:R"></span><span class="target" id="AnalyzeTWMC_8h_1aafbdc017754d8392bf014a36767842e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeanP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeanHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Processes a ROOT file to fit the charge distribution. </p>
-<p>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum in a certain range (between 1. and 12.), and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. TW/AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</p>
+<p>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -304,41 +467,75 @@
 
 </div>
 </section>
-<section id="calopeakenergydisplay">
-<h1>CaloPeakEnergyDisplay<a class="headerlink" href="#calopeakenergydisplay" title="Link to this heading">¶</a></h1>
-<p>Header file for plotting charge distribution histograms from ROOT files. </p>
-<p>Macro that plots the charge given by the fit performed in AnalyzePeakCrystal.cc in all the available crystals vs the beam energy. The fit results are stored in objects, named like <code class="docutils literal notranslate"><span class="pre">Fit_result_Charge_Calo_crystalId_1</span></code> inside the e.g. <code class="docutils literal notranslate"><span class="pre">Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root</span></code> file. To be run with root -l -b -q ‘CaloPeakEnergyDisplay.cc()` it loops on every crystalID and extracts the fit values only on the available IDs. </p>
+<section id="analyzetofmc">
+<h2>AnalyzeTofMC<a class="headerlink" href="#analyzetofmc" title="Link to this heading">¶</a></h2>
+<p>Header file for AnalyzeTofMC.cc. </p>
+<p>This file contains function declarations for fitting ToF (Time of Flight) distributions from the AnalyzeTWFragMC.cc output files (for MC runs). The fits are performed with a gaussian function, the fit limits depend on the bar and on the beam energy. The histogram peaks are automatically found with TSpectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don’t already exist, or overwritten if they do. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE">
-<span id="_CPPv326ConvertFileNumbersToStringRKNSt6vectorIiEE"></span><span id="_CPPv226ConvertFileNumbersToStringRKNSt6vectorIiEE"></span><span id="ConvertFileNumbersToString__std::vector:i:CR"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ConvertFileNumbersToString</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">energies</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv426ConvertFileNumbersToStringRKNSt6vectorIiEE" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Converts a vector of energy values to a comma-separated string. </p>
-<p>This function converts a vector of energy values to a comma-separated string.</p>
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">
+<span id="_CPPv311ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="ProcessFile__ssCR.i.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R"></span><span class="target" id="AnalyzeTofMC_8h_1a528148d5c0683839f6dec9f9a13ef9b6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TofMeansMC</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TofErrorsMC</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file and fits the histograms. </p>
+<p>This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.</p>
+<p>
+This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>energies</strong> – A vector of energy values. </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A string containing the energy values separated by commas. </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – Name of the ROOT file. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>TofMeansMC</strong> – Map to store the mean values of the fits. </p></li>
+<li><p><strong>TofErrorsMC</strong> – Map to store the errors of the fits.</p></li>
+<li><p><strong>fileName</strong> – Name of the ROOT file. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>TofMeans</strong> – Map to store the mean values of the fits. </p></li>
+<li><p><strong>TofErrors</strong> – Map to store the errors of the fits. </p></li>
+</ul>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv416RoundMeasurementdd">
-<span id="_CPPv316RoundMeasurementdd"></span><span id="_CPPv216RoundMeasurementdd"></span><span id="RoundMeasurement__double.double"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1ab4907eeeea5fe95544ce97afbb74d65d"></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416RoundMeasurementdd" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Rounds a measurement value and its uncertainty. </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dt class="sig sig-object cpp" id="_CPPv424FitHistogramsInDirectoryP10TDirectoryiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile">
+<span id="_CPPv324FitHistogramsInDirectoryP10TDirectoryiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"></span><span id="_CPPv224FitHistogramsInDirectoryP10TDirectoryiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile"></span><span id="FitHistogramsInDirectory__TDirectoryP.i.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.TFileP"></span><span class="target" id="AnalyzeTofMC_8h_1a2136ab016ddeabc904c87316e8d034b0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitHistogramsInDirectory</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TDirectory</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">dir</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TofMeansMC</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TofErrorsMC</span></span>, <span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">outputFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424FitHistogramsInDirectoryP10TDirectoryiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEEP5TFile" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits histograms in a directory and stores the results. </p>
+<p>This function fits the histograms in the specified directory using a gaussian function. The fit results are stored in the provided maps and written to the output file.</p>
+<p>
+This function fits the histograms in the specified directory using a gaussian function. The fit results are stored in the provided maps and written to the output file.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+<li><p><strong>dir</strong> – Pointer to the directory containing the histograms. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>TofMeansMC</strong> – Map to store the mean values of the fits. </p></li>
+<li><p><strong>TofErrorsMC</strong> – Map to store the errors of the fits. </p></li>
+<li><p><strong>outputFile</strong> – Pointer to the output ROOT file to store the fitted histograms.</p></li>
+<li><p><strong>dir</strong> – Pointer to the directory containing the histograms. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>TofMeans</strong> – Map to store the mean values of the fits. </p></li>
+<li><p><strong>TofErrors</strong> – Map to store the errors of the fits. </p></li>
+<li><p><strong>outputFile</strong> – Pointer to the output ROOT file to store the fitted histograms. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv421FitPeaksWithTSpectrumP4TH1DiRK7TString">
+<span id="_CPPv321FitPeaksWithTSpectrumP4TH1DiRK7TString"></span><span id="_CPPv221FitPeaksWithTSpectrumP4TH1DiRK7TString"></span><span id="FitPeaksWithTSpectrum__TH1DP.i.TStringCR"></span><span class="target" id="AnalyzeTofMC_8h_1a82f501f613b6a51643fcadd61ce5ba9b"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitPeaksWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">TString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layerBarCombination</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv421FitPeaksWithTSpectrumP4TH1DiRK7TString" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits peaks in a histogram using TSpectrum. </p>
+<p>This function fits peaks in the specified histogram using TSpectrum and a gaussian function. The fit results are returned as a TFitResultPtr.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hist</strong> – Pointer to the histogram. </p></li>
+<li><p><strong>energy</strong> – Beam energy. </p></li>
+<li><p><strong>layerBarCombination</strong> – String representing the layer and bar combination. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty. </p>
+<dd class="field-even"><p>TFitResultPtr containing the fit results. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -346,9 +543,9 @@
 </div>
 </section>
 <section id="calibratefragm">
-<h1>CalibrateFragm<a class="headerlink" href="#calibratefragm" title="Link to this heading">¶</a></h1>
-<p>Header file for processing and fitting charge distribution histograms from ROOT files. </p>
-<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies retrieved from MC (2 energy loss values per bar and beam energy). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; these parameters (one per bar) are written in the configuration file. To be run with root -l -b -q ‘CalibrateFragm.cc()`. </p>
+<h2>CalibrateFragm<a class="headerlink" href="#calibratefragm" title="Link to this heading">¶</a></h2>
+<p>Header file for the charge-energy calibration. </p>
+<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; the imverse of these parameters (one per bar) are written in the configuration file. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -423,6 +620,425 @@
 </dd></dl>
 
 </div>
+</section>
+<section id="calibratetof">
+<h2>CalibrateTof<a class="headerlink" href="#calibratetof" title="Link to this heading">¶</a></h2>
+<p>Header file for the ToF calibration. </p>
+<p>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). To be run with root -l -b -q ‘CalibrateTof.cc()’. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413LoadFitResultRKNSt6stringERKNSt6stringE">
+<span id="_CPPv313LoadFitResultRKNSt6stringERKNSt6stringE"></span><span id="_CPPv213LoadFitResultRKNSt6stringERKNSt6stringE"></span><span id="LoadFitResult__ssCR.ssCR"></span><span class="target" id="CalibrateTof_8h_1acbf260d366bf4b7dc33d00c2b2f2552f"></span><span class="n"><span class="pre">TFitResult</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">LoadFitResult</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitResultName</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413LoadFitResultRKNSt6stringERKNSt6stringE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Loads a fit result from a specified file and directory. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – The name of the file containing the fit result. </p></li>
+<li><p><strong>fitResultName</strong> – The name of the fit result to load. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pointer to the loaded TFitResult, or nullptr if an error occurs. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv417ExtractMeanValuesRKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEE">
+<span id="_CPPv317ExtractMeanValuesRKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEE"></span><span id="_CPPv217ExtractMeanValuesRKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEE"></span><span id="ExtractMeanValues__std::vector:std::pair:ss.i::CR.ssCR.i.std::vector:double:R.std::vector:double:R"></span><span class="target" id="CalibrateTof_8h_1a3709ac7cbea5496ed4a4436aa1efdcea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ExtractMeanValues</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filesAndEnergies</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bar</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">means</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanErrors</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv417ExtractMeanValuesRKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Extracts mean values and uncertainties from fit results. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filesAndEnergies</strong> – A vector of pairs containing file names and corresponding energies. </p></li>
+<li><p><strong>layer</strong> – The layer identifier (e.g., “X” or “Y”). </p></li>
+<li><p><strong>bar</strong> – The bar number. </p></li>
+<li><p><strong>means</strong> – A vector to store the extracted mean values. </p></li>
+<li><p><strong>meanErrors</strong> – A vector to store the extracted mean errors. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420WriteMeanDifferencesKNSt3mapIiNSt6vectorINSt6stringEEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEi">
+<span id="_CPPv320WriteMeanDifferencesKNSt3mapIiNSt6vectorINSt6stringEEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEi"></span><span id="_CPPv220WriteMeanDifferencesKNSt3mapIiNSt6vectorINSt6stringEEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEi"></span><span id="WriteMeanDifferences__std::map:i.std::vector:ss::C.std::vector:std::pair:ss.i::CR.std::vector:std::pair:ss.i::CR.ssCR.i"></span><span class="target" id="CalibrateTof_8h_1a56ae1ed9e3d3405ee8e7bee444c02c9e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WriteMeanDifferences</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">calibFiles</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filesAndEnergies</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">filesAndEnergiesMC</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">layer</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">bar</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420WriteMeanDifferencesKNSt3mapIiNSt6vectorINSt6stringEEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6vectorINSt4pairINSt6stringEiEEEERKNSt6stringEi" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Writes the differences between data and MC mean values to calibration files. </p>
+<p>This function writes the fit values to configuration files. The fit values are sorted by bar ID and written to the file in a specific format.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filesAndEnergies</strong> – A vector of pairs containing data file names and corresponding energies. </p></li>
+<li><p><strong>filesAndEnergiesMC</strong> – A vector of pairs containing MC file names and corresponding energies. </p></li>
+<li><p><strong>layer</strong> – The layer identifier (e.g., “X” or “Y”). </p></li>
+<li><p><strong>bar</strong> – The bar number. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="tw-resolutions">
+<h2>TW_resolutions<a class="headerlink" href="#tw-resolutions" title="Link to this heading">¶</a></h2>
+<p>Header file for TW_resolutions.cc. </p>
+<p>This file contains function declarations for analyzing and plotting the resolution of Time-Of-Flight (TOF) and energy loss (Eloss). The energy loss and TOF histograms, considering the response of all the TW bars, for the merged runs without target at each beam energy are fitted with gaussian functions; the resolution on the energy loss is retrieved as sigma/mu, the resolution on TOF is evaluated as sigma. The results are stored in LaTeX tables and plotted. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE">
+<span id="_CPPv313FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE"></span><span id="_CPPv213FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE"></span><span id="FitHistograms__TFileP.i.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::ofstreamR.std::ofstreamR"></span><span class="target" id="TW__resolutions_8h_1aad661d4c7037778af8afc75d9cfc82af"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitHistograms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inFile</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_He_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_He_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanEloss_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanEloss_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Tof_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Tof_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanTof_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanTof_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LatexFile_Eloss</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LatexFile_Tof</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits histograms for ToF and Eloss resolutions. </p>
+<p>This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to LaTeX files.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inFile</strong> – Pointer to the input ROOT file. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>R_He_vec</strong> – Vector to store He resolution values. </p></li>
+<li><p><strong>R_He_err_vec</strong> – Vector to store He resolution uncertainties. </p></li>
+<li><p><strong>meanEloss_vec</strong> – Vector to store mean Eloss values. </p></li>
+<li><p><strong>meanEloss_err_vec</strong> – Vector to store mean Eloss uncertainties. </p></li>
+<li><p><strong>R_Tof_vec</strong> – Vector to store ToF resolution values. </p></li>
+<li><p><strong>R_Tof_err_vec</strong> – Vector to store ToF resolution uncertainties. </p></li>
+<li><p><strong>meanTof_vec</strong> – Vector to store mean ToF values. </p></li>
+<li><p><strong>meanTof_err_vec</strong> – Vector to store mean ToF uncertainties. </p></li>
+<li><p><strong>LatexFile_Eloss</strong> – Output stream for the Eloss LaTeX table. </p></li>
+<li><p><strong>LatexFile_Tof</strong> – Output stream for the ToF LaTeX table. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE">
+<span id="_CPPv311ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE"></span><span id="ProcessFile__ssCR.i.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::ofstreamR.std::ofstreamR"></span><span class="target" id="TW__resolutions_8h_1a02c7c5bce27bbd7305a4f78b242bf035"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_He_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_He_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanEloss_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanEloss_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Tof_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Tof_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanTof_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanTof_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LatexFile_Eloss</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LatexFile_Tof</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamERNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file and calculates resolutions for ToF and Eloss. </p>
+<p>This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – Name of the ROOT file to process. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>R_He_vec</strong> – Vector to store He resolution values. </p></li>
+<li><p><strong>R_He_err_vec</strong> – Vector to store He resolution uncertainties. </p></li>
+<li><p><strong>meanEloss_vec</strong> – Vector to store mean Eloss values. </p></li>
+<li><p><strong>meanEloss_err_vec</strong> – Vector to store mean Eloss uncertainties. </p></li>
+<li><p><strong>R_Tof_vec</strong> – Vector to store ToF resolution values. </p></li>
+<li><p><strong>R_Tof_err_vec</strong> – Vector to store ToF resolution uncertainties. </p></li>
+<li><p><strong>meanTof_vec</strong> – Vector to store mean ToF values. </p></li>
+<li><p><strong>meanTof_err_vec</strong> – Vector to store mean ToF uncertainties. </p></li>
+<li><p><strong>LatexFile_Eloss</strong> – Output stream for the Eloss LaTeX table. </p></li>
+<li><p><strong>LatexFile_Tof</strong> – Output stream for the ToF LaTeX table. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv416FitWithTSpectrumP4TH1Di">
+<span id="_CPPv316FitWithTSpectrumP4TH1Di"></span><span id="_CPPv216FitWithTSpectrumP4TH1Di"></span><span id="FitWithTSpectrum__TH1DP.i"></span><span class="target" id="TW__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416FitWithTSpectrumP4TH1Di" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits a histogram using TSpectrum for peak detection. </p>
+<p>This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hist</strong> – Pointer to the histogram to fit. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>TFitResultPtr containing the fit results. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv415WriteElossTableRNSt8ofstreamEidddddd">
+<span id="_CPPv315WriteElossTableRNSt8ofstreamEidddddd"></span><span id="_CPPv215WriteElossTableRNSt8ofstreamEidddddd"></span><span id="WriteElossTable__std::ofstreamR.i.double.double.double.double.double.double"></span><span class="target" id="TW__resolutions_8h_1a70a0181fb46626b661e03c6a299a82d1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WriteElossTable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">meanElossHe</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stdElossHe</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">R_He</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">meanElossErrHe</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stdElossErrHe</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">R_He_err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv415WriteElossTableRNSt8ofstreamEidddddd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Writes Eloss results to a LaTeX table. </p>
+<p>This function writes the Eloss results, including mean, standard deviation, and resolution, to a LaTeX table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outFile</strong> – Output stream for the LaTeX file. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>meanElossHe</strong> – Mean Eloss value for He. </p></li>
+<li><p><strong>stdElossHe</strong> – Standard deviation of Eloss for He. </p></li>
+<li><p><strong>R_He</strong> – Resolution for He. </p></li>
+<li><p><strong>meanElossErrHe</strong> – Uncertainty in the mean Eloss for He. </p></li>
+<li><p><strong>stdElossErrHe</strong> – Uncertainty in the standard deviation of Eloss for He. </p></li>
+<li><p><strong>R_He_err</strong> – Uncertainty in the resolution for He. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413WriteTofTableRNSt8ofstreamEidddd">
+<span id="_CPPv313WriteTofTableRNSt8ofstreamEidddd"></span><span id="_CPPv213WriteTofTableRNSt8ofstreamEidddd"></span><span id="WriteTofTable__std::ofstreamR.i.double.double.double.double"></span><span class="target" id="TW__resolutions_8h_1a59aa5a05a061a274c82311aaf5137ee4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WriteTofTable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">meanTof</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">meanTofErr</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">R_Tof</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">R_Tof_err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413WriteTofTableRNSt8ofstreamEidddd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Writes ToF results to a LaTeX table. </p>
+<p>This function writes the ToF results, including mean and resolution, to a LaTeX table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outFile</strong> – Output stream for the LaTeX file. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>meanTof</strong> – Mean ToF value. </p></li>
+<li><p><strong>meanTofErr</strong> – Uncertainty in the mean ToF value. </p></li>
+<li><p><strong>R_Tof</strong> – Resolution for ToF. </p></li>
+<li><p><strong>R_Tof_err</strong> – Uncertainty in the resolution for ToF. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413OpenElossFileRNSt8ofstreamE">
+<span id="_CPPv313OpenElossFileRNSt8ofstreamE"></span><span id="_CPPv213OpenElossFileRNSt8ofstreamE"></span><span id="OpenElossFile__std::ofstreamR"></span><span class="target" id="TW__resolutions_8h_1ab559ccd64309e7e7e34f94723cb06fe7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OpenElossFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413OpenElossFileRNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Opens a LaTeX file for Eloss results. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>outFile</strong> – Output stream for the LaTeX file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411OpenTofFileRNSt8ofstreamE">
+<span id="_CPPv311OpenTofFileRNSt8ofstreamE"></span><span id="_CPPv211OpenTofFileRNSt8ofstreamE"></span><span id="OpenTofFile__std::ofstreamR"></span><span class="target" id="TW__resolutions_8h_1a313a1c48700390e15fb773d67c056d1e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OpenTofFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411OpenTofFileRNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Opens a LaTeX file for ToF results. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>outFile</strong> – Output stream for the LaTeX file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv414CloseElossFileRNSt8ofstreamE">
+<span id="_CPPv314CloseElossFileRNSt8ofstreamE"></span><span id="_CPPv214CloseElossFileRNSt8ofstreamE"></span><span id="CloseElossFile__std::ofstreamR"></span><span class="target" id="TW__resolutions_8h_1aada91a63fcdac00b6709bce94b912b86"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloseElossFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv414CloseElossFileRNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Closes a LaTeX file for Eloss results. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>outFile</strong> – Output stream for the LaTeX file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv412CloseTofFileRNSt8ofstreamE">
+<span id="_CPPv312CloseTofFileRNSt8ofstreamE"></span><span id="_CPPv212CloseTofFileRNSt8ofstreamE"></span><span id="CloseTofFile__std::ofstreamR"></span><span class="target" id="TW__resolutions_8h_1a9d4d462e980c97c3c83e2395a4b30979"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloseTofFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv412CloseTofFileRNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Closes a LaTeX file for ToF results. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>outFile</strong> – Output stream for the LaTeX file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEE">
+<span id="_CPPv320PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEE"></span><span id="_CPPv220PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEE"></span><span id="PlotResolutionGraphs__std::vector:double:CR.std::vector:double:CR.std::vector:double:CR.std::vector:double:CR.std::vector:double:CR.std::vector:double:CR.std::vector:double:CR.std::vector:double:CR"></span><span class="target" id="TW__resolutions_8h_1ac05499726ae87bcc5ec712f14e99867f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PlotResolutionGraphs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_He_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_He_err_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanEloss_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanEloss_err_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Tof_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Tof_err_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanTof_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanTof_err_vec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEERKNSt6vectorIdEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Plots resolution graphs for ToF and Eloss. </p>
+<p>This function creates graphs for ToF and Eloss resolutions and saves them as PNG files. The eloss resolutions at each beam energy are plotted against the mean energy loss value, the TOF resolutions against the mean TOF value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R_He_vec</strong> – Vector containing He resolution values. </p></li>
+<li><p><strong>R_He_err_vec</strong> – Vector containing He resolution uncertainties. </p></li>
+<li><p><strong>meanEloss_vec</strong> – Vector containing mean Eloss values. </p></li>
+<li><p><strong>meanEloss_err_vec</strong> – Vector containing mean Eloss uncertainties. </p></li>
+<li><p><strong>R_Tof_vec</strong> – Vector containing ToF resolution values. </p></li>
+<li><p><strong>R_Tof_err_vec</strong> – Vector containing ToF resolution uncertainties. </p></li>
+<li><p><strong>meanTof_vec</strong> – Vector containing mean ToF values. </p></li>
+<li><p><strong>meanTof_err_vec</strong> – Vector containing mean ToF uncertainties. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Rounds a measurement value and its uncertainty.   </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<p>
+Rounds a measurement value and its uncertainty.  </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
+<section id="z-resolutions">
+<h2>Z_resolutions<a class="headerlink" href="#z-resolutions" title="Link to this heading">¶</a></h2>
+<p>Header file for Z_resolutions.cc. </p>
+<p>This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in LaTeX tables and plotted.s </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE">
+<span id="_CPPv311ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE"></span><span id="ProcessFile__ssCR.i.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::ofstreamR"></span><span class="target" id="Z__resolutions_8h_1af480f62255be31912e5201650f336ea5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Z_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Z_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanZ_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanZ_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LatexFile_Z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Processes a ROOT file and calculates resolutions for Z (charge). </p>
+<p>This function reads histograms from the specified ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to a LaTeX file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>fileName</strong> – Name of the ROOT file to process. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>R_Z_vec</strong> – Vector to store Z resolution values. </p></li>
+<li><p><strong>R_Z_err_vec</strong> – Vector to store Z resolution uncertainties. </p></li>
+<li><p><strong>meanZ_vec</strong> – Vector to store mean Z values. </p></li>
+<li><p><strong>meanZ_err_vec</strong> – Vector to store mean Z uncertainties. </p></li>
+<li><p><strong>LatexFile_Z</strong> – Output stream for the Z LaTeX table. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE">
+<span id="_CPPv313FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE"></span><span id="_CPPv213FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE"></span><span id="FitHistograms__TFileP.i.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::vector:double:R.std::ofstreamR"></span><span class="target" id="Z__resolutions_8h_1a475ba69ff2ad8505cfa33751901d81ea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitHistograms</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TFile</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">inFile</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Z_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Z_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanZ_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">meanZ_err_vec</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">LatexFile_Z</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv413FitHistogramsP5TFileiRNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt6vectorIdEERNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Fits histograms for Z resolutions. </p>
+<p>This function processes histograms from the input ROOT file, performs fits, and stores the results in vectors for resolutions and means. The results are also written to a LaTeX file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inFile</strong> – Pointer to the input ROOT file. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>R_Z_vec</strong> – Vector to store Z resolution values. </p></li>
+<li><p><strong>R_Z_err_vec</strong> – Vector to store Z resolution uncertainties. </p></li>
+<li><p><strong>meanZ_vec</strong> – Vector to store mean Z values. </p></li>
+<li><p><strong>meanZ_err_vec</strong> – Vector to store mean Z uncertainties. </p></li>
+<li><p><strong>LatexFile_Z</strong> – Output stream for the Z LaTeX table. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="Z__resolutions_8h_1a7c1379d234367f611e9cb241b1f49847"></span><span class="n"><span class="pre">TFitResultPtr</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FitWithTSpectrum</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">TH1D</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="n sig-param"><span class="pre">hist</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Fits a histogram using TSpectrum for peak detection. </p>
+<p>This function detects peaks in the histogram using TSpectrum and performs a Gaussian fit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hist</strong> – Pointer to the histogram to fit. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>TFitResultPtr containing the fit results. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv411WriteZTableRNSt8ofstreamEidddddd">
+<span id="_CPPv311WriteZTableRNSt8ofstreamEidddddd"></span><span id="_CPPv211WriteZTableRNSt8ofstreamEidddddd"></span><span id="WriteZTable__std::ofstreamR.i.double.double.double.double.double.double"></span><span class="target" id="Z__resolutions_8h_1abc8a567abccc89e3f6585bf4c1c38d52"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">WriteZTable</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">meanZ</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stdZ</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">R_Z</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">meanErrZ</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">stdErrZ</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">R_Z_err</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411WriteZTableRNSt8ofstreamEidddddd" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Writes Z results to a LaTeX table. </p>
+<p>This function writes the Z results, including mean, standard deviation, and resolution, to a LaTeX table.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>outFile</strong> – Output stream for the LaTeX file. </p></li>
+<li><p><strong>energy</strong> – Beam energy in MeV/u. </p></li>
+<li><p><strong>meanZ</strong> – Mean Z value. </p></li>
+<li><p><strong>stdZ</strong> – Standard deviation of Z. </p></li>
+<li><p><strong>R_Z</strong> – Resolution for Z. </p></li>
+<li><p><strong>meanErrZ</strong> – Uncertainty in the mean Z value. </p></li>
+<li><p><strong>stdErrZ</strong> – Uncertainty in the standard deviation of Z. </p></li>
+<li><p><strong>R_Z_err</strong> – Uncertainty in the resolution for Z. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv49OpenZFileRNSt8ofstreamE">
+<span id="_CPPv39OpenZFileRNSt8ofstreamE"></span><span id="_CPPv29OpenZFileRNSt8ofstreamE"></span><span id="OpenZFile__std::ofstreamR"></span><span class="target" id="Z__resolutions_8h_1ad867a67690e3dd7ac7f46e6123580b80"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">OpenZFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv49OpenZFileRNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Opens a LaTeX file for Z results. </p>
+<p>This function initializes the LaTeX file for storing Z results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>outFile</strong> – Output stream for the LaTeX file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv410CloseZFileRNSt8ofstreamE">
+<span id="_CPPv310CloseZFileRNSt8ofstreamE"></span><span id="_CPPv210CloseZFileRNSt8ofstreamE"></span><span id="CloseZFile__std::ofstreamR"></span><span class="target" id="Z__resolutions_8h_1afaad6cbd1c71c2461d830e374f574434"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CloseZFile</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ofstream</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">outFile</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv410CloseZFileRNSt8ofstreamE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Closes a LaTeX file for Z results. </p>
+<p>This function finalizes and closes the LaTeX file for Z results.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>outFile</strong> – Output stream for the LaTeX file. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEE">
+<span id="_CPPv320PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEE"></span><span id="_CPPv220PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEE"></span><span id="PlotResolutionGraphs__std::vector:double:CR.std::vector:double:CR"></span><span class="target" id="Z__resolutions_8h_1a016555409fa0e6777994e083a713e05e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">PlotResolutionGraphs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Z_vec</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">R_Z_err_vec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv420PlotResolutionGraphsRKNSt6vectorIdEERKNSt6vectorIdEE" title="Link to this definition">¶</a><br /></dt>
+<dd><p>Plots resolution graphs for Z. </p>
+<p>This function creates graphs for Z resolutions and saves them as PNG files. The Z resolutions at each beam energy are plotted against the mean Z value.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>R_Z_vec</strong> – Vector containing Z resolution values. </p></li>
+<li><p><strong>R_Z_err_vec</strong> – Vector containing Z resolution uncertainties. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp">
+<span class="target" id="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
+<dd><p>Rounds a measurement value and its uncertainty.   </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<p>
+Rounds a measurement value and its uncertainty.  </p>
+<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+<li><p><strong>value</strong> – The measurement value. </p></li>
+<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
+</dd>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</section>
 </section>
 
 
