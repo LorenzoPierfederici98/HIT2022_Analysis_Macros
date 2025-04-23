@@ -31,11 +31,6 @@
  */
 std::string ConvertFileNumbersToString(const std::vector<int>& energies);
 
-/**
- * @brief Rounds the given value and uncertainty to the appropriate number of significant figures based on the uncertainty.
- * 
- * @param value The value to be rounded.
- * @param uncertainty The uncertainty associated with the value.
- * @return A pair containing the rounded value and rounded uncertainty.
- */
+/*! @copydoc RoundMeasurement(double,double)
+*/
 std::pair<double, double> RoundMeasurement(double value, double uncertainty);
