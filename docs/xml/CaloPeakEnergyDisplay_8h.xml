@@ -131,8 +131,8 @@
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal">std::string<sp/><ref refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kindref="member">ConvertFileNumbersToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>energies);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h"/>
   </compounddef>

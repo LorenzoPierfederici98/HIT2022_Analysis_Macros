@@ -620,8 +620,8 @@
 <codeline lineno="138"><highlight class="normal">);</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="142"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
-<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">std::pair&lt;std::string,<sp/>std::string&gt;<sp/>RoundMeasurement(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/Z_resolutions.h"/>
   </compounddef>
