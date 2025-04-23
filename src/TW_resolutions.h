@@ -107,7 +107,7 @@ void ProcessFile(
  * @param energy Beam energy in MeV/u.
  * @return TFitResultPtr containing the fit results.
  */
-TFitResultPtr FitWithTSpectrum(TH1D *hist, int energy);s
+TFitResultPtr FitWithTSpectrum(TH1D *hist, int energy);
 
 /**
  * @brief Writes Eloss results to a LaTeX table.
@@ -198,15 +198,7 @@ void PlotResolutionGraphs(
     const std::vector<double>& meanTof_err_vec
 );
 
-/**
- * @brief Rounds a measurement value and its uncertainty to appropriate significant figures.
- * 
- * This function rounds the given value and uncertainty to the number of significant figures
- * determined by the uncertainty.
- * 
- * @param value The measurement value to round.
- * @param uncertainty The uncertainty of the measurement.
- * @return A pair containing the rounded value and uncertainty as strings.
- */
+
+/// \copydoc RoundMeasurement
 std::pair<std::string, std::string> RoundMeasurement(double value, double uncertainty);
 

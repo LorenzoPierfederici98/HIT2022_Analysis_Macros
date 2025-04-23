@@ -41,16 +41,7 @@
  */
 void ProcessFile(const std::string& fileName, const int energy, std::map<int, std::vector<std::pair<int, double>>>& Res, std::map<int, std::vector<std::pair<int, double>>>& Res_err);
 
-/**
- * @brief Rounds a measurement value and its uncertainty to the appropriate significant figures.
- * 
- * This function rounds the given value and uncertainty to the number of significant figures
- * determined by the uncertainty.
- * 
- * @param value The measurement value to round.
- * @param uncertainty The uncertainty of the measurement.
- * @return A pair containing the rounded value and uncertainty.
- */
+/// \copydoc RoundMeasurement
 std::pair<double, double> RoundMeasurement(double value, double uncertainty);
 
 /**
