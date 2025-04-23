@@ -1,13 +1,11 @@
 /**
  * @file AnalyzePeakCrystal.h
- * @brief Header file for processing and fitting charge distribution histograms from ROOT files.
+ * @brief Header file for AnalyzePeakCrystal.cc
  * 
- * Macro that fits the 1D charge histograms for a given crystal of the calorimeter.
- * The histograms are retrieved from the AnaLyzeCalo.cc merged output files (the histograms are automatically summed).
- * To be run with e.g. root -l -b -q 'AnalyzePeakCrystal.cc()', -b doesn't display plots. 
- * In an interval between x_min and x_max a peak beyond fit_thresh is automatically found with TSpectrum and fitted.
- * The fit results are inserted in files named like e.g. `Calo/AnaFOOT_Calo_Decoded_HIT2022_140MeV_Fit.root` which also
- * store the crystalID charge histogram and the fit plot restricted in [x_min, x_max].
+ * This file contains function declarations for analyzing and fitting charge histograms
+ * for calorimeter crystals. The charge histograms of every crystal are fitted with
+ * a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit
+ * results are saved in output files, along with the histograms and fit plots.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)
@@ -25,46 +23,51 @@
 #endif
 
 /**
- * @brief Prints a measurement value and its uncertainty.
+ * @brief Prints the measurement value and its uncertainty.
  * 
- * This function prints a measurement value and its uncertainty to the console.
+ * This function formats and prints the peak position and its uncertainty with significant figures
+ * based on the uncertainty.
  * 
- * @param value The measurement value.
- * @param uncertainty The uncertainty of the measurement.
+ * @param value The measurement value (e.g., peak position).
+ * @param uncertainty The uncertainty in the measurement.
  */
 void PrintMeasurement(double value, double uncertainty);
 
 /**
- * @brief Fits a peak in a histogram using TSpectrum.
+ * @brief Fits a peak in the given histogram using TSpectrum and a Gaussian function.
  * 
- * This function uses TSpectrum to search for a peak in a histogram and fits it with a Gaussian function.
+ * This function detects peaks in the histogram using TSpectrum and fits the detected peak
+ * with a Gaussian function. The fit results are returned as a TFitResultPtr.
  * 
- * @param hist The histogram to fit.
- * @param threshold The threshold for peak detection.
- * @return A TFitResultPtr containing the fit result.
+ * @param hist Pointer to the histogram to fit.
+ * @param energy Beam energy in MeV/u.
+ * @param crystal_ID The ID of the crystal being analyzed.
+ * @return TFitResultPtr containing the fit results.
  */
-TFitResultPtr FitPeakWithTSpectrum(TH1D *hist, double threshold);
+TFitResultPtr FitPeakWithTSpectrum(TH1D *hist, int energy, int crystal_ID);
 
 /**
- * @brief Finds histograms in a ROOT file.
+ * @brief Retrieves histograms for a specific crystal and the total charge from the input ROOT file.
  * 
- * This function finds and retrieves histograms from a ROOT file.
+ * This function searches for and retrieves the specified histograms from the input file.
+ * It returns pointers to the crystal-specific histogram and the total charge histogram.
  * 
- * @param inFile The input ROOT file.
- * @param histName_total The name of the total histogram.
- * @param histName The name of the specific histogram.
- * @return A tuple containing pointers to the total histogram and the specific histogram.
+ * @param inFile Pointer to the input ROOT file.
+ * @param histName_total Name of the total charge histogram.
+ * @param histName Name of the histogram for the specific crystal.
+ * @return A tuple containing pointers to the crystal histogram and the total charge histogram.
  */
 std::tuple<TH1D*, TH1D*> FindHistograms(TFile *inFile, const TString &histName_total, const TString &histName);
 
 /**
- * @brief Saves fit results to a ROOT file.
+ * @brief Saves the fit results, histograms, and plots to an output ROOT file.
  * 
- * This function saves the fit results and the corresponding histogram to a ROOT file.
+ * This function writes the histogram, fit results, and canvas to the specified output file.
+ * It creates the output file if it does not exist or updates it if it does.
  * 
- * @param canvas The canvas containing the fit plot.
- * @param hist The histogram to save.
- * @param fitResult The fit result to save.
- * @param outputFileName The name of the output ROOT file.
+ * @param canvas Pointer to the canvas containing the fit plot.
+ * @param hist Pointer to the histogram being analyzed.
+ * @param fitResult The fit results to save.
+ * @param outputFileName Name of the output ROOT file.
  */
 void SaveFitResultsToFile(TCanvas* canvas, TH1D* hist, TFitResultPtr fitResult, const TString& outputFileName);

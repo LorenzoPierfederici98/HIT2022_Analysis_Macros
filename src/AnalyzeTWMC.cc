@@ -113,13 +113,7 @@ std::pair<TFitResultPtr, TFitResultPtr> FitPeaksWithTSpectrum(TH1D *hist, int en
         double x1 = sortedPeaks[0];
         cout << "first peak found at x=" << x1 << endl;
         int binMax1 = hist->FindBin(x1);
-        int bins_fit_p;
-        if (energy == 100){
-            bins_fit_p = 3;
-        }
-        else {
-            bins_fit_p = 2;
-        }
+        int bins_fit_p = 2;
         int binLow1 = std::max(1, binMax1 - bins_fit_p);
         int binHigh1 = std::min(hist->GetNbinsX(), binMax1 + bins_fit_p);
         TF1* gaus1 = new TF1("gaus1", "gaus", hist->GetBinLowEdge(binLow1), hist->GetBinLowEdge(binHigh1 + 1));

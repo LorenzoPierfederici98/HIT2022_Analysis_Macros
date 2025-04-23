@@ -17,7 +17,8 @@ void CalibrateFragm() {
     // std::map<int, double>elossP = {{100, 2.721}, {140, 2.020}, {200, 1.4761}, {220, 1.4267}};  // energy loss for protons, from MC
     // std::map<int, double>elossHe = {{100, 9.7638}, {140, 7.2929}, {200, 5.4135}, {220, 5.2352}};  // energy loss for heliums, from MC
 
-    std::map<int, double>elossP = {{100, 2.621}, {140, 1.901}, {200, 1.410}, {220, 1.325}};  // energy loss for protons, from MC
+    //std::map<int, double>elossP = {{100, 2.621}, {140, 1.901}, {200, 1.410}, {220, 1.325}};  // energy loss for protons, from MC (no cuts)
+    std::map<int, double>elossP = {{100, 2.551}, {140, 1.900}, {200, 1.441}, {220, 1.367}};
     std::map<int, double>elossHe = {{100, 9.7371}, {140, 7.2586}, {200, 5.5314}, {220, 5.1694}};  // energy loss for heliums, from MC
 
     std::map<TString, std::map<int, double>> fitMeansP;  // protons
@@ -30,7 +31,7 @@ void CalibrateFragm() {
     }
 
     std::map<TString, double> fitValues = PlotFitResultsCombined(fitMeansP, fitErrorsP, fitMeansHe, fitErrorsHe, elossP, elossHe);
-    WriteFitValuesOrdered(fitValues);
+    //WriteFitValuesOrdered(fitValues);
 }
 
 void ProcessFile(const TString& fileName, 
@@ -175,8 +176,10 @@ std::map<TString, double> PlotFitResultsCombined(
             }
 
             graphProtons->SetMarkerStyle(20);
+            graphProtons->SetMarkerSize(1.5);
             graphProtons->SetMarkerColor(kBlue);
             graphHeliums->SetMarkerStyle(20);
+            graphHeliums->SetMarkerSize(1.5);
             graphHeliums->SetMarkerColor(kRed);
 
             multiGraph->Add(graphProtons, "P");
@@ -185,12 +188,16 @@ std::map<TString, double> PlotFitResultsCombined(
             TCanvas* c = new TCanvas(Form("c_%s", layerBarName.Data()), 
                                       Form("Fit Results - %s", layerBarName.Data()), 
                                       800, 600);
+            c->SetMargin(0.12, 0.12, 0.15, 0.15); // Left, Right, Bottom, Top margins
 
-            multiGraph->SetTitle(Form("%s - Fit Results true MC", layerBarName.Data()));
-            multiGraph->GetXaxis()->SetTitle("Energy loss MC [MeV]");
-            multiGraph->GetYaxis()->SetTitle("Mean Charge [a.u.]");
+            multiGraph->SetTitle(Form("%s - fit results calibration", layerBarName.Data()));
+            multiGraph->GetXaxis()->SetTitle("#Delta E_{MC} [MeV]");
+            multiGraph->GetYaxis()->SetTitle("#mu(Q) [a.u.]");
             multiGraph->SetMinimum(0.);
             multiGraph->GetXaxis()->SetLimits(0., 15.);
+            gStyle->SetTitleSize(0.07, "T");
+            multiGraph->GetXaxis()->SetTitleSize(0.05);  // X-axis title size
+            multiGraph->GetYaxis()->SetTitleSize(0.05);  // Y-axis title size
             multiGraph->Draw("A");
 
             // Combine data for fitting
@@ -242,10 +249,13 @@ std::map<TString, double> PlotFitResultsCombined(
             combinedFit->Draw("same");
 
             // Add legend
-            TLegend* legend = new TLegend(0.45, 0.25, 0.9, 0.50);
+            TLegend* legend = new TLegend(0.45, 0.25, 0.92, 0.50);
             legend->AddEntry(graphProtons, "Protons", "p");
             legend->AddEntry(graphHeliums, "Heliums", "p");
             auto [p0, p0Error] = RoundMeasurement(combinedFit->GetParameter(0), combinedFit->GetParError(0));
+            double p0_val = std::stod(p0);
+            double p0Error_val = std::stod(p0Error);
+            cout << layerBarName.Data() << " 1/p0: " << 1./p0_val << " +/- " << p0Error_val / (p0_val * p0_val) << endl;
             //auto [p1, p1Error] = RoundMeasurement(combinedFit->GetParameter(1), combinedFit->GetParError(1));
             //auto [p2, p2Error] = RoundMeasurement(combinedFit->GetParameter(2), combinedFit->GetParError(2));
             //auto [p3, p3Error] = RoundMeasurement(combinedFit->GetParameter(3), combinedFit->GetParError(3));
@@ -255,7 +265,7 @@ std::map<TString, double> PlotFitResultsCombined(
             //legend->AddEntry((TObject*)0, Form("p_{1} = %s#pm%s", p1.c_str(), p1Error.c_str()), "");
             //legend->AddEntry((TObject*)0, Form("p_{2} = %s#pm%s", p2.c_str(), p2Error.c_str()), "");
             //legend->AddEntry((TObject*)0, Form("p_{3} = %s#pm%s", p3.c_str(), p3Error.c_str()), "");
-            legend->SetTextSize(0.03);
+            legend->SetTextSize(0.035);
             legend->Draw();
 
             c->SaveAs(Form("Plots/cuts/Fragmentation_%s.png", layerBarName.Data()));
@@ -295,7 +305,8 @@ void WriteFitValuesOrdered(const std::map<TString, double>& fitValues) {
         int combinedBarID = barID + (isLayerX ? 20 : 0);
 
         // Add to the sortedValues vector
-        sortedValues.emplace_back(combinedBarID, layerBarName, p0);
+        // Adding 1/p0 since E_loss = Q / p0
+        sortedValues.emplace_back(combinedBarID, layerBarName, 1./p0);
     }
 
     // Sort by the combined bar ID
@@ -304,10 +315,13 @@ void WriteFitValuesOrdered(const std::map<TString, double>& fitValues) {
 
     // Define the four output file names
     std::vector<std::string> outputFileNames = {
-        "TATW_Energy_calibration_perBar_HIT2022_100MeV_u.cal",
-        "TATW_Energy_calibration_perBar_HIT2022_140MeV_u.cal",
-        "TATW_Energy_calibration_perBar_HIT2022_200MeV_u.cal",
-        "TATW_Energy_calibration_perBar_HIT2022_220MeV_u.cal"
+        "TATW_Energy_Calibration_perBar_4742.cal",
+        "TATW_Energy_Calibration_perBar_4766.cal",
+        "TATW_Energy_Calibration_perBar_4801.cal",
+        "TATW_Energy_Calibration_perBar_4828.cal",
+        "TATW_Energy_Calibration_perBar_4868.cal",
+        "TATW_Energy_Calibration_perBar_4877.cal",
+        "TATW_Energy_Calibration_perBar_4884.cal"
     };
 
     // Write the content to each file
