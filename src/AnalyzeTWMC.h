@@ -30,7 +30,7 @@
  * It performs a fit with two separate Gaussians, one for proton and one for helium peaks.
  * The peaks are automatically found with TSpectrum,
  * and then fitted within a certain bin-range centered around the peak.
- * The fit results are stored in files named like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.
+ * The fit results are stored in output files.
  * 
  * @param fileName The name of the ROOT file to process.
  * @param energy The energy value associated with the file.

@@ -271,7 +271,7 @@
 <para>Processes a ROOT file and fits the histograms. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps.</para>
+<para>This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps. The fit results are stored in output files.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fileName</parametername>

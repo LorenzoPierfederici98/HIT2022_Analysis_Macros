@@ -29,7 +29,7 @@
   * @brief Processes a ROOT file and fits the histograms.
   * 
   * This function processes the specified ROOT file, fits the histograms in the specified directories,
-  * and stores the fit results in the provided maps.
+  * and stores the fit results in the provided maps. The fit results are stored in output files.
   * 
   * @param fileName Name of the ROOT file.
   * @param energy Beam energy.

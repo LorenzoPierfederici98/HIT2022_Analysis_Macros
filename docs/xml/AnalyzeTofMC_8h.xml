@@ -113,7 +113,7 @@
 <para>Processes a ROOT file and fits the histograms. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.</para>
+<para>This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps. The fit results are stored in output files.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fileName</parametername>
@@ -147,7 +147,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.</para>
+This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps. The fit results are stored in output files.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fileName</parametername>

@@ -71,6 +71,7 @@ void FitHistogramsInDirectory(
  * This function processes the specified ROOT file, sums the number of entries,
  * calculates the threshold, and fits the histograms in the specified directories.
  * The fit results are stored in the provided maps.
+ * The fit results are stored in output files.
  * 
  * @param fileName Name of the ROOT file.
  * @param energy Beam energy.

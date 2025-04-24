@@ -121,7 +121,7 @@
 <para>Processes a ROOT file to fit the charge distribution. </para>
         </briefdescription>
         <detaileddescription>
-<para>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</para>
+<para>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-range centered around the peak. The fit results are stored in output files.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>fileName</parametername>
