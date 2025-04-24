@@ -20,7 +20,7 @@
 </para>
 </sect2>
 <sect2 id="index_1autotoc_md2">
-<title>Build &amp; Run</title>
+<title>Run</title>
 <para>To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment. <programlisting filename=".sh"><codeline><highlight class="normal">root<sp/>-l<sp/>-b<sp/>&apos;AnalyzePeakCrystal.cc()&apos;</highlight></codeline>
 </programlisting></para>
 </sect2>

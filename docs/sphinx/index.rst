@@ -24,6 +24,14 @@ To run the macros, ROOT needs to be installed and set up on the system. The macr
 
    root -l -b 'AnalyzePeakCrystal.cc()'
 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+   api
+
+
 Documentation Links
 -------------------
 
@@ -34,14 +42,6 @@ Dependencies
 ------------
 
 - `ROOT <https://root.cern>`_
-
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   api
-
-
 
 Indices and tables
 ==================
