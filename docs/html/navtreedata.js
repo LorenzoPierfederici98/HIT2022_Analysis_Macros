@@ -26,6 +26,11 @@ var NAVTREE =
 [
   [ "HIT 2022 Analysis", "index.html", [
     [ "Files", "files.html", [
+      [ "Overview", "index.html#autotoc_md0", null ],
+      [ "Structure", "index.html#autotoc_md1", null ],
+      [ "Build & Run", "index.html#autotoc_md2", null ],
+      [ "Documentation Links", "index.html#autotoc_md3", null ],
+      [ "Dependencies", "index.html#autotoc_md4", null ],
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],

@@ -1,0 +1,24 @@
+\chapter{HIT 2022 Analysis}
+\hypertarget{index}{}\label{index}\index{HIT 2022 Analysis@{HIT 2022 Analysis}}
+Welcome to the documentation for the HIT 2022 Analysis project.\hypertarget{index_autotoc_md0}{}\doxysubsection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md0}
+This project contains a set of macros used to analyze Calorimeter and TOF-\/wall data from the HIT2022 campaign, focus of my MS thesis work. These macros take as input the ROOT output files produced by the macros which analyze the runs decoded by the SHOE software, producing the histograms of interest. The ROOT output files of the runs characterized by the same beam energy value are merged into a single file, which is then used as input for these macros.\hypertarget{index_autotoc_md1}{}\doxysubsection{\texorpdfstring{Structure}{Structure}}\label{index_autotoc_md1}
+
+\begin{DoxyItemize}
+\item {\bfseries{Calorimeter Analysis}} – Macros for the analysis of the energetic response of the crystals and resolution evaluation.
+\item {\bfseries{TOF-\/\+Wall Analysis}} – Macros fot the energy and Time-\/\+Of-\/\+Flight (TOF) calibrations, resolution evaluation.
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Build \& Run}{Build \& Run}}\label{index_autotoc_md2}
+To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{root\ -\/l\ -\/b\ 'AnalyzePeakCrystal.cc()'}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Documentation Links}{Documentation Links}}\label{index_autotoc_md3}
+
+\begin{DoxyItemize}
+\item \href{./index.html}{\texttt{ API Reference}}
+\item \href{https://github.com/LorenzoPierfederici98/HIT2022_Analysis_Macros}{\texttt{ Git\+Hub Repository}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Dependencies}{Dependencies}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item \href{https://root.cern}{\texttt{ ROOT}} 
+\end{DoxyItemize}

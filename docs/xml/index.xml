@@ -1,5 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.8" xml:lang="en-US">
+  <compound refid="mainpage_8dox" kind="file"><name>mainpage.dox</name>
+  </compound>
   <compound refid="AnalyzePeakCrystal_8cc" kind="file"><name>AnalyzePeakCrystal.cc</name>
     <member refid="AnalyzePeakCrystal_8cc_1a88bec13ed9c957dba2ee562a6d361e5f" kind="function"><name>AnalyzePeakCrystal</name></member>
     <member refid="AnalyzePeakCrystal_8cc_1a5aadeca6af3105a72d885dcc752237db" kind="function"><name>PrintMeasurement</name></member>
@@ -150,5 +152,7 @@
     <member refid="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6" kind="function"><name>RoundMeasurement</name></member>
   </compound>
   <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
   </compound>
 </doxygenindex>

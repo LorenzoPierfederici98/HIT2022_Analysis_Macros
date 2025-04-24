@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>HIT 2022 Analysis: Main Page</title>
+<title>HIT 2022 Analysis: HIT 2022 Analysis</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -96,10 +96,35 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </div>
 </div>
 
-<div class="header">
-  <div class="headertitle"><div class="title">HIT 2022 Analysis Documentation</div></div>
+<div><div class="header">
+  <div class="headertitle"><div class="title">HIT 2022 Analysis </div></div>
 </div><!--header-->
 <div class="contents">
+<div class="textblock"><p>Welcome to the documentation for the HIT 2022 Analysis project.</p>
+<h2><a class="anchor" id="autotoc_md0"></a>
+Overview</h2>
+<p>This project contains a set of macros used to analyze Calorimeter and TOF-wall data from the HIT2022 campaign, focus of my MS thesis work. These macros take as input the ROOT output files produced by the macros which analyze the runs decoded by the SHOE software, producing the histograms of interest. The ROOT output files of the runs characterized by the same beam energy value are merged into a single file, which is then used as input for these macros.</p>
+<h2><a class="anchor" id="autotoc_md1"></a>
+Structure</h2>
+<ul>
+<li><b>Calorimeter Analysis</b> – Macros for the analysis of the energetic response of the crystals and resolution evaluation.</li>
+<li><b>TOF-Wall Analysis</b> – Macros fot the energy and Time-Of-Flight (TOF) calibrations, resolution evaluation.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md2"></a>
+Build &amp; Run</h2>
+<p>To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment. </p><div class="fragment"><div class="line">root -l -b &#39;AnalyzePeakCrystal.cc()&#39;</div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+Documentation Links</h2>
+<ul>
+<li><a href="./index.html">API Reference</a></li>
+<li><a href="https://github.com/LorenzoPierfederici98/HIT2022_Analysis_Macros">GitHub Repository</a></li>
+</ul>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Dependencies</h2>
+<ul>
+<li><a href="https://root.cern">ROOT</a> </li>
+</ul>
+</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
