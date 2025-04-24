@@ -15,7 +15,7 @@
 <title>Structure</title>
 <para><itemizedlist>
 <listitem><para><bold>Calorimeter Analysis</bold> – Macros for the analysis of the energetic response of the crystals and resolution evaluation.</para>
-</listitem><listitem><para><bold>TOF-Wall Analysis</bold> – Macros fot the energy and Time-Of-Flight (TOF) calibrations, resolution evaluation.</para>
+</listitem><listitem><para><bold>TOF-Wall Analysis</bold> – Macros for the energy and Time-Of-Flight (TOF) calibrations, resolution evaluation.</para>
 </listitem></itemizedlist>
 </para>
 </sect2>
