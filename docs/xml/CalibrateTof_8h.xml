@@ -295,10 +295,10 @@
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>Header file for the ToF calibration. </para>
+<para>Header file for CalibrateTof.cc. </para>
     </briefdescription>
     <detaileddescription>
-<para>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). To be run with root -l -b -q &apos;CalibrateTof.cc()&apos;. </para>
+<para>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

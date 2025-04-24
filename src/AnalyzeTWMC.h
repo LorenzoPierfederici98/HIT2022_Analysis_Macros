@@ -1,12 +1,10 @@
 /**
  * @file AnalyzeTWMC.h
- * @brief Header file for processing and fitting energy loss distribution histograms from ROOT files.
+ * @brief Header file for AnalyzeTWMC.cc.
  * 
  * Macro that fits the energy loss distribution from the AnalyzeTWFragMC.cc output files (for MC runs).
- * A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically
- * found with TSpectrum and then fitted within a certain bin-range centered around the peak. The fit results are
- * stored in files name like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.
- * To be run with root -l -b -q 'AnalyzeTWMC.cc()'.
+ * A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are
+ * automatically found with TSpectrum and then fitted within a certain bin-range centered around the peak.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

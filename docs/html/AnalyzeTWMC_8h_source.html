@@ -106,32 +106,32 @@ $(document).ready(function(){initNavTree('AnalyzeTWMC_8h_source.html',''); initR
 </div><!--header-->
 <div class="contents">
 <a href="AnalyzeTWMC_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;TFile.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;TKey.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;TDirectory.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;TH1.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;TF1.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;TGraphErrors.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;TCanvas.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;TNamed.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;TSpectrum.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzeTWMC_8h.html#aafbdc017754d8392bf014a36767842e4">ProcessFile</a>(</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keyword">const</span> std::string&amp; fileName, </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keywordtype">int</span> energy, </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::map&lt;int, double&gt;&amp; fitMeanP,</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::map&lt;int, double&gt;&amp; fitMeanHe,</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    std::map&lt;int, double&gt;&amp; fitErrorP,</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    std::map&lt;int, double&gt;&amp; fitErrorHe</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>std::pair&lt;TFitResultPtr, TFitResultPtr&gt; <a class="code hl_function" href="AnalyzeTWMC_8h.html#a15e3e63c2fe3026d9a34aa8bbcc77a6d">FitPeaksWithTSpectrum</a>(TH1D *hist, <span class="keywordtype">int</span> energy);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;TFile.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;TKey.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;TDirectory.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;TH1.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;TF1.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;TGraphErrors.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;TCanvas.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;TNamed.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;TSpectrum.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzeTWMC_8h.html#aafbdc017754d8392bf014a36767842e4">ProcessFile</a>(</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keyword">const</span> std::string&amp; fileName, </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">int</span> energy, </div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    std::map&lt;int, double&gt;&amp; fitMeanP,</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    std::map&lt;int, double&gt;&amp; fitMeanHe,</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    std::map&lt;int, double&gt;&amp; fitErrorP,</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    std::map&lt;int, double&gt;&amp; fitErrorHe</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>std::pair&lt;TFitResultPtr, TFitResultPtr&gt; <a class="code hl_function" href="AnalyzeTWMC_8h.html#a15e3e63c2fe3026d9a34aa8bbcc77a6d">FitPeaksWithTSpectrum</a>(TH1D *hist, <span class="keywordtype">int</span> energy);</div>
 <div class="ttc" id="aAnalyzeTWMC_8h_html_a15e3e63c2fe3026d9a34aa8bbcc77a6d"><div class="ttname"><a href="AnalyzeTWMC_8h.html#a15e3e63c2fe3026d9a34aa8bbcc77a6d">FitPeaksWithTSpectrum</a></div><div class="ttdeci">std::pair&lt; TFitResultPtr, TFitResultPtr &gt; FitPeaksWithTSpectrum(TH1D *hist, int energy)</div><div class="ttdoc">Fits the peaks in a histogram using TSpectrum.</div><div class="ttdef"><b>Definition</b> AnalyzeTWMC.cc:91</div></div>
 <div class="ttc" id="aAnalyzeTWMC_8h_html_aafbdc017754d8392bf014a36767842e4"><div class="ttname"><a href="AnalyzeTWMC_8h.html#aafbdc017754d8392bf014a36767842e4">ProcessFile</a></div><div class="ttdeci">void ProcessFile(const std::string &amp;fileName, int energy, std::map&lt; int, double &gt; &amp;fitMeanP, std::map&lt; int, double &gt; &amp;fitMeanHe, std::map&lt; int, double &gt; &amp;fitErrorP, std::map&lt; int, double &gt; &amp;fitErrorHe)</div><div class="ttdoc">Processes a ROOT file to fit the charge distribution.</div><div class="ttdef"><b>Definition</b> AnalyzeTWMC.cc:29</div></div>
 </div><!-- fragment --></div><!-- contents -->

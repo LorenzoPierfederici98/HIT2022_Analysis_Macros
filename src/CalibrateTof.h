@@ -1,12 +1,12 @@
 /**
  * @file CalibrateTof.h
- * @brief Header file for the ToF calibration.
+ * @brief Header file for CalibrateTof.cc.
  * 
  * This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration.
- * The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values
- * for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in
- * four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values).
- * To be run with root -l -b -q 'CalibrateTof.cc()'.
+ * The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit
+ * values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are
+ * written in four calibration files, one for each energy, along with the corresponding uncertainties (squared
+ * sum of the values).
  * 
  */
 

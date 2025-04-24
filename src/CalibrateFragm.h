@@ -1,11 +1,11 @@
 /**
  * @file CalibrateFragm.h
- * @brief Header file for the charge-energy calibration.
+ * @brief Header file for CalibrateFragm.cc.
  * 
- * Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies
- * loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro).
- * The fit charge values vs energy loss values are fitted with a 1 parameter linear function; the imverse of these parameters
- * (one per bar) are written in the configuration file.
+ * Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the
+ * energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the
+ * AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear
+ * function; the imverse of these parameters (one per bar) are written in the configuration file.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('CalibrateTof_8h.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for the ToF calibration.  
+<p>Header file for CalibrateTof.cc.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;TFile.h&gt;</code><br />
 <code>#include &lt;TFitResultPtr.h&gt;</code><br />
@@ -137,8 +137,8 @@ Functions</h2></td></tr>
 <tr class="separator:a56ae1ed9e3d3405ee8e7bee444c02c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for the ToF calibration. </p>
-<p>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). To be run with root -l -b -q 'CalibrateTof.cc()'. </p>
+<div class="textblock"><p>Header file for CalibrateTof.cc. </p>
+<p>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="a3709ac7cbea5496ed4a4436aa1efdcea" name="a3709ac7cbea5496ed4a4436aa1efdcea"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3709ac7cbea5496ed4a4436aa1efdcea">&#9670;&#160;</a></span>ExtractMeanValues()</h2>

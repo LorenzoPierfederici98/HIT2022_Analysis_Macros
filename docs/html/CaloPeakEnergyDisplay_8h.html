@@ -103,7 +103,7 @@ $(document).ready(function(){initNavTree('CaloPeakEnergyDisplay_8h.html',''); in
 </div><!--header-->
 <div class="contents">
 
-<p>Header file for the CaloPeakEnergyDisplay macro.  
+<p>Header file for CaloPeakEnergyDisplay.cc.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &lt;TFile.h&gt;</code><br />
 <code>#include &lt;TF1.h&gt;</code><br />
@@ -129,7 +129,7 @@ Functions</h2></td></tr>
 <tr class="separator:a2ad7fc5517b3ca53aced9f056accb5dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Header file for the CaloPeakEnergyDisplay macro. </p>
+<div class="textblock"><p>Header file for CaloPeakEnergyDisplay.cc. </p>
 <p>Macro that collects the charge fit results of AnalyzePeakCrystal.cc for every calorimeter crystal. A charge-beam energy plot is built for every crystal and fitted with a 1 parameter (slope) linear function. An intercalibration is then performed for those crystals with at least 2 fitted charge peaks out of 5 energy values, by computing the ratio of the slopes of a certain crystal with respect to crystal ID 0 (the central crystal). The calibration coefficients for every available crystal are stored in a file named SlopeRatios.cal. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
 <a id="ad2291774551251ac39112a4b52e463ee" name="ad2291774551251ac39112a4b52e463ee"></a>
