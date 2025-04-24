@@ -137,6 +137,4 @@ void PlotResolutionGraphs(
     const std::vector<double>& R_Z_err_vec
 );
 
-
-/// \copydoc RoundMeasurement(double, double)
 std::pair<std::string, std::string> RoundMeasurement(double value, double uncertainty);

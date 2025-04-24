@@ -120,7 +120,7 @@
           <declname>uncertainty</declname>
         </param>
         <briefdescription>
-<para>Rounds a measurement value and its uncertainty.   </para>
+<para>Rounds a measurement value and its uncertainty. </para>
         </briefdescription>
         <detaileddescription>
 <para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
@@ -141,34 +141,13 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty.  </para>
-</simplesect>
-Rounds a measurement value and its uncertainty.  </para>
-<para>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</para>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>value</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The measurement value. </para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>uncertainty</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>The uncertainty of the measurement. </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+<simplesect kind="return"><para>A pair with the rounded value and uncertainty. </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" line="35" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" declline="35" declcolumn="11"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" line="34" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CalibrateFragm.cc" bodystart="362" bodyend="382" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h" declline="34" declcolumn="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -195,7 +174,7 @@ Rounds a measurement value and its uncertainty.  </para>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal">std::string<sp/><ref refid="CaloPeakEnergyDisplay_8h_1ad2291774551251ac39112a4b52e463ee" kindref="member">ConvertFileNumbersToString</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;int&gt;&amp;<sp/>energies);</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/><ref refid="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">std::pair&lt;double,<sp/>double&gt;<sp/><ref refid="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd" kindref="member">RoundMeasurement</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>value,<sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>uncertainty);</highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/CaloPeakEnergyDisplay.h"/>
   </compounddef>

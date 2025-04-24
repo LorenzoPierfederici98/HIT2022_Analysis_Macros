@@ -326,7 +326,7 @@
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A pair of strings containing the rounded value and uncertainty. </para>
+<simplesect kind="return"><para>A pair with the rounded value and uncertainty. </para>
 </simplesect>
 </para>
         </detaileddescription>

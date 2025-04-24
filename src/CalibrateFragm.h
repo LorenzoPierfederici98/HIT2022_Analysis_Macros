@@ -84,6 +84,6 @@ void WriteFitValuesOrdered(const std::map<TString, double>& fitValues);
  * 
  * @param value The measurement value.
  * @param uncertainty The uncertainty of the measurement.
- * @return A pair of strings containing the rounded value and uncertainty.
+ * @return A pair with the rounded value and uncertainty.
  */
 pair<std::string, std::string> RoundMeasurement(double value, double uncertainty);

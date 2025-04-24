@@ -29,7 +29,7 @@ Include dependency graph for Calo\+Peak\+Energy\+Display.\+h\+:\nopagebreak
 std\+::string \mbox{\hyperlink{CaloPeakEnergyDisplay_8h_ad2291774551251ac39112a4b52e463ee}{Convert\+File\+Numbers\+To\+String}} (const std\+::vector$<$ int $>$ \&energies)
 \begin{DoxyCompactList}\small\item\em Converts a vector of integers representing energies to a comma-\/separated string. \end{DoxyCompactList}\item 
 std\+::pair$<$ double, double $>$ \mbox{\hyperlink{CaloPeakEnergyDisplay_8h_a2ad7fc5517b3ca53aced9f056accb5dd}{Round\+Measurement}} (double value, double uncertainty)
-\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty.   \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Rounds a measurement value and its uncertainty. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
@@ -64,7 +64,7 @@ A string containing the comma-\/separated list of energies.
 
 
 
-Rounds a measurement value and its uncertainty.   
+Rounds a measurement value and its uncertainty. 
 
 This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
 
@@ -76,19 +76,5 @@ This function rounds a measurement value and its uncertainty to the appropriate 
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-A pair of strings containing the rounded value and uncertainty.  
-\end{DoxyReturn}
-Rounds a measurement value and its uncertainty.  
-
-This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.
-
-
-\begin{DoxyParams}{Parameters}
-{\em value} & The measurement value. \\
-\hline
-{\em uncertainty} & The uncertainty of the measurement. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-A pair of strings containing the rounded value and uncertainty. 
+A pair with the rounded value and uncertainty. 
 \end{DoxyReturn}
