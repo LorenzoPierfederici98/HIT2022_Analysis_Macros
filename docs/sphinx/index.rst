@@ -19,6 +19,7 @@ Directory Structure
 -------------------
 
 Typical structure of the macros and input files:
+
 .. code-block:: text
 
    src/                    # Path of the analysis macros source code

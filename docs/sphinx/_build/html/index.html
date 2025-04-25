@@ -72,7 +72,33 @@
              
   <section id="welcome-to-hit2022-analysis-s-documentation">
 <h1>Welcome to HIT2022 Analysis’s documentation!<a class="headerlink" href="#welcome-to-hit2022-analysis-s-documentation" title="Link to this heading">¶</a></h1>
-<p>blah blah blah</p>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">¶</a></h2>
+<p>This project contains a set of macros used to analyze Calorimeter and TOF-wall data from the HIT2022 campaign, focus of my MS thesis work. These macros take as input the ROOT output files produced by the macros which analyze the runs decoded by the SHOE software, producing the histograms of interest. The ROOT output files of the runs characterized by the same beam energy value are merged into a single file, which is then used as input for these macros.</p>
+</section>
+<section id="structure">
+<h2>Structure<a class="headerlink" href="#structure" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Calorimeter Analysis</strong> – Macros for the analysis of the energetic response of the crystals and resolution evaluation.</p></li>
+<li><p><strong>TOF-Wall Analysis</strong> – Macros for the energy and Time-Of-Flight (TOF) calibrations, resolution evaluation.</p></li>
+</ul>
+</section>
+<section id="directory-structure">
+<h2>Directory Structure<a class="headerlink" href="#directory-structure" title="Link to this heading">¶</a></h2>
+<p>Typical structure of the macros and input files:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>src/                    # Path of the analysis macros source code
+├── TW/cuts/            # TW uncalibrated files, with the selections to remove pedestal and pile-up
+├── Calo/               # Calorimeter-related input files
+├── Plots/              # Output plots and figures
+</pre></div>
+</div>
+</section>
+<section id="run">
+<h2>Run<a class="headerlink" href="#run" title="Link to this heading">¶</a></h2>
+<p>To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>root<span class="w"> </span>-l<span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;AnalyzePeakCrystal.cc()&#39;</span>
+</pre></div>
+</div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
@@ -94,6 +120,20 @@
 </li>
 </ul>
 </div>
+</section>
+<section id="documentation-links">
+<h2>Documentation Links<a class="headerlink" href="#documentation-links" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><span class="xref std std-ref">API Reference</span></p></li>
+<li><p><a class="reference external" href="https://github.com/LorenzoPierfederici98/HIT2022_Analysis_Macros">GitHub Repository</a></p></li>
+</ul>
+</section>
+<section id="dependencies">
+<h2>Dependencies<a class="headerlink" href="#dependencies" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><a class="reference external" href="https://root.cern">ROOT</a></p></li>
+</ul>
+</section>
 </section>
 <section id="indices-and-tables">
 <h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Link to this heading">¶</a></h1>

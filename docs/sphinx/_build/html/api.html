@@ -148,7 +148,7 @@
 <section id="analyzepeakcrystal">
 <h2>AnalyzePeakCrystal<a class="headerlink" href="#analyzepeakcrystal" title="Link to this heading">¶</a></h2>
 <p>Header file for AnalyzePeakCrystal.cc. </p>
-<p>This file contains function declarations for analyzing and fitting charge histograms for calorimeter crystals. The charge histograms of every crystal are fitted with a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit results are saved in output files, along with the histograms and fit plots. </p>
+<p>This file contains function declarations for analyzing and fitting charge histograms for calorimeter crystals. The charge histograms of every crystal (provided that it has enough statistics to display a peak) are fitted with a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit results are saved in output files, along with the histograms and fit plots. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -225,7 +225,7 @@
 </section>
 <section id="calopeakenergydisplay">
 <h2>CaloPeakEnergyDisplay<a class="headerlink" href="#calopeakenergydisplay" title="Link to this heading">¶</a></h2>
-<p>Header file for the CaloPeakEnergyDisplay macro. </p>
+<p>Header file for CaloPeakEnergyDisplay.cc. </p>
 <p>Macro that collects the charge fit results of AnalyzePeakCrystal.cc for every calorimeter crystal. A charge-beam energy plot is built for every crystal and fitted with a 1 parameter (slope) linear function. An intercalibration is then performed for those crystals with at least 2 fitted charge peaks out of 5 energy values, by computing the ratio of the slopes of a certain crystal with respect to crystal ID 0 (the central crystal). The calibration coefficients for every available crystal are stored in a file named SlopeRatios.cal. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
@@ -246,25 +246,17 @@
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv416RoundMeasurementdd">
 <span id="_CPPv316RoundMeasurementdd"></span><span id="_CPPv216RoundMeasurementdd"></span><span id="RoundMeasurement__double.double"></span><span class="target" id="CaloPeakEnergyDisplay_8h_1a2ad7fc5517b3ca53aced9f056accb5dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv416RoundMeasurementdd" title="Link to this definition">¶</a><br /></dt>
-<dd><p>Rounds a measurement value and its uncertainty.   </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<p>
-Rounds a measurement value and its uncertainty.  </p>
+<dd><p>Rounds a measurement value and its uncertainty. </p>
 <p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> – The measurement value. </p></li>
 <li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+<dd class="field-even"><p>A pair with the rounded value and uncertainty. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -274,7 +266,7 @@ Rounds a measurement value and its uncertainty.  </p>
 <section id="calo-resolutions">
 <h2>Calo_resolutions<a class="headerlink" href="#calo-resolutions" title="Link to this heading">¶</a></h2>
 <p>Header file for Calo_resolutions.cc. </p>
-<p>This file contains function declarations and necessary includes for analyzing and plotting the resolution of calorimeter crystals as a function of beam energy. The analysis is performed using ROOT libraries, and the resolution is calculated based on the mean and standard deviation of Gaussian fits to charge histograms. The results are stored and plotted for further analysis. </p>
+<p>This file contains function declarations and necessary includes for analyzing and plotting the resolution of calorimeter crystals as a function of beam energy. The resolution is calculated based on the mean and standard deviation of Gaussian fits to charge histograms. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -297,25 +289,17 @@ Rounds a measurement value and its uncertainty.  </p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
 <span class="target" id="Calo__resolutions_8h_1a2ad7fc5517b3ca53aced9f056accb5dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Rounds a measurement value and its uncertainty.   </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<p>
-Rounds a measurement value and its uncertainty.  </p>
+<dd><p>Rounds a measurement value and its uncertainty. </p>
 <p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> – The measurement value. </p></li>
 <li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+<dd class="field-even"><p>A pair with the rounded value and uncertainty. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -343,7 +327,7 @@ Rounds a measurement value and its uncertainty.  </p>
 <section id="analyzetwfragm">
 <h2>AnalyzeTWFragm<a class="headerlink" href="#analyzetwfragm" title="Link to this heading">¶</a></h2>
 <p>Header file for AnalyzeTWFragm.cc. </p>
-<p>This file contains function declarations for fitting charge distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files named like e.g., created if they don’t already exist, or overwritten if they do. </p>
+<p>This file contains function declarations for fitting charge distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don’t already exist, or overwritten if they do. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -386,7 +370,7 @@ Rounds a measurement value and its uncertainty.  </p>
 <dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">
 <span id="_CPPv311ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="ProcessFile__ssCR.double.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R"></span><span class="target" id="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeansHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorsHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEdRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Processes a ROOT file and fits the histograms. </p>
-<p>This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps.</p>
+<p>This function processes the specified ROOT file, sums the number of entries, calculates the threshold, and fits the histograms in the specified directories. The fit results are stored in the provided maps. The fit results are stored in output files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -424,15 +408,15 @@ Rounds a measurement value and its uncertainty.  </p>
 </section>
 <section id="analyzetwmc">
 <h2>AnalyzeTWMC<a class="headerlink" href="#analyzetwmc" title="Link to this heading">¶</a></h2>
-<p>Header file for processing and fitting energy loss distribution histograms from ROOT files. </p>
-<p>Macro that fits the energy loss distribution from the AnalyzeTWFragMC.cc output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum and then fitted within a certain bin-range centered around the peak. The fit results are stored in files name like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root. To be run with root -l -b -q ‘AnalyzeTWMC.cc()’. </p>
+<p>Header file for AnalyzeTWMC.cc. </p>
+<p>Macro that fits the energy loss distribution from the AnalyzeTWFragMC.cc output files (for MC runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum and then fitted within a certain bin-range centered around the peak. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE">
 <span id="_CPPv311ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE"></span><span id="ProcessFile__ssCR.i.std::map:i.double:R.std::map:i.double:R.std::map:i.double:R.std::map:i.double:R"></span><span class="target" id="AnalyzeTWMC_8h_1aafbdc017754d8392bf014a36767842e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeanP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitMeanHe</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorP</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fitErrorHe</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapIidEERNSt3mapIidEERNSt3mapIidEERNSt3mapIidEE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Processes a ROOT file to fit the charge distribution. </p>
-<p>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-range centered around the peak. The fit results are stored in files named like e.g. AnaFOOT_TW_DecodedMC_HIT2022_MC_140_Fit.root.</p>
+<p>This function processes a ROOT file containing charge distribution data. It performs a fit with two separate Gaussians, one for proton and one for helium peaks. The peaks are automatically found with TSpectrum, and then fitted within a certain bin-range centered around the peak. The fit results are stored in output files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -477,9 +461,9 @@ Rounds a measurement value and its uncertainty.  </p>
 <dt class="sig sig-object cpp" id="_CPPv411ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE">
 <span id="_CPPv311ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="_CPPv211ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE"></span><span id="ProcessFile__ssCR.i.std::map:TString.std::map:i.double::R.std::map:TString.std::map:i.double::R"></span><span class="target" id="AnalyzeTofMC_8h_1a528148d5c0683839f6dec9f9a13ef9b6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ProcessFile</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">fileName</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">energy</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TofMeansMC</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">TString</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">TofErrorsMC</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv411ProcessFileRKNSt6stringEiRNSt3mapI7TStringNSt3mapIidEEEERNSt3mapI7TStringNSt3mapIidEEEE" title="Link to this definition">¶</a><br /></dt>
 <dd><p>Processes a ROOT file and fits the histograms. </p>
-<p>This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.</p>
+<p>This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps. The fit results are stored in output files.</p>
 <p>
-This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps.</p>
+This function processes the specified ROOT file, fits the histograms in the specified directories, and stores the fit results in the provided maps. The fit results are stored in output files.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -544,8 +528,8 @@ This function fits the histograms in the specified directory using a gaussian fu
 </section>
 <section id="calibratefragm">
 <h2>CalibrateFragm<a class="headerlink" href="#calibratefragm" title="Link to this heading">¶</a></h2>
-<p>Header file for the charge-energy calibration. </p>
-<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; the imverse of these parameters (one per bar) are written in the configuration file. </p>
+<p>Header file for CalibrateFragm.cc. </p>
+<p>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; the inverse of these parameters (one per bar) are written in the configuration file. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -614,7 +598,7 @@ This function fits the histograms in the specified directory using a gaussian fu
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty. </p>
+<dd class="field-even"><p>A pair with the rounded value and uncertainty. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -623,8 +607,8 @@ This function fits the histograms in the specified directory using a gaussian fu
 </section>
 <section id="calibratetof">
 <h2>CalibrateTof<a class="headerlink" href="#calibratetof" title="Link to this heading">¶</a></h2>
-<p>Header file for the ToF calibration. </p>
-<p>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). To be run with root -l -b -q ‘CalibrateTof.cc()’. </p>
+<p>Header file for CalibrateTof.cc. </p>
+<p>This header file contains the declarations for the functions used in the ToF (Time of Flight) calibration. The calibration is performed by computing the differences between the ToF from data and ToF from MC mean fit values for every bar, as provided by the AnalyzeTofFragm.cc and AnalyzeTofMC.cc macros. These differences are written in four calibration files, one for each energy, along with the corresponding uncertainties (squared sum of the values). </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -862,25 +846,17 @@ This function fits the histograms in the specified directory using a gaussian fu
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
 <span class="target" id="TW__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Rounds a measurement value and its uncertainty.   </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<p>
-Rounds a measurement value and its uncertainty.  </p>
+<dd><p>Rounds a measurement value and its uncertainty. </p>
 <p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> – The measurement value. </p></li>
 <li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+<dd class="field-even"><p>A pair with the rounded value and uncertainty. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -890,7 +866,7 @@ Rounds a measurement value and its uncertainty.  </p>
 <section id="z-resolutions">
 <h2>Z_resolutions<a class="headerlink" href="#z-resolutions" title="Link to this heading">¶</a></h2>
 <p>Header file for Z_resolutions.cc. </p>
-<p>This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in LaTeX tables and plotted.s </p>
+<p>This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in LaTeX tables and plotted. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-functions">Functions</p>
 <dl class="cpp function">
@@ -1014,25 +990,17 @@ Rounds a measurement value and its uncertainty.  </p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp">
 <span class="target" id="Z__resolutions_8h_1a56d523c54cc171aa9e0ab754857f64d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">RoundMeasurement</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">value</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">uncertainty</span></span><span class="sig-paren">)</span><br /></dt>
-<dd><p>Rounds a measurement value and its uncertainty.   </p>
-<p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
-<p>
-Rounds a measurement value and its uncertainty.  </p>
+<dd><p>Rounds a measurement value and its uncertainty. </p>
 <p>This function rounds a measurement value and its uncertainty to the appropriate number of significant figures. The uncertainty is rounded to 1 significant figure.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>value</strong> – The measurement value. </p></li>
 <li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
-<li><p><strong>value</strong> – The measurement value. </p></li>
-<li><p><strong>uncertainty</strong> – The uncertainty of the measurement. </p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>A pair of strings containing the rounded value and uncertainty.  </p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>A pair of strings containing the rounded value and uncertainty. </p>
+<dd class="field-even"><p>A pair with the rounded value and uncertainty. </p>
 </dd>
 </dl>
 </dd></dl>
