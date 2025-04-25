@@ -23,7 +23,7 @@ Typical structure of the macros and input files used in the analysis:
 .. code-block:: text
 
    src/                    # Path of the analysis macros source code
-   ├── TW/cuts/            # TW uncalibrated files, with the selections to remove pedestal and pile-up
+   ├── TW/cuts/            # TW uncalibrated input files, with the selections to remove pedestal and pile-up
    ├── Calo/               # Calorimeter-related input files
    ├── Plots/              # Output plots and figures
 
