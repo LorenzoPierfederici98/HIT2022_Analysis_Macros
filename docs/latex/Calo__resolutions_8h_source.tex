@@ -3,30 +3,30 @@
 \mbox{\hyperlink{Calo__resolutions_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TRandom3.h>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <numeric>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <fstream>}}
-\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <vector>}}
-\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <map>}}
-\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#include\ <regex>}}
-\DoxyCodeLine{00028\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00029\ }
-\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Calo__resolutions_8h_ae42deae8bf798058b77d8a228427dddb}{ProcessFile}}(\textcolor{keyword}{const}\ std::string\&\ fileName,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ energy,\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res,\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res\_err);}
-\DoxyCodeLine{00043\ }
-\DoxyCodeLine{00044\ std::pair<double,\ double>\ \mbox{\hyperlink{Calo__resolutions_8h_a2ad7fc5517b3ca53aced9f056accb5dd}{RoundMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Calo__resolutions_8h_aebb2d0ec4b031210878491c63b1908ef}{PlotResolutions}}(\textcolor{keyword}{const}\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res,}
-\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keyword}{const}\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res\_err);}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <TKey.h>}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TDirectory.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TH1.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TRandom3.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <numeric>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TGraphErrors.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <TNamed.h>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00026\ \textcolor{preprocessor}{\#include\ <regex>}}
+\DoxyCodeLine{00027\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Calo__resolutions_8h_ae42deae8bf798058b77d8a228427dddb}{ProcessFile}}(\textcolor{keyword}{const}\ std::string\&\ fileName,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ energy,\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res,\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res\_err);}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00043\ std::pair<double,\ double>\ \mbox{\hyperlink{Calo__resolutions_8h_a2ad7fc5517b3ca53aced9f056accb5dd}{RoundMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00054\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Calo__resolutions_8h_aebb2d0ec4b031210878491c63b1908ef}{PlotResolutions}}(\textcolor{keyword}{const}\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res,}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keyword}{const}\ std::map<\textcolor{keywordtype}{int},\ std::vector<std::pair<int,\ double>>>\&\ Res\_err);}
 
 \end{DoxyCode}

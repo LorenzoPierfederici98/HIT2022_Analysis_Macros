@@ -7,7 +7,7 @@
  * for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the
  * merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed).
  * The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around
- * the peak, depending on the specific bar and beam energy. The fit results are stored in output files named like e.g., created if they don't already exist, or overwritten if they do.
+ * the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don't already exist, or overwritten if they do.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

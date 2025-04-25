@@ -3,26 +3,26 @@
 \mbox{\hyperlink{AnalyzePeakCrystal_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{00001\ }
-\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
-\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
-\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
-\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TH1D.h>}}
-\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TFitResultPtr.h>}}
-\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
-\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TLegend.h>}}
-\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TObjString.h>}}
-\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <iostream>}}
-\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <cmath>}}
-\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <iomanip>}}
-\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
-\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#endif}}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00034\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_a5aadeca6af3105a72d885dcc752237db}{PrintMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
-\DoxyCodeLine{00035\ }
-\DoxyCodeLine{00047\ TFitResultPtr\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_a72e2657579c5be6f6e4d73d8be4b5ec8}{FitPeakWithTSpectrum}}(TH1D\ *hist,\ \textcolor{keywordtype}{int}\ energy,\ \textcolor{keywordtype}{int}\ crystal\_ID);}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00060\ std::tuple<TH1D*,\ TH1D*>\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_aee07cb059be4125e9378b6ec353e11a3}{FindHistograms}}(TFile\ *inFile,\ \textcolor{keyword}{const}\ TString\ \&histName\_total,\ \textcolor{keyword}{const}\ TString\ \&histName);}
-\DoxyCodeLine{00061\ }
-\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_aec202f6e32bb23c6bb5ffe63a7d2e7df}{SaveFitResultsToFile}}(TCanvas*\ canvas,\ TH1D*\ hist,\ TFitResultPtr\ fitResult,\ \textcolor{keyword}{const}\ TString\&\ outputFileName);}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#if\ !defined(\_\_CINT\_\_)\ ||\ defined(\_\_MAKECINT\_\_)}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <TFile.h>}}
+\DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <TCanvas.h>}}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <TH1D.h>}}
+\DoxyCodeLine{00016\ \textcolor{preprocessor}{\#include\ <TFitResultPtr.h>}}
+\DoxyCodeLine{00017\ \textcolor{preprocessor}{\#include\ <TF1.h>}}
+\DoxyCodeLine{00018\ \textcolor{preprocessor}{\#include\ <TLegend.h>}}
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#include\ <TObjString.h>}}
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#include\ <cmath>}}
+\DoxyCodeLine{00022\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00023\ \textcolor{preprocessor}{\#include\ <TSpectrum.h>}}
+\DoxyCodeLine{00024\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_a5aadeca6af3105a72d885dcc752237db}{PrintMeasurement}}(\textcolor{keywordtype}{double}\ value,\ \textcolor{keywordtype}{double}\ uncertainty);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00048\ TFitResultPtr\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_a72e2657579c5be6f6e4d73d8be4b5ec8}{FitPeakWithTSpectrum}}(TH1D\ *hist,\ \textcolor{keywordtype}{int}\ energy,\ \textcolor{keywordtype}{int}\ crystal\_ID);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00061\ std::tuple<TH1D*,\ TH1D*>\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_aee07cb059be4125e9378b6ec353e11a3}{FindHistograms}}(TFile\ *inFile,\ \textcolor{keyword}{const}\ TString\ \&histName\_total,\ \textcolor{keyword}{const}\ TString\ \&histName);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00074\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{AnalyzePeakCrystal_8h_aec202f6e32bb23c6bb5ffe63a7d2e7df}{SaveFitResultsToFile}}(TCanvas*\ canvas,\ TH1D*\ hist,\ TFitResultPtr\ fitResult,\ \textcolor{keyword}{const}\ TString\&\ outputFileName);}
 
 \end{DoxyCode}

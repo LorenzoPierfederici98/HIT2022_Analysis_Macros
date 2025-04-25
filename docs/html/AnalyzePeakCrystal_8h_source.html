@@ -106,27 +106,27 @@ $(document).ready(function(){initNavTree('AnalyzePeakCrystal_8h_source.html','')
 </div><!--header-->
 <div class="contents">
 <a href="AnalyzePeakCrystal_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;TFile.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;TCanvas.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;TH1D.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;TFitResultPtr.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;TF1.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;TLegend.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;TObjString.h&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;TSpectrum.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#a5aadeca6af3105a72d885dcc752237db">PrintMeasurement</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">double</span> uncertainty);</div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>TFitResultPtr <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#a72e2657579c5be6f6e4d73d8be4b5ec8">FitPeakWithTSpectrum</a>(TH1D *hist, <span class="keywordtype">int</span> energy, <span class="keywordtype">int</span> crystal_ID);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>std::tuple&lt;TH1D*, TH1D*&gt; <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#aee07cb059be4125e9378b6ec353e11a3">FindHistograms</a>(TFile *inFile, <span class="keyword">const</span> TString &amp;histName_total, <span class="keyword">const</span> TString &amp;histName);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#aec202f6e32bb23c6bb5ffe63a7d2e7df">SaveFitResultsToFile</a>(TCanvas* canvas, TH1D* hist, TFitResultPtr fitResult, <span class="keyword">const</span> TString&amp; outputFileName);</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;TFile.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;TCanvas.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;TH1D.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;TFitResultPtr.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;TF1.h&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;TLegend.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;TObjString.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;iomanip&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;TSpectrum.h&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#a5aadeca6af3105a72d885dcc752237db">PrintMeasurement</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">double</span> uncertainty);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>TFitResultPtr <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#a72e2657579c5be6f6e4d73d8be4b5ec8">FitPeakWithTSpectrum</a>(TH1D *hist, <span class="keywordtype">int</span> energy, <span class="keywordtype">int</span> crystal_ID);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>std::tuple&lt;TH1D*, TH1D*&gt; <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#aee07cb059be4125e9378b6ec353e11a3">FindHistograms</a>(TFile *inFile, <span class="keyword">const</span> TString &amp;histName_total, <span class="keyword">const</span> TString &amp;histName);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="AnalyzePeakCrystal_8h.html#aec202f6e32bb23c6bb5ffe63a7d2e7df">SaveFitResultsToFile</a>(TCanvas* canvas, TH1D* hist, TFitResultPtr fitResult, <span class="keyword">const</span> TString&amp; outputFileName);</div>
 <div class="ttc" id="aAnalyzePeakCrystal_8h_html_a5aadeca6af3105a72d885dcc752237db"><div class="ttname"><a href="AnalyzePeakCrystal_8h.html#a5aadeca6af3105a72d885dcc752237db">PrintMeasurement</a></div><div class="ttdeci">void PrintMeasurement(double value, double uncertainty)</div><div class="ttdoc">Prints the measurement value and its uncertainty.</div><div class="ttdef"><b>Definition</b> AnalyzePeakCrystal.cc:111</div></div>
 <div class="ttc" id="aAnalyzePeakCrystal_8h_html_a72e2657579c5be6f6e4d73d8be4b5ec8"><div class="ttname"><a href="AnalyzePeakCrystal_8h.html#a72e2657579c5be6f6e4d73d8be4b5ec8">FitPeakWithTSpectrum</a></div><div class="ttdeci">TFitResultPtr FitPeakWithTSpectrum(TH1D *hist, int energy, int crystal_ID)</div><div class="ttdoc">Fits a peak in the given histogram using TSpectrum and a Gaussian function.</div><div class="ttdef"><b>Definition</b> AnalyzePeakCrystal.cc:120</div></div>
 <div class="ttc" id="aAnalyzePeakCrystal_8h_html_aec202f6e32bb23c6bb5ffe63a7d2e7df"><div class="ttname"><a href="AnalyzePeakCrystal_8h.html#aec202f6e32bb23c6bb5ffe63a7d2e7df">SaveFitResultsToFile</a></div><div class="ttdeci">void SaveFitResultsToFile(TCanvas *canvas, TH1D *hist, TFitResultPtr fitResult, const TString &amp;outputFileName)</div><div class="ttdoc">Saves the fit results, histograms, and plots to an output ROOT file.</div><div class="ttdef"><b>Definition</b> AnalyzePeakCrystal.cc:155</div></div>

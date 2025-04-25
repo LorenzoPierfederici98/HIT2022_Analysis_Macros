@@ -3,9 +3,10 @@
  * @brief Header file for AnalyzePeakCrystal.cc
  * 
  * This file contains function declarations for analyzing and fitting charge histograms
- * for calorimeter crystals. The charge histograms of every crystal are fitted with
- * a Gaussian function in a region surrounding the peak, found with TSpectrum. The fit
- * results are saved in output files, along with the histograms and fit plots.
+ * for calorimeter crystals. The charge histograms of every crystal (provided that it has
+ * enough statistics to display a peak) are fitted with a Gaussian function in a region 
+ * surrounding the peak, found with TSpectrum. The fit results are saved in output files,
+ * along with the histograms and fit plots.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

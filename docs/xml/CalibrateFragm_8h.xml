@@ -339,7 +339,7 @@
 <para>Header file for CalibrateFragm.cc. </para>
     </briefdescription>
     <detaileddescription>
-<para>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; the imverse of these parameters (one per bar) are written in the configuration file. </para>
+<para>Macro that plots the fit results on protons and helium peaks given by the AnalyzeTWFragm.cc macro vs the energies loss values retrieved from MC (2 energy loss values per bar and beam energy, given by the AnalyzeTWMC.cc macro). The fit charge values vs energy loss values are fitted with a 1 parameter linear function; the inverse of these parameters (one per bar) are written in the configuration file. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

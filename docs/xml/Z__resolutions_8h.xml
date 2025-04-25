@@ -605,7 +605,7 @@
 <para>Header file for Z_resolutions.cc. </para>
     </briefdescription>
     <detaileddescription>
-<para>This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in LaTeX tables and plotted.s </para>
+<para>This file contains function declarations for analyzing and plotting the resolution of Z (reconstructed charge). The reconstructed Z histograms of the runs without target, obtained by inverting the Bethe-Bloch formula with the calibrated energy loss and TOF values considering every TW bar, are fitted with a gaussian function. The resolution is evaluated as sigma/mu. The results are stored in LaTeX tables and plotted. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>

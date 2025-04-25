@@ -7,7 +7,7 @@
  * of the runs without target, obtained by inverting the Bethe-Bloch formula with 
  * the calibrated energy loss and TOF values considering every TW bar, are fitted with
  * a gaussian function. The resolution is evaluated as sigma/mu.
- * The results are stored in LaTeX tables and plotted.s
+ * The results are stored in LaTeX tables and plotted.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

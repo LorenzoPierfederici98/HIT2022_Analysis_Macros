@@ -3,9 +3,8 @@
  * @brief Header file for Calo_resolutions.cc
  * 
  * This file contains function declarations and necessary includes for analyzing and plotting the resolution
- * of calorimeter crystals as a function of beam energy. The analysis is performed using ROOT libraries, and
- * the resolution is calculated based on the mean and standard deviation of Gaussian fits to charge histograms.
- * The results are stored and plotted for further analysis.
+ * of calorimeter crystals as a function of beam energy. The resolution is calculated based on the mean and 
+ * standard deviation of Gaussian fits to charge histograms.
  */
 
 #if !defined(__CINT__) || defined(__MAKECINT__)

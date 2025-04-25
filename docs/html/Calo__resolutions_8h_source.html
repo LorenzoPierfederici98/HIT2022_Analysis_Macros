@@ -106,31 +106,31 @@ $(document).ready(function(){initNavTree('Calo__resolutions_8h_source.html','');
 </div><!--header-->
 <div class="contents">
 <a href="Calo__resolutions_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;TFile.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;TKey.h&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;TDirectory.h&gt;</span></div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;TH1.h&gt;</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;TF1.h&gt;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;TRandom3.h&gt;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;numeric&gt;</span></div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;TGraphErrors.h&gt;</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;TCanvas.h&gt;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;TNamed.h&gt;</span></div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;TSpectrum.h&gt;</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">#endif</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keywordtype">void</span> <a class="code hl_function" href="Calo__resolutions_8h.html#ae42deae8bf798058b77d8a228427dddb">ProcessFile</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keyword">const</span> <span class="keywordtype">int</span> energy, std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res, std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res_err);</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>std::pair&lt;double, double&gt; <a class="code hl_function" href="Calo__resolutions_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd">RoundMeasurement</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">double</span> uncertainty);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> <a class="code hl_function" href="Calo__resolutions_8h.html#aebb2d0ec4b031210878491c63b1908ef">PlotResolutions</a>(<span class="keyword">const</span> std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res,</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keyword">const</span> std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res_err);</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#if !defined(__CINT__) || defined(__MAKECINT__)</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;TFile.h&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;TKey.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;TDirectory.h&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;TH1.h&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;TF1.h&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;TRandom3.h&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;numeric&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;TGraphErrors.h&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;TCanvas.h&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &lt;TNamed.h&gt;</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="preprocessor">#include &lt;TSpectrum.h&gt;</span></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#include &lt;regex&gt;</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keywordtype">void</span> <a class="code hl_function" href="Calo__resolutions_8h.html#ae42deae8bf798058b77d8a228427dddb">ProcessFile</a>(<span class="keyword">const</span> std::string&amp; fileName, <span class="keyword">const</span> <span class="keywordtype">int</span> energy, std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res, std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res_err);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>std::pair&lt;double, double&gt; <a class="code hl_function" href="Calo__resolutions_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd">RoundMeasurement</a>(<span class="keywordtype">double</span> value, <span class="keywordtype">double</span> uncertainty);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keywordtype">void</span> <a class="code hl_function" href="Calo__resolutions_8h.html#aebb2d0ec4b031210878491c63b1908ef">PlotResolutions</a>(<span class="keyword">const</span> std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">const</span> std::map&lt;<span class="keywordtype">int</span>, std::vector&lt;std::pair&lt;int, double&gt;&gt;&gt;&amp; Res_err);</div>
 <div class="ttc" id="aCalo__resolutions_8h_html_a2ad7fc5517b3ca53aced9f056accb5dd"><div class="ttname"><a href="Calo__resolutions_8h.html#a2ad7fc5517b3ca53aced9f056accb5dd">RoundMeasurement</a></div><div class="ttdeci">std::pair&lt; double, double &gt; RoundMeasurement(double value, double uncertainty)</div><div class="ttdoc">Rounds a measurement value and its uncertainty.</div><div class="ttdef"><b>Definition</b> CalibrateFragm.cc:362</div></div>
 <div class="ttc" id="aCalo__resolutions_8h_html_ae42deae8bf798058b77d8a228427dddb"><div class="ttname"><a href="Calo__resolutions_8h.html#ae42deae8bf798058b77d8a228427dddb">ProcessFile</a></div><div class="ttdeci">void ProcessFile(const std::string &amp;fileName, const int energy, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</div><div class="ttdoc">Processes a ROOT file and calculates the resolution for each crystal.</div><div class="ttdef"><b>Definition</b> Calo_resolutions.cc:32</div></div>
 <div class="ttc" id="aCalo__resolutions_8h_html_aebb2d0ec4b031210878491c63b1908ef"><div class="ttname"><a href="Calo__resolutions_8h.html#aebb2d0ec4b031210878491c63b1908ef">PlotResolutions</a></div><div class="ttdeci">void PlotResolutions(const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res, const std::map&lt; int, std::vector&lt; std::pair&lt; int, double &gt; &gt; &gt; &amp;Res_err)</div><div class="ttdoc">Plots the resolution as a function of beam energy for each crystal.</div><div class="ttdef"><b>Definition</b> Calo_resolutions.cc:92</div></div>
