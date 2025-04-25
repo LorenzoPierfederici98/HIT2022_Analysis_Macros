@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="38" column="5" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="31" bodyend="46" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="38" declcolumn="5"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="37" column="5" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="31" bodyend="46" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="37" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -230,7 +230,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="57" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="49" bodyend="119" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="57" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="56" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="49" bodyend="119" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="56" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -319,7 +319,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="83" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="121" bodyend="164" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="83" declcolumn="6"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="82" column="6" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="121" bodyend="164" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="82" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="AnalyzeTWFragm_8h_1a14f0293f4852a5be3aa203d1aedcf64c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>std::pair&lt; TFitResultPtr, TFitResultPtr &gt;</type>
@@ -374,60 +374,60 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="103" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="166" bodyend="459" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="103" declcolumn="11"/>
+        <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" line="102" column="11" bodyfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.cc" bodystart="166" bodyend="459" declfile="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h" declline="102" declcolumn="11"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Header file for AnalyzeTWFragm.cc. </para>
     </briefdescription>
     <detaileddescription>
-<para>This file contains function declarations for fitting charge distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. Only the histograms whose entries are greater than a fraction of the sum of the merged files total event number are fitted (the entries of each file part of the merged output are saved in it and summed). The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don&apos;t already exist, or overwritten if they do. </para>
+<para>This file contains function declarations for fitting charge distributions from the AnalyzeTWChargeTime.cc merged output files (for fragmentation runs). A fit is performed with 2 separate gaussians, one for proton and one for helium peaks. The fit limits for the proton peaks depend on the beam energy. The histogram peaks are automatically found with TSPectrum; the fits are then performed within a certain bin-range centered around the peak, depending on the specific bar and beam energy. The fit results are stored in output files, created if they don&apos;t already exist, or overwritten if they do. </para>
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TKey.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TDirectory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TNamed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="AnalyzeTWFragm_8h_1aabad4b700eccd2608a76d82430bfea3a" kindref="member">SumNentries</ref>(TFile*<sp/>file);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148" kindref="member">FitHistogramsInDirectory</ref>(</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>TDirectory*<sp/>dir,<sp/></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>threshold,<sp/></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,<sp/></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,<sp/></highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,<sp/></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe,<sp/></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>outputFile</highlight></codeline>
-<codeline lineno="66"><highlight class="normal">);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097" kindref="member">ProcessFile</ref>(</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight></codeline>
-<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">);</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal">std::pair&lt;TFitResultPtr,<sp/>TFitResultPtr&gt;<sp/><ref refid="AnalyzeTWFragm_8h_1a14f0293f4852a5be3aa203d1aedcf64c" kindref="member">FitPeaksWithTSpectrum</ref>(</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>TH1D<sp/>*hist,<sp/></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/><sp/></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>layerBarCombination</highlight></codeline>
-<codeline lineno="107"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>!defined(__CINT__)<sp/>||<sp/>defined(__MAKECINT__)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TFile.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TKey.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TDirectory.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TH1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TF1.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TGraphErrors.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TCanvas.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TNamed.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;TSpectrum.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;regex&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="AnalyzeTWFragm_8h_1aabad4b700eccd2608a76d82430bfea3a" kindref="member">SumNentries</ref>(TFile*<sp/>file);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzeTWFragm_8h_1a6c75f7227727efc6541cf19ea6fec148" kindref="member">FitHistogramsInDirectory</ref>(</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>TDirectory*<sp/>dir,<sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>threshold,<sp/></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,<sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,<sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,<sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe,<sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>TFile*<sp/>outputFile</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="AnalyzeTWFragm_8h_1abb0f053729deb39169a04ad7965ed097" kindref="member">ProcessFile</ref>(</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansP,</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitMeansHe,</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsP,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map&lt;TString,<sp/>std::map&lt;int,<sp/>double&gt;&gt;&amp;<sp/>fitErrorsHe</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal">std::pair&lt;TFitResultPtr,<sp/>TFitResultPtr&gt;<sp/><ref refid="AnalyzeTWFragm_8h_1a14f0293f4852a5be3aa203d1aedcf64c" kindref="member">FitPeaksWithTSpectrum</ref>(</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>TH1D<sp/>*hist,<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>energy,<sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>TString&amp;<sp/>layerBarCombination</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">);</highlight></codeline>
     </programlisting>
     <location file="/mnt/c/Users/Lorenzo/Desktop/HIT2022_Analysis_Macros/src/AnalyzeTWFragm.h"/>
   </compounddef>
