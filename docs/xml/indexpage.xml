@@ -24,8 +24,7 @@
 <para>Typical structure of the macros and input files used in the analysis: <programlisting><codeline><highlight class="normal">src/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Path<sp/>of<sp/>the<sp/>analysis<sp/>macros<sp/>source<sp/>code</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">├──<sp/>TW/cuts/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TW<sp/>uncalibrated<sp/>files,<sp/>with<sp/>the<sp/>selections<sp/>to<sp/>remove<sp/>pedestal<sp/>and<sp/>pile-up</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">├──<sp/>Calo/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calorimeter-related<sp/>input<sp/>files</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>Plots/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Output<sp/>plots<sp/>and<sp/>figures</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">├──<sp/>docs/html/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Doxygen-generated<sp/>documentation</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>Plots/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Output<sp/>plots<sp/>and<sp/>figures</highlight></codeline>
 </programlisting></para>
 </sect2>
 <sect2 id="index_1autotoc_md3">

@@ -19,7 +19,6 @@ Typical structure of the macros and input files used in the analysis:
  ├── TW/cuts/            // TW uncalibrated files, with the selections to remove pedestal and pile-up
  ├── Calo/               // Calorimeter-related input files
  ├── Plots/              // Output plots and figures
- ├── docs/html/          // Doxygen-generated documentation
  ```
 
 ## Run
