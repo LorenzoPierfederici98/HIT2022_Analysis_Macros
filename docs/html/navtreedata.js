@@ -28,9 +28,10 @@ var NAVTREE =
     [ "Files", "files.html", [
       [ "Overview", "index.html#autotoc_md0", null ],
       [ "Structure", "index.html#autotoc_md1", null ],
-      [ "Run", "index.html#autotoc_md2", null ],
-      [ "Documentation Links", "index.html#autotoc_md3", null ],
-      [ "Dependencies", "index.html#autotoc_md4", null ],
+      [ "Directory Structure", "index.html#autotoc_md2", null ],
+      [ "Run", "index.html#autotoc_md3", null ],
+      [ "Documentation Links", "index.html#autotoc_md4", null ],
+      [ "Dependencies", "index.html#autotoc_md5", null ],
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],

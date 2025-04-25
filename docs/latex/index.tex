@@ -6,18 +6,29 @@ This project contains a set of macros used to analyze Calorimeter and TOF-\/wall
 \begin{DoxyItemize}
 \item {\bfseries{Calorimeter Analysis}} – Macros for the analysis of the energetic response of the crystals and resolution evaluation.
 \item {\bfseries{TOF-\/\+Wall Analysis}} – Macros for the energy and Time-\/\+Of-\/\+Flight (TOF) calibrations, resolution evaluation.
-\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Run}{Run}}\label{index_autotoc_md2}
+\end{DoxyItemize}\hypertarget{index_autotoc_md2}{}\doxysubsection{\texorpdfstring{Directory Structure}{Directory Structure}}\label{index_autotoc_md2}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{HIT2022\_Analysis/}
+\DoxyCodeLine{├──\ src/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ROOT\ analysis\ macros\ source\ code}}
+\DoxyCodeLine{├──\ TW/cuts/\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ TW\ uncalibrated\ files,\ with\ the\ selections\ to\ remove\ pedestal\ and\ pile-\/up}}
+\DoxyCodeLine{├──\ Calo/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Calorimeter-\/related\ input\ files}}
+\DoxyCodeLine{├──\ Plots/\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Output\ plots\ and\ figures}}
+\DoxyCodeLine{├──\ docs/html/\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Doxygen-\/generated\ documentation}}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Run}{Run}}\label{index_autotoc_md3}
 To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment. 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{root\ -\/l\ -\/b\ 'AnalyzePeakCrystal.cc()'}
 
 \end{DoxyCode}
-\hypertarget{index_autotoc_md3}{}\doxysubsection{\texorpdfstring{Documentation Links}{Documentation Links}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Documentation Links}{Documentation Links}}\label{index_autotoc_md4}
 
 \begin{DoxyItemize}
 \item \href{./index.html}{\texttt{ API Reference}}
 \item \href{https://github.com/LorenzoPierfederici98/HIT2022_Analysis_Macros}{\texttt{ Git\+Hub Repository}}
-\end{DoxyItemize}\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Dependencies}{Dependencies}}\label{index_autotoc_md4}
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Dependencies}{Dependencies}}\label{index_autotoc_md5}
 
 \begin{DoxyItemize}
 \item \href{https://root.cern}{\texttt{ ROOT}} 

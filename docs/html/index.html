@@ -111,15 +111,23 @@ Structure</h2>
 <li><b>TOF-Wall Analysis</b> – Macros for the energy and Time-Of-Flight (TOF) calibrations, resolution evaluation.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md2"></a>
+Directory Structure</h2>
+<div class="fragment"><div class="line">HIT2022_Analysis/</div>
+<div class="line">├── src/                <span class="comment">// ROOT analysis macros source code</span></div>
+<div class="line">├── TW/cuts/            <span class="comment">// TW uncalibrated files, with the selections to remove pedestal and pile-up</span></div>
+<div class="line">├── Calo/               <span class="comment">// Calorimeter-related input files</span></div>
+<div class="line">├── Plots/              <span class="comment">// Output plots and figures</span></div>
+<div class="line">├── docs/html/          <span class="comment">// Doxygen-generated documentation</span></div>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
 Run</h2>
 <p>To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment. </p><div class="fragment"><div class="line">root -l -b &#39;AnalyzePeakCrystal.cc()&#39;</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md3"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md4"></a>
 Documentation Links</h2>
 <ul>
 <li><a href="./index.html">API Reference</a></li>
 <li><a href="https://github.com/LorenzoPierfederici98/HIT2022_Analysis_Macros">GitHub Repository</a></li>
 </ul>
-<h2><a class="anchor" id="autotoc_md4"></a>
+<h2><a class="anchor" id="autotoc_md5"></a>
 Dependencies</h2>
 <ul>
 <li><a href="https://root.cern">ROOT</a> </li>

@@ -15,6 +15,18 @@ Structure
 - **Calorimeter Analysis** – Macros for the analysis of the energetic response of the crystals and resolution evaluation.
 - **TOF-Wall Analysis** – Macros for the energy and Time-Of-Flight (TOF) calibrations, resolution evaluation.
 
+Directory Structure
+-------------------
+
+.. code-block:: text
+
+   HIT2022_Analysis/
+   ├── src/                # ROOT analysis macros source code
+   ├── TW/cuts/            # TW uncalibrated files, with the selections to remove pedestal and pile-up
+   ├── Calo/               # Calorimeter-related input files
+   ├── Plots/              # Output plots and figures
+   ├── docs/html/          # Doxygen-generated documentation
+
 Run
 ---
 

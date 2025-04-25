@@ -20,11 +20,21 @@
 </para>
 </sect2>
 <sect2 id="index_1autotoc_md2">
+<title>Directory Structure</title>
+<para><programlisting><codeline><highlight class="normal">HIT2022_Analysis/</highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>src/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROOT<sp/>analysis<sp/>macros<sp/>source<sp/>code</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>TW/cuts/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TW<sp/>uncalibrated<sp/>files,<sp/>with<sp/>the<sp/>selections<sp/>to<sp/>remove<sp/>pedestal<sp/>and<sp/>pile-up</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>Calo/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Calorimeter-related<sp/>input<sp/>files</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>Plots/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Output<sp/>plots<sp/>and<sp/>figures</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">├──<sp/>docs/html/<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Doxygen-generated<sp/>documentation</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="index_1autotoc_md3">
 <title>Run</title>
 <para>To run the macros, ROOT needs to be installed and set up on the system. The macros are written in C++ and can be executed within the ROOT environment. <programlisting filename=".sh"><codeline><highlight class="normal">root<sp/>-l<sp/>-b<sp/>&apos;AnalyzePeakCrystal.cc()&apos;</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="index_1autotoc_md3">
+<sect2 id="index_1autotoc_md4">
 <title>Documentation Links</title>
 <para><itemizedlist>
 <listitem><para><ulink url="./index.html">API Reference</ulink></para>
@@ -32,7 +42,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="index_1autotoc_md4">
+<sect2 id="index_1autotoc_md5">
 <title>Dependencies</title>
 <para><itemizedlist>
 <listitem><para><ulink url="https://root.cern">ROOT</ulink> </para>
