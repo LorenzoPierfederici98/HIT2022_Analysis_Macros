@@ -18,10 +18,10 @@ Structure
 Directory Structure
 -------------------
 
+Typical structure of the macros and input files used in the analysis:
 .. code-block:: text
 
-   HIT2022_Analysis/
-   ├── src/                # ROOT analysis macros source code
+   src/                    # Path of the analysis macros source code
    ├── TW/cuts/            # TW uncalibrated files, with the selections to remove pedestal and pile-up
    ├── Calo/               # Calorimeter-related input files
    ├── Plots/              # Output plots and figures
