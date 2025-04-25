@@ -43,7 +43,14 @@
 <sect2 id="index_1autotoc_md5">
 <title>Dependencies</title>
 <para><itemizedlist>
-<listitem><para><ulink url="https://root.cern">ROOT</ulink> </para>
+<listitem><para><ulink url="https://root.cern">ROOT</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="index_1autotoc_md6">
+<title>Need help?</title>
+<para>If you have questions or encounter issues, feel free to contact:<itemizedlist>
+<listitem><para><bold>📧 Lorenzo Pierfederici</bold> – <ulink url="mailto:l.pierfederici@studenti.unipi.it">l.pierfederici@studenti.unipi.it</ulink>, <ulink url="mailto:lori.pierfe@gmail.com">lori.pierfe@gmail.com</ulink> </para>
 </listitem></itemizedlist>
 </para>
 </sect2>

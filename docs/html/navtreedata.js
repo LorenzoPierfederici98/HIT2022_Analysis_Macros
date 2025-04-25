@@ -32,6 +32,7 @@ var NAVTREE =
       [ "Run", "index.html#autotoc_md3", null ],
       [ "Documentation Links", "index.html#autotoc_md4", null ],
       [ "Dependencies", "index.html#autotoc_md5", null ],
+      [ "Need help?", "index.html#autotoc_md6", null ],
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
         [ "All", "globals.html", null ],

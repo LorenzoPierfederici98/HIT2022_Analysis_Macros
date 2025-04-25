@@ -38,10 +38,12 @@ To run the macros, ROOT needs to be installed and set up on the system. The macr
 
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 4
    :caption: Contents:
 
    api
+   help
+   license
 
 
 Documentation Links
