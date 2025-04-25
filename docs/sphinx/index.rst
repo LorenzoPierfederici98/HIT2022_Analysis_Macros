@@ -18,7 +18,7 @@ Structure
 Directory Structure
 -------------------
 
-Typical structure of the macros and input files:
+Typical structure of the macros and input files used in the analysis:
 
 .. code-block:: text
 
